@@ -1,18 +1,18 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.com/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix str: <https://w3id.org/str#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix cv: <http://data.europa.eu/m8g/> .
-@prefix ex: <http://example.com/> .
-@prefix person: <http://www.w3.org/ns/person#> .
-@prefix str: <https://w3id.org/str/> .
 
 ex:person1 foaf:familyName "Magritte"@fr ;
 	foaf:givenName "René François Ghislain"@fr ;
@@ -36,10 +36,12 @@ ex:document1 str:submissionDate "2024-01-28T09:00:00"^^xsd:dateTime ;
 	str:describes ex:unit1 ;
 	a foaf:Document .
 
-ex:unit1 str:numberOfBedrooms "1" ;
-	str:occupancy "2" ;
+ex:unit1 str:numberOfBedrooms "1"^^xsd:nonNegativeInteger ;
+	str:occupancy "2"^^xsd:nonNegativeInteger ;
 	str:floorLevel "2eme étage"@fr ;
 	str:purpose "Maison partagée avec étage privé"@fr ;
-	dcterms:type ex:logementPartage ;
+	dct:type ex:sharedHouse ;
 	str:hasUnitAddress ex:address1 ;
 	a str:Unit .
+
+ex:sharedHouse a skos:Concept .

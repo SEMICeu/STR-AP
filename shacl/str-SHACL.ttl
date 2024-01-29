@@ -60,7 +60,7 @@
     <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/83a526d4737b8f02fda4647d1ed8e33d588e10b0>,
     <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e>,
     <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/fdb862fb6ec09eba671ead03620a42e7bf42415a>;
-  shacl:targetClass <https://w3id.org/str/ActivityData> .
+  shacl:targetClass <https://w3id.org/str#ActivityData> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/0abcdba49f8d12b77739b38a2a574e78372940b7> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.temporal";
   shacl:description "It indicates the period of time associated."@en;
@@ -80,28 +80,28 @@
   shacl:description "The number of guest that the unit was rented to per night."@en;
   shacl:minCount 1;
   shacl:name "number of guests"@en;
-  shacl:path <https://w3id.org/str/numberOfGuests>;
+  shacl:path <https://w3id.org/str#numberOfGuests>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for number of guests"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/49a6320b7777187095496984ab0658fb4fe18432> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.countryofresidence";
   shacl:description "The country of residence of the guests."@en;
   shacl:maxCount 1;
   shacl:name "country of residence"@en;
-  shacl:path <https://w3id.org/str/countryOfResidence>;
+  shacl:path <https://w3id.org/str#countryOfResidence>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for country of residence"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/4e82d935d0d59fdace5892c98d0e973011b6288f> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.numberofguests";
   shacl:description "The number of guest that the unit was rented to per night."@en;
   shacl:name "number of guests"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/numberOfGuests>;
+  shacl:path <https://w3id.org/str#numberOfGuests>;
   <https://purl.eu/ns/shacl#message> "The expected value for number of guests is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/6aa30c70cdf1269774f13637e328efc4a99b0f8f> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.numberofguests";
   shacl:datatype xsd:nonNegativeInteger;
   shacl:description "The number of guest that the unit was rented to per night."@en;
   shacl:name "number of guests"@en;
-  shacl:path <https://w3id.org/str/numberOfGuests>;
+  shacl:path <https://w3id.org/str#numberOfGuests>;
   <https://purl.eu/ns/shacl#message> "The range of number of guests must be of type <http://www.w3.org/2001/XMLSchema#nonNegativeInteger>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/733a0398421d35cbce9fb5765feabf6299469337> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.temporal";
@@ -115,28 +115,28 @@
   shacl:description "The country of residence of the guests."@en;
   shacl:minCount 1;
   shacl:name "country of residence"@en;
-  shacl:path <https://w3id.org/str/countryOfResidence>;
+  shacl:path <https://w3id.org/str#countryOfResidence>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for country of residence"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/7a6cec8e4c96d05cad8e2cee9ae88b24727c55b3> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.countryofresidence";
   shacl:class dc:Location;
   shacl:description "The country of residence of the guests."@en;
   shacl:name "country of residence"@en;
-  shacl:path <https://w3id.org/str/countryOfResidence>;
+  shacl:path <https://w3id.org/str#countryOfResidence>;
   <https://purl.eu/ns/shacl#message> "The range of country of residence must be of type <http://purl.org/dc/terms/Location>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/83a526d4737b8f02fda4647d1ed8e33d588e10b0> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.countryofresidence";
   shacl:description "The country of residence of the guests."@en;
   shacl:name "country of residence"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/countryOfResidence>;
+  shacl:path <https://w3id.org/str#countryOfResidence>;
   <https://purl.eu/ns/shacl#message> "The expected value for country of residence is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.numberofguests";
   shacl:description "The number of guest that the unit was rented to per night."@en;
   shacl:maxCount 1;
   shacl:name "number of guests"@en;
-  shacl:path <https://w3id.org/str/numberOfGuests>;
+  shacl:path <https://w3id.org/str#numberOfGuests>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for number of guests"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ActivityDataShape/fdb862fb6ec09eba671ead03620a42e7bf42415a> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ActivityData.temporal";
@@ -256,14 +256,14 @@
   shacl:description "The land register in which the Address is registered in."@en;
   shacl:maxCount 1;
   shacl:name "land register"@en;
-  shacl:path <https://w3id.org/str/landRegister>;
+  shacl:path <https://w3id.org/str#landRegister>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for land register"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#AddressShape/6189a49a5cedd230bdea41d224948fe9e0e81091> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Address.landregister";
   shacl:class dcat:Dataset;
   shacl:description "The land register in which the Address is registered in."@en;
   shacl:name "land register"@en;
-  shacl:path <https://w3id.org/str/landRegister>;
+  shacl:path <https://w3id.org/str#landRegister>;
   <https://purl.eu/ns/shacl#message> "The range of land register must be of type <http://www.w3.org/ns/dcat#Dataset>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#AddressShape/6f98d6d917a0e0b73d8614923f953e1ee2533918> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Address.locatorname";
@@ -431,7 +431,7 @@
   shacl:description "The land register in which the Address is registered in."@en;
   shacl:name "land register"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/landRegister>;
+  shacl:path <https://w3id.org/str#landRegister>;
   <https://purl.eu/ns/shacl#message> "The expected value for land register is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#AddressShape/edf517a4066ee468a174711e33c96a64fb7364a6> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Address.thoroughfare";
@@ -615,7 +615,7 @@
   shacl:property <https://semiceu.github.io/STR/releases/1.0.0#CoordinationGroupShape/5940c6557e0c9e80dde239449ccb3245e6e3d71b>,
     <https://semiceu.github.io/STR/releases/1.0.0#CoordinationGroupShape/d1b848aaa9218dcd827e88c2a604aa9509e598fc>,
     <https://semiceu.github.io/STR/releases/1.0.0#CoordinationGroupShape/d875a34c2a5b0d03bcfe904f1f9b83872f37ed3b>;
-  shacl:targetClass <https://w3id.org/str/CoordinationGroup> .
+  shacl:targetClass <https://w3id.org/str#CoordinationGroup> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#CoordinationGroupShape/5940c6557e0c9e80dde239449ccb3245e6e3d71b> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#CoordinationGroup.member";
   shacl:description "Indicates a member of a Group."@en;
@@ -796,15 +796,15 @@
   shacl:description "It indicates the Unit listed."@en;
   shacl:name "has listing"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasListing>;
+  shacl:path <https://w3id.org/str#hasListing>;
   <https://purl.eu/ns/shacl#message> "The expected value for has listing is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DistributionShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Distribution.haslisting";
-  shacl:class <https://w3id.org/str/Unit>;
+  shacl:class <https://w3id.org/str#Unit>;
   shacl:description "It indicates the Unit listed."@en;
   shacl:name "has listing"@en;
-  shacl:path <https://w3id.org/str/hasListing>;
-  <https://purl.eu/ns/shacl#message> "The range of has listing must be of type <https://w3id.org/str/Unit>."@en .
+  shacl:path <https://w3id.org/str#hasListing>;
+  <https://purl.eu/ns/shacl#message> "The range of has listing must be of type <https://w3id.org/str#Unit>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape> a shacl:NodeShape;
   shacl:closed false;
@@ -827,92 +827,92 @@
   shacl:description "The date in which the Document has been submitted."@en;
   shacl:name "submission date"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/submissionDate>;
+  shacl:path <https://w3id.org/str#submissionDate>;
   <https://purl.eu/ns/shacl#message> "The expected value for submission date is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/42c749b4eb19506d98ebe732f87b81ae28e6d368> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.updatedate";
   shacl:datatype xsd:dateTime;
   shacl:description "The date in which the Document has been updated."@en;
   shacl:name "update date"@en;
-  shacl:path <https://w3id.org/str/updateDate>;
+  shacl:path <https://w3id.org/str#updateDate>;
   <https://purl.eu/ns/shacl#message> "The range of update date must be of type <http://www.w3.org/2001/XMLSchema#dateTime>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/4e50252886f48098088edc3d277190380f8e2a91> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.describes";
   shacl:description "It indicates the Unit described."@en;
   shacl:name "describes"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/describes>;
+  shacl:path <https://w3id.org/str#describes>;
   <https://purl.eu/ns/shacl#message> "The expected value for describes is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/58f2bb146c1acc13d00df887f8005ac509470906> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.submissiondate";
   shacl:datatype xsd:dateTime;
   shacl:description "The date in which the Document has been submitted."@en;
   shacl:name "submission date"@en;
-  shacl:path <https://w3id.org/str/submissionDate>;
+  shacl:path <https://w3id.org/str#submissionDate>;
   <https://purl.eu/ns/shacl#message> "The range of submission date must be of type <http://www.w3.org/2001/XMLSchema#dateTime>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/6065b86a462e0eb1d5964d166fbccf077716ffe5> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.describes";
   shacl:description "It indicates the Unit described."@en;
   shacl:maxCount 1;
   shacl:name "describes"@en;
-  shacl:path <https://w3id.org/str/describes>;
+  shacl:path <https://w3id.org/str#describes>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for describes"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/6b97f7e0a0f961acea76f7efe41e064b2868f3fb> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.hasvalidityperiod";
   shacl:description "It indicates the Period of Time in which the resource is valid."@en;
   shacl:maxCount 1;
   shacl:name "has validity period"@en;
-  shacl:path <https://w3id.org/str/hasValidityPeriod>;
+  shacl:path <https://w3id.org/str#hasValidityPeriod>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for has validity period"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/73fbba98aa00a91953e1cf81d9810a2b3bf506dd> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.hasvalidityperiod";
   shacl:class dc:PeriodOfTime;
   shacl:description "It indicates the Period of Time in which the resource is valid."@en;
   shacl:name "has validity period"@en;
-  shacl:path <https://w3id.org/str/hasValidityPeriod>;
+  shacl:path <https://w3id.org/str#hasValidityPeriod>;
   <https://purl.eu/ns/shacl#message> "The range of has validity period must be of type <http://purl.org/dc/terms/PeriodOfTime>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/94510aa3cbf2d9336548af60f358546eff7b9c53> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.updatedate";
   shacl:description "The date in which the Document has been updated."@en;
   shacl:name "update date"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/updateDate>;
+  shacl:path <https://w3id.org/str#updateDate>;
   <https://purl.eu/ns/shacl#message> "The expected value for update date is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/973c218c87e5004e247def216f50a940ac2e9738> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.updatedate";
   shacl:description "The date in which the Document has been updated."@en;
   shacl:maxCount 1;
   shacl:name "update date"@en;
-  shacl:path <https://w3id.org/str/updateDate>;
+  shacl:path <https://w3id.org/str#updateDate>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for update date"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/b0808aba3dec05895b41c2ae79ca3aa0df7bf189> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.hasvalidityperiod";
   shacl:description "It indicates the Period of Time in which the resource is valid."@en;
   shacl:name "has validity period"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasValidityPeriod>;
+  shacl:path <https://w3id.org/str#hasValidityPeriod>;
   <https://purl.eu/ns/shacl#message> "The expected value for has validity period is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.submissiondate";
   shacl:description "The date in which the Document has been submitted."@en;
   shacl:maxCount 1;
   shacl:name "submission date"@en;
-  shacl:path <https://w3id.org/str/submissionDate>;
+  shacl:path <https://w3id.org/str#submissionDate>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for submission date"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.submissiondate";
   shacl:description "The date in which the Document has been submitted."@en;
   shacl:minCount 1;
   shacl:name "submission date"@en;
-  shacl:path <https://w3id.org/str/submissionDate>;
+  shacl:path <https://w3id.org/str#submissionDate>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for submission date"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/e64b135aa5770a921a6738287316722c7a7dd679> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Document.describes";
-  shacl:class <https://w3id.org/str/Unit>;
+  shacl:class <https://w3id.org/str#Unit>;
   shacl:description "It indicates the Unit described."@en;
   shacl:name "describes"@en;
-  shacl:path <https://w3id.org/str/describes>;
-  <https://purl.eu/ns/shacl#message> "The range of describes must be of type <https://w3id.org/str/Unit>."@en .
+  shacl:path <https://w3id.org/str#describes>;
+  <https://purl.eu/ns/shacl#message> "The range of describes must be of type <https://w3id.org/str#Unit>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#GeometryShape> a shacl:NodeShape;
   shacl:closed false;
@@ -961,13 +961,13 @@
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for identifies"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Identifier.identifies";
-  shacl:class <http://www.w3.org/ns/legal#LegalEntity>,
-    <http://www.w3.org/ns/person#Person>;
+  shacl:class <http://www.w3.org/ns/person#Person>,
+    <http://www.w3.org/ns/legal#LegalEntity>;
   shacl:description "The entity that is referenced by the Identifier."@en;
   shacl:name "identifies"@en;
   shacl:path <http://data.europa.eu/m8g/identifies>;
-  <https://purl.eu/ns/shacl#message> "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."@en,
-    "The range of identifies must be of type <http://www.w3.org/ns/person#Person>."@en .
+  <https://purl.eu/ns/shacl#message> "The range of identifies must be of type <http://www.w3.org/ns/person#Person>."@en,
+    "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Identifier.notation";
   shacl:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype."@en;
@@ -1028,17 +1028,17 @@
   <https://purl.eu/ns/shacl#message> "The expected value for legal identifier is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#LegalEntityShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#LegalEntity.offers";
-  shacl:class <https://w3id.org/str/STAccomondationRentalService>;
+  shacl:class <https://w3id.org/str#STAccomondationRentalService>;
   shacl:description "It indicates the rental service offered."@en;
   shacl:name "offers"@en;
-  shacl:path <https://w3id.org/str/offers>;
-  <https://purl.eu/ns/shacl#message> "The range of offers must be of type <https://w3id.org/str/STAccomondationRentalService>."@en .
+  shacl:path <https://w3id.org/str#offers>;
+  <https://purl.eu/ns/shacl#message> "The range of offers must be of type <https://w3id.org/str#STAccomondationRentalService>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#LegalEntityShape/5d14811c6232941e92ffcd4178afa70419f6a04b> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#LegalEntity.offers";
   shacl:description "It indicates the rental service offered."@en;
   shacl:name "offers"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/offers>;
+  shacl:path <https://w3id.org/str#offers>;
   <https://purl.eu/ns/shacl#message> "The expected value for offers is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#LegalEntityShape/5de7dd3454af7271c3bf268f0cf8723b4a9667ec> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#LegalEntity.legalname";
@@ -1052,21 +1052,21 @@
   shacl:class foaf:Document;
   shacl:description "It indicates the Document provided."@en;
   shacl:name "provides"@en;
-  shacl:path <https://w3id.org/str/provides>;
+  shacl:path <https://w3id.org/str#provides>;
   <https://purl.eu/ns/shacl#message> "The range of provides must be of type <http://xmlns.com/foaf/0.1/Document>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#LegalEntityShape/7732c779d9ef9b53ab85a7c61b415537d57aafba> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#LegalEntity.haslegalrepresentative";
   shacl:description "It indicates the Person that can represent legally an organization."@en;
   shacl:minCount 1;
   shacl:name "has legal representative"@en;
-  shacl:path <https://w3id.org/str/hasLegalRepresentative>;
+  shacl:path <https://w3id.org/str#hasLegalRepresentative>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for has legal representative"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#LegalEntityShape/7d73074765293c6ee57c5af79f568751c1a4bde7> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#LegalEntity.haslegalrepresentative";
   shacl:class <http://www.w3.org/ns/person#Person>;
   shacl:description "It indicates the Person that can represent legally an organization."@en;
   shacl:name "has legal representative"@en;
-  shacl:path <https://w3id.org/str/hasLegalRepresentative>;
+  shacl:path <https://w3id.org/str#hasLegalRepresentative>;
   <https://purl.eu/ns/shacl#message> "The range of has legal representative must be of type <http://www.w3.org/ns/person#Person>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#LegalEntityShape/866f7a83c3007ee916031153fda619f2402ac69c> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#LegalEntity.legalidentifier";
@@ -1087,7 +1087,7 @@
   shacl:description "It indicates the Person that can represent legally an organization."@en;
   shacl:name "has legal representative"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasLegalRepresentative>;
+  shacl:path <https://w3id.org/str#hasLegalRepresentative>;
   <https://purl.eu/ns/shacl#message> "The expected value for has legal representative is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#LegalEntityShape/b690ef515b6791ab0c0cec778dc753dd45e21324> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#LegalEntity.legalname";
@@ -1129,7 +1129,7 @@
   shacl:description "It indicates the Document provided."@en;
   shacl:name "provides"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/provides>;
+  shacl:path <https://w3id.org/str#provides>;
   <https://purl.eu/ns/shacl#message> "The expected value for provides is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#LiteralShape> a shacl:NodeShape;
@@ -1209,13 +1209,13 @@
     <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
     <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/b034e97816843ce128ccaf9ee2531a7edc1b8ad7>,
     <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976>;
-  shacl:targetClass <https://w3id.org/str/OnlineSTRentalPlatform> .
+  shacl:targetClass <https://w3id.org/str#OnlineSTRentalPlatform> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/163a1504b50d376f6bd573ff7b199a18383aa678> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.providesinformationto";
   shacl:description "It indicates the Single Digital Entry Point receiving information."@en;
   shacl:name "provides information to"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/providesInformationTo>;
+  shacl:path <https://w3id.org/str#providesInformationTo>;
   <https://purl.eu/ns/shacl#message> "The expected value for provides information to is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.type";
@@ -1229,7 +1229,7 @@
   shacl:description "It indicates the Single Digital Entry Point being checked."@en;
   shacl:name "checks"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/checks>;
+  shacl:path <https://w3id.org/str#checks>;
   <https://purl.eu/ns/shacl#message> "The expected value for checks is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.type";
@@ -1240,17 +1240,17 @@
   <https://purl.eu/ns/shacl#message> "The range of type must be of type <http://www.w3.org/2004/02/skos/core#Concept>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.checks";
-  shacl:class <https://w3id.org/str/SingleDigitalEntryPoint>;
+  shacl:class <https://w3id.org/str#SingleDigitalEntryPoint>;
   shacl:description "It indicates the Single Digital Entry Point being checked."@en;
   shacl:name "checks"@en;
-  shacl:path <https://w3id.org/str/checks>;
-  <https://purl.eu/ns/shacl#message> "The range of checks must be of type <https://w3id.org/str/SingleDigitalEntryPoint>."@en .
+  shacl:path <https://w3id.org/str#checks>;
+  <https://purl.eu/ns/shacl#message> "The range of checks must be of type <https://w3id.org/str#SingleDigitalEntryPoint>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.publishes";
   shacl:class dcat:Dataset;
   shacl:description "It indicates the Dataset of listings published."@en;
   shacl:name "publishes"@en;
-  shacl:path <https://w3id.org/str/publishes>;
+  shacl:path <https://w3id.org/str#publishes>;
   <https://purl.eu/ns/shacl#message> "The range of publishes must be of type <http://www.w3.org/ns/dcat#Dataset>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.type";
@@ -1264,7 +1264,7 @@
   shacl:description "It indicates the Dataset of listings published."@en;
   shacl:minCount 1;
   shacl:name "publishes"@en;
-  shacl:path <https://w3id.org/str/publishes>;
+  shacl:path <https://w3id.org/str#publishes>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for publishes"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.type";
@@ -1278,15 +1278,15 @@
   shacl:description "It indicates the Dataset of listings published."@en;
   shacl:name "publishes"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/publishes>;
+  shacl:path <https://w3id.org/str#publishes>;
   <https://purl.eu/ns/shacl#message> "The expected value for publishes is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.providesinformationto";
-  shacl:class <https://w3id.org/str/SingleDigitalEntryPoint>;
+  shacl:class <https://w3id.org/str#SingleDigitalEntryPoint>;
   shacl:description "It indicates the Single Digital Entry Point receiving information."@en;
   shacl:name "provides information to"@en;
-  shacl:path <https://w3id.org/str/providesInformationTo>;
-  <https://purl.eu/ns/shacl#message> "The range of provides information to must be of type <https://w3id.org/str/SingleDigitalEntryPoint>."@en .
+  shacl:path <https://w3id.org/str#providesInformationTo>;
+  <https://purl.eu/ns/shacl#message> "The range of provides information to must be of type <https://w3id.org/str#SingleDigitalEntryPoint>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1307,89 +1307,89 @@
     <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/e98e308b7a2188aca75320dc2dff19d748a78f71>,
     <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/ecd48ea50e599fe2202c2b7b301191c9adff2fe1>,
     <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c>;
-  shacl:targetClass <https://w3id.org/str/Order> .
+  shacl:targetClass <https://w3id.org/str#Order> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/0f790ab49df619643eac3389c633494bfbaf74d0> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.concerns";
   shacl:description "It indicated the Registration Number concerned."@en;
   shacl:minCount 1;
   shacl:name "concerns"@en;
-  shacl:path <https://w3id.org/str/concerns>;
+  shacl:path <https://w3id.org/str#concerns>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for concerns"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/0fa383047260f8432938e4f5aa14282db5376221> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.reason";
   shacl:description "The statement indicating the reason of the Order."@en;
   shacl:maxCount 1;
   shacl:name "reason"@en;
-  shacl:path <https://w3id.org/str/reason>;
+  shacl:path <https://w3id.org/str#reason>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for reason"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/1c61fa1d29718c4e8813811b251890449cd4f23d> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.concerns";
-  shacl:class <https://w3id.org/str/RegistrationNumber>;
+  shacl:class <https://w3id.org/str#RegistrationNumber>;
   shacl:description "It indicated the Registration Number concerned."@en;
   shacl:name "concerns"@en;
-  shacl:path <https://w3id.org/str/concerns>;
-  <https://purl.eu/ns/shacl#message> "The range of concerns must be of type <https://w3id.org/str/RegistrationNumber>."@en .
+  shacl:path <https://w3id.org/str#concerns>;
+  <https://purl.eu/ns/shacl#message> "The range of concerns must be of type <https://w3id.org/str#RegistrationNumber>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/1f53ac638f602797a2c6f9a508ea32f75aab7093> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.sentto";
   shacl:description "It indicates the receiver of the Order."@en;
   shacl:minCount 1;
   shacl:name "sent to"@en;
-  shacl:path <https://w3id.org/str/sentTo>;
+  shacl:path <https://w3id.org/str#sentTo>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for sent to"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/2d9b17eaccb0061e40c18ad16dac0910319864ac> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.reason";
   shacl:description "The statement indicating the reason of the Order."@en;
   shacl:name "reason"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/reason>;
+  shacl:path <https://w3id.org/str#reason>;
   <https://purl.eu/ns/shacl#message> "The expected value for reason is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/2dce9b18efee12654d57d620e560b98866939a09> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.isabout";
   shacl:description "It indicates the host reference."@en;
   shacl:name "is about"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/isAbout>;
+  shacl:path <https://w3id.org/str#isAbout>;
   <https://purl.eu/ns/shacl#message> "The expected value for is about is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/3a597ba103cfec924c0dcf0aad7777a76554a268> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.sentto";
-  shacl:class <https://w3id.org/str/OnlineSTRentalPlatform>;
+  shacl:class <https://w3id.org/str#OnlineSTRentalPlatform>;
   shacl:description "It indicates the receiver of the Order."@en;
   shacl:name "sent to"@en;
-  shacl:path <https://w3id.org/str/sentTo>;
-  <https://purl.eu/ns/shacl#message> "The range of sent to must be of type <https://w3id.org/str/OnlineSTRentalPlatform>."@en .
+  shacl:path <https://w3id.org/str#sentTo>;
+  <https://purl.eu/ns/shacl#message> "The range of sent to must be of type <https://w3id.org/str#OnlineSTRentalPlatform>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/4ceaa00dc591b6d4b5c6d08551fa22b7072be188> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.sentto";
   shacl:description "It indicates the receiver of the Order."@en;
   shacl:name "sent to"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/sentTo>;
+  shacl:path <https://w3id.org/str#sentTo>;
   <https://purl.eu/ns/shacl#message> "The expected value for sent to is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/6c16de1b23a2324b79a66111d1ee2a7a1e84c597> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.reason";
   shacl:datatype rdf:langString;
   shacl:description "The statement indicating the reason of the Order."@en;
   shacl:name "reason"@en;
-  shacl:path <https://w3id.org/str/reason>;
+  shacl:path <https://w3id.org/str#reason>;
   <https://purl.eu/ns/shacl#message> "The range of reason must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/7a6112ed05520b889083ad602edef6b4ae90e8f0> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.concerns";
   shacl:description "It indicated the Registration Number concerned."@en;
   shacl:maxCount 1;
   shacl:name "concerns"@en;
-  shacl:path <https://w3id.org/str/concerns>;
+  shacl:path <https://w3id.org/str#concerns>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for concerns"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.isabout";
   shacl:description "It indicates the host reference."@en;
   shacl:minCount 1;
   shacl:name "is about"@en;
-  shacl:path <https://w3id.org/str/isAbout>;
+  shacl:path <https://w3id.org/str#isAbout>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for is about"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/bf15d791a0b0a4a285d78d24f1e512b942b480bf> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.reason";
   shacl:description "The statement indicating the reason of the Order."@en;
   shacl:name "reason"@en;
-  shacl:path <https://w3id.org/str/reason>;
+  shacl:path <https://w3id.org/str#reason>;
   shacl:uniqueLang true;
   <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for reason"@en .
 
@@ -1397,28 +1397,28 @@
   shacl:description "The statement indicating the reason of the Order."@en;
   shacl:minCount 1;
   shacl:name "reason"@en;
-  shacl:path <https://w3id.org/str/reason>;
+  shacl:path <https://w3id.org/str#reason>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for reason"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/dd5acd5f2a95b2d54489e871f39a1756b0157962> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.isabout";
   shacl:description "It indicates the host reference."@en;
   shacl:maxCount 1;
   shacl:name "is about"@en;
-  shacl:path <https://w3id.org/str/isAbout>;
+  shacl:path <https://w3id.org/str#isAbout>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for is about"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/e98e308b7a2188aca75320dc2dff19d748a78f71> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.sentto";
   shacl:description "It indicates the receiver of the Order."@en;
   shacl:maxCount 1;
   shacl:name "sent to"@en;
-  shacl:path <https://w3id.org/str/sentTo>;
+  shacl:path <https://w3id.org/str#sentTo>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for sent to"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/ecd48ea50e599fe2202c2b7b301191c9adff2fe1> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.concerns";
   shacl:description "It indicated the Registration Number concerned."@en;
   shacl:name "concerns"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/concerns>;
+  shacl:path <https://w3id.org/str#concerns>;
   <https://purl.eu/ns/shacl#message> "The expected value for concerns is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#OrderShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Order.isabout";
@@ -1426,7 +1426,7 @@
     <http://www.w3.org/ns/person#Person>;
   shacl:description "It indicates the host reference."@en;
   shacl:name "is about"@en;
-  shacl:path <https://w3id.org/str/isAbout>;
+  shacl:path <https://w3id.org/str#isAbout>;
   <https://purl.eu/ns/shacl#message> "The range of is about must be of type <http://www.w3.org/ns/legal#LegalEntity>."@en,
     "The range of is about must be of type <http://www.w3.org/ns/person#Person>."@en .
 
@@ -1557,11 +1557,11 @@
   <https://purl.eu/ns/shacl#message> "The range of family name must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PersonShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Person.offers";
-  shacl:class <https://w3id.org/str/STAccomondationRentalService>;
+  shacl:class <https://w3id.org/str#STAccomondationRentalService>;
   shacl:description "It indicates the rental service offered."@en;
   shacl:name "offers"@en;
-  shacl:path <https://w3id.org/str/offers>;
-  <https://purl.eu/ns/shacl#message> "The range of offers must be of type <https://w3id.org/str/STAccomondationRentalService>."@en .
+  shacl:path <https://w3id.org/str#offers>;
+  <https://purl.eu/ns/shacl#message> "The range of offers must be of type <https://w3id.org/str#STAccomondationRentalService>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PersonShape/55b5451dbdf7a52f51562f996bc320d6e00bf47d> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Person.domicile";
   shacl:class <http://www.w3.org/ns/locn#Address>;
@@ -1588,7 +1588,7 @@
   shacl:description "It indicates the rental service offered."@en;
   shacl:name "offers"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/offers>;
+  shacl:path <https://w3id.org/str#offers>;
   <https://purl.eu/ns/shacl#message> "The expected value for offers is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PersonShape/61f072497c90b6f48b2efa7269eb306c26bb4757> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Person.givenname";
@@ -1623,7 +1623,7 @@
   shacl:class foaf:Document;
   shacl:description "It indicates the Document provided."@en;
   shacl:name "provides"@en;
-  shacl:path <https://w3id.org/str/provides>;
+  shacl:path <https://w3id.org/str#provides>;
   <https://purl.eu/ns/shacl#message> "The range of provides must be of type <http://xmlns.com/foaf/0.1/Document>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PersonShape/7349aedd98256d90685571bddc6da8ac9eab1767> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Person.givenname";
@@ -1700,7 +1700,7 @@
   shacl:description "It indicates the Document provided."@en;
   shacl:name "provides"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/provides>;
+  shacl:path <https://w3id.org/str#provides>;
   <https://purl.eu/ns/shacl#message> "The expected value for provides is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PersonShape/f888a185270cac3f6e32d6e1a22eb6a89d617ba8> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Person.givenname";
@@ -1773,7 +1773,7 @@
   shacl:description "It indicates the host notified."@en;
   shacl:name "notifies"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/notifies>;
+  shacl:path <https://w3id.org/str#notifies>;
   <https://purl.eu/ns/shacl#message> "The expected value for notifies is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/3b9cc6558bbf88b7fbaf0c2f3ab6ae7fb8c1b4b9> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.preferredlabel";
@@ -1795,7 +1795,7 @@
     <http://www.w3.org/ns/person#Person>;
   shacl:description "It indicates the host notified."@en;
   shacl:name "notifies"@en;
-  shacl:path <https://w3id.org/str/notifies>;
+  shacl:path <https://w3id.org/str#notifies>;
   <https://purl.eu/ns/shacl#message> "The range of notifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."@en,
     "The range of notifies must be of type <http://www.w3.org/ns/person#Person>."@en .
 
@@ -1824,14 +1824,14 @@
   shacl:description "It indicates the Single Digital Entry Point being managed."@en;
   shacl:maxCount 1;
   shacl:name "is responsible for"@en;
-  shacl:path <https://w3id.org/str/isResponsibleFor>;
+  shacl:path <https://w3id.org/str#isResponsibleFor>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for is responsible for"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/757af08c061e8e26802b71f9d98b74ed1e772dd1> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.isresponsiblefor";
   shacl:description "It indicates the Single Digital Entry Point being managed."@en;
   shacl:name "is responsible for"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/isResponsibleFor>;
+  shacl:path <https://w3id.org/str#isResponsibleFor>;
   <https://purl.eu/ns/shacl#message> "The expected value for is responsible for is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/768bb4171e00505886fe9a1e949b4cd71f0eb548> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.description";
@@ -1845,7 +1845,7 @@
   shacl:description "It indicates ther Order issued."@en;
   shacl:name "issues"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/issues>;
+  shacl:path <https://w3id.org/str#issues>;
   <https://purl.eu/ns/shacl#message> "The expected value for issues is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.purpose";
@@ -1870,17 +1870,17 @@
   <https://purl.eu/ns/shacl#message> "The expected value for purpose is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/8fb31f650d30d25e4d30f4d255e9c1877f5d7fa3> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.isresponsiblefor";
-  shacl:class <https://w3id.org/str/SingleDigitalEntryPoint>;
+  shacl:class <https://w3id.org/str#SingleDigitalEntryPoint>;
   shacl:description "It indicates the Single Digital Entry Point being managed."@en;
   shacl:name "is responsible for"@en;
-  shacl:path <https://w3id.org/str/isResponsibleFor>;
-  <https://purl.eu/ns/shacl#message> "The range of is responsible for must be of type <https://w3id.org/str/SingleDigitalEntryPoint>."@en .
+  shacl:path <https://w3id.org/str#isResponsibleFor>;
+  <https://purl.eu/ns/shacl#message> "The range of is responsible for must be of type <https://w3id.org/str#SingleDigitalEntryPoint>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/936884d6e1539aaa027a5f975b124acfdd169126> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.verifies";
   shacl:class foaf:Document;
   shacl:description "It indicates the Document verified."@en;
   shacl:name "verifies"@en;
-  shacl:path <https://w3id.org/str/verifies>;
+  shacl:path <https://w3id.org/str#verifies>;
   <https://purl.eu/ns/shacl#message> "The range of verifies must be of type <http://xmlns.com/foaf/0.1/Document>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.classification";
@@ -1898,11 +1898,11 @@
   <https://purl.eu/ns/shacl#message> "The expected value for classification is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/c9fffe20eccf0e1883a426d0976d6e66c16f6c71> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.issues";
-  shacl:class <https://w3id.org/str/Order>;
+  shacl:class <https://w3id.org/str#Order>;
   shacl:description "It indicates ther Order issued."@en;
   shacl:name "issues"@en;
-  shacl:path <https://w3id.org/str/issues>;
-  <https://purl.eu/ns/shacl#message> "The range of issues must be of type <https://w3id.org/str/Order>."@en .
+  shacl:path <https://w3id.org/str#issues>;
+  <https://purl.eu/ns/shacl#message> "The range of issues must be of type <https://w3id.org/str#Order>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.description";
   shacl:datatype rdf:langString;
@@ -1915,7 +1915,7 @@
   shacl:description "It indicates the Document verified."@en;
   shacl:name "verifies"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/verifies>;
+  shacl:path <https://w3id.org/str#verifies>;
   <https://purl.eu/ns/shacl#message> "The expected value for verifies is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.alternativelabel";
@@ -2091,7 +2091,7 @@ and managed by a Base Registry Service."""@en;
     <https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape/a3d3b83f183d8280701382025f8beda6c06befb3>,
     <https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape/b0808aba3dec05895b41c2ae79ca3aa0df7bf189>,
     <https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape/c623dd0ee9911f8266a229393e26001684e14eaf>;
-  shacl:targetClass <https://w3id.org/str/RegistrationNumber> .
+  shacl:targetClass <https://w3id.org/str#RegistrationNumber> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape/02979d67c706a6886ef581ec3af63f1c67325a24> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumber.identifies";
   shacl:description "The entity that is referenced by the Identifier."@en;
@@ -2153,14 +2153,14 @@ and managed by a Base Registry Service."""@en;
   shacl:description "It indicates the Period of Time in which the resource is valid."@en;
   shacl:maxCount 1;
   shacl:name "has validity period"@en;
-  shacl:path <https://w3id.org/str/hasValidityPeriod>;
+  shacl:path <https://w3id.org/str#hasValidityPeriod>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for has validity period"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape/73fbba98aa00a91953e1cf81d9810a2b3bf506dd> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumber.hasvalidityperiod";
   shacl:class dc:PeriodOfTime;
   shacl:description "It indicates the Period of Time in which the resource is valid."@en;
   shacl:name "has validity period"@en;
-  shacl:path <https://w3id.org/str/hasValidityPeriod>;
+  shacl:path <https://w3id.org/str#hasValidityPeriod>;
   <https://purl.eu/ns/shacl#message> "The range of has validity period must be of type <http://purl.org/dc/terms/PeriodOfTime>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape/7b58580d6ba4b19971bff315fc2642c01ff708aa> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumber.identifies";
@@ -2188,15 +2188,15 @@ and managed by a Base Registry Service."""@en;
   shacl:description "It indicates the Period of Time in which the resource is valid."@en;
   shacl:name "has validity period"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasValidityPeriod>;
+  shacl:path <https://w3id.org/str#hasValidityPeriod>;
   <https://purl.eu/ns/shacl#message> "The expected value for has validity period is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape/c623dd0ee9911f8266a229393e26001684e14eaf> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumber.identifies";
-  shacl:class <https://w3id.org/str/Unit>;
+  shacl:class <https://w3id.org/str#Unit>;
   shacl:description "The entity that is referenced by the Identifier."@en;
   shacl:name "identifies"@en;
   shacl:path <http://data.europa.eu/m8g/identifies>;
-  <https://purl.eu/ns/shacl#message> "The range of identifies must be of type <https://w3id.org/str/Unit>."@en .
+  <https://purl.eu/ns/shacl#message> "The range of identifies must be of type <https://w3id.org/str#Unit>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape> a shacl:NodeShape;
   shacl:closed false;
@@ -2207,14 +2207,14 @@ and managed by a Base Registry Service."""@en;
     <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/c90e5c04bef13b3fd1b18723bae26a49b7b704c1>,
     <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/ce8eb8d70b0315b592091191b2a34b661e18032b>,
     <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/d48349f1f6bda80f4465115b500eea9daa813424>;
-  shacl:targetClass <https://w3id.org/str/RegistrationProcedure> .
+  shacl:targetClass <https://w3id.org/str#RegistrationProcedure> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/53bd38e3d33ba488ee41d290d32c1df211accc84> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedure.produces";
-  shacl:class <https://w3id.org/str/RegistrationNumber>;
+  shacl:class <https://w3id.org/str#RegistrationNumber>;
   shacl:description "It indicates the Registration Number produced."@en;
   shacl:name "produces"@en;
-  shacl:path <https://w3id.org/str/produces>;
-  <https://purl.eu/ns/shacl#message> "The range of produces must be of type <https://w3id.org/str/RegistrationNumber>."@en .
+  shacl:path <https://w3id.org/str#produces>;
+  <https://purl.eu/ns/shacl#message> "The range of produces must be of type <https://w3id.org/str#RegistrationNumber>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedure.hascost";
   shacl:class <http://data.europa.eu/m8g/Cost>;
@@ -2227,28 +2227,28 @@ and managed by a Base Registry Service."""@en;
   shacl:description "It indicates the Registration Number produced."@en;
   shacl:maxCount 1;
   shacl:name "produces"@en;
-  shacl:path <https://w3id.org/str/produces>;
+  shacl:path <https://w3id.org/str#produces>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for produces"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/8e469beea96ca1eac530a78c7268fb9aa72ba6a0> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedure.hasinput";
   shacl:class foaf:Document;
   shacl:description "It indicated the Document provided as input."@en;
   shacl:name "has input"@en;
-  shacl:path <https://w3id.org/str/hasInput>;
+  shacl:path <https://w3id.org/str#hasInput>;
   <https://purl.eu/ns/shacl#message> "The range of has input must be of type <http://xmlns.com/foaf/0.1/Document>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/c90e5c04bef13b3fd1b18723bae26a49b7b704c1> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedure.produces";
   shacl:description "It indicates the Registration Number produced."@en;
   shacl:name "produces"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/produces>;
+  shacl:path <https://w3id.org/str#produces>;
   <https://purl.eu/ns/shacl#message> "The expected value for produces is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/ce8eb8d70b0315b592091191b2a34b661e18032b> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedure.hasinput";
   shacl:description "It indicated the Document provided as input."@en;
   shacl:name "has input"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasInput>;
+  shacl:path <https://w3id.org/str#hasInput>;
   <https://purl.eu/ns/shacl#message> "The expected value for has input is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/d48349f1f6bda80f4465115b500eea9daa813424> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedure.hascost";
@@ -2263,27 +2263,27 @@ and managed by a Base Registry Service."""@en;
   shacl:property <https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7>,
     <https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485>,
     <https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalServiceShape/c1e801feb755f4a21b24faffda85b9290ef0ad55>;
-  shacl:targetClass <https://w3id.org/str/STAccomondationRentalService> .
+  shacl:targetClass <https://w3id.org/str#STAccomondationRentalService> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto";
-  shacl:class <https://w3id.org/str/OnlineSTRentalPlatform>;
+  shacl:class <https://w3id.org/str#OnlineSTRentalPlatform>;
   shacl:description "It indicates the Online Short Term Rental Platform being accessed by the service."@en;
   shacl:name "provides access to"@en;
-  shacl:path <https://w3id.org/str/providesAccessTo>;
-  <https://purl.eu/ns/shacl#message> "The range of provides access to must be of type <https://w3id.org/str/OnlineSTRentalPlatform>."@en .
+  shacl:path <https://w3id.org/str#providesAccessTo>;
+  <https://purl.eu/ns/shacl#message> "The range of provides access to must be of type <https://w3id.org/str#OnlineSTRentalPlatform>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto";
   shacl:description "It indicates the Online Short Term Rental Platform being accessed by the service."@en;
   shacl:minCount 1;
   shacl:name "provides access to"@en;
-  shacl:path <https://w3id.org/str/providesAccessTo>;
+  shacl:path <https://w3id.org/str#providesAccessTo>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for provides access to"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalServiceShape/c1e801feb755f4a21b24faffda85b9290ef0ad55> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto";
   shacl:description "It indicates the Online Short Term Rental Platform being accessed by the service."@en;
   shacl:name "provides access to"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/providesAccessTo>;
+  shacl:path <https://w3id.org/str#providesAccessTo>;
   <https://purl.eu/ns/shacl#message> "The expected value for provides access to is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape> a shacl:NodeShape;
@@ -2292,34 +2292,34 @@ and managed by a Base Registry Service."""@en;
     <https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape/75936dec380ffbbfcdde6c50cf08fe59666b3ae2>,
     <https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape/7c93fd6b0b01f01edd22c5d427afec4f20ec2b88>,
     <https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape/a315bc125916d6005403a8ad2001b5d86d5b17bb>;
-  shacl:targetClass <https://w3id.org/str/SingleDigitalEntryPoint> .
+  shacl:targetClass <https://w3id.org/str#SingleDigitalEntryPoint> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape/098ba10a583641e0e96f1b08648e9a7a54f8e575> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPoint.hasnationalcoordinator";
   shacl:description "It indicates the Person appointed as national coordinator."@en;
   shacl:name "has national coordinator"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasNationalCoordinator>;
+  shacl:path <https://w3id.org/str#hasNationalCoordinator>;
   <https://purl.eu/ns/shacl#message> "The expected value for has national coordinator is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape/75936dec380ffbbfcdde6c50cf08fe59666b3ae2> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPoint.hasnationalcoordinator";
   shacl:description "It indicates the Person appointed as national coordinator."@en;
   shacl:minCount 1;
   shacl:name "has national coordinator"@en;
-  shacl:path <https://w3id.org/str/hasNationalCoordinator>;
+  shacl:path <https://w3id.org/str#hasNationalCoordinator>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for has national coordinator"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape/7c93fd6b0b01f01edd22c5d427afec4f20ec2b88> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPoint.hasnationalcoordinator";
   shacl:class <http://www.w3.org/ns/person#Person>;
   shacl:description "It indicates the Person appointed as national coordinator."@en;
   shacl:name "has national coordinator"@en;
-  shacl:path <https://w3id.org/str/hasNationalCoordinator>;
+  shacl:path <https://w3id.org/str#hasNationalCoordinator>;
   <https://purl.eu/ns/shacl#message> "The range of has national coordinator must be of type <http://www.w3.org/ns/person#Person>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape/a315bc125916d6005403a8ad2001b5d86d5b17bb> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPoint.hasnationalcoordinator";
   shacl:description "It indicates the Person appointed as national coordinator."@en;
   shacl:maxCount 1;
   shacl:name "has national coordinator"@en;
-  shacl:path <https://w3id.org/str/hasNationalCoordinator>;
+  shacl:path <https://w3id.org/str#hasNationalCoordinator>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for has national coordinator"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#TemporalLiteralShape> a shacl:NodeShape;
@@ -2374,34 +2374,34 @@ and managed by a Base Registry Service."""@en;
     <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/ef003961d29fc6f49d4064fde9cf146a04b2fa63>,
     <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/f544a89175bc344cf02b7d8c7cfe4ef86624a572>,
     <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/f99a22d163e98475e81c1931fc5c74d12bcb2f69>;
-  shacl:targetClass <https://w3id.org/str/Unit> .
+  shacl:targetClass <https://w3id.org/str#Unit> .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/0986b58f41b6ddc65700bbf3df7b3cbccee4bf85> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.occupancy";
   shacl:description "The maximum number of guests that the unit accommodates."@en;
   shacl:name "occupancy"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/occupancy>;
+  shacl:path <https://w3id.org/str#occupancy>;
   <https://purl.eu/ns/shacl#message> "The expected value for occupancy is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/0ce49fb97d596316baca7f55a091ceb00385e97c> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.isauthorizationobtained";
   shacl:datatype xsd:boolean;
   shacl:description "it indicates whether the host has obtained an authorisation for the Unit."@en;
   shacl:name "is authorization obtained"@en;
-  shacl:path <https://w3id.org/str/isAuthorizationObtained>;
+  shacl:path <https://w3id.org/str#isAuthorizationObtained>;
   <https://purl.eu/ns/shacl#message> "The range of is authorization obtained must be of type <http://www.w3.org/2001/XMLSchema#boolean>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/12c9a7f8405aaa436e890397da9bca16d34e102a> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.issubjecttoauthorization";
   shacl:description "It indicates whether the Unit is subject to authorization."@en;
   shacl:maxCount 1;
   shacl:name "is subject to authorization"@en;
-  shacl:path <https://w3id.org/str/isSubjectToAuthorization>;
+  shacl:path <https://w3id.org/str#isSubjectToAuthorization>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for is subject to authorization"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/184e142eab427c6c7e47283d042326282a61dfd1> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.purpose";
   shacl:description "It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes."@en;
   shacl:minCount 1;
   shacl:name "purpose"@en;
-  shacl:path <https://w3id.org/str/purpose>;
+  shacl:path <https://w3id.org/str#purpose>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for purpose"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.type";
@@ -2415,22 +2415,22 @@ and managed by a Base Registry Service."""@en;
   shacl:description "It indicated the document attesting the authorization."@en;
   shacl:name "has authorization"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasAuthorization>;
+  shacl:path <https://w3id.org/str#hasAuthorization>;
   <https://purl.eu/ns/shacl#message> "The expected value for has authorization is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/30c2de1b85595fb7b8ff738893031cf824165ba1> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.purpose";
   shacl:description "It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes."@en;
   shacl:maxCount 1;
   shacl:name "purpose"@en;
-  shacl:path <https://w3id.org/str/purpose>;
+  shacl:path <https://w3id.org/str#purpose>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for purpose"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/31111627cb358a7f982659fa9ae497c12260ab23> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.hasactivitydata";
-  shacl:class <https://w3id.org/str/ActivityData>;
+  shacl:class <https://w3id.org/str#ActivityData>;
   shacl:description "The activity data associated to the Unit."@en;
   shacl:name "has activity data"@en;
-  shacl:path <https://w3id.org/str/hasActivityData>;
-  <https://purl.eu/ns/shacl#message> "The range of has activity data must be of type <https://w3id.org/str/ActivityData>."@en .
+  shacl:path <https://w3id.org/str#hasActivityData>;
+  <https://purl.eu/ns/shacl#message> "The range of has activity data must be of type <https://w3id.org/str#ActivityData>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.type";
   shacl:class skos:Concept;
@@ -2450,7 +2450,7 @@ and managed by a Base Registry Service."""@en;
   shacl:description "The maximum number of available bed places."@en;
   shacl:minCount 1;
   shacl:name "number of bedrooms"@en;
-  shacl:path <https://w3id.org/str/numberOfBedrooms>;
+  shacl:path <https://w3id.org/str#numberOfBedrooms>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for number of bedrooms"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.type";
@@ -2464,55 +2464,55 @@ and managed by a Base Registry Service."""@en;
   shacl:datatype rdf:langString;
   shacl:description "The level of the floor of the Unit as textual description."@en;
   shacl:name "floor level"@en;
-  shacl:path <https://w3id.org/str/floorLevel>;
+  shacl:path <https://w3id.org/str#floorLevel>;
   <https://purl.eu/ns/shacl#message> "The range of floor level must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/53d180ae4c9433263fc38d0a7ce200289bcc91b3> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.hasunitaddress";
   shacl:description "The specific address of the Unit."@en;
   shacl:maxCount 1;
   shacl:name "has unit address"@en;
-  shacl:path <https://w3id.org/str/hasUnitAddress>;
+  shacl:path <https://w3id.org/str#hasUnitAddress>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for has unit address"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/53f7190678e85e0de9a2f418dd6db3f0d847bd31> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.occupancy";
   shacl:datatype xsd:nonNegativeInteger;
   shacl:description "The maximum number of guests that the unit accommodates."@en;
   shacl:name "occupancy"@en;
-  shacl:path <https://w3id.org/str/occupancy>;
+  shacl:path <https://w3id.org/str#occupancy>;
   <https://purl.eu/ns/shacl#message> "The range of occupancy must be of type <http://www.w3.org/2001/XMLSchema#nonNegativeInteger>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/5cfe0e820d01d2310ed73910aaec00dae288644d> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.isauthorizationobtained";
   shacl:description "it indicates whether the host has obtained an authorisation for the Unit."@en;
   shacl:name "is authorization obtained"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/isAuthorizationObtained>;
+  shacl:path <https://w3id.org/str#isAuthorizationObtained>;
   <https://purl.eu/ns/shacl#message> "The expected value for is authorization obtained is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/652baf9ce9c2a6ac8ffb513df060b75499e8148a> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.floorlevel";
   shacl:description "The level of the floor of the Unit as textual description."@en;
   shacl:maxCount 1;
   shacl:name "floor level"@en;
-  shacl:path <https://w3id.org/str/floorLevel>;
+  shacl:path <https://w3id.org/str#floorLevel>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for floor level"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/65edd2fc49d0d7e78bf5cabfaaa813725308a9c4> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.hasauthorization";
   shacl:description "It indicated the document attesting the authorization."@en;
   shacl:maxCount 1;
   shacl:name "has authorization"@en;
-  shacl:path <https://w3id.org/str/hasAuthorization>;
+  shacl:path <https://w3id.org/str#hasAuthorization>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for has authorization"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/6658fd8bec456983088457c514485a6c839cd056> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.numberofbedrooms";
   shacl:datatype xsd:nonNegativeInteger;
   shacl:description "The maximum number of available bed places."@en;
   shacl:name "number of bedrooms"@en;
-  shacl:path <https://w3id.org/str/numberOfBedrooms>;
+  shacl:path <https://w3id.org/str#numberOfBedrooms>;
   <https://purl.eu/ns/shacl#message> "The range of number of bedrooms must be of type <http://www.w3.org/2001/XMLSchema#nonNegativeInteger>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/6b9f146f1aeab232cd8359f58b0b21a1193ee9ca> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.purpose";
   shacl:description "It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes."@en;
   shacl:name "purpose"@en;
-  shacl:path <https://w3id.org/str/purpose>;
+  shacl:path <https://w3id.org/str#purpose>;
   shacl:uniqueLang true;
   <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for purpose"@en .
 
@@ -2520,7 +2520,7 @@ and managed by a Base Registry Service."""@en;
   shacl:description "The specific address of the Unit."@en;
   shacl:minCount 1;
   shacl:name "has unit address"@en;
-  shacl:path <https://w3id.org/str/hasUnitAddress>;
+  shacl:path <https://w3id.org/str#hasUnitAddress>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for has unit address"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/6cae9880e515253132af1452a38a8a5827165149> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.description";
@@ -2534,7 +2534,7 @@ and managed by a Base Registry Service."""@en;
   shacl:description "The level of the floor of the Unit as textual description."@en;
   shacl:name "floor level"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/floorLevel>;
+  shacl:path <https://w3id.org/str#floorLevel>;
   <https://purl.eu/ns/shacl#message> "The expected value for floor level is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.type";
@@ -2555,49 +2555,49 @@ and managed by a Base Registry Service."""@en;
   shacl:datatype xsd:boolean;
   shacl:description "It indicates whether the Unit is subject to authorization."@en;
   shacl:name "is subject to authorization"@en;
-  shacl:path <https://w3id.org/str/isSubjectToAuthorization>;
+  shacl:path <https://w3id.org/str#isSubjectToAuthorization>;
   <https://purl.eu/ns/shacl#message> "The range of is subject to authorization must be of type <http://www.w3.org/2001/XMLSchema#boolean>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/8662a1e162ca0ebe52611bf26791584c89c3de70> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.purpose";
   shacl:datatype rdf:langString;
   shacl:description "It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes."@en;
   shacl:name "purpose"@en;
-  shacl:path <https://w3id.org/str/purpose>;
+  shacl:path <https://w3id.org/str#purpose>;
   <https://purl.eu/ns/shacl#message> "The range of purpose must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/8932cdc11dcea78a104fe961daef62e126485fc3> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.purpose";
   shacl:description "It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes."@en;
   shacl:name "purpose"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/purpose>;
+  shacl:path <https://w3id.org/str#purpose>;
   <https://purl.eu/ns/shacl#message> "The expected value for purpose is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/89c4fde388a82204ae99f86bc6736787e0215378> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.hasactivitydata";
   shacl:description "The activity data associated to the Unit."@en;
   shacl:name "has activity data"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasActivityData>;
+  shacl:path <https://w3id.org/str#hasActivityData>;
   <https://purl.eu/ns/shacl#message> "The expected value for has activity data is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/8dfba9a652c34cb37478f1208bfb0a93d0854a81> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.hasunitaddress";
   shacl:description "The specific address of the Unit."@en;
   shacl:name "has unit address"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <https://w3id.org/str/hasUnitAddress>;
+  shacl:path <https://w3id.org/str#hasUnitAddress>;
   <https://purl.eu/ns/shacl#message> "The expected value for has unit address is a rdfs:Resource (URI or blank node)"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/9b3612c89abb019f783fec2020641c8dcad8b320> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.occupancy";
   shacl:description "The maximum number of guests that the unit accommodates."@en;
   shacl:maxCount 1;
   shacl:name "occupancy"@en;
-  shacl:path <https://w3id.org/str/occupancy>;
+  shacl:path <https://w3id.org/str#occupancy>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for occupancy"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/9fc8f49ed06ee6935fcbc6ff935df6485e3416e7> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.isauthorizationobtained";
   shacl:description "it indicates whether the host has obtained an authorisation for the Unit."@en;
   shacl:maxCount 1;
   shacl:name "is authorization obtained"@en;
-  shacl:path <https://w3id.org/str/isAuthorizationObtained>;
+  shacl:path <https://w3id.org/str#isAuthorizationObtained>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for is authorization obtained"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.identifier";
@@ -2611,21 +2611,21 @@ and managed by a Base Registry Service."""@en;
   shacl:description "It indicates whether the Unit is subject to authorization."@en;
   shacl:name "is subject to authorization"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/isSubjectToAuthorization>;
+  shacl:path <https://w3id.org/str#isSubjectToAuthorization>;
   <https://purl.eu/ns/shacl#message> "The expected value for is subject to authorization is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/bb233272ce969ce614137a62d27506e28b5feee1> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.hasunitaddress";
   shacl:class <http://www.w3.org/ns/locn#Address>;
   shacl:description "The specific address of the Unit."@en;
   shacl:name "has unit address"@en;
-  shacl:path <https://w3id.org/str/hasUnitAddress>;
+  shacl:path <https://w3id.org/str#hasUnitAddress>;
   <https://purl.eu/ns/shacl#message> "The range of has unit address must be of type <http://www.w3.org/ns/locn#Address>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/c0c453532d8bf22ffafb3d0aefa0a88e4f12348f> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.hasauthorization";
   shacl:class foaf:Document;
   shacl:description "It indicated the document attesting the authorization."@en;
   shacl:name "has authorization"@en;
-  shacl:path <https://w3id.org/str/hasAuthorization>;
+  shacl:path <https://w3id.org/str#hasAuthorization>;
   <https://purl.eu/ns/shacl#message> "The range of has authorization must be of type <http://xmlns.com/foaf/0.1/Document>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.description";
@@ -2636,37 +2636,37 @@ and managed by a Base Registry Service."""@en;
   <https://purl.eu/ns/shacl#message> "The range of description must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/e2017f72421063cd9ff494011ec78f35f9632a4a> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.identifier";
-  shacl:class <https://w3id.org/str/RegistrationNumber>;
+  shacl:class <https://w3id.org/str#RegistrationNumber>;
   shacl:description "Links a resource to an adms:Identifier class."@en;
   shacl:name "identifier"@en;
   shacl:path <http://www.w3.org/ns/adms#identifier>;
-  <https://purl.eu/ns/shacl#message> "The range of identifier must be of type <https://w3id.org/str/RegistrationNumber>."@en .
+  <https://purl.eu/ns/shacl#message> "The range of identifier must be of type <https://w3id.org/str#RegistrationNumber>."@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/e5becd8a26ce63dce7f0c84e338a2ceef2611f83> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.numberofbedrooms";
   shacl:description "The maximum number of available bed places."@en;
   shacl:maxCount 1;
   shacl:name "number of bedrooms"@en;
-  shacl:path <https://w3id.org/str/numberOfBedrooms>;
+  shacl:path <https://w3id.org/str#numberOfBedrooms>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for number of bedrooms"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/ef003961d29fc6f49d4064fde9cf146a04b2fa63> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.occupancy";
   shacl:description "The maximum number of guests that the unit accommodates."@en;
   shacl:minCount 1;
   shacl:name "occupancy"@en;
-  shacl:path <https://w3id.org/str/occupancy>;
+  shacl:path <https://w3id.org/str#occupancy>;
   <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for occupancy"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/f544a89175bc344cf02b7d8c7cfe4ef86624a572> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.numberofbedrooms";
   shacl:description "The maximum number of available bed places."@en;
   shacl:name "number of bedrooms"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://w3id.org/str/numberOfBedrooms>;
+  shacl:path <https://w3id.org/str#numberOfBedrooms>;
   <https://purl.eu/ns/shacl#message> "The expected value for number of bedrooms is a Literal"@en .
 
 <https://semiceu.github.io/STR/releases/1.0.0#UnitShape/f99a22d163e98475e81c1931fc5c74d12bcb2f69> rdfs:seeAlso "https://semiceu.github.io/STR/releases/1.0.0#Unit.floorlevel";
   shacl:description "The level of the floor of the Unit as textual description."@en;
   shacl:name "floor level"@en;
-  shacl:path <https://w3id.org/str/floorLevel>;
+  shacl:path <https://w3id.org/str#floorLevel>;
   shacl:uniqueLang true;
   <https://purl.eu/ns/shacl#message> "Only 1 value for each language is allowed for floor level"@en .
 

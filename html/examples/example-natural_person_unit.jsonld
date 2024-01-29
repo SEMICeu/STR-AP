@@ -13,7 +13,7 @@
     "person": "http://www.w3.org/ns/person#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "str": "https://w3id.org/str/",
+    "str": "https://w3id.org/str#",
     "time": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
    }
@@ -76,8 +76,14 @@
     {
       "@id": "ex:unit1",
       "@type": "Unit",
-      "str:numberOfBedrooms": "1",
-      "str:occupancy": "2",
+      "str:numberOfBedrooms": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "1"
+      },
+      "str:occupancy": {
+        "@type": "xsd:nonNegativeInteger",
+        "@value": "2"
+      },
       "str:floorLevel": {
         "@language": "fr",
         "@value": "2eme étage"
@@ -87,11 +93,15 @@
         "@value": "Maison partagée avec étage privé"
       },
       "dct:type" : {
-        "@id": "ex:logementPartage"
+        "@id": "ex:sharedHouse"
       },
       "str:hasUnitAddress" : {
         "@id": "ex:address1"
       }
+    },
+    {
+      "@id": "ex:sharedHouse",
+      "@type": "Concept",
     }
   ]
 }

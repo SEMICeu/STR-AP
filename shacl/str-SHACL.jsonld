@@ -448,7 +448,7 @@
             "en": "notifies"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/notifies",
+          "sh:path": "https://w3id.org/str#notifies",
           "vl:message": {
             "en": "The expected value for notifies is a rdfs:Resource (URI or blank node)"
           }
@@ -463,7 +463,7 @@
             "en": "notifies"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/notifies",
+          "sh:path": "https://w3id.org/str#notifies",
           "vl:message": {
             "en": "The expected value for notifies is a rdfs:Resource (URI or blank node)"
           }
@@ -508,7 +508,7 @@
           "sh:name": {
             "en": "notifies"
           },
-          "sh:path": "https://w3id.org/str/notifies",
+          "sh:path": "https://w3id.org/str#notifies",
           "vl:message": {
             "en": "The range of notifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."
           }
@@ -523,7 +523,7 @@
           "sh:name": {
             "en": "notifies"
           },
-          "sh:path": "https://w3id.org/str/notifies",
+          "sh:path": "https://w3id.org/str#notifies",
           "vl:message": {
             "en": "The range of notifies must be of type <http://www.w3.org/ns/person#Person>."
           }
@@ -583,7 +583,7 @@
           "sh:name": {
             "en": "is responsible for"
           },
-          "sh:path": "https://w3id.org/str/isResponsibleFor",
+          "sh:path": "https://w3id.org/str#isResponsibleFor",
           "vl:message": {
             "en": "Maximally 1 values allowed for is responsible for"
           }
@@ -598,7 +598,7 @@
             "en": "is responsible for"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/isResponsibleFor",
+          "sh:path": "https://w3id.org/str#isResponsibleFor",
           "vl:message": {
             "en": "The expected value for is responsible for is a rdfs:Resource (URI or blank node)"
           }
@@ -628,7 +628,7 @@
             "en": "issues"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/issues",
+          "sh:path": "https://w3id.org/str#issues",
           "vl:message": {
             "en": "The expected value for issues is a rdfs:Resource (URI or blank node)"
           }
@@ -681,16 +681,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/8fb31f650d30d25e4d30f4d255e9c1877f5d7fa3",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.isresponsiblefor",
-          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
+          "sh:class": "https://w3id.org/str#SingleDigitalEntryPoint",
           "sh:description": {
             "en": "It indicates the Single Digital Entry Point being managed."
           },
           "sh:name": {
             "en": "is responsible for"
           },
-          "sh:path": "https://w3id.org/str/isResponsibleFor",
+          "sh:path": "https://w3id.org/str#isResponsibleFor",
           "vl:message": {
-            "en": "The range of is responsible for must be of type <https://w3id.org/str/SingleDigitalEntryPoint>."
+            "en": "The range of is responsible for must be of type <https://w3id.org/str#SingleDigitalEntryPoint>."
           }
         },
         {
@@ -703,7 +703,7 @@
           "sh:name": {
             "en": "verifies"
           },
-          "sh:path": "https://w3id.org/str/verifies",
+          "sh:path": "https://w3id.org/str#verifies",
           "vl:message": {
             "en": "The range of verifies must be of type <http://xmlns.com/foaf/0.1/Document>."
           }
@@ -741,16 +741,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisationShape/c9fffe20eccf0e1883a426d0976d6e66c16f6c71",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#PublicOrganisation.issues",
-          "sh:class": "https://w3id.org/str/Order",
+          "sh:class": "https://w3id.org/str#Order",
           "sh:description": {
             "en": "It indicates ther Order issued."
           },
           "sh:name": {
             "en": "issues"
           },
-          "sh:path": "https://w3id.org/str/issues",
+          "sh:path": "https://w3id.org/str#issues",
           "vl:message": {
-            "en": "The range of issues must be of type <https://w3id.org/str/Order>."
+            "en": "The range of issues must be of type <https://w3id.org/str#Order>."
           }
         },
         {
@@ -778,7 +778,7 @@
             "en": "verifies"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/verifies",
+          "sh:path": "https://w3id.org/str#verifies",
           "vl:message": {
             "en": "The expected value for verifies is a rdfs:Resource (URI or blank node)"
           }
@@ -1511,21 +1511,6 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Identifier.identifies",
-          "sh:class": "http://www.w3.org/ns/legal#LegalEntity",
-          "sh:description": {
-            "en": "The entity that is referenced by the Identifier."
-          },
-          "sh:name": {
-            "en": "identifies"
-          },
-          "sh:path": "http://data.europa.eu/m8g/identifies",
-          "vl:message": {
-            "en": "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io/STR/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Identifier.identifies",
           "sh:class": "http://www.w3.org/ns/person#Person",
           "sh:description": {
             "en": "The entity that is referenced by the Identifier."
@@ -1536,6 +1521,21 @@
           "sh:path": "http://data.europa.eu/m8g/identifies",
           "vl:message": {
             "en": "The range of identifies must be of type <http://www.w3.org/ns/person#Person>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/STR/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Identifier.identifies",
+          "sh:class": "http://www.w3.org/ns/legal#LegalEntity",
+          "sh:description": {
+            "en": "The entity that is referenced by the Identifier."
+          },
+          "sh:name": {
+            "en": "identifies"
+          },
+          "sh:path": "http://data.europa.eu/m8g/identifies",
+          "vl:message": {
+            "en": "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."
           }
         },
         {
@@ -1843,7 +1843,7 @@
             "en": "has listing"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasListing",
+          "sh:path": "https://w3id.org/str#hasListing",
           "vl:message": {
             "en": "The expected value for has listing is a rdfs:Resource (URI or blank node)"
           }
@@ -1851,16 +1851,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#DistributionShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Distribution.haslisting",
-          "sh:class": "https://w3id.org/str/Unit",
+          "sh:class": "https://w3id.org/str#Unit",
           "sh:description": {
             "en": "It indicates the Unit listed."
           },
           "sh:name": {
             "en": "has listing"
           },
-          "sh:path": "https://w3id.org/str/hasListing",
+          "sh:path": "https://w3id.org/str#hasListing",
           "vl:message": {
-            "en": "The range of has listing must be of type <https://w3id.org/str/Unit>."
+            "en": "The range of has listing must be of type <https://w3id.org/str#Unit>."
           }
         }
       ],
@@ -1941,16 +1941,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#LegalEntityShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#LegalEntity.offers",
-          "sh:class": "https://w3id.org/str/STAccomondationRentalService",
+          "sh:class": "https://w3id.org/str#STAccomondationRentalService",
           "sh:description": {
             "en": "It indicates the rental service offered."
           },
           "sh:name": {
             "en": "offers"
           },
-          "sh:path": "https://w3id.org/str/offers",
+          "sh:path": "https://w3id.org/str#offers",
           "vl:message": {
-            "en": "The range of offers must be of type <https://w3id.org/str/STAccomondationRentalService>."
+            "en": "The range of offers must be of type <https://w3id.org/str#STAccomondationRentalService>."
           }
         },
         {
@@ -1963,7 +1963,7 @@
             "en": "offers"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/offers",
+          "sh:path": "https://w3id.org/str#offers",
           "vl:message": {
             "en": "The expected value for offers is a rdfs:Resource (URI or blank node)"
           }
@@ -1993,7 +1993,7 @@
           "sh:name": {
             "en": "provides"
           },
-          "sh:path": "https://w3id.org/str/provides",
+          "sh:path": "https://w3id.org/str#provides",
           "vl:message": {
             "en": "The range of provides must be of type <http://xmlns.com/foaf/0.1/Document>."
           }
@@ -2008,7 +2008,7 @@
           "sh:name": {
             "en": "has legal representative"
           },
-          "sh:path": "https://w3id.org/str/hasLegalRepresentative",
+          "sh:path": "https://w3id.org/str#hasLegalRepresentative",
           "vl:message": {
             "en": "Minimally 1 values are expected for has legal representative"
           }
@@ -2023,7 +2023,7 @@
           "sh:name": {
             "en": "has legal representative"
           },
-          "sh:path": "https://w3id.org/str/hasLegalRepresentative",
+          "sh:path": "https://w3id.org/str#hasLegalRepresentative",
           "vl:message": {
             "en": "The range of has legal representative must be of type <http://www.w3.org/ns/person#Person>."
           }
@@ -2068,7 +2068,7 @@
             "en": "has legal representative"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasLegalRepresentative",
+          "sh:path": "https://w3id.org/str#hasLegalRepresentative",
           "vl:message": {
             "en": "The expected value for has legal representative is a rdfs:Resource (URI or blank node)"
           }
@@ -2158,7 +2158,7 @@
             "en": "provides"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/provides",
+          "sh:path": "https://w3id.org/str#provides",
           "vl:message": {
             "en": "The expected value for provides is a rdfs:Resource (URI or blank node)"
           }
@@ -2316,7 +2316,7 @@
           "sh:name": {
             "en": "land register"
           },
-          "sh:path": "https://w3id.org/str/landRegister",
+          "sh:path": "https://w3id.org/str#landRegister",
           "vl:message": {
             "en": "Maximally 1 values allowed for land register"
           }
@@ -2331,7 +2331,7 @@
           "sh:name": {
             "en": "land register"
           },
-          "sh:path": "https://w3id.org/str/landRegister",
+          "sh:path": "https://w3id.org/str#landRegister",
           "vl:message": {
             "en": "The range of land register must be of type <http://www.w3.org/ns/dcat#Dataset>."
           }
@@ -2691,7 +2691,7 @@
             "en": "land register"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/landRegister",
+          "sh:path": "https://w3id.org/str#landRegister",
           "vl:message": {
             "en": "The expected value for land register is a rdfs:Resource (URI or blank node)"
           }
@@ -2804,16 +2804,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#PersonShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Person.offers",
-          "sh:class": "https://w3id.org/str/STAccomondationRentalService",
+          "sh:class": "https://w3id.org/str#STAccomondationRentalService",
           "sh:description": {
             "en": "It indicates the rental service offered."
           },
           "sh:name": {
             "en": "offers"
           },
-          "sh:path": "https://w3id.org/str/offers",
+          "sh:path": "https://w3id.org/str#offers",
           "vl:message": {
-            "en": "The range of offers must be of type <https://w3id.org/str/STAccomondationRentalService>."
+            "en": "The range of offers must be of type <https://w3id.org/str#STAccomondationRentalService>."
           }
         },
         {
@@ -2871,7 +2871,7 @@
             "en": "offers"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/offers",
+          "sh:path": "https://w3id.org/str#offers",
           "vl:message": {
             "en": "The expected value for offers is a rdfs:Resource (URI or blank node)"
           }
@@ -2946,7 +2946,7 @@
           "sh:name": {
             "en": "provides"
           },
-          "sh:path": "https://w3id.org/str/provides",
+          "sh:path": "https://w3id.org/str#provides",
           "vl:message": {
             "en": "The range of provides must be of type <http://xmlns.com/foaf/0.1/Document>."
           }
@@ -3111,7 +3111,7 @@
             "en": "provides"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/provides",
+          "sh:path": "https://w3id.org/str#provides",
           "vl:message": {
             "en": "The expected value for provides is a rdfs:Resource (URI or blank node)"
           }
@@ -3149,7 +3149,7 @@
             "en": "submission date"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/submissionDate",
+          "sh:path": "https://w3id.org/str#submissionDate",
           "vl:message": {
             "en": "The expected value for submission date is a Literal"
           }
@@ -3164,7 +3164,7 @@
           "sh:name": {
             "en": "update date"
           },
-          "sh:path": "https://w3id.org/str/updateDate",
+          "sh:path": "https://w3id.org/str#updateDate",
           "vl:message": {
             "en": "The range of update date must be of type <http://www.w3.org/2001/XMLSchema#dateTime>."
           }
@@ -3179,7 +3179,7 @@
             "en": "describes"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/describes",
+          "sh:path": "https://w3id.org/str#describes",
           "vl:message": {
             "en": "The expected value for describes is a rdfs:Resource (URI or blank node)"
           }
@@ -3194,7 +3194,7 @@
           "sh:name": {
             "en": "submission date"
           },
-          "sh:path": "https://w3id.org/str/submissionDate",
+          "sh:path": "https://w3id.org/str#submissionDate",
           "vl:message": {
             "en": "The range of submission date must be of type <http://www.w3.org/2001/XMLSchema#dateTime>."
           }
@@ -3209,7 +3209,7 @@
           "sh:name": {
             "en": "describes"
           },
-          "sh:path": "https://w3id.org/str/describes",
+          "sh:path": "https://w3id.org/str#describes",
           "vl:message": {
             "en": "Maximally 1 values allowed for describes"
           }
@@ -3224,7 +3224,7 @@
           "sh:name": {
             "en": "has validity period"
           },
-          "sh:path": "https://w3id.org/str/hasValidityPeriod",
+          "sh:path": "https://w3id.org/str#hasValidityPeriod",
           "vl:message": {
             "en": "Maximally 1 values allowed for has validity period"
           }
@@ -3239,7 +3239,7 @@
           "sh:name": {
             "en": "has validity period"
           },
-          "sh:path": "https://w3id.org/str/hasValidityPeriod",
+          "sh:path": "https://w3id.org/str#hasValidityPeriod",
           "vl:message": {
             "en": "The range of has validity period must be of type <http://purl.org/dc/terms/PeriodOfTime>."
           }
@@ -3254,7 +3254,7 @@
             "en": "update date"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/updateDate",
+          "sh:path": "https://w3id.org/str#updateDate",
           "vl:message": {
             "en": "The expected value for update date is a Literal"
           }
@@ -3269,7 +3269,7 @@
           "sh:name": {
             "en": "update date"
           },
-          "sh:path": "https://w3id.org/str/updateDate",
+          "sh:path": "https://w3id.org/str#updateDate",
           "vl:message": {
             "en": "Maximally 1 values allowed for update date"
           }
@@ -3284,7 +3284,7 @@
             "en": "has validity period"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasValidityPeriod",
+          "sh:path": "https://w3id.org/str#hasValidityPeriod",
           "vl:message": {
             "en": "The expected value for has validity period is a rdfs:Resource (URI or blank node)"
           }
@@ -3299,7 +3299,7 @@
           "sh:name": {
             "en": "submission date"
           },
-          "sh:path": "https://w3id.org/str/submissionDate",
+          "sh:path": "https://w3id.org/str#submissionDate",
           "vl:message": {
             "en": "Maximally 1 values allowed for submission date"
           }
@@ -3314,7 +3314,7 @@
           "sh:name": {
             "en": "submission date"
           },
-          "sh:path": "https://w3id.org/str/submissionDate",
+          "sh:path": "https://w3id.org/str#submissionDate",
           "vl:message": {
             "en": "Minimally 1 values are expected for submission date"
           }
@@ -3322,16 +3322,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#DocumentShape/e64b135aa5770a921a6738287316722c7a7dd679",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Document.describes",
-          "sh:class": "https://w3id.org/str/Unit",
+          "sh:class": "https://w3id.org/str#Unit",
           "sh:description": {
             "en": "It indicates the Unit described."
           },
           "sh:name": {
             "en": "describes"
           },
-          "sh:path": "https://w3id.org/str/describes",
+          "sh:path": "https://w3id.org/str#describes",
           "vl:message": {
-            "en": "The range of describes must be of type <https://w3id.org/str/Unit>."
+            "en": "The range of describes must be of type <https://w3id.org/str#Unit>."
           }
         }
       ],
@@ -3389,7 +3389,7 @@
           "sh:name": {
             "en": "number of guests"
           },
-          "sh:path": "https://w3id.org/str/numberOfGuests",
+          "sh:path": "https://w3id.org/str#numberOfGuests",
           "vl:message": {
             "en": "Minimally 1 values are expected for number of guests"
           }
@@ -3404,7 +3404,7 @@
           "sh:name": {
             "en": "country of residence"
           },
-          "sh:path": "https://w3id.org/str/countryOfResidence",
+          "sh:path": "https://w3id.org/str#countryOfResidence",
           "vl:message": {
             "en": "Maximally 1 values allowed for country of residence"
           }
@@ -3419,7 +3419,7 @@
             "en": "number of guests"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/numberOfGuests",
+          "sh:path": "https://w3id.org/str#numberOfGuests",
           "vl:message": {
             "en": "The expected value for number of guests is a Literal"
           }
@@ -3434,7 +3434,7 @@
           "sh:name": {
             "en": "number of guests"
           },
-          "sh:path": "https://w3id.org/str/numberOfGuests",
+          "sh:path": "https://w3id.org/str#numberOfGuests",
           "vl:message": {
             "en": "The range of number of guests must be of type <http://www.w3.org/2001/XMLSchema#nonNegativeInteger>."
           }
@@ -3464,7 +3464,7 @@
           "sh:name": {
             "en": "country of residence"
           },
-          "sh:path": "https://w3id.org/str/countryOfResidence",
+          "sh:path": "https://w3id.org/str#countryOfResidence",
           "vl:message": {
             "en": "Minimally 1 values are expected for country of residence"
           }
@@ -3479,7 +3479,7 @@
           "sh:name": {
             "en": "country of residence"
           },
-          "sh:path": "https://w3id.org/str/countryOfResidence",
+          "sh:path": "https://w3id.org/str#countryOfResidence",
           "vl:message": {
             "en": "The range of country of residence must be of type <http://purl.org/dc/terms/Location>."
           }
@@ -3494,7 +3494,7 @@
             "en": "country of residence"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/countryOfResidence",
+          "sh:path": "https://w3id.org/str#countryOfResidence",
           "vl:message": {
             "en": "The expected value for country of residence is a rdfs:Resource (URI or blank node)"
           }
@@ -3509,7 +3509,7 @@
           "sh:name": {
             "en": "number of guests"
           },
-          "sh:path": "https://w3id.org/str/numberOfGuests",
+          "sh:path": "https://w3id.org/str#numberOfGuests",
           "vl:message": {
             "en": "Maximally 1 values allowed for number of guests"
           }
@@ -3530,7 +3530,7 @@
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/ActivityData"
+      "sh:targetClass": "https://w3id.org/str#ActivityData"
     },
     {
       "@id": "https://semiceu.github.io/STR/releases/1.0.0#CoordinationGroupShape",
@@ -3583,7 +3583,7 @@
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/CoordinationGroup"
+      "sh:targetClass": "https://w3id.org/str#CoordinationGroup"
     },
     {
       "@id": "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape",
@@ -3600,7 +3600,7 @@
             "en": "provides information to"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/providesInformationTo",
+          "sh:path": "https://w3id.org/str#providesInformationTo",
           "vl:message": {
             "en": "The expected value for provides information to is a rdfs:Resource (URI or blank node)"
           }
@@ -3630,7 +3630,7 @@
             "en": "checks"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/checks",
+          "sh:path": "https://w3id.org/str#checks",
           "vl:message": {
             "en": "The expected value for checks is a rdfs:Resource (URI or blank node)"
           }
@@ -3653,16 +3653,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.checks",
-          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
+          "sh:class": "https://w3id.org/str#SingleDigitalEntryPoint",
           "sh:description": {
             "en": "It indicates the Single Digital Entry Point being checked."
           },
           "sh:name": {
             "en": "checks"
           },
-          "sh:path": "https://w3id.org/str/checks",
+          "sh:path": "https://w3id.org/str#checks",
           "vl:message": {
-            "en": "The range of checks must be of type <https://w3id.org/str/SingleDigitalEntryPoint>."
+            "en": "The range of checks must be of type <https://w3id.org/str#SingleDigitalEntryPoint>."
           }
         },
         {
@@ -3675,7 +3675,7 @@
           "sh:name": {
             "en": "publishes"
           },
-          "sh:path": "https://w3id.org/str/publishes",
+          "sh:path": "https://w3id.org/str#publishes",
           "vl:message": {
             "en": "The range of publishes must be of type <http://www.w3.org/ns/dcat#Dataset>."
           }
@@ -3705,7 +3705,7 @@
           "sh:name": {
             "en": "publishes"
           },
-          "sh:path": "https://w3id.org/str/publishes",
+          "sh:path": "https://w3id.org/str#publishes",
           "vl:message": {
             "en": "Minimally 1 values are expected for publishes"
           }
@@ -3735,7 +3735,7 @@
             "en": "publishes"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/publishes",
+          "sh:path": "https://w3id.org/str#publishes",
           "vl:message": {
             "en": "The expected value for publishes is a rdfs:Resource (URI or blank node)"
           }
@@ -3743,20 +3743,20 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#OnlineShortTermRentalPlatform.providesinformationto",
-          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
+          "sh:class": "https://w3id.org/str#SingleDigitalEntryPoint",
           "sh:description": {
             "en": "It indicates the Single Digital Entry Point receiving information."
           },
           "sh:name": {
             "en": "provides information to"
           },
-          "sh:path": "https://w3id.org/str/providesInformationTo",
+          "sh:path": "https://w3id.org/str#providesInformationTo",
           "vl:message": {
-            "en": "The range of provides information to must be of type <https://w3id.org/str/SingleDigitalEntryPoint>."
+            "en": "The range of provides information to must be of type <https://w3id.org/str#SingleDigitalEntryPoint>."
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/OnlineSTRentalPlatform"
+      "sh:targetClass": "https://w3id.org/str#OnlineSTRentalPlatform"
     },
     {
       "@id": "https://semiceu.github.io/STR/releases/1.0.0#OrderShape",
@@ -3773,7 +3773,7 @@
           "sh:name": {
             "en": "concerns"
           },
-          "sh:path": "https://w3id.org/str/concerns",
+          "sh:path": "https://w3id.org/str#concerns",
           "vl:message": {
             "en": "Minimally 1 values are expected for concerns"
           }
@@ -3788,7 +3788,7 @@
           "sh:name": {
             "en": "reason"
           },
-          "sh:path": "https://w3id.org/str/reason",
+          "sh:path": "https://w3id.org/str#reason",
           "vl:message": {
             "en": "Maximally 1 values allowed for reason"
           }
@@ -3796,16 +3796,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#OrderShape/1c61fa1d29718c4e8813811b251890449cd4f23d",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Order.concerns",
-          "sh:class": "https://w3id.org/str/RegistrationNumber",
+          "sh:class": "https://w3id.org/str#RegistrationNumber",
           "sh:description": {
             "en": "It indicated the Registration Number concerned."
           },
           "sh:name": {
             "en": "concerns"
           },
-          "sh:path": "https://w3id.org/str/concerns",
+          "sh:path": "https://w3id.org/str#concerns",
           "vl:message": {
-            "en": "The range of concerns must be of type <https://w3id.org/str/RegistrationNumber>."
+            "en": "The range of concerns must be of type <https://w3id.org/str#RegistrationNumber>."
           }
         },
         {
@@ -3818,7 +3818,7 @@
           "sh:name": {
             "en": "sent to"
           },
-          "sh:path": "https://w3id.org/str/sentTo",
+          "sh:path": "https://w3id.org/str#sentTo",
           "vl:message": {
             "en": "Minimally 1 values are expected for sent to"
           }
@@ -3833,7 +3833,7 @@
             "en": "reason"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/reason",
+          "sh:path": "https://w3id.org/str#reason",
           "vl:message": {
             "en": "The expected value for reason is a Literal"
           }
@@ -3848,7 +3848,7 @@
             "en": "is about"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/isAbout",
+          "sh:path": "https://w3id.org/str#isAbout",
           "vl:message": {
             "en": "The expected value for is about is a rdfs:Resource (URI or blank node)"
           }
@@ -3863,7 +3863,7 @@
             "en": "is about"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/isAbout",
+          "sh:path": "https://w3id.org/str#isAbout",
           "vl:message": {
             "en": "The expected value for is about is a rdfs:Resource (URI or blank node)"
           }
@@ -3871,16 +3871,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#OrderShape/3a597ba103cfec924c0dcf0aad7777a76554a268",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Order.sentto",
-          "sh:class": "https://w3id.org/str/OnlineSTRentalPlatform",
+          "sh:class": "https://w3id.org/str#OnlineSTRentalPlatform",
           "sh:description": {
             "en": "It indicates the receiver of the Order."
           },
           "sh:name": {
             "en": "sent to"
           },
-          "sh:path": "https://w3id.org/str/sentTo",
+          "sh:path": "https://w3id.org/str#sentTo",
           "vl:message": {
-            "en": "The range of sent to must be of type <https://w3id.org/str/OnlineSTRentalPlatform>."
+            "en": "The range of sent to must be of type <https://w3id.org/str#OnlineSTRentalPlatform>."
           }
         },
         {
@@ -3893,7 +3893,7 @@
             "en": "sent to"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/sentTo",
+          "sh:path": "https://w3id.org/str#sentTo",
           "vl:message": {
             "en": "The expected value for sent to is a rdfs:Resource (URI or blank node)"
           }
@@ -3908,7 +3908,7 @@
           "sh:name": {
             "en": "reason"
           },
-          "sh:path": "https://w3id.org/str/reason",
+          "sh:path": "https://w3id.org/str#reason",
           "vl:message": {
             "en": "The range of reason must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
           }
@@ -3923,7 +3923,7 @@
           "sh:name": {
             "en": "concerns"
           },
-          "sh:path": "https://w3id.org/str/concerns",
+          "sh:path": "https://w3id.org/str#concerns",
           "vl:message": {
             "en": "Maximally 1 values allowed for concerns"
           }
@@ -3938,7 +3938,7 @@
           "sh:name": {
             "en": "is about"
           },
-          "sh:path": "https://w3id.org/str/isAbout",
+          "sh:path": "https://w3id.org/str#isAbout",
           "vl:message": {
             "en": "Minimally 1 values are expected for is about"
           }
@@ -3953,7 +3953,7 @@
           "sh:name": {
             "en": "is about"
           },
-          "sh:path": "https://w3id.org/str/isAbout",
+          "sh:path": "https://w3id.org/str#isAbout",
           "vl:message": {
             "en": "Minimally 1 values are expected for is about"
           }
@@ -3967,7 +3967,7 @@
           "sh:name": {
             "en": "reason"
           },
-          "sh:path": "https://w3id.org/str/reason",
+          "sh:path": "https://w3id.org/str#reason",
           "sh:uniqueLang": "true",
           "vl:message": {
             "en": "Only 1 value for each language is allowed for reason"
@@ -3983,7 +3983,7 @@
           "sh:name": {
             "en": "reason"
           },
-          "sh:path": "https://w3id.org/str/reason",
+          "sh:path": "https://w3id.org/str#reason",
           "vl:message": {
             "en": "Minimally 1 values are expected for reason"
           }
@@ -3998,7 +3998,7 @@
           "sh:name": {
             "en": "is about"
           },
-          "sh:path": "https://w3id.org/str/isAbout",
+          "sh:path": "https://w3id.org/str#isAbout",
           "vl:message": {
             "en": "Maximally 1 values allowed for is about"
           }
@@ -4013,7 +4013,7 @@
           "sh:name": {
             "en": "is about"
           },
-          "sh:path": "https://w3id.org/str/isAbout",
+          "sh:path": "https://w3id.org/str#isAbout",
           "vl:message": {
             "en": "Maximally 1 values allowed for is about"
           }
@@ -4028,7 +4028,7 @@
           "sh:name": {
             "en": "sent to"
           },
-          "sh:path": "https://w3id.org/str/sentTo",
+          "sh:path": "https://w3id.org/str#sentTo",
           "vl:message": {
             "en": "Maximally 1 values allowed for sent to"
           }
@@ -4043,7 +4043,7 @@
             "en": "concerns"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/concerns",
+          "sh:path": "https://w3id.org/str#concerns",
           "vl:message": {
             "en": "The expected value for concerns is a rdfs:Resource (URI or blank node)"
           }
@@ -4058,7 +4058,7 @@
           "sh:name": {
             "en": "is about"
           },
-          "sh:path": "https://w3id.org/str/isAbout",
+          "sh:path": "https://w3id.org/str#isAbout",
           "vl:message": {
             "en": "The range of is about must be of type <http://www.w3.org/ns/legal#LegalEntity>."
           }
@@ -4073,13 +4073,13 @@
           "sh:name": {
             "en": "is about"
           },
-          "sh:path": "https://w3id.org/str/isAbout",
+          "sh:path": "https://w3id.org/str#isAbout",
           "vl:message": {
             "en": "The range of is about must be of type <http://www.w3.org/ns/person#Person>."
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/Order"
+      "sh:targetClass": "https://w3id.org/str#Order"
     },
     {
       "@id": "https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape",
@@ -4216,7 +4216,7 @@
           "sh:name": {
             "en": "has validity period"
           },
-          "sh:path": "https://w3id.org/str/hasValidityPeriod",
+          "sh:path": "https://w3id.org/str#hasValidityPeriod",
           "vl:message": {
             "en": "Maximally 1 values allowed for has validity period"
           }
@@ -4231,7 +4231,7 @@
           "sh:name": {
             "en": "has validity period"
           },
-          "sh:path": "https://w3id.org/str/hasValidityPeriod",
+          "sh:path": "https://w3id.org/str#hasValidityPeriod",
           "vl:message": {
             "en": "The range of has validity period must be of type <http://purl.org/dc/terms/PeriodOfTime>."
           }
@@ -4291,7 +4291,7 @@
             "en": "has validity period"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasValidityPeriod",
+          "sh:path": "https://w3id.org/str#hasValidityPeriod",
           "vl:message": {
             "en": "The expected value for has validity period is a rdfs:Resource (URI or blank node)"
           }
@@ -4299,7 +4299,7 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumberShape/c623dd0ee9911f8266a229393e26001684e14eaf",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#RegistrationNumber.identifies",
-          "sh:class": "https://w3id.org/str/Unit",
+          "sh:class": "https://w3id.org/str#Unit",
           "sh:description": {
             "en": "The entity that is referenced by the Identifier."
           },
@@ -4308,11 +4308,11 @@
           },
           "sh:path": "http://data.europa.eu/m8g/identifies",
           "vl:message": {
-            "en": "The range of identifies must be of type <https://w3id.org/str/Unit>."
+            "en": "The range of identifies must be of type <https://w3id.org/str#Unit>."
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/RegistrationNumber"
+      "sh:targetClass": "https://w3id.org/str#RegistrationNumber"
     },
     {
       "@id": "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape",
@@ -4322,16 +4322,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedureShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#RegistrationProcedure.produces",
-          "sh:class": "https://w3id.org/str/RegistrationNumber",
+          "sh:class": "https://w3id.org/str#RegistrationNumber",
           "sh:description": {
             "en": "It indicates the Registration Number produced."
           },
           "sh:name": {
             "en": "produces"
           },
-          "sh:path": "https://w3id.org/str/produces",
+          "sh:path": "https://w3id.org/str#produces",
           "vl:message": {
-            "en": "The range of produces must be of type <https://w3id.org/str/RegistrationNumber>."
+            "en": "The range of produces must be of type <https://w3id.org/str#RegistrationNumber>."
           }
         },
         {
@@ -4359,7 +4359,7 @@
           "sh:name": {
             "en": "produces"
           },
-          "sh:path": "https://w3id.org/str/produces",
+          "sh:path": "https://w3id.org/str#produces",
           "vl:message": {
             "en": "Maximally 1 values allowed for produces"
           }
@@ -4374,7 +4374,7 @@
           "sh:name": {
             "en": "has input"
           },
-          "sh:path": "https://w3id.org/str/hasInput",
+          "sh:path": "https://w3id.org/str#hasInput",
           "vl:message": {
             "en": "The range of has input must be of type <http://xmlns.com/foaf/0.1/Document>."
           }
@@ -4389,7 +4389,7 @@
             "en": "produces"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/produces",
+          "sh:path": "https://w3id.org/str#produces",
           "vl:message": {
             "en": "The expected value for produces is a rdfs:Resource (URI or blank node)"
           }
@@ -4404,7 +4404,7 @@
             "en": "has input"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasInput",
+          "sh:path": "https://w3id.org/str#hasInput",
           "vl:message": {
             "en": "The expected value for has input is a rdfs:Resource (URI or blank node)"
           }
@@ -4425,7 +4425,7 @@
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/RegistrationProcedure"
+      "sh:targetClass": "https://w3id.org/str#RegistrationProcedure"
     },
     {
       "@id": "https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalServiceShape",
@@ -4435,16 +4435,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto",
-          "sh:class": "https://w3id.org/str/OnlineSTRentalPlatform",
+          "sh:class": "https://w3id.org/str#OnlineSTRentalPlatform",
           "sh:description": {
             "en": "It indicates the Online Short Term Rental Platform being accessed by the service."
           },
           "sh:name": {
             "en": "provides access to"
           },
-          "sh:path": "https://w3id.org/str/providesAccessTo",
+          "sh:path": "https://w3id.org/str#providesAccessTo",
           "vl:message": {
-            "en": "The range of provides access to must be of type <https://w3id.org/str/OnlineSTRentalPlatform>."
+            "en": "The range of provides access to must be of type <https://w3id.org/str#OnlineSTRentalPlatform>."
           }
         },
         {
@@ -4457,7 +4457,7 @@
           "sh:name": {
             "en": "provides access to"
           },
-          "sh:path": "https://w3id.org/str/providesAccessTo",
+          "sh:path": "https://w3id.org/str#providesAccessTo",
           "vl:message": {
             "en": "Minimally 1 values are expected for provides access to"
           }
@@ -4472,13 +4472,13 @@
             "en": "provides access to"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/providesAccessTo",
+          "sh:path": "https://w3id.org/str#providesAccessTo",
           "vl:message": {
             "en": "The expected value for provides access to is a rdfs:Resource (URI or blank node)"
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/STAccomondationRentalService"
+      "sh:targetClass": "https://w3id.org/str#STAccomondationRentalService"
     },
     {
       "@id": "https://semiceu.github.io/STR/releases/1.0.0#SingleDigitalEntryPointShape",
@@ -4495,7 +4495,7 @@
             "en": "has national coordinator"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasNationalCoordinator",
+          "sh:path": "https://w3id.org/str#hasNationalCoordinator",
           "vl:message": {
             "en": "The expected value for has national coordinator is a rdfs:Resource (URI or blank node)"
           }
@@ -4510,7 +4510,7 @@
           "sh:name": {
             "en": "has national coordinator"
           },
-          "sh:path": "https://w3id.org/str/hasNationalCoordinator",
+          "sh:path": "https://w3id.org/str#hasNationalCoordinator",
           "vl:message": {
             "en": "Minimally 1 values are expected for has national coordinator"
           }
@@ -4525,7 +4525,7 @@
           "sh:name": {
             "en": "has national coordinator"
           },
-          "sh:path": "https://w3id.org/str/hasNationalCoordinator",
+          "sh:path": "https://w3id.org/str#hasNationalCoordinator",
           "vl:message": {
             "en": "The range of has national coordinator must be of type <http://www.w3.org/ns/person#Person>."
           }
@@ -4540,13 +4540,13 @@
           "sh:name": {
             "en": "has national coordinator"
           },
-          "sh:path": "https://w3id.org/str/hasNationalCoordinator",
+          "sh:path": "https://w3id.org/str#hasNationalCoordinator",
           "vl:message": {
             "en": "Maximally 1 values allowed for has national coordinator"
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/SingleDigitalEntryPoint"
+      "sh:targetClass": "https://w3id.org/str#SingleDigitalEntryPoint"
     },
     {
       "@id": "https://semiceu.github.io/STR/releases/1.0.0#UnitShape",
@@ -4563,7 +4563,7 @@
             "en": "occupancy"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/occupancy",
+          "sh:path": "https://w3id.org/str#occupancy",
           "vl:message": {
             "en": "The expected value for occupancy is a Literal"
           }
@@ -4578,7 +4578,7 @@
           "sh:name": {
             "en": "is authorization obtained"
           },
-          "sh:path": "https://w3id.org/str/isAuthorizationObtained",
+          "sh:path": "https://w3id.org/str#isAuthorizationObtained",
           "vl:message": {
             "en": "The range of is authorization obtained must be of type <http://www.w3.org/2001/XMLSchema#boolean>."
           }
@@ -4593,7 +4593,7 @@
           "sh:name": {
             "en": "is subject to authorization"
           },
-          "sh:path": "https://w3id.org/str/isSubjectToAuthorization",
+          "sh:path": "https://w3id.org/str#isSubjectToAuthorization",
           "vl:message": {
             "en": "Maximally 1 values allowed for is subject to authorization"
           }
@@ -4608,7 +4608,7 @@
           "sh:name": {
             "en": "purpose"
           },
-          "sh:path": "https://w3id.org/str/purpose",
+          "sh:path": "https://w3id.org/str#purpose",
           "vl:message": {
             "en": "Minimally 1 values are expected for purpose"
           }
@@ -4638,7 +4638,7 @@
             "en": "has authorization"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasAuthorization",
+          "sh:path": "https://w3id.org/str#hasAuthorization",
           "vl:message": {
             "en": "The expected value for has authorization is a rdfs:Resource (URI or blank node)"
           }
@@ -4653,7 +4653,7 @@
           "sh:name": {
             "en": "purpose"
           },
-          "sh:path": "https://w3id.org/str/purpose",
+          "sh:path": "https://w3id.org/str#purpose",
           "vl:message": {
             "en": "Maximally 1 values allowed for purpose"
           }
@@ -4661,16 +4661,16 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#UnitShape/31111627cb358a7f982659fa9ae497c12260ab23",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Unit.hasactivitydata",
-          "sh:class": "https://w3id.org/str/ActivityData",
+          "sh:class": "https://w3id.org/str#ActivityData",
           "sh:description": {
             "en": "The activity data associated to the Unit."
           },
           "sh:name": {
             "en": "has activity data"
           },
-          "sh:path": "https://w3id.org/str/hasActivityData",
+          "sh:path": "https://w3id.org/str#hasActivityData",
           "vl:message": {
-            "en": "The range of has activity data must be of type <https://w3id.org/str/ActivityData>."
+            "en": "The range of has activity data must be of type <https://w3id.org/str#ActivityData>."
           }
         },
         {
@@ -4713,7 +4713,7 @@
           "sh:name": {
             "en": "number of bedrooms"
           },
-          "sh:path": "https://w3id.org/str/numberOfBedrooms",
+          "sh:path": "https://w3id.org/str#numberOfBedrooms",
           "vl:message": {
             "en": "Minimally 1 values are expected for number of bedrooms"
           }
@@ -4743,7 +4743,7 @@
           "sh:name": {
             "en": "floor level"
           },
-          "sh:path": "https://w3id.org/str/floorLevel",
+          "sh:path": "https://w3id.org/str#floorLevel",
           "vl:message": {
             "en": "The range of floor level must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
           }
@@ -4758,7 +4758,7 @@
           "sh:name": {
             "en": "has unit address"
           },
-          "sh:path": "https://w3id.org/str/hasUnitAddress",
+          "sh:path": "https://w3id.org/str#hasUnitAddress",
           "vl:message": {
             "en": "Maximally 1 values allowed for has unit address"
           }
@@ -4773,7 +4773,7 @@
           "sh:name": {
             "en": "occupancy"
           },
-          "sh:path": "https://w3id.org/str/occupancy",
+          "sh:path": "https://w3id.org/str#occupancy",
           "vl:message": {
             "en": "The range of occupancy must be of type <http://www.w3.org/2001/XMLSchema#nonNegativeInteger>."
           }
@@ -4788,7 +4788,7 @@
             "en": "is authorization obtained"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/isAuthorizationObtained",
+          "sh:path": "https://w3id.org/str#isAuthorizationObtained",
           "vl:message": {
             "en": "The expected value for is authorization obtained is a Literal"
           }
@@ -4803,7 +4803,7 @@
           "sh:name": {
             "en": "floor level"
           },
-          "sh:path": "https://w3id.org/str/floorLevel",
+          "sh:path": "https://w3id.org/str#floorLevel",
           "vl:message": {
             "en": "Maximally 1 values allowed for floor level"
           }
@@ -4818,7 +4818,7 @@
           "sh:name": {
             "en": "has authorization"
           },
-          "sh:path": "https://w3id.org/str/hasAuthorization",
+          "sh:path": "https://w3id.org/str#hasAuthorization",
           "vl:message": {
             "en": "Maximally 1 values allowed for has authorization"
           }
@@ -4833,7 +4833,7 @@
           "sh:name": {
             "en": "number of bedrooms"
           },
-          "sh:path": "https://w3id.org/str/numberOfBedrooms",
+          "sh:path": "https://w3id.org/str#numberOfBedrooms",
           "vl:message": {
             "en": "The range of number of bedrooms must be of type <http://www.w3.org/2001/XMLSchema#nonNegativeInteger>."
           }
@@ -4847,7 +4847,7 @@
           "sh:name": {
             "en": "purpose"
           },
-          "sh:path": "https://w3id.org/str/purpose",
+          "sh:path": "https://w3id.org/str#purpose",
           "sh:uniqueLang": "true",
           "vl:message": {
             "en": "Only 1 value for each language is allowed for purpose"
@@ -4863,7 +4863,7 @@
           "sh:name": {
             "en": "has unit address"
           },
-          "sh:path": "https://w3id.org/str/hasUnitAddress",
+          "sh:path": "https://w3id.org/str#hasUnitAddress",
           "vl:message": {
             "en": "Minimally 1 values are expected for has unit address"
           }
@@ -4893,7 +4893,7 @@
             "en": "floor level"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/floorLevel",
+          "sh:path": "https://w3id.org/str#floorLevel",
           "vl:message": {
             "en": "The expected value for floor level is a Literal"
           }
@@ -4938,7 +4938,7 @@
           "sh:name": {
             "en": "is subject to authorization"
           },
-          "sh:path": "https://w3id.org/str/isSubjectToAuthorization",
+          "sh:path": "https://w3id.org/str#isSubjectToAuthorization",
           "vl:message": {
             "en": "The range of is subject to authorization must be of type <http://www.w3.org/2001/XMLSchema#boolean>."
           }
@@ -4953,7 +4953,7 @@
           "sh:name": {
             "en": "purpose"
           },
-          "sh:path": "https://w3id.org/str/purpose",
+          "sh:path": "https://w3id.org/str#purpose",
           "vl:message": {
             "en": "The range of purpose must be of type <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString>."
           }
@@ -4968,7 +4968,7 @@
             "en": "purpose"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/purpose",
+          "sh:path": "https://w3id.org/str#purpose",
           "vl:message": {
             "en": "The expected value for purpose is a Literal"
           }
@@ -4983,7 +4983,7 @@
             "en": "has activity data"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasActivityData",
+          "sh:path": "https://w3id.org/str#hasActivityData",
           "vl:message": {
             "en": "The expected value for has activity data is a rdfs:Resource (URI or blank node)"
           }
@@ -4998,7 +4998,7 @@
             "en": "has unit address"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "https://w3id.org/str/hasUnitAddress",
+          "sh:path": "https://w3id.org/str#hasUnitAddress",
           "vl:message": {
             "en": "The expected value for has unit address is a rdfs:Resource (URI or blank node)"
           }
@@ -5013,7 +5013,7 @@
           "sh:name": {
             "en": "occupancy"
           },
-          "sh:path": "https://w3id.org/str/occupancy",
+          "sh:path": "https://w3id.org/str#occupancy",
           "vl:message": {
             "en": "Maximally 1 values allowed for occupancy"
           }
@@ -5028,7 +5028,7 @@
           "sh:name": {
             "en": "is authorization obtained"
           },
-          "sh:path": "https://w3id.org/str/isAuthorizationObtained",
+          "sh:path": "https://w3id.org/str#isAuthorizationObtained",
           "vl:message": {
             "en": "Maximally 1 values allowed for is authorization obtained"
           }
@@ -5058,7 +5058,7 @@
             "en": "is subject to authorization"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/isSubjectToAuthorization",
+          "sh:path": "https://w3id.org/str#isSubjectToAuthorization",
           "vl:message": {
             "en": "The expected value for is subject to authorization is a Literal"
           }
@@ -5073,7 +5073,7 @@
           "sh:name": {
             "en": "has unit address"
           },
-          "sh:path": "https://w3id.org/str/hasUnitAddress",
+          "sh:path": "https://w3id.org/str#hasUnitAddress",
           "vl:message": {
             "en": "The range of has unit address must be of type <http://www.w3.org/ns/locn#Address>."
           }
@@ -5088,7 +5088,7 @@
           "sh:name": {
             "en": "has authorization"
           },
-          "sh:path": "https://w3id.org/str/hasAuthorization",
+          "sh:path": "https://w3id.org/str#hasAuthorization",
           "vl:message": {
             "en": "The range of has authorization must be of type <http://xmlns.com/foaf/0.1/Document>."
           }
@@ -5111,7 +5111,7 @@
         {
           "@id": "https://semiceu.github.io/STR/releases/1.0.0#UnitShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
           "rdfs:seeAlso": "https://semiceu.github.io/STR/releases/1.0.0#Unit.identifier",
-          "sh:class": "https://w3id.org/str/RegistrationNumber",
+          "sh:class": "https://w3id.org/str#RegistrationNumber",
           "sh:description": {
             "en": "Links a resource to an adms:Identifier class."
           },
@@ -5120,7 +5120,7 @@
           },
           "sh:path": "http://www.w3.org/ns/adms#identifier",
           "vl:message": {
-            "en": "The range of identifier must be of type <https://w3id.org/str/RegistrationNumber>."
+            "en": "The range of identifier must be of type <https://w3id.org/str#RegistrationNumber>."
           }
         },
         {
@@ -5133,7 +5133,7 @@
           "sh:name": {
             "en": "number of bedrooms"
           },
-          "sh:path": "https://w3id.org/str/numberOfBedrooms",
+          "sh:path": "https://w3id.org/str#numberOfBedrooms",
           "vl:message": {
             "en": "Maximally 1 values allowed for number of bedrooms"
           }
@@ -5148,7 +5148,7 @@
           "sh:name": {
             "en": "occupancy"
           },
-          "sh:path": "https://w3id.org/str/occupancy",
+          "sh:path": "https://w3id.org/str#occupancy",
           "vl:message": {
             "en": "Minimally 1 values are expected for occupancy"
           }
@@ -5163,7 +5163,7 @@
             "en": "number of bedrooms"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://w3id.org/str/numberOfBedrooms",
+          "sh:path": "https://w3id.org/str#numberOfBedrooms",
           "vl:message": {
             "en": "The expected value for number of bedrooms is a Literal"
           }
@@ -5177,14 +5177,14 @@
           "sh:name": {
             "en": "floor level"
           },
-          "sh:path": "https://w3id.org/str/floorLevel",
+          "sh:path": "https://w3id.org/str#floorLevel",
           "sh:uniqueLang": "true",
           "vl:message": {
             "en": "Only 1 value for each language is allowed for floor level"
           }
         }
       ],
-      "sh:targetClass": "https://w3id.org/str/Unit"
+      "sh:targetClass": "https://w3id.org/str#Unit"
     }
   ]
 }

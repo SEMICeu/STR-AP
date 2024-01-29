@@ -13,7 +13,7 @@
     "person": "http://www.w3.org/ns/person#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "str": "https://w3id.org/str/",
+    "str": "https://w3id.org/str#",
     "time": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
    }
@@ -59,7 +59,10 @@
       "skos:prefLabel": {
         "@language": "en",
         "@value": "Jette municipality"
-      }
+      },
+      "locn:address": {
+       "@id": "ex:address2"
+      }  
     },
     {
       "@id": "ex:STRentalservice1",
@@ -98,6 +101,14 @@
       "str:offers": {
        "@id": "ex:STRentalservice1"
      }
+    },
+    {
+      "@id": "ex:address2",
+      "@type": "Address",
+    },
+    {
+      "@id": "ex:micro",
+      "@type": "Concept",
     }
   ]
 }

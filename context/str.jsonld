@@ -3,11 +3,11 @@
     "ActivityData": {
       "@context": {
         "countryOfResidence": {
-          "@id": "https://w3id.org/str/countryOfResidence",
+          "@id": "https://w3id.org/str#countryOfResidence",
           "@type": "@id"
         },
         "numberOfGuests": {
-          "@id": "https://w3id.org/str/numberOfGuests",
+          "@id": "https://w3id.org/str#numberOfGuests",
           "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
         },
         "temporal": {
@@ -15,7 +15,7 @@
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/ActivityData"
+      "@id": "https://w3id.org/str#ActivityData"
     },
     "Address": {
       "@context": {
@@ -39,7 +39,7 @@
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "landRegister": {
-          "@id": "https://w3id.org/str/landRegister",
+          "@id": "https://w3id.org/str#landRegister",
           "@type": "@id"
         },
         "locatorDesignator": {
@@ -117,7 +117,7 @@
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/CoordinationGroup"
+      "@id": "https://w3id.org/str#CoordinationGroup"
     },
     "Cost": {
       "@context": {
@@ -165,7 +165,7 @@
         },
         "hasListing": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/hasListing",
+          "@id": "https://w3id.org/str#hasListing",
           "@type": "@id"
         }
       },
@@ -174,19 +174,19 @@
     "Document": {
       "@context": {
         "describes": {
-          "@id": "https://w3id.org/str/describes",
+          "@id": "https://w3id.org/str#describes",
           "@type": "@id"
         },
         "hasValidityPeriod": {
-          "@id": "https://w3id.org/str/hasValidityPeriod",
+          "@id": "https://w3id.org/str#hasValidityPeriod",
           "@type": "@id"
         },
         "submissionDate": {
-          "@id": "https://w3id.org/str/submissionDate",
+          "@id": "https://w3id.org/str#submissionDate",
           "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         },
         "updateDate": {
-          "@id": "https://w3id.org/str/updateDate",
+          "@id": "https://w3id.org/str#updateDate",
           "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
         }
       },
@@ -212,7 +212,7 @@
       "@context": {
         "hasLegalRepresentative": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/hasLegalRepresentative",
+          "@id": "https://w3id.org/str#hasLegalRepresentative",
           "@type": "@id"
         },
         "legalIdentifier": {
@@ -226,12 +226,12 @@
         },
         "offers": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/offers",
+          "@id": "https://w3id.org/str#offers",
           "@type": "@id"
         },
         "provides": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/provides",
+          "@id": "https://w3id.org/str#provides",
           "@type": "@id"
         },
         "registeredAddress": {
@@ -262,17 +262,17 @@
       "@context": {
         "checks": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/checks",
+          "@id": "https://w3id.org/str#checks",
           "@type": "@id"
         },
         "providesInformationTo": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/providesInformationTo",
+          "@id": "https://w3id.org/str#providesInformationTo",
           "@type": "@id"
         },
         "publishes": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/publishes",
+          "@id": "https://w3id.org/str#publishes",
           "@type": "@id"
         },
         "type": {
@@ -280,28 +280,28 @@
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/OnlineSTRentalPlatform"
+      "@id": "https://w3id.org/str#OnlineSTRentalPlatform"
     },
     "Order": {
       "@context": {
         "concerns": {
-          "@id": "https://w3id.org/str/concerns",
+          "@id": "https://w3id.org/str#concerns",
           "@type": "@id"
         },
         "isAbout": {
-          "@id": "https://w3id.org/str/isAbout",
+          "@id": "https://w3id.org/str#isAbout",
           "@type": "@id"
         },
         "reason": {
-          "@id": "https://w3id.org/str/reason",
+          "@id": "https://w3id.org/str#reason",
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "sentTo": {
-          "@id": "https://w3id.org/str/sentTo",
+          "@id": "https://w3id.org/str#sentTo",
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/Order"
+      "@id": "https://w3id.org/str#Order"
     },
     "PeriodOfTime": {
       "@context": {
@@ -348,12 +348,12 @@
         },
         "offers": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/offers",
+          "@id": "https://w3id.org/str#offers",
           "@type": "@id"
         },
         "provides": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/provides",
+          "@id": "https://w3id.org/str#provides",
           "@type": "@id"
         }
       },
@@ -381,17 +381,17 @@
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "isResponsibleFor": {
-          "@id": "https://w3id.org/str/isResponsibleFor",
+          "@id": "https://w3id.org/str#isResponsibleFor",
           "@type": "@id"
         },
         "issues": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/issues",
+          "@id": "https://w3id.org/str#issues",
           "@type": "@id"
         },
         "notifies": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/notifies",
+          "@id": "https://w3id.org/str#notifies",
           "@type": "@id"
         },
         "preferredLabel": {
@@ -406,7 +406,7 @@
         },
         "verifies": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/verifies",
+          "@id": "https://w3id.org/str#verifies",
           "@type": "@id"
         }
       },
@@ -442,7 +442,7 @@
     "RegistrationNumber": {
       "@context": {
         "hasValidityPeriod": {
-          "@id": "https://w3id.org/str/hasValidityPeriod",
+          "@id": "https://w3id.org/str#hasValidityPeriod",
           "@type": "@id"
         },
         "identifies": {
@@ -458,7 +458,7 @@
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/RegistrationNumber"
+      "@id": "https://w3id.org/str#RegistrationNumber"
     },
     "RegistrationProcedure": {
       "@context": {
@@ -469,34 +469,34 @@
         },
         "hasInput": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/hasInput",
+          "@id": "https://w3id.org/str#hasInput",
           "@type": "@id"
         },
         "produces": {
-          "@id": "https://w3id.org/str/produces",
+          "@id": "https://w3id.org/str#produces",
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/RegistrationProcedure"
+      "@id": "https://w3id.org/str#RegistrationProcedure"
     },
     "ShortTermAccomodationRentalService": {
       "@context": {
         "providesAccessTo": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/providesAccessTo",
+          "@id": "https://w3id.org/str#providesAccessTo",
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/STAccomondationRentalService"
+      "@id": "https://w3id.org/str#STAccomondationRentalService"
     },
     "SingleDigitalEntryPoint": {
       "@context": {
         "hasNationalCoordinator": {
-          "@id": "https://w3id.org/str/hasNationalCoordinator",
+          "@id": "https://w3id.org/str#hasNationalCoordinator",
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/SingleDigitalEntryPoint"
+      "@id": "https://w3id.org/str#SingleDigitalEntryPoint"
     },
     "TemporalLiteral": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "TimeInstant": "http://www.w3.org/2006/time#Instant",
@@ -507,20 +507,20 @@
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "floorLevel": {
-          "@id": "https://w3id.org/str/floorLevel",
+          "@id": "https://w3id.org/str#floorLevel",
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "hasActivityData": {
           "@container": "@set",
-          "@id": "https://w3id.org/str/hasActivityData",
+          "@id": "https://w3id.org/str#hasActivityData",
           "@type": "@id"
         },
         "hasAuthorization": {
-          "@id": "https://w3id.org/str/hasAuthorization",
+          "@id": "https://w3id.org/str#hasAuthorization",
           "@type": "@id"
         },
         "hasUnitAddress": {
-          "@id": "https://w3id.org/str/hasUnitAddress",
+          "@id": "https://w3id.org/str#hasUnitAddress",
           "@type": "@id"
         },
         "identifier": {
@@ -529,23 +529,23 @@
           "@type": "@id"
         },
         "isAuthorizationObtained": {
-          "@id": "https://w3id.org/str/isAuthorizationObtained",
+          "@id": "https://w3id.org/str#isAuthorizationObtained",
           "@type": "http://www.w3.org/2001/XMLSchema#boolean"
         },
         "isSubjectToAuthorization": {
-          "@id": "https://w3id.org/str/isSubjectToAuthorization",
+          "@id": "https://w3id.org/str#isSubjectToAuthorization",
           "@type": "http://www.w3.org/2001/XMLSchema#boolean"
         },
         "numberOfBedrooms": {
-          "@id": "https://w3id.org/str/numberOfBedrooms",
+          "@id": "https://w3id.org/str#numberOfBedrooms",
           "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
         },
         "occupancy": {
-          "@id": "https://w3id.org/str/occupancy",
+          "@id": "https://w3id.org/str#occupancy",
           "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
         },
         "purpose": {
-          "@id": "https://w3id.org/str/purpose",
+          "@id": "https://w3id.org/str#purpose",
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
         "type": {
@@ -553,7 +553,7 @@
           "@type": "@id"
         }
       },
-      "@id": "https://w3id.org/str/Unit"
+      "@id": "https://w3id.org/str#Unit"
     }
   }
 }
