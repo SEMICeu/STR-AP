@@ -961,13 +961,13 @@
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for identifies"@en .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.identifies";
-  shacl:class <http://www.w3.org/ns/legal#LegalEntity>,
-    <http://www.w3.org/ns/person#Person>;
+  shacl:class <http://www.w3.org/ns/person#Person>,
+    <http://www.w3.org/ns/legal#LegalEntity>;
   shacl:description "The entity that is referenced by the Identifier."@en;
   shacl:name "identifies"@en;
   shacl:path <http://data.europa.eu/m8g/identifies>;
-  <https://purl.eu/ns/shacl#message> "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."@en,
-    "The range of identifies must be of type <http://www.w3.org/ns/person#Person>."@en .
+  <https://purl.eu/ns/shacl#message> "The range of identifies must be of type <http://www.w3.org/ns/person#Person>."@en,
+    "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."@en .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.notation";
   shacl:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype."@en;
@@ -1300,7 +1300,6 @@
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/4ceaa00dc591b6d4b5c6d08551fa22b7072be188>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/6c16de1b23a2324b79a66111d1ee2a7a1e84c597>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/7a6112ed05520b889083ad602edef6b4ae90e8f0>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/bf15d791a0b0a4a285d78d24f1e512b942b480bf>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/dd5acd5f2a95b2d54489e871f39a1756b0157962>,
@@ -1378,13 +1377,6 @@
   shacl:name "concerns"@en;
   shacl:path <https://w3id.org/str#concerns>;
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for concerns"@en .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.isabout";
-  shacl:description "It indicates the host reference."@en;
-  shacl:minCount 1;
-  shacl:name "is about"@en;
-  shacl:path <https://w3id.org/str#isAbout>;
-  <https://purl.eu/ns/shacl#message> "Minimally 1 values are expected for is about"@en .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/bf15d791a0b0a4a285d78d24f1e512b942b480bf> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.reason";
   shacl:description "The statement indicating the reason of the Order."@en;

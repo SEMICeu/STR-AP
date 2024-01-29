@@ -1511,21 +1511,6 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.identifies",
-          "sh:class": "http://www.w3.org/ns/legal#LegalEntity",
-          "sh:description": {
-            "en": "The entity that is referenced by the Identifier."
-          },
-          "sh:name": {
-            "en": "identifies"
-          },
-          "sh:path": "http://data.europa.eu/m8g/identifies",
-          "vl:message": {
-            "en": "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.identifies",
           "sh:class": "http://www.w3.org/ns/person#Person",
           "sh:description": {
             "en": "The entity that is referenced by the Identifier."
@@ -1536,6 +1521,21 @@
           "sh:path": "http://data.europa.eu/m8g/identifies",
           "vl:message": {
             "en": "The range of identifies must be of type <http://www.w3.org/ns/person#Person>."
+          }
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.identifies",
+          "sh:class": "http://www.w3.org/ns/legal#LegalEntity",
+          "sh:description": {
+            "en": "The entity that is referenced by the Identifier."
+          },
+          "sh:name": {
+            "en": "identifies"
+          },
+          "sh:path": "http://data.europa.eu/m8g/identifies",
+          "vl:message": {
+            "en": "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."
           }
         },
         {
@@ -3926,36 +3926,6 @@
           "sh:path": "https://w3id.org/str#concerns",
           "vl:message": {
             "en": "Maximally 1 values allowed for concerns"
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.isabout",
-          "sh:description": {
-            "en": "It indicates the host reference."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "is about"
-          },
-          "sh:path": "https://w3id.org/str#isAbout",
-          "vl:message": {
-            "en": "Minimally 1 values are expected for is about"
-          }
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.isabout",
-          "sh:description": {
-            "en": "It indicates the host reference."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "is about"
-          },
-          "sh:path": "https://w3id.org/str#isAbout",
-          "vl:message": {
-            "en": "Minimally 1 values are expected for is about"
           }
         },
         {
