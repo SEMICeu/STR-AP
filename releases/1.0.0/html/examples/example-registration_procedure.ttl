@@ -50,3 +50,5 @@ ex:person1 str:offers ex:STRentalservice1 ;
 ex:address2 a locn:Address .
 
 ex:micro a skos:Concept .
+
+ex:validStatus a skos:Concept .
