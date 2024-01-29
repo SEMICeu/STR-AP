@@ -961,13 +961,13 @@
   <https://purl.eu/ns/shacl#message> "Maximally 1 values allowed for identifies"@en .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/c623dd0ee9911f8266a229393e26001684e14eaf> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.identifies";
-  shacl:class <http://www.w3.org/ns/person#Person>,
-    <http://www.w3.org/ns/legal#LegalEntity>;
+  shacl:class <http://www.w3.org/ns/legal#LegalEntity>,
+    <http://www.w3.org/ns/person#Person>;
   shacl:description "The entity that is referenced by the Identifier."@en;
   shacl:name "identifies"@en;
   shacl:path <http://data.europa.eu/m8g/identifies>;
-  <https://purl.eu/ns/shacl#message> "The range of identifies must be of type <http://www.w3.org/ns/person#Person>."@en,
-    "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."@en .
+  <https://purl.eu/ns/shacl#message> "The range of identifies must be of type <http://www.w3.org/ns/legal#LegalEntity>."@en,
+    "The range of identifies must be of type <http://www.w3.org/ns/person#Person>."@en .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.notation";
   shacl:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype."@en;

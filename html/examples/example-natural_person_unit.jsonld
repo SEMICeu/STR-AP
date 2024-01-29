@@ -1,6 +1,6 @@
 {
   "@context": [
-  "https://semiceu.github.io/uri.semic.eu-generated/STR/releases/1.0.0/context/str.jsonld",
+  "https://semiceu.github.io/STR-AP/releases/1.0.0/context/strap.jsonld",
    {
     "adms": "http://www.w3.org/ns/adms#",
     "cv": "http://data.europa.eu/m8g/",
