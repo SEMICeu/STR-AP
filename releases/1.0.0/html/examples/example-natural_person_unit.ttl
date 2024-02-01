@@ -19,7 +19,7 @@ ex:person1 foaf:familyName "Magritte"@fr ;
 	cv:contactPoint ex:contactPoint1 ;
 	cv:domicile ex:address1 ;
 	adms:identifier ex:identifier1 ;
-	str:provides ex:document1 ;
+    str:provides ex:document1;
 	a person:Person .
 
 ex:contactPoint1 cv:email "rene@magritte.be" ;
@@ -36,8 +36,8 @@ ex:document1 str:submissionDate "2024-01-28T09:00:00"^^xsd:dateTime ;
 	str:describes ex:unit1 ;
 	a foaf:Document .
 
-ex:unit1 str:numberOfBedrooms "1"^^xsd:nonNegativeInteger ;
-	str:occupancy "2"^^xsd:nonNegativeInteger ;
+ex:unit1 str:numberOfBedrooms 1 ;
+	str:occupancy 2 ;
 	str:floorLevel "2eme étage"@fr ;
 	str:purpose "Maison partagée avec étage privé"@fr ;
 	dct:type ex:sharedHouse ;

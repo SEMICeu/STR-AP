@@ -295,6 +295,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
                             This document describes the usage of the following main entities for a correct usage of the Core Vocabulary:
                             <br />
                             |
+			      <a href="#Evidence">Evidence</a> |
 			      <a href="#LegalEntity">Legal Entity</a> |
 			      <a href="#OnlineShortTermRentalPlatform">Online Short Term Rental Platform</a> |
 			      <a href="#Order">Order</a> |
@@ -327,6 +328,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
 			      <a href="#Identifier">Identifier</a> |
 			      <a href="#Literal">Literal</a> |
 			      <a href="#Location">Location</a> |
+			      <a href="#Output">Output</a> |
 			      <a href="#Periodoftime">Period of time</a> |
 			      <a href="#PublicRegistryService">Public Registry Service</a> |
 			      <a href="#SingleDigitalEntryPoint">Single Digital Entry Point</a> |
@@ -336,7 +338,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
                         <p>
                             And supported by these datatypes:
                             <br />
-                            | <a href="#boolean">boolean</a> | <a href="#dateTime">dateTime</a> | <a href="#double">double</a> | <a href="#langString">langString</a> | <a href="#nonNegativeInteger">nonNegativeInteger</a> | <a href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> |
+                            | <a href="#Boolean">Boolean</a> | <a href="#DateTime">DateTime</a> | <a href="#Double">Double</a> | <a href="#Integer">Integer</a> | <a href="#langString">langString</a> | <a href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> |
                         </p>
                 
     </div>
@@ -387,6 +389,269 @@ The main entities are those that form the core of the Core Vocabulary.
 
 
 
+   
+        <section>
+            <h3 id="Evidence">
+                <a href="http://data.europa.eu/m8g/Evidence"
+                   data-toggle="tooltip"
+                   data-content="http://data.europa.eu/m8g/Evidence"
+                   data-placement="right">Evidence</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20Evidence&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Proof that a Requirement is met.
+                </dd>
+                
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        Although the wording of the definition is different, the semantics are an exact match for CPSV's Input class which it replaces. Evidence can be any resource - document, artefact - anything needed for executing the Public Service. In the context of Public Services, Evidence is usually administrative documents or completed application forms. A specific Public Service may require the presence of certain Evidence or combinations of Evidence in order to be delivered. In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s).
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Evidence.identifier">identifier</a>
+                            , <a href="#Evidence.name">name</a>
+                            , <a href="#Evidence.relateddocumentation">related documentation</a>
+                            , <a href="#Evidence.validityperiod">validity period</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Evidence.identifier"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/identifier"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifier%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Evidence.identifier" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/identifier"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/identifier"
+                                           data-placement="right">
+                                        identifier</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An Identifier for the piece of Evidence.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Evidence.name"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20name%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Evidence.name" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#langString" data-placement="right">langString</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The official Name of the piece of Evidence.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Evidence.relateddocumentation"
+                                typeof="rdfs:Property"
+                                resource="http://xmlns.com/foaf/0.1/page"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20related documentation%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Evidence.relateddocumentation" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://xmlns.com/foaf/0.1/page"
+                                           data-toggle="tooltip"
+                                           data-content="http://xmlns.com/foaf/0.1/page"
+                                           data-placement="right">
+                                        related documentation</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Document" data-placement="right">Document</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The documentation that contains information.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    For instance, a particular template for an administrative document, an application or a guide on formatting the Evidence.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Evidence.validityperiod"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/validityPeriod"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20validity period%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Evidence.validityperiod" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/validityPeriod"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/validityPeriod"
+                                           data-placement="right">
+                                        validity period</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Periodoftime" data-placement="right">Period of time</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Period of Time during which the Evidence holds true or has force.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
 
 
 
@@ -431,6 +696,8 @@ The main entities are those that form the core of the Core Vocabulary.
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#LegalEntity.haslegalrepresentative">has legal representative</a>
+                            , <a href="#LegalEntity.isnotifiedby">is notified by</a>
+                            , <a href="#LegalEntity.isreferredin">is referred in</a>
                             , <a href="#LegalEntity.legalidentifier">legal identifier</a>
                             , <a href="#LegalEntity.legalname">legal name</a>
                             , <a href="#LegalEntity.offers">offers</a>
@@ -504,6 +771,92 @@ The main entities are those that form the core of the Core Vocabulary.
                                 </td>
                                 <td property="rdfs:comment">
                                     It indicates the Person that can represent legally an organization.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="LegalEntity.isnotifiedby"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str#isNotifiedBy"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is notified by%20in%20Legal Entity&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23LegalEntity.isnotifiedby" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str#isNotifiedBy"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str#isNotifiedBy"
+                                           data-placement="right">
+                                        is notified by</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#PublicOrganisation" data-placement="right">Public Organisation</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    It indicates the host notified.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="LegalEntity.isreferredin"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str#isReferredIn"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is referred in%20in%20Legal Entity&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23LegalEntity.isreferredin" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str#isReferredIn"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str#isReferredIn"
+                                           data-placement="right">
+                                        is referred in</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Order" data-placement="right">Order</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    It indicates the Order in which the host is referred.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1036,8 +1389,6 @@ A business might have more than one legal name, particularly in countries with m
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#Order.concerns">concerns</a>
-                            , <a href="#Order.isabout">is about</a>
-                            , <a href="#Order.isabout">is about</a>
                             , <a href="#Order.reason">reason</a>
                             , <a href="#Order.sentto">sent to</a>
                             .
@@ -1108,92 +1459,6 @@ A business might have more than one legal name, particularly in countries with m
                                 </td>
                                 <td property="rdfs:comment">
                                     It indicated the Registration Number concerned.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Order.isabout"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#isAbout"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is about%20in%20Order&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Order.isabout" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#isAbout"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#isAbout"
-                                           data-placement="right">
-                                        is about</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Person" data-placement="right">Person</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the host reference.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Order.isabout"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#isAbout"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is about%20in%20Order&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Order.isabout" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#isAbout"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#isAbout"
-                                           data-placement="right">
-                                        is about</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#LegalEntity" data-placement="right">Legal Entity</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the host reference.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1307,6 +1572,8 @@ A business might have more than one legal name, particularly in countries with m
 
 
 
+
+
    
         <section>
             <h3 id="Person">
@@ -1349,6 +1616,9 @@ A business might have more than one legal name, particularly in countries with m
                             , <a href="#Person.familyname">family name</a>
                             , <a href="#Person.givenname">given name</a>
                             , <a href="#Person.identifier">identifier</a>
+                            , <a href="#Person.ispointofcontactfor">is point of contact for</a>
+                            , <a href="#Person.isreferredin">is referred in</a>
+                            , <a href="#Person.notifies">notifies</a>
                             , <a href="#Person.offers">offers</a>
                             , <a href="#Person.provides">provides</a>
                             .
@@ -1605,6 +1875,135 @@ A business might have more than one legal name, particularly in countries with m
                                 </td>
                             </tr>
                         
+                            <tr id="Person.ispointofcontactfor"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str#isPointOfContactFor"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is point of contact for%20in%20Person&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Person.ispointofcontactfor" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str#isPointOfContactFor"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str#isPointOfContactFor"
+                                           data-placement="right">
+                                        is point of contact for</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#SingleDigitalEntryPoint" data-placement="right">Single Digital Entry Point</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td property="rdfs:comment">
+                                    The Single Digital Entry point for which the person acts as contact point for all matters related.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Person.isreferredin"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str#isReferredIn"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is referred in%20in%20Person&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Person.isreferredin" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str#isReferredIn"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str#isReferredIn"
+                                           data-placement="right">
+                                        is referred in</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Order" data-placement="right">Order</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    It indicates the Order in which the host is referred.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Person.notifies"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str#notifies"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20notifies%20in%20Person&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Person.notifies" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str#notifies"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str#notifies"
+                                           data-placement="right">
+                                        notifies</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#PublicOrganisation" data-placement="right">Public Organisation</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    It indicates the host notified.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Person.offers"
                                 typeof="rdfs:Property"
                                 resource="https://w3id.org/str#offers"
@@ -1745,10 +2144,9 @@ This definition is consistent with the more detailed definition of a "public sec
                             , <a href="#PublicOrganisation.alternativelabel">alternative label</a>
                             , <a href="#PublicOrganisation.classification">classification</a>
                             , <a href="#PublicOrganisation.description">description</a>
-                            , <a href="#PublicOrganisation.isresponsiblefor">is responsible for</a>
+                            , <a href="#PublicOrganisation.establishes">establishes</a>
+                            , <a href="#PublicOrganisation.hasnationalcoordinator">has national coordinator</a>
                             , <a href="#PublicOrganisation.issues">issues</a>
-                            , <a href="#PublicOrganisation.notifies">notifies</a>
-                            , <a href="#PublicOrganisation.notifies">notifies</a>
                             , <a href="#PublicOrganisation.preferredlabel">preferred label</a>
                             , <a href="#PublicOrganisation.purpose">purpose</a>
                             , <a href="#PublicOrganisation.verifies">verifies</a>
@@ -1963,22 +2361,22 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                             </tr>
                         
-                            <tr id="PublicOrganisation.isresponsiblefor"
+                            <tr id="PublicOrganisation.establishes"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str#isResponsibleFor"
+                                resource="https://w3id.org/str#establishes"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is responsible for%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23PublicOrganisation.isresponsiblefor" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20establishes%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23PublicOrganisation.establishes" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str#isResponsibleFor"
+                                        <a href="https://w3id.org/str#establishes"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#isResponsibleFor"
+                                           data-content="https://w3id.org/str#establishes"
                                            data-placement="right">
-                                        is responsible for</a>
+                                        establishes</a>
                                 </td>
                                 <td>
                                     
@@ -1992,6 +2390,49 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                                 <td property="rdfs:comment">
                                     It indicates the Single Digital Entry Point being managed.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="PublicOrganisation.hasnationalcoordinator"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str#hasNationalCoordinator"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20has national coordinator%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23PublicOrganisation.hasnationalcoordinator" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str#hasNationalCoordinator"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str#hasNationalCoordinator"
+                                           data-placement="right">
+                                        has national coordinator</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Person" data-placement="right">Person</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    It indicates the Person appointed as national coordinator.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2035,92 +2476,6 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                                 <td property="rdfs:comment">
                                     It indicates ther Order issued.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="PublicOrganisation.notifies"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#notifies"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20notifies%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23PublicOrganisation.notifies" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#notifies"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#notifies"
-                                           data-placement="right">
-                                        notifies</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Person" data-placement="right">Person</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the host notified.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="PublicOrganisation.notifies"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#notifies"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20notifies%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23PublicOrganisation.notifies" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#notifies"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#notifies"
-                                           data-placement="right">
-                                        notifies</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#LegalEntity" data-placement="right">Legal Entity</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the host notified.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2241,7 +2596,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 <td>
                                     
                                         
-                                            <a href="#Document" data-placement="right">Document</a>
+                                            <a href="#Evidence" data-placement="right">Evidence</a>
                                         
                                     
                                 </td>
@@ -2249,7 +2604,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It indicates the Document verified.
+                                    It indicates the Evidence verified.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2305,7 +2660,7 @@ This definition is consistent with the more detailed definition of a "public sec
                     <dt>
                         Subclass of
                         <dt>
-                            <dd> <a href="#Identifier">Identifier</a>
+                            <dd> <a href="#Output">Output</a>
                                 
                         </dd>
                     
@@ -2314,10 +2669,10 @@ This definition is consistent with the more detailed definition of a "public sec
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#RegistrationNumber.hasvalidityperiod">has validity period</a>
-                            , <a href="#RegistrationNumber.identifies">identifies</a>
+                            For this entity the following properties are defined: <a href="#RegistrationNumber.identifies">identifies</a>
                             , <a href="#RegistrationNumber.issuedate">issue date</a>
                             , <a href="#RegistrationNumber.status">status</a>
+                            , <a href="#RegistrationNumber.temporal">temporal</a>
                             .
                     </dd>
                 
@@ -2357,52 +2712,9 @@ This definition is consistent with the more detailed definition of a "public sec
                     </thead>
                     <tbody class="supertype">
                         
-                            <tr id="RegistrationNumber.hasvalidityperiod"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#hasValidityPeriod"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20has validity period%20in%20Registration Number&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23RegistrationNumber.hasvalidityperiod" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#hasValidityPeriod"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#hasValidityPeriod"
-                                           data-placement="right">
-                                        has validity period</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Periodoftime" data-placement="right">Period of time</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the Period of Time in which the resource is valid.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
                             <tr id="RegistrationNumber.identifies"
                                 typeof="rdfs:Property"
-                                resource="http://data.europa.eu/m8g/identifies"
+                                resource="https://w3id.org/str#identifies"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifies%20in%20Registration Number&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23RegistrationNumber.identifies" target="_blank" rel="noopener noreferrer" >
@@ -2411,9 +2723,9 @@ This definition is consistent with the more detailed definition of a "public sec
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="http://data.europa.eu/m8g/identifies"
+                                        <a href="https://w3id.org/str#identifies"
                                            data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/m8g/identifies"
+                                           data-content="https://w3id.org/str#identifies"
                                            data-placement="right">
                                         identifies</a>
                                 </td>
@@ -2428,7 +2740,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The entity that is referenced by the Identifier.
+                                    The Unit identified by the Registration Number.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2463,7 +2775,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 <td>
                                     
                                         
-                                            <a href="#dateTime" data-placement="right">dateTime</a>
+                                            <a href="#DateTime" data-placement="right">DateTime</a>
                                         
                                     
                                 </td>
@@ -2529,6 +2841,49 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                             </tr>
                         
+                            <tr id="RegistrationNumber.temporal"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/temporal"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20temporal%20in%20Registration Number&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23RegistrationNumber.temporal" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/temporal"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/temporal"
+                                           data-placement="right">
+                                        temporal</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Periodoftime" data-placement="right">Period of time</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    It indicates the period of time associated.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -2578,8 +2933,6 @@ This definition is consistent with the more detailed definition of a "public sec
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#RegistrationProcedure.hascost">has cost</a>
-                            , <a href="#RegistrationProcedure.hasinput">has input</a>
-                            , <a href="#RegistrationProcedure.produces">produces</a>
                             .
                     </dd>
                 
@@ -2648,92 +3001,6 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                                 <td property="rdfs:comment">
                                     	It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="RegistrationProcedure.hasinput"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#hasInput"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20has input%20in%20Registration Procedure&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23RegistrationProcedure.hasinput" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#hasInput"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#hasInput"
-                                           data-placement="right">
-                                        has input</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Document" data-placement="right">Document</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicated the Document provided as input.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="RegistrationProcedure.produces"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#produces"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20produces%20in%20Registration Procedure&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23RegistrationProcedure.produces" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#produces"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#produces"
-                                           data-placement="right">
-                                        produces</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#RegistrationNumber" data-placement="right">Registration Number</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the Registration Number produced.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2920,7 +3187,6 @@ This definition is consistent with the more detailed definition of a "public sec
                             , <a href="#Unit.hasactivitydata">has activity data</a>
                             , <a href="#Unit.hasauthorization">has authorization</a>
                             , <a href="#Unit.hasunitaddress">has unit address</a>
-                            , <a href="#Unit.identifier">identifier</a>
                             , <a href="#Unit.isauthorizationobtained">is authorization obtained</a>
                             , <a href="#Unit.issubjecttoauthorization">is subject to authorization</a>
                             , <a href="#Unit.numberofbedrooms">number of bedrooms</a>
@@ -3181,49 +3447,6 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                             </tr>
                         
-                            <tr id="Unit.identifier"
-                                typeof="rdfs:Property"
-                                resource="http://www.w3.org/ns/adms#identifier"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifier%20in%20Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Unit.identifier" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/ns/adms#identifier"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/ns/adms#identifier"
-                                           data-placement="right">
-                                        identifier</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#RegistrationNumber" data-placement="right">Registration Number</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    Links a resource to an adms:Identifier class.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
                             <tr id="Unit.isauthorizationobtained"
                                 typeof="rdfs:Property"
                                 resource="https://w3id.org/str#isAuthorizationObtained"
@@ -3244,7 +3467,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 <td>
                                     
                                         
-                                            <a href="#boolean" data-placement="right">boolean</a>
+                                            <a href="#Boolean" data-placement="right">Boolean</a>
                                         
                                     
                                 </td>
@@ -3287,7 +3510,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 <td>
                                     
                                         
-                                            <a href="#boolean" data-placement="right">boolean</a>
+                                            <a href="#Boolean" data-placement="right">Boolean</a>
                                         
                                     
                                 </td>
@@ -3330,7 +3553,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 <td>
                                     
                                         
-                                            <a href="#nonNegativeInteger" data-placement="right">nonNegativeInteger</a>
+                                            <a href="#Integer" data-placement="right">Integer</a>
                                         
                                     
                                 </td>
@@ -3373,7 +3596,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 <td>
                                     
                                         
-                                            <a href="#nonNegativeInteger" data-placement="right">nonNegativeInteger</a>
+                                            <a href="#Integer" data-placement="right">Integer</a>
                                         
                                     
                                 </td>
@@ -3639,7 +3862,7 @@ They are included in the Core Vocabulary because they form the range of properti
                                 <td>
                                     
                                         
-                                            <a href="#nonNegativeInteger" data-placement="right">nonNegativeInteger</a>
+                                            <a href="#Integer" data-placement="right">Integer</a>
                                         
                                     
                                 </td>
@@ -5251,7 +5474,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                 <td>
                                     
                                         
-                                            <a href="#double" data-placement="right">double</a>
+                                            <a href="#Double" data-placement="right">Double</a>
                                         
                                     
                                 </td>
@@ -5817,7 +6040,6 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#Document.describes">describes</a>
-                            , <a href="#Document.hasvalidityperiod">has validity period</a>
                             , <a href="#Document.submissiondate">submission date</a>
                             , <a href="#Document.updatedate">update date</a>
                             .
@@ -5902,49 +6124,6 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                 </td>
                             </tr>
                         
-                            <tr id="Document.hasvalidityperiod"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#hasValidityPeriod"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20has validity period%20in%20Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Document.hasvalidityperiod" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#hasValidityPeriod"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#hasValidityPeriod"
-                                           data-placement="right">
-                                        has validity period</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Periodoftime" data-placement="right">Period of time</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the Period of Time in which the resource is valid.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
                             <tr id="Document.submissiondate"
                                 typeof="rdfs:Property"
                                 resource="https://w3id.org/str#submissionDate"
@@ -5965,7 +6144,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                 <td>
                                     
                                         
-                                            <a href="#dateTime" data-placement="right">dateTime</a>
+                                            <a href="#DateTime" data-placement="right">DateTime</a>
                                         
                                     
                                 </td>
@@ -6008,7 +6187,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                 <td>
                                     
                                         
-                                            <a href="#dateTime" data-placement="right">dateTime</a>
+                                            <a href="#DateTime" data-placement="right">DateTime</a>
                                         
                                     
                                 </td>
@@ -6037,6 +6216,8 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
         
     </div>
 </section>
+
+
 
 
 
@@ -6158,9 +6339,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Identifier.identifies">identifies</a>
-                            , <a href="#Identifier.identifies">identifies</a>
-                            , <a href="#Identifier.notation">notation</a>
+                            For this entity the following properties are defined: <a href="#Identifier.notation">notation</a>
                             .
                     </dd>
                 
@@ -6199,92 +6378,6 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
-                            <tr id="Identifier.identifies"
-                                typeof="rdfs:Property"
-                                resource="http://data.europa.eu/m8g/identifies"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifies%20in%20Identifier&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Identifier.identifies" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://data.europa.eu/m8g/identifies"
-                                           data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/m8g/identifies"
-                                           data-placement="right">
-                                        identifies</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Person" data-placement="right">Person</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The entity that is referenced by the Identifier.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Identifier.identifies"
-                                typeof="rdfs:Property"
-                                resource="http://data.europa.eu/m8g/identifies"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifies%20in%20Identifier&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Identifier.identifies" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://data.europa.eu/m8g/identifies"
-                                           data-toggle="tooltip"
-                                           data-content="http://data.europa.eu/m8g/identifies"
-                                           data-placement="right">
-                                        identifies</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#LegalEntity" data-placement="right">Legal Entity</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The entity that is referenced by the Identifier.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
                         
                             <tr id="Identifier.notation"
                                 typeof="rdfs:Property"
@@ -6610,6 +6703,181 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
 
    
         <section>
+            <h3 id="Output">
+                <a href="http://data.europa.eu/m8g/Output"
+                   data-toggle="tooltip"
+                   data-content="http://data.europa.eu/m8g/Output"
+                   data-placement="right">Output</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20Output&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    An output can be any resource - document, artefact - anything produced by the Public Service. In the context of a Public Service, the output provides an official document or other artefact of the Competent Authority (Public Organization) that permits/authorises/entitles an Agent to (do) something.
+                </dd>
+                
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        In some cases, the Output of one Public Service will be used as evidence to fulfil a requirement of another Public Service. Such relationships should be described in the associated Rule(s)
+                    </dd>
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Output.identifier">identifier</a>
+                            , <a href="#Output.name">name</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Output.identifier"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/identifier"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifier%20in%20Output&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Output.identifier" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/identifier"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/identifier"
+                                           data-placement="right">
+                                        identifier</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An Identifier for the Output.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Output.name"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20name%20in%20Output&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Output.name" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#langString" data-placement="right">langString</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The official Name of the Output.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
             <h3 id="Periodoftime">
                 <a href="http://purl.org/dc/terms/PeriodOfTime"
                    data-toggle="tooltip"
@@ -6912,8 +7180,10 @@ companies, vehicles, licences, buildings, locations and roads.
                         <dd>
                             For this entity the following properties are defined: <a href="#PublicRegistryService.description">description</a>
                             , <a href="#PublicRegistryService.hascompetentauthority">has competent authority</a>
+                            , <a href="#PublicRegistryService.hasinput">has input</a>
                             , <a href="#PublicRegistryService.identifier">identifier</a>
                             , <a href="#PublicRegistryService.name">name</a>
+                            , <a href="#PublicRegistryService.produces">produces</a>
                             , <a href="#PublicRegistryService.produces">produces</a>
                             .
                     </dd>
@@ -7040,6 +7310,49 @@ companies, vehicles, licences, buildings, locations and roads.
                                 </td>
                             </tr>
                         
+                            <tr id="PublicRegistryService.hasinput"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/vocab/cpsv#hasInput"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20has input%20in%20Public Registry Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23PublicRegistryService.hasinput" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/vocab/cpsv#hasInput"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/vocab/cpsv#hasInput"
+                                           data-placement="right">
+                                        has input</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Evidence" data-placement="right">Evidence</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    It links a Public Service to one or more instances of the Evidence class.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    In the case of STR, the Evidence is all information and documents provided by the host.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="PublicRegistryService.identifier"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/identifier"
@@ -7146,6 +7459,49 @@ companies, vehicles, licences, buildings, locations and roads.
                                 <td>
                                     
                                         
+                                            <a href="#Output" data-placement="right">Output</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="PublicRegistryService.produces"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/vocab/cpsv#produces"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20produces%20in%20Public Registry Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23PublicRegistryService.produces" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/vocab/cpsv#produces"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/vocab/cpsv#produces"
+                                           data-placement="right">
+                                        produces</a>
+                                </td>
+                                <td>
+                                    
+                                        
                                             <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
                                         
                                     
@@ -7217,93 +7573,12 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                         Properties
                     </dt>
                     
-                        <dd>
-                            For this entity the following properties are defined: <a href="#SingleDigitalEntryPoint.hasnationalcoordinator">has national coordinator</a>
-                            .
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
         </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-			    -->
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="SingleDigitalEntryPoint.hasnationalcoordinator"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str#hasNationalCoordinator"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20has national coordinator%20in%20Single Digital Entry Point&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23SingleDigitalEntryPoint.hasnationalcoordinator" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str#hasNationalCoordinator"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str#hasNationalCoordinator"
-                                           data-placement="right">
-                                        has national coordinator</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Person" data-placement="right">Person</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the Person appointed as national coordinator.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
         
     </div>
 </section>
@@ -7344,11 +7619,11 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
 		   </a>
 		</td><td>
                 
-                    <div id="boolean">
+                    <div id="Boolean">
                         <a href="http://www.w3.org/2001/XMLSchema#boolean"
                            data-toggle="tooltip"
                            data-content="http://www.w3.org/2001/XMLSchema#boolean"
-                           data-placement="right">boolean</a>
+                           data-placement="right">Boolean</a>
                     </div>
                 
 		</td><td>
@@ -7360,11 +7635,11 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
 		   </a>
 		</td><td>
                 
-                    <div id="dateTime">
+                    <div id="DateTime">
                         <a href="http://www.w3.org/2001/XMLSchema#dateTime"
                            data-toggle="tooltip"
                            data-content="http://www.w3.org/2001/XMLSchema#dateTime"
-                           data-placement="right">dateTime</a>
+                           data-placement="right">DateTime</a>
                     </div>
                 
 		</td><td>
@@ -7376,15 +7651,31 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
 		   </a>
 		</td><td>
                 
-                    <div id="double">
+                    <div id="Double">
                         <a href="http://www.w3.org/2001/XMLSchema#double"
                            data-toggle="tooltip"
                            data-content="http://www.w3.org/2001/XMLSchema#double"
-                           data-placement="right">double</a>
+                           data-placement="right">Double</a>
                     </div>
                 
 		</td><td>
                     The double datatype is patterned after the IEEE double-precision 64-bit floating point type [IEEE 754-1985].
+		</td></tr>
+		<tr><td>
+                   <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20Integer&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="Integer">
+                        <a href="http://www.w3.org/2001/XMLSchema#integer"
+                           data-toggle="tooltip"
+                           data-content="http://www.w3.org/2001/XMLSchema#integer"
+                           data-placement="right">Integer</a>
+                    </div>
+                
+		</td><td>
+                    integer is derived from decimal by fixing the value of fractionDigits to be 0 and disallowing the trailing decimal point. This results in the standard mathematical concept of the integer numbers.
 		</td></tr>
 		<tr><td>
                    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20Langstring&body=Explain%20your%20issue"}}>
@@ -7401,22 +7692,6 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                 
 		</td><td>
                     The class rdf:langString is the class of language-tagged string values. rdf:langString is an instance of rdfs:Datatype and a subclass of rdfs:Literal .
-		</td></tr>
-		<tr><td>
-                   <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20Nonnegativeinteger&body=Explain%20your%20issue"}}>
-                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
-		   </a>
-		</td><td>
-                
-                    <div id="nonNegativeInteger">
-                        <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-                           data-toggle="tooltip"
-                           data-content="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-                           data-placement="right">nonNegativeInteger</a>
-                    </div>
-                
-		</td><td>
-                    Number derived from integer by setting the value of minInclusive to be 0.
 		</td></tr>
 		<tr><td>
                    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20TemporalLiteral&body=Explain%20your%20issue"}}>
@@ -8120,10 +8395,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
-					
-						
 					
 						
 					
@@ -8147,16 +8418,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Document">Document</a></td>
 								<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
 								<td></td>
-								<td><a href="#Document.hasvalidityperiod">has validity period </a></td>
-								<td><div class="shorten">https://w3id.org/str#hasValidityPeriod</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Document">Document</a></td>
-								<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
-								<td></td>
 								<td><a href="#Document.submissiondate">submission date </a></td>
 								<td><div class="shorten">https://w3id.org/str#submissionDate</div></td>
 							</tr>
@@ -8169,6 +8430,69 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Document.updatedate">update date </a></td>
 								<td><div class="shorten">https://w3id.org/str#updateDate</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
+								<td><a href="#Evidence.identifier">identifier </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
+								<td><a href="#Evidence.name">name </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
+								<td><a href="#Evidence.relateddocumentation">related documentation </a></td>
+								<td><div class="shorten">http://xmlns.com/foaf/0.1/page</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
+								<td><a href="#Evidence.validityperiod">validity period </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/validityPeriod</div></td>
 							</tr>
 						
 					
@@ -8200,10 +8524,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 				
 					
 						
-					
-						
-					
-						
 							<tr>
 								<td><a href="#Identifier">Identifier</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/adms#identifier</div></td>
@@ -8216,30 +8536,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
-						
-					
-					
-						
-							<tr>
-								<td><a href="#Identifier">Identifier</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/adms#identifier</div></td>
-								<td></td>
-								<td><a href="#Identifier.identifies">identifies </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/identifies</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Identifier">Identifier</a></td>
-								<td><div class="shorten">http://www.w3.org/ns/adms#identifier</div></td>
-								<td></td>
-								<td><a href="#Identifier.identifies">identifies </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/identifies</div></td>
-							</tr>
-						
 					
 						
 					
@@ -8260,6 +8556,14 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+					
+						
+					
+						
 					
 						
 					
@@ -8281,6 +8585,26 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#LegalEntity.haslegalrepresentative">has legal representative </a></td>
 								<td><div class="shorten">https://w3id.org/str#hasLegalRepresentative</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#LegalEntity">Legal Entity</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/legal#LegalEntity</div></td>
+								<td></td>
+								<td><a href="#LegalEntity.isnotifiedby">is notified by </a></td>
+								<td><div class="shorten">https://w3id.org/str#isNotifiedBy</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#LegalEntity">Legal Entity</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/legal#LegalEntity</div></td>
+								<td></td>
+								<td><a href="#LegalEntity.isreferredin">is referred in </a></td>
+								<td><div class="shorten">https://w3id.org/str#isReferredIn</div></td>
 							</tr>
 						
 					
@@ -8468,14 +8792,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
-						
-					
-					
-						
-					
-						
 					
 						
 					
@@ -8499,26 +8815,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Order">Order</a></td>
 								<td><div class="shorten">https://w3id.org/str#Order</div></td>
 								<td></td>
-								<td><a href="#Order.isabout">is about </a></td>
-								<td><div class="shorten">https://w3id.org/str#isAbout</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Order">Order</a></td>
-								<td><div class="shorten">https://w3id.org/str#Order</div></td>
-								<td></td>
-								<td><a href="#Order.isabout">is about </a></td>
-								<td><div class="shorten">https://w3id.org/str#isAbout</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Order">Order</a></td>
-								<td><div class="shorten">https://w3id.org/str#Order</div></td>
-								<td></td>
 								<td><a href="#Order.reason">reason </a></td>
 								<td><div class="shorten">https://w3id.org/str#reason</div></td>
 							</tr>
@@ -8531,6 +8827,41 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Order.sentto">sent to </a></td>
 								<td><div class="shorten">https://w3id.org/str#sentTo</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Output">Output</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
+								<td></td>
+								<td><a href="#Output.identifier">identifier </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Output">Output</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Output</div></td>
+								<td></td>
+								<td><a href="#Output.name">name </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
 						
 					
@@ -8616,6 +8947,18 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
 					
 						
 					
@@ -8687,6 +9030,36 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Person">Person</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/person#Person</div></td>
 								<td></td>
+								<td><a href="#Person.ispointofcontactfor">is point of contact for </a></td>
+								<td><div class="shorten">https://w3id.org/str#isPointOfContactFor</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Person">Person</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/person#Person</div></td>
+								<td></td>
+								<td><a href="#Person.isreferredin">is referred in </a></td>
+								<td><div class="shorten">https://w3id.org/str#isReferredIn</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Person">Person</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/person#Person</div></td>
+								<td></td>
+								<td><a href="#Person.notifies">notifies </a></td>
+								<td><div class="shorten">https://w3id.org/str#notifies</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Person">Person</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/person#Person</div></td>
+								<td></td>
 								<td><a href="#Person.offers">offers </a></td>
 								<td><div class="shorten">https://w3id.org/str#offers</div></td>
 							</tr>
@@ -8727,10 +9100,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
-					
-						
 					
 						
 					
@@ -8798,8 +9167,18 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#PublicOrganisation">Public Organisation</a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/PublicOrganisation</div></td>
 								<td></td>
-								<td><a href="#PublicOrganisation.isresponsiblefor">is responsible for </a></td>
-								<td><div class="shorten">https://w3id.org/str#isResponsibleFor</div></td>
+								<td><a href="#PublicOrganisation.establishes">establishes </a></td>
+								<td><div class="shorten">https://w3id.org/str#establishes</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#PublicOrganisation">Public Organisation</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/PublicOrganisation</div></td>
+								<td></td>
+								<td><a href="#PublicOrganisation.hasnationalcoordinator">has national coordinator </a></td>
+								<td><div class="shorten">https://w3id.org/str#hasNationalCoordinator</div></td>
 							</tr>
 						
 					
@@ -8810,26 +9189,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#PublicOrganisation.issues">issues </a></td>
 								<td><div class="shorten">https://w3id.org/str#issues</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#PublicOrganisation">Public Organisation</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/PublicOrganisation</div></td>
-								<td></td>
-								<td><a href="#PublicOrganisation.notifies">notifies </a></td>
-								<td><div class="shorten">https://w3id.org/str#notifies</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#PublicOrganisation">Public Organisation</a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/PublicOrganisation</div></td>
-								<td></td>
-								<td><a href="#PublicOrganisation.notifies">notifies </a></td>
-								<td><div class="shorten">https://w3id.org/str#notifies</div></td>
 							</tr>
 						
 					
@@ -8878,6 +9237,14 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+					
+						
+					
+						
 					
 						
 					
@@ -8915,6 +9282,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
 								<td></td>
+								<td><a href="#PublicRegistryService.hasinput">has input </a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#hasInput</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
+								<td></td>
 								<td><a href="#PublicRegistryService.identifier">identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
@@ -8927,6 +9304,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#PublicRegistryService.name">name </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
+								<td></td>
+								<td><a href="#PublicRegistryService.produces">produces </a></td>
+								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
 						
 					
@@ -8968,18 +9355,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#RegistrationNumber">Registration Number</a></td>
 								<td><div class="shorten">https://w3id.org/str#RegistrationNumber</div></td>
 								<td></td>
-								<td><a href="#RegistrationNumber.hasvalidityperiod">has validity period </a></td>
-								<td><div class="shorten">https://w3id.org/str#hasValidityPeriod</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#RegistrationNumber">Registration Number</a></td>
-								<td><div class="shorten">https://w3id.org/str#RegistrationNumber</div></td>
-								<td></td>
 								<td><a href="#RegistrationNumber.identifies">identifies </a></td>
-								<td><div class="shorten">http://data.europa.eu/m8g/identifies</div></td>
+								<td><div class="shorten">https://w3id.org/str#identifies</div></td>
 							</tr>
 						
 					
@@ -9003,6 +9380,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
+						
+							<tr>
+								<td><a href="#RegistrationNumber">Registration Number</a></td>
+								<td><div class="shorten">https://w3id.org/str#RegistrationNumber</div></td>
+								<td></td>
+								<td><a href="#RegistrationNumber.temporal">temporal </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/temporal</div></td>
+							</tr>
+						
+					
 				
 			</tr>
 		
@@ -9010,14 +9397,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
-						
-					
-					
-						
-					
-						
 					
 						
 					
@@ -9029,26 +9408,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#RegistrationProcedure.hascost">has cost </a></td>
 								<td><div class="shorten">http://data.europa.eu/m8g/hasCost</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#RegistrationProcedure">Registration Procedure</a></td>
-								<td><div class="shorten">https://w3id.org/str#RegistrationProcedure</div></td>
-								<td></td>
-								<td><a href="#RegistrationProcedure.hasinput">has input </a></td>
-								<td><div class="shorten">https://w3id.org/str#hasInput</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#RegistrationProcedure">Registration Procedure</a></td>
-								<td><div class="shorten">https://w3id.org/str#RegistrationProcedure</div></td>
-								<td></td>
-								<td><a href="#RegistrationProcedure.produces">produces </a></td>
-								<td><div class="shorten">https://w3id.org/str#produces</div></td>
 							</tr>
 						
 					
@@ -9077,23 +9436,13 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 			</tr>
 		
 				
-					
-						
-					
-					
-						
-					
-					
-						
-							<tr>
-								<td><a href="#SingleDigitalEntryPoint">Single Digital Entry Point</a></td>
-								<td><div class="shorten">https://w3id.org/str#SingleDigitalEntryPoint</div></td>
-								<td></td>
-								<td><a href="#SingleDigitalEntryPoint.hasnationalcoordinator">has national coordinator </a></td>
-								<td><div class="shorten">https://w3id.org/str#hasNationalCoordinator</div></td>
-							</tr>
-						
-					
+					<tr>
+						<td><a href="#SingleDigitalEntryPoint">Single Digital Entry Point</a></td>
+						<td><div class="shorten">https://w3id.org/str#SingleDigitalEntryPoint</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
 				
 			</tr>
 		
@@ -9121,10 +9470,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
-						
-					
-					
-						
 					
 						
 					
@@ -9196,16 +9541,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Unit.hasunitaddress">has unit address </a></td>
 								<td><div class="shorten">https://w3id.org/str#hasUnitAddress</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Unit">Unit</a></td>
-								<td><div class="shorten">https://w3id.org/str#Unit</div></td>
-								<td></td>
-								<td><a href="#Unit.identifier">identifier </a></td>
-								<td><div class="shorten">http://www.w3.org/ns/adms#identifier</div></td>
 							</tr>
 						
 					

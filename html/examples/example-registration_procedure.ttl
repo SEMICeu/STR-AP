@@ -1,4 +1,5 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -14,22 +15,31 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:registrationNumber1 skos:notation "2025-01-28_12345" ;
-	cv:identifies ex:unit1 ;
+ex:registrationProcedure1 dct:identifier "2015-01-28-09-00-00-123" ;
+	dct:description "Provision of registration number for Rene Magritte for shared house"@en ;
+	dct:title "Registration number service 123"@en ;
+	cpsv:produces ex:registrationNumber1 ;
+    cpsv:hasInput ex:evidence1 ;
+	cv:hasCompetentAuthority ex:publicOrganisation1 ;
+	a str:RegistrationProcedure .
+
+ex:registrationNumber1 dct:identifier "2025-01-28_12345" ;
+	dct:title "Registration number 12345"@en ;
+	str:identifies ex:unit1 ;
 	dct:issued "2024-01-28T12:00:00"^^xsd:dateTime ;
 	adms:status ex:validStatus ;
 	a str:RegistrationNumber .
 
-ex:registrationProcedure1 dct:identifier "2015-01-28-09-00-00-123" ;
-	dct:description "Provision of registration number for Rene Magritte for shared house"@en ;
-	dct:title "Registration number service 123"@en ;
-	str:produces ex:registrationNumber1 ;
-	cv:hasCompetentAuthority ex:publicOrganisation1 ;
-	a str:RegistrationProcedure .
+ex:evidence1 dct:identifier "evi-123" ;
+	dct:title "Unit evidence"@en ;
+    foaf:page ex:document1 ;
+    a cv:Evidence .
 
 ex:publicOrganisation1 skos:prefLabel "Jette municipality"@en ;
-	locn:address ex:address2;
+	locn:address ex:address2 ;
 	a cv:PublicOrganisation .
+
+ex:person1 str:offers ex:STRentalservice1 .
 
 ex:STRentalservice1 str:providesAccessTo ex:onlineSTRentalPlatform1 ;
 	a str:STAccomondationRentalService .
@@ -43,9 +53,6 @@ ex:dataset1 dcat:distribution ex:distribution1 ;
 
 ex:distribution1 str:hasListing ex:unit1 ;
 	a dcat:Distribution .
-
-ex:person1 str:offers ex:STRentalservice1 ;
-	a person:Person .
 
 ex:address2 a locn:Address .
 

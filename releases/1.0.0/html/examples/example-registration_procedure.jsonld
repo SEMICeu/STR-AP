@@ -3,6 +3,7 @@
   "https://semiceu.github.io/STR-AP/releases/1.0.0/context/strap.jsonld",
    {
     "adms": "http://www.w3.org/ns/adms#",
+    "cpsv": "http://purl.org/vocab/cpsv#",
     "cv": "http://data.europa.eu/m8g/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "dct": "http://purl.org/dc/terms/",
@@ -20,21 +21,6 @@
   ],
   "@graph": [
     {
-      "@id": "ex:registrationNumber1",
-      "@type": "RegistrationNumber",
-      "skos:notation": "2025-01-28_12345",
-      "cv:identifies": {
-       "@id": "ex:unit1"
-      },
-      "dct:issued": {
-        "@type": "xsd:dateTime",
-        "@value": "2024-01-28T12:00:00"
-      },
-      "adms:status": {
-        "@id": "ex:validStatus"
-      }
-    },
-    {
       "@id": "ex:registrationProcedure1",
       "@type": "RegistrationProcedure",
       "dct:identifier": "2015-01-28-09-00-00-123",
@@ -46,12 +32,46 @@
         "@language": "en",
         "@value": "Registration number service 123"
       },
-      "str:produces": {
+      "cpsv:produces": {
        "@id": "ex:registrationNumber1"
+      },
+      "cpsv:hasInput": {
+       "@id": "ex:evidence1"
       },
       "cv:hasCompetentAuthority": {
        "@id": "ex:publicOrganisation1"
       }
+    },
+    {
+      "@id": "ex:registrationNumber1",
+      "@type": "RegistrationNumber",
+      "dct:identifier": "2025-01-28_12345",
+      "dct:title": {
+        "@language": "en",
+        "@value": "Registration number 12345"
+      },
+      "str:identifies": {
+       "@id": "ex:unit1"
+      },
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2024-01-28T12:00:00"
+      },
+      "adms:status": {
+        "@id": "ex:validStatus"
+      }
+    },
+    {
+      "@id": "ex:evidence1",
+      "@type": "Evidence",
+      "dct:identifier": "evi-123",
+      "dct:title": {
+        "@language": "en",
+        "@value": "Unit evidence"
+      },
+      "foaf:page": {
+        "@id": "ex:document1"
+      }  
     },
     {
       "@id": "ex:publicOrganisation1",

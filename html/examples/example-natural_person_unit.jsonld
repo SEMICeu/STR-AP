@@ -38,9 +38,6 @@
      },
      "adms:identifier" : {
        "@id": "ex:identifier1"
-     },
-     "str:provides" : {
-       "@id": "ex:document1"
      }
     },
     {
@@ -63,25 +60,33 @@
       "skos:notation": "123.456.789"
     },
     {
-      "@id": "ex:document1",
-      "@type": "Document",
+      "@id": "ex:evidence1",
+      "@type": "Evidence",
+      "dct:identifier" : "evi-123",
+      "dct:title" : {
+        "@language": "en",
+        "@value": "Information about the unit"
+      },
       "str:submissionDate": {
         "@type": "xsd:dateTime",
         "@value": "2024-01-28T09:00:00"
       },
       "str:describes": {
         "@id": "ex:unit1"
-      }
+      },
+      "cv:isProvidedBy" : {
+       "@id": "ex:person1"
+     }
     },
     {
       "@id": "ex:unit1",
       "@type": "Unit",
       "str:numberOfBedrooms": {
-        "@type": "xsd:nonNegativeInteger",
+        "@type": "xsd:integer",
         "@value": "1"
       },
       "str:occupancy": {
-        "@type": "xsd:nonNegativeInteger",
+        "@type": "xsd:integer",
         "@value": "2"
       },
       "str:floorLevel": {
