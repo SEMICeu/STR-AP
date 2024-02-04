@@ -1,0 +1,6 @@
+<https://w3id.org/str/hasActivityData> <http://www.w3.org/2000/01/rdf-schema#label> "has activity data"@en .
+<https://w3id.org/str/hasActivityData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/str/hasActivityData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/str/> .
+<https://w3id.org/str/hasActivityData> <http://www.w3.org/2000/01/rdf-schema#comment> "The activity data associated to the Unit."@en .
+<https://w3id.org/str/hasActivityData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+

@@ -14,34 +14,12 @@
     "person": "http://www.w3.org/ns/person#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "str": "https://w3id.org/str#",
+    "str": "https://w3id.org/str/",
     "time": "http://www.w3.org/2006/time#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
    }
   ],
   "@graph": [
-    {
-      "@id": "ex:registrationProcedure1",
-      "@type": "RegistrationProcedure",
-      "dct:identifier": "2015-01-28-09-00-00-123",
-      "dct:description": {
-        "@language": "en",
-        "@value": "Provision of registration number for Rene Magritte for shared house"
-      },
-      "dct:title": {
-        "@language": "en",
-        "@value": "Registration number service 123"
-      },
-      "cpsv:produces": {
-       "@id": "ex:registrationNumber1"
-      },
-      "cpsv:hasInput": {
-       "@id": "ex:evidence1"
-      },
-      "cv:hasCompetentAuthority": {
-       "@id": "ex:publicOrganisation1"
-      }
-    },
     {
       "@id": "ex:registrationNumber1",
       "@type": "RegistrationNumber",
@@ -62,16 +40,23 @@
       }
     },
     {
-      "@id": "ex:evidence1",
-      "@type": "Evidence",
-      "dct:identifier": "evi-123",
+      "@id": "ex:registrationProcedure1",
+      "@type": "RegistrationProcedure",
+      "dct:identifier": "2015-01-28-09-00-00-123",
+      "dct:description": {
+        "@language": "en",
+        "@value": "Provision of registration number for Rene Magritte for shared house"
+      },
       "dct:title": {
         "@language": "en",
-        "@value": "Unit evidence"
+        "@value": "Registration number service 123"
       },
-      "foaf:page": {
-        "@id": "ex:document1"
-      }  
+      "cpsv:produces": {
+       "@id": "ex:registrationNumber1"
+      },
+      "cv:hasCompetentAuthority": {
+       "@id": "ex:publicOrganisation1"
+      }
     },
     {
       "@id": "ex:publicOrganisation1",

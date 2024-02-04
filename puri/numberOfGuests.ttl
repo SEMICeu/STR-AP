@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/str/numberOfGuests> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "number of guests"@en ;
+    rdfs:comment "The number of guest that the unit was rented to per night."@en ;
+    rdfs:isDefinedBy <https://w3id.org/str/> .
+

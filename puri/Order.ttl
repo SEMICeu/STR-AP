@@ -1,4 +1,6 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://w3ird.org/str#Order> a owl:Class .
+<https://w3id.org/str/Order> a owl:Class ;
+    rdfs:isDefinedBy <https://w3id.org/str/> .
 

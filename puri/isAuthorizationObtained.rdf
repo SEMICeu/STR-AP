@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/str/isAuthorizationObtained">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/str/"/>
+    <rdfs:label xml:lang="en">is authorization obtained</rdfs:label>
+    <rdfs:comment xml:lang="en">it indicates whether the host has obtained an authorisation for the Unit.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>

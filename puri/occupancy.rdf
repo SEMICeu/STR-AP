@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/str/occupancy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">occupancy</rdfs:label>
+    <rdfs:comment xml:lang="en">The maximum number of guests that the unit accommodates.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/str/"/>
+  </rdf:Description>
+</rdf:RDF>

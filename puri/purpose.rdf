@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/str/purpose">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">purpose</rdfs:label>
+    <rdfs:comment xml:lang="en">It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/str/"/>
+  </rdf:Description>
+</rdf:RDF>

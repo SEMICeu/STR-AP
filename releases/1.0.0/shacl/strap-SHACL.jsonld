@@ -461,7 +461,7 @@
           "sh:name": {
             "en": "establishes"
           },
-          "sh:path": "https://w3id.org/str#establishes"
+          "sh:path": "https://w3id.org/str/establishes"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267",
@@ -485,7 +485,7 @@
           "sh:name": {
             "en": "has national coordinator"
           },
-          "sh:path": "https://w3id.org/str#hasNationalCoordinator"
+          "sh:path": "https://w3id.org/str/hasNationalCoordinator"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70",
@@ -509,7 +509,7 @@
           "sh:name": {
             "en": "verifies"
           },
-          "sh:path": "https://w3id.org/str#verifies"
+          "sh:path": "https://w3id.org/str/verifies"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisationShape/a315bc125916d6005403a8ad2001b5d86d5b17bb",
@@ -521,19 +521,19 @@
           "sh:name": {
             "en": "has national coordinator"
           },
-          "sh:path": "https://w3id.org/str#hasNationalCoordinator"
+          "sh:path": "https://w3id.org/str/hasNationalCoordinator"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisationShape/b2058b4ad9511a1d9d91e1dd9ec1ef8ecfcad387",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisation.establishes",
-          "sh:class": "https://w3id.org/str#SingleDigitalEntryPoint",
+          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
           "sh:description": {
             "en": "It indicates the Single Digital Entry Point being managed."
           },
           "sh:name": {
             "en": "establishes"
           },
-          "sh:path": "https://w3id.org/str#establishes"
+          "sh:path": "https://w3id.org/str/establishes"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96",
@@ -550,14 +550,14 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisationShape/c9fffe20eccf0e1883a426d0976d6e66c16f6c71",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisation.issues",
-          "sh:class": "https://w3id.org/str#Order",
+          "sh:class": "https://w3id.org/str/Order",
           "sh:description": {
             "en": "It indicates ther Order issued."
           },
           "sh:name": {
             "en": "issues"
           },
-          "sh:path": "https://w3id.org/str#issues"
+          "sh:path": "https://w3id.org/str/issues"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -1141,14 +1141,14 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DistributionShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Distribution.haslisting",
-          "sh:class": "https://w3id.org/str#Unit",
+          "sh:class": "https://w3id.org/str/Unit",
           "sh:description": {
             "en": "It indicates the Unit listed."
           },
           "sh:name": {
             "en": "has listing"
           },
-          "sh:path": "https://w3id.org/str#hasListing"
+          "sh:path": "https://w3id.org/str/hasListing"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/dcat#Distribution"
@@ -1170,24 +1170,24 @@
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.isnotifiedby",
           "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
           "sh:description": {
-            "en": "It indicates the host notified."
+            "en": "It indicates the competent auhority notifying."
           },
           "sh:name": {
             "en": "is notified by"
           },
-          "sh:path": "https://w3id.org/str#isNotifiedBy"
+          "sh:path": "https://w3id.org/str/legalEntityIsNotifiedBy"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/2d7ae974de8cf6bf9f79f4d5bd3e490544d0bd9a",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.isreferredin",
-          "sh:class": "https://w3id.org/str#Order",
+          "sh:class": "https://w3id.org/str/Order",
           "sh:description": {
             "en": "It indicates the Order in which the host is referred."
           },
           "sh:name": {
             "en": "is referred in"
           },
-          "sh:path": "https://w3id.org/str#isReferredIn"
+          "sh:path": "https://w3id.org/str/legalEntityIsReferredIn"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/35a0c5bc0ce5ab144bd063c0f462c983de54579b",
@@ -1216,26 +1216,26 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.offers",
-          "sh:class": "https://w3id.org/str#STAccomondationRentalService",
+          "sh:class": "https://w3id.org/str/ShortTermAccomondationRentalService",
           "sh:description": {
             "en": "It indicates the rental service offered."
           },
           "sh:name": {
             "en": "offers"
           },
-          "sh:path": "https://w3id.org/str#offers"
+          "sh:path": "https://w3id.org/str/legalEntityOffers"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/71b69bfe1f117f65960a52027da4905f447de695",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.provides",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
-            "en": "It indicates the Document provided."
+            "en": "It indicates the Document provided by the Legal Entity."
           },
           "sh:name": {
             "en": "provides"
           },
-          "sh:path": "https://w3id.org/str#provides"
+          "sh:path": "https://w3id.org/str/legalEntityProvides"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/7732c779d9ef9b53ab85a7c61b415537d57aafba",
@@ -1247,7 +1247,7 @@
           "sh:name": {
             "en": "has legal representative"
           },
-          "sh:path": "https://w3id.org/str#hasLegalRepresentative"
+          "sh:path": "https://w3id.org/str/hasLegalRepresentative"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/7d73074765293c6ee57c5af79f568751c1a4bde7",
@@ -1259,7 +1259,7 @@
           "sh:name": {
             "en": "has legal representative"
           },
-          "sh:path": "https://w3id.org/str#hasLegalRepresentative"
+          "sh:path": "https://w3id.org/str/hasLegalRepresentative"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/866f7a83c3007ee916031153fda619f2402ac69c",
@@ -1411,7 +1411,7 @@
           "sh:name": {
             "en": "land register"
           },
-          "sh:path": "https://w3id.org/str#landRegister"
+          "sh:path": "https://w3id.org/str/landRegister"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#AddressShape/6189a49a5cedd230bdea41d224948fe9e0e81091",
@@ -1423,7 +1423,7 @@
           "sh:name": {
             "en": "land register"
           },
-          "sh:path": "https://w3id.org/str#landRegister"
+          "sh:path": "https://w3id.org/str/landRegister"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
@@ -1597,6 +1597,18 @@
       "sh:closed": false,
       "sh:property": [
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/0e159f840ef049893a46a2425cfce1a80e06ece6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.isnotifiedby",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "It indicates the competent auhority notifying."
+          },
+          "sh:name": {
+            "en": "is notified by"
+          },
+          "sh:path": "https://w3id.org/str/personIsNotifiedBy"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/1572a063cf6e42858dabf5017baf40a96bf7155d",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.familyname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
@@ -1611,26 +1623,26 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/2d7ae974de8cf6bf9f79f4d5bd3e490544d0bd9a",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.isreferredin",
-          "sh:class": "https://w3id.org/str#Order",
+          "sh:class": "https://w3id.org/str/Order",
           "sh:description": {
             "en": "It indicates the Order in which the host is referred."
           },
           "sh:name": {
             "en": "is referred in"
           },
-          "sh:path": "https://w3id.org/str#isReferredIn"
+          "sh:path": "https://w3id.org/str/personIsReferredIn"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.offers",
-          "sh:class": "https://w3id.org/str#STAccomondationRentalService",
+          "sh:class": "https://w3id.org/str/ShortTermAccomondationRentalService",
           "sh:description": {
             "en": "It indicates the rental service offered."
           },
           "sh:name": {
             "en": "offers"
           },
-          "sh:path": "https://w3id.org/str#offers"
+          "sh:path": "https://w3id.org/str/personOffers"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/55b5451dbdf7a52f51562f996bc320d6e00bf47d",
@@ -1643,18 +1655,6 @@
             "en": "domicile"
           },
           "sh:path": "http://data.europa.eu/m8g/domicile"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/56c3f09e4582689fdefe20021ba208e5c29833e0",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.notifies",
-          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
-          "sh:description": {
-            "en": "It indicates the host notified."
-          },
-          "sh:name": {
-            "en": "notifies"
-          },
-          "sh:path": "https://w3id.org/str#notifies"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/578fe53d9dfe43a6910ddf42d990ee2d7e26e120",
@@ -1733,12 +1733,12 @@
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.provides",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
           "sh:description": {
-            "en": "It indicates the Document provided."
+            "en": "It indicates the Document provided by the person."
           },
           "sh:name": {
             "en": "provides"
           },
-          "sh:path": "https://w3id.org/str#provides"
+          "sh:path": "https://w3id.org/str/personProvides"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
@@ -1755,14 +1755,14 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/ab0e6b0fb6366e55bccc49a6801563c185f8a209",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.ispointofcontactfor",
-          "sh:class": "https://w3id.org/str#SingleDigitalEntryPoint",
+          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
           "sh:description": {
             "en": "The Single Digital Entry point for which the person acts as contact point for all matters related."
           },
           "sh:name": {
             "en": "is point of contact for"
           },
-          "sh:path": "https://w3id.org/str#isPointOfContactFor"
+          "sh:path": "https://w3id.org/str/isPointOfContactFor"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/c0d17764e84e711728581fda7356a51e99a9040a",
@@ -1830,7 +1830,7 @@
           "sh:name": {
             "en": "update date"
           },
-          "sh:path": "https://w3id.org/str#updateDate"
+          "sh:path": "https://w3id.org/str/updateDate"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/58f2bb146c1acc13d00df887f8005ac509470906",
@@ -1842,7 +1842,7 @@
           "sh:name": {
             "en": "submission date"
           },
-          "sh:path": "https://w3id.org/str#submissionDate"
+          "sh:path": "https://w3id.org/str/submissionDate"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/6065b86a462e0eb1d5964d166fbccf077716ffe5",
@@ -1854,7 +1854,7 @@
           "sh:name": {
             "en": "describes"
           },
-          "sh:path": "https://w3id.org/str#describes"
+          "sh:path": "https://w3id.org/str/describes"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/973c218c87e5004e247def216f50a940ac2e9738",
@@ -1866,7 +1866,7 @@
           "sh:name": {
             "en": "update date"
           },
-          "sh:path": "https://w3id.org/str#updateDate"
+          "sh:path": "https://w3id.org/str/updateDate"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc",
@@ -1878,7 +1878,7 @@
           "sh:name": {
             "en": "submission date"
           },
-          "sh:path": "https://w3id.org/str#submissionDate"
+          "sh:path": "https://w3id.org/str/submissionDate"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636",
@@ -1890,19 +1890,19 @@
           "sh:name": {
             "en": "submission date"
           },
-          "sh:path": "https://w3id.org/str#submissionDate"
+          "sh:path": "https://w3id.org/str/submissionDate"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/e64b135aa5770a921a6738287316722c7a7dd679",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.describes",
-          "sh:class": "https://w3id.org/str#Unit",
+          "sh:class": "https://w3id.org/str/Unit",
           "sh:description": {
             "en": "It indicates the Unit described."
           },
           "sh:name": {
             "en": "describes"
           },
-          "sh:path": "https://w3id.org/str#describes"
+          "sh:path": "https://w3id.org/str/describes"
         }
       ],
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
@@ -1953,7 +1953,7 @@
           "sh:name": {
             "en": "number of guests"
           },
-          "sh:path": "https://w3id.org/str#numberOfGuests"
+          "sh:path": "https://w3id.org/str/numberOfGuests"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/49a6320b7777187095496984ab0658fb4fe18432",
@@ -1965,7 +1965,7 @@
           "sh:name": {
             "en": "country of residence"
           },
-          "sh:path": "https://w3id.org/str#countryOfResidence"
+          "sh:path": "https://w3id.org/str/countryOfResidence"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/6aa30c70cdf1269774f13637e328efc4a99b0f8f",
@@ -1977,7 +1977,7 @@
           "sh:name": {
             "en": "number of guests"
           },
-          "sh:path": "https://w3id.org/str#numberOfGuests"
+          "sh:path": "https://w3id.org/str/numberOfGuests"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/733a0398421d35cbce9fb5765feabf6299469337",
@@ -2001,7 +2001,7 @@
           "sh:name": {
             "en": "country of residence"
           },
-          "sh:path": "https://w3id.org/str#countryOfResidence"
+          "sh:path": "https://w3id.org/str/countryOfResidence"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7a6cec8e4c96d05cad8e2cee9ae88b24727c55b3",
@@ -2013,7 +2013,7 @@
           "sh:name": {
             "en": "country of residence"
           },
-          "sh:path": "https://w3id.org/str#countryOfResidence"
+          "sh:path": "https://w3id.org/str/countryOfResidence"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e",
@@ -2025,10 +2025,10 @@
           "sh:name": {
             "en": "number of guests"
           },
-          "sh:path": "https://w3id.org/str#numberOfGuests"
+          "sh:path": "https://w3id.org/str/numberOfGuests"
         }
       ],
-      "sh:targetClass": "https://w3id.org/str#ActivityData"
+      "sh:targetClass": "https://w3id.org/str/ActivityData"
     },
     {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#CoordinationGroupShape",
@@ -2060,7 +2060,7 @@
           "sh:path": "http://xmlns.com/foaf/0.1/member"
         }
       ],
-      "sh:targetClass": "https://w3id.org/str#CoordinationGroup"
+      "sh:targetClass": "https://w3id.org/str/CoordinationGroup"
     },
     {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape",
@@ -2094,14 +2094,14 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.checks",
-          "sh:class": "https://w3id.org/str#SingleDigitalEntryPoint",
+          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
           "sh:description": {
             "en": "It indicates the Single Digital Entry Point being checked."
           },
           "sh:name": {
             "en": "checks"
           },
-          "sh:path": "https://w3id.org/str#checks"
+          "sh:path": "https://w3id.org/str/checks"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2",
@@ -2113,7 +2113,7 @@
           "sh:name": {
             "en": "publishes"
           },
-          "sh:path": "https://w3id.org/str#publishes"
+          "sh:path": "https://w3id.org/str/publishes"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87",
@@ -2125,7 +2125,7 @@
           "sh:name": {
             "en": "publishes"
           },
-          "sh:path": "https://w3id.org/str#publishes"
+          "sh:path": "https://w3id.org/str/publishes"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592",
@@ -2142,17 +2142,17 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.providesinformationto",
-          "sh:class": "https://w3id.org/str#SingleDigitalEntryPoint",
+          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
           "sh:description": {
             "en": "It indicates the Single Digital Entry Point receiving information."
           },
           "sh:name": {
             "en": "provides information to"
           },
-          "sh:path": "https://w3id.org/str#providesInformationTo"
+          "sh:path": "https://w3id.org/str/providesInformationTo"
         }
       ],
-      "sh:targetClass": "https://w3id.org/str#OnlineSTRentalPlatform"
+      "sh:targetClass": "https://w3id.org/str/OnlineShortTermRentalPlatform"
     },
     {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape",
@@ -2169,7 +2169,7 @@
           "sh:name": {
             "en": "concerns"
           },
-          "sh:path": "https://w3id.org/str#concerns"
+          "sh:path": "https://w3id.org/str/concerns"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0fa383047260f8432938e4f5aa14282db5376221",
@@ -2181,19 +2181,19 @@
           "sh:name": {
             "en": "reason"
           },
-          "sh:path": "https://w3id.org/str#reason"
+          "sh:path": "https://w3id.org/str/reason"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/1c61fa1d29718c4e8813811b251890449cd4f23d",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.concerns",
-          "sh:class": "https://w3id.org/str#RegistrationNumber",
+          "sh:class": "https://w3id.org/str/RegistrationNumber",
           "sh:description": {
             "en": "It indicated the Registration Number concerned."
           },
           "sh:name": {
             "en": "concerns"
           },
-          "sh:path": "https://w3id.org/str#concerns"
+          "sh:path": "https://w3id.org/str/concerns"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/1f53ac638f602797a2c6f9a508ea32f75aab7093",
@@ -2205,19 +2205,19 @@
           "sh:name": {
             "en": "sent to"
           },
-          "sh:path": "https://w3id.org/str#sentTo"
+          "sh:path": "https://w3id.org/str/sentTo"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/3a597ba103cfec924c0dcf0aad7777a76554a268",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.sentto",
-          "sh:class": "https://w3id.org/str#OnlineSTRentalPlatform",
+          "sh:class": "https://w3id.org/str/OnlineShortTermRentalPlatform",
           "sh:description": {
             "en": "It indicates the receiver of the Order."
           },
           "sh:name": {
             "en": "sent to"
           },
-          "sh:path": "https://w3id.org/str#sentTo"
+          "sh:path": "https://w3id.org/str/sentTo"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/6c16de1b23a2324b79a66111d1ee2a7a1e84c597",
@@ -2229,7 +2229,7 @@
           "sh:name": {
             "en": "reason"
           },
-          "sh:path": "https://w3id.org/str#reason"
+          "sh:path": "https://w3id.org/str/reason"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/7a6112ed05520b889083ad602edef6b4ae90e8f0",
@@ -2241,7 +2241,7 @@
           "sh:name": {
             "en": "concerns"
           },
-          "sh:path": "https://w3id.org/str#concerns"
+          "sh:path": "https://w3id.org/str/concerns"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5",
@@ -2253,7 +2253,7 @@
           "sh:name": {
             "en": "reason"
           },
-          "sh:path": "https://w3id.org/str#reason"
+          "sh:path": "https://w3id.org/str/reason"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/e98e308b7a2188aca75320dc2dff19d748a78f71",
@@ -2265,10 +2265,10 @@
           "sh:name": {
             "en": "sent to"
           },
-          "sh:path": "https://w3id.org/str#sentTo"
+          "sh:path": "https://w3id.org/str/sentTo"
         }
       ],
-      "sh:targetClass": "https://w3id.org/str#Order"
+      "sh:targetClass": "https://w3id.org/str/Order"
     },
     {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumberShape",
@@ -2369,7 +2369,7 @@
           "sh:name": {
             "en": "identifies"
           },
-          "sh:path": "https://w3id.org/str#identifies"
+          "sh:path": "https://w3id.org/str/dentifies"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumberShape/92c625adec226bb66dd55def6f53b661050aed71",
@@ -2393,22 +2393,22 @@
           "sh:name": {
             "en": "identifies"
           },
-          "sh:path": "https://w3id.org/str#identifies"
+          "sh:path": "https://w3id.org/str/dentifies"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumberShape/c623dd0ee9911f8266a229393e26001684e14eaf",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumber.identifies",
-          "sh:class": "https://w3id.org/str#Unit",
+          "sh:class": "https://w3id.org/str/Unit",
           "sh:description": {
             "en": "The Unit identified by the Registration Number."
           },
           "sh:name": {
             "en": "identifies"
           },
-          "sh:path": "https://w3id.org/str#identifies"
+          "sh:path": "https://w3id.org/str/dentifies"
         }
       ],
-      "sh:targetClass": "https://w3id.org/str#RegistrationNumber"
+      "sh:targetClass": "https://w3id.org/str/RegistrationNumber"
     },
     {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape",
@@ -2428,7 +2428,7 @@
           "sh:path": "http://data.europa.eu/m8g/hasCost"
         }
       ],
-      "sh:targetClass": "https://w3id.org/str#RegistrationProcedure"
+      "sh:targetClass": "https://w3id.org/str/RegistrationProcedure"
     },
     {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape",
@@ -2438,14 +2438,14 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto",
-          "sh:class": "https://w3id.org/str#OnlineSTRentalPlatform",
+          "sh:class": "https://w3id.org/str/OnlineShortTermRentalPlatform",
           "sh:description": {
             "en": "It indicates the Online Short Term Rental Platform being accessed by the service."
           },
           "sh:name": {
             "en": "provides access to"
           },
-          "sh:path": "https://w3id.org/str#providesAccessTo"
+          "sh:path": "https://w3id.org/str/providesAccessTo"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485",
@@ -2457,17 +2457,17 @@
           "sh:name": {
             "en": "provides access to"
           },
-          "sh:path": "https://w3id.org/str#providesAccessTo"
+          "sh:path": "https://w3id.org/str/providesAccessTo"
         }
       ],
-      "sh:targetClass": "https://w3id.org/str#STAccomondationRentalService"
+      "sh:targetClass": "https://w3id.org/str/ShortTermAccomondationRentalService"
     },
     {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#SingleDigitalEntryPointShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
-      "sh:targetClass": "https://w3id.org/str#SingleDigitalEntryPoint"
+      "sh:targetClass": "https://w3id.org/str/SingleDigitalEntryPoint"
     },
     {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape",
@@ -2484,7 +2484,7 @@
           "sh:name": {
             "en": "is authorization obtained"
           },
-          "sh:path": "https://w3id.org/str#isAuthorizationObtained"
+          "sh:path": "https://w3id.org/str/isAuthorizationObtained"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/12c9a7f8405aaa436e890397da9bca16d34e102a",
@@ -2496,7 +2496,7 @@
           "sh:name": {
             "en": "is subject to authorization"
           },
-          "sh:path": "https://w3id.org/str#isSubjectToAuthorization"
+          "sh:path": "https://w3id.org/str/isSubjectToAuthorization"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/184e142eab427c6c7e47283d042326282a61dfd1",
@@ -2508,7 +2508,7 @@
           "sh:name": {
             "en": "purpose"
           },
-          "sh:path": "https://w3id.org/str#purpose"
+          "sh:path": "https://w3id.org/str/purpose"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/236f0210baaf149903750c43bbe7012c21debb2a",
@@ -2532,19 +2532,19 @@
           "sh:name": {
             "en": "purpose"
           },
-          "sh:path": "https://w3id.org/str#purpose"
+          "sh:path": "https://w3id.org/str/purpose"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/31111627cb358a7f982659fa9ae497c12260ab23",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.hasactivitydata",
-          "sh:class": "https://w3id.org/str#ActivityData",
+          "sh:class": "https://w3id.org/str/ActivityData",
           "sh:description": {
             "en": "The activity data associated to the Unit."
           },
           "sh:name": {
             "en": "has activity data"
           },
-          "sh:path": "https://w3id.org/str#hasActivityData"
+          "sh:path": "https://w3id.org/str/hasActivityData"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -2580,7 +2580,7 @@
           "sh:name": {
             "en": "number of bedrooms"
           },
-          "sh:path": "https://w3id.org/str#numberOfBedrooms"
+          "sh:path": "https://w3id.org/str/numberOfBedrooms"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/4fcd7e63e9610cb497f4953a2ca6d75712f31d3f",
@@ -2592,7 +2592,7 @@
           "sh:name": {
             "en": "floor level"
           },
-          "sh:path": "https://w3id.org/str#floorLevel"
+          "sh:path": "https://w3id.org/str/floorLevel"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/53d180ae4c9433263fc38d0a7ce200289bcc91b3",
@@ -2604,7 +2604,7 @@
           "sh:name": {
             "en": "has unit address"
           },
-          "sh:path": "https://w3id.org/str#hasUnitAddress"
+          "sh:path": "https://w3id.org/str/hasUnitAddress"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/53f7190678e85e0de9a2f418dd6db3f0d847bd31",
@@ -2616,7 +2616,7 @@
           "sh:name": {
             "en": "occupancy"
           },
-          "sh:path": "https://w3id.org/str#occupancy"
+          "sh:path": "https://w3id.org/str/occupancy"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/652baf9ce9c2a6ac8ffb513df060b75499e8148a",
@@ -2628,7 +2628,7 @@
           "sh:name": {
             "en": "floor level"
           },
-          "sh:path": "https://w3id.org/str#floorLevel"
+          "sh:path": "https://w3id.org/str/floorLevel"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/65edd2fc49d0d7e78bf5cabfaaa813725308a9c4",
@@ -2640,7 +2640,7 @@
           "sh:name": {
             "en": "has authorization"
           },
-          "sh:path": "https://w3id.org/str#hasAuthorization"
+          "sh:path": "https://w3id.org/str/hasAuthorization"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/6658fd8bec456983088457c514485a6c839cd056",
@@ -2652,7 +2652,7 @@
           "sh:name": {
             "en": "number of bedrooms"
           },
-          "sh:path": "https://w3id.org/str#numberOfBedrooms"
+          "sh:path": "https://w3id.org/str/numberOfBedrooms"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/6bb9c69c7d6569fccff76c410d1540010c5b07c7",
@@ -2664,7 +2664,7 @@
           "sh:name": {
             "en": "has unit address"
           },
-          "sh:path": "https://w3id.org/str#hasUnitAddress"
+          "sh:path": "https://w3id.org/str/hasUnitAddress"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/74feba662f4f65577bf45a8dd94f8faec0f03592",
@@ -2688,7 +2688,7 @@
           "sh:name": {
             "en": "is subject to authorization"
           },
-          "sh:path": "https://w3id.org/str#isSubjectToAuthorization"
+          "sh:path": "https://w3id.org/str/isSubjectToAuthorization"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/8662a1e162ca0ebe52611bf26791584c89c3de70",
@@ -2700,7 +2700,7 @@
           "sh:name": {
             "en": "purpose"
           },
-          "sh:path": "https://w3id.org/str#purpose"
+          "sh:path": "https://w3id.org/str/purpose"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/9b3612c89abb019f783fec2020641c8dcad8b320",
@@ -2712,7 +2712,7 @@
           "sh:name": {
             "en": "occupancy"
           },
-          "sh:path": "https://w3id.org/str#occupancy"
+          "sh:path": "https://w3id.org/str/occupancy"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/9fc8f49ed06ee6935fcbc6ff935df6485e3416e7",
@@ -2724,7 +2724,7 @@
           "sh:name": {
             "en": "is authorization obtained"
           },
-          "sh:path": "https://w3id.org/str#isAuthorizationObtained"
+          "sh:path": "https://w3id.org/str/isAuthorizationObtained"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/bb233272ce969ce614137a62d27506e28b5feee1",
@@ -2736,7 +2736,7 @@
           "sh:name": {
             "en": "has unit address"
           },
-          "sh:path": "https://w3id.org/str#hasUnitAddress"
+          "sh:path": "https://w3id.org/str/hasUnitAddress"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/c0c453532d8bf22ffafb3d0aefa0a88e4f12348f",
@@ -2748,7 +2748,7 @@
           "sh:name": {
             "en": "has authorization"
           },
-          "sh:path": "https://w3id.org/str#hasAuthorization"
+          "sh:path": "https://w3id.org/str/hasAuthorization"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
@@ -2772,7 +2772,7 @@
           "sh:name": {
             "en": "number of bedrooms"
           },
-          "sh:path": "https://w3id.org/str#numberOfBedrooms"
+          "sh:path": "https://w3id.org/str/numberOfBedrooms"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/ef003961d29fc6f49d4064fde9cf146a04b2fa63",
@@ -2784,10 +2784,10 @@
           "sh:name": {
             "en": "occupancy"
           },
-          "sh:path": "https://w3id.org/str#occupancy"
+          "sh:path": "https://w3id.org/str/occupancy"
         }
       ],
-      "sh:targetClass": "https://w3id.org/str#Unit"
+      "sh:targetClass": "https://w3id.org/str/Unit"
     }
   ]
 }

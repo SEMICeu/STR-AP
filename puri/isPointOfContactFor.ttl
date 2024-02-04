@@ -1,0 +1,10 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/str/isPointOfContactFor> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "is point of contact for"@en ;
+    rdfs:comment "The Single Digital Entry point for which the person acts as contact point for all matters related."@en ;
+    rdfs:isDefinedBy <https://w3id.org/str/> .
+

@@ -1,0 +1,6 @@
+<https://w3id.org/str/isPointOfContactFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/str/isPointOfContactFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<https://w3id.org/str/isPointOfContactFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/str/> .
+<https://w3id.org/str/isPointOfContactFor> <http://www.w3.org/2000/01/rdf-schema#comment> "The Single Digital Entry point for which the person acts as contact point for all matters related."@en .
+<https://w3id.org/str/isPointOfContactFor> <http://www.w3.org/2000/01/rdf-schema#label> "is point of contact for"@en .
+
