@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://w3id.org/str/dentifies",
+    "@id": "https://w3id.org/str/identifies",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"

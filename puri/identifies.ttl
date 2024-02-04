@@ -2,7 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/str/dentifies> a rdf:Property,
+<https://w3id.org/str/identifies> a rdf:Property,
         owl:ObjectProperty ;
     rdfs:label "identifies"@en ;
     rdfs:comment "The Unit identified by the Registration Number."@en ;
