@@ -766,9 +766,9 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces",
-          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:class": "http://data.europa.eu/m8g/Output",
           "sh:description": {
-            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
+            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
           },
           "sh:name": {
             "en": "produces"
@@ -778,9 +778,9 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces",
-          "sh:class": "http://data.europa.eu/m8g/Output",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
           "sh:description": {
-            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
+            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
           },
           "sh:name": {
             "en": "produces"
@@ -2063,15 +2063,15 @@
       "sh:targetClass": "https://w3id.org/str/CoordinationGroup"
     },
     {
-      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape",
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type",
           "sh:description": {
-            "en": "The type of an OnlineSTRentalPlatform"
+            "en": "The type of an Online Short Term Rental Platform"
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -2080,11 +2080,11 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "The type of an OnlineSTRentalPlatform"
+            "en": "The type of an Online Short Term Rental Platform"
           },
           "sh:name": {
             "en": "type"
@@ -2092,7 +2092,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.checks",
           "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
           "sh:description": {
@@ -2104,7 +2104,7 @@
           "sh:path": "https://w3id.org/str/checks"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.publishes",
           "sh:class": "http://www.w3.org/ns/dcat#Dataset",
           "sh:description": {
@@ -2116,7 +2116,7 @@
           "sh:path": "https://w3id.org/str/publishes"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.publishes",
           "sh:description": {
             "en": "It indicates the Dataset of listings published."
@@ -2128,10 +2128,10 @@
           "sh:path": "https://w3id.org/str/publishes"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type",
           "sh:description": {
-            "en": "The type of an OnlineSTRentalPlatform"
+            "en": "The type of an Online Short Term Rental Platform"
           },
           "sh:minCount": "1",
           "sh:name": {
@@ -2140,7 +2140,7 @@
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.providesinformationto",
           "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
           "sh:description": {
@@ -2369,7 +2369,7 @@
           "sh:name": {
             "en": "identifies"
           },
-          "sh:path": "https://w3id.org/str/dentifies"
+          "sh:path": "https://w3id.org/str/identifies"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumberShape/92c625adec226bb66dd55def6f53b661050aed71",
@@ -2393,7 +2393,7 @@
           "sh:name": {
             "en": "identifies"
           },
-          "sh:path": "https://w3id.org/str/dentifies"
+          "sh:path": "https://w3id.org/str/identifies"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumberShape/c623dd0ee9911f8266a229393e26001684e14eaf",
@@ -2405,7 +2405,7 @@
           "sh:name": {
             "en": "identifies"
           },
-          "sh:path": "https://w3id.org/str/dentifies"
+          "sh:path": "https://w3id.org/str/identifies"
         }
       ],
       "sh:targetClass": "https://w3id.org/str/RegistrationNumber"
@@ -2431,12 +2431,12 @@
       "sh:targetClass": "https://w3id.org/str/RegistrationProcedure"
     },
     {
-      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape",
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto",
           "sh:class": "https://w3id.org/str/OnlineShortTermRentalPlatform",
           "sh:description": {
@@ -2448,7 +2448,7 @@
           "sh:path": "https://w3id.org/str/providesAccessTo"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto",
           "sh:description": {
             "en": "It indicates the Online Short Term Rental Platform being accessed by the service."

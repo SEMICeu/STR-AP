@@ -399,12 +399,13 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "PublicRegistryService.produces": {
+      "@container": "@set",
       "@id": "http://purl.org/vocab/cpsv#produces",
       "@type": "@id"
     },
     "RegistrationNumber": "https://w3id.org/str/RegistrationNumber",
     "RegistrationNumber.identifies": {
-      "@id": "https://w3id.org/str/dentifies",
+      "@id": "https://w3id.org/str/identifies",
       "@type": "@id"
     },
     "RegistrationNumber.issueDate": {

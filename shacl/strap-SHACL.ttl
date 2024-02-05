@@ -40,11 +40,11 @@
     <https://semiceu.github.io/STR-AP/releases/1.0.0#GroupShape>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#CoordinationGroupShape>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumberShape>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#SingleDigitalEntryPointShape>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape> .
 
@@ -733,54 +733,54 @@
   shacl:name "geometry"@en;
   shacl:path <http://www.w3.org/ns/locn#geometry> .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape> a shacl:NodeShape;
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976>;
+  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976>;
   shacl:targetClass <https://w3id.org/str/OnlineShortTermRentalPlatform> .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
-  shacl:description "The type of an OnlineSTRentalPlatform"@en;
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
+  shacl:description "The type of an Online Short Term Rental Platform"@en;
   shacl:maxCount 1;
   shacl:name "type"@en;
   shacl:path dc:type .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
   shacl:class skos:Concept;
-  shacl:description "The type of an OnlineSTRentalPlatform"@en;
+  shacl:description "The type of an Online Short Term Rental Platform"@en;
   shacl:name "type"@en;
   shacl:path dc:type .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.checks";
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.checks";
   shacl:class <https://w3id.org/str/SingleDigitalEntryPoint>;
   shacl:description "It indicates the Single Digital Entry Point being checked."@en;
   shacl:name "checks"@en;
   shacl:path <https://w3id.org/str/checks> .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.publishes";
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.publishes";
   shacl:class dcat:Dataset;
   shacl:description "It indicates the Dataset of listings published."@en;
   shacl:name "publishes"@en;
   shacl:path <https://w3id.org/str/publishes> .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.publishes";
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.publishes";
   shacl:description "It indicates the Dataset of listings published."@en;
   shacl:minCount 1;
   shacl:name "publishes"@en;
   shacl:path <https://w3id.org/str/publishes> .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
-  shacl:description "The type of an OnlineSTRentalPlatform"@en;
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
+  shacl:description "The type of an Online Short Term Rental Platform"@en;
   shacl:minCount 1;
   shacl:name "type"@en;
   shacl:path dc:type .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineSTRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.providesinformationto";
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.providesinformationto";
   shacl:class <https://w3id.org/str/SingleDigitalEntryPoint>;
   shacl:description "It indicates the Single Digital Entry Point receiving information."@en;
   shacl:name "provides information to"@en;
@@ -1199,11 +1199,11 @@
   shacl:path dc:title .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces";
-  shacl:class dcat:Resource,
-    <http://data.europa.eu/m8g/Output>;
-  shacl:description """This property defines the output of the service as a data resource available
-and managed by a Base Registry Service."""@en,
-    "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en;
+  shacl:class <http://data.europa.eu/m8g/Output>,
+    dcat:Resource;
+  shacl:description "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en,
+    """This property defines the output of the service as a data resource available
+and managed by a Base Registry Service."""@en;
   shacl:name "produces"@en;
   shacl:path <http://purl.org/vocab/cpsv#produces> .
 
@@ -1322,7 +1322,7 @@ and managed by a Base Registry Service."""@en,
   shacl:description "The Unit identified by the Registration Number."@en;
   shacl:minCount 1;
   shacl:name "identifies"@en;
-  shacl:path <https://w3id.org/str/dentifies> .
+  shacl:path <https://w3id.org/str/identifies> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumberShape/92c625adec226bb66dd55def6f53b661050aed71> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumber.issuedate";
   shacl:datatype xsd:dateTime;
@@ -1334,13 +1334,13 @@ and managed by a Base Registry Service."""@en,
   shacl:description "The Unit identified by the Registration Number."@en;
   shacl:maxCount 1;
   shacl:name "identifies"@en;
-  shacl:path <https://w3id.org/str/dentifies> .
+  shacl:path <https://w3id.org/str/identifies> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumberShape/c623dd0ee9911f8266a229393e26001684e14eaf> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationNumber.identifies";
   shacl:class <https://w3id.org/str/Unit>;
   shacl:description "The Unit identified by the Registration Number."@en;
   shacl:name "identifies"@en;
-  shacl:path <https://w3id.org/str/dentifies> .
+  shacl:path <https://w3id.org/str/identifies> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1357,19 +1357,19 @@ and managed by a Base Registry Service."""@en,
   shacl:closed false;
   shacl:targetClass dcat:Resource .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape> a shacl:NodeShape;
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485>;
+  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485>;
   shacl:targetClass <https://w3id.org/str/ShortTermAccomondationRentalService> .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto";
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto";
   shacl:class <https://w3id.org/str/OnlineShortTermRentalPlatform>;
   shacl:description "It indicates the Online Short Term Rental Platform being accessed by the service."@en;
   shacl:name "provides access to"@en;
   shacl:path <https://w3id.org/str/providesAccessTo> .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#STAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto";
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto";
   shacl:description "It indicates the Online Short Term Rental Platform being accessed by the service."@en;
   shacl:minCount 1;
   shacl:name "provides access to"@en;

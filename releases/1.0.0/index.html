@@ -1331,7 +1331,7 @@ A business might have more than one legal name, particularly in countries with m
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The type of an OnlineSTRentalPlatform
+                                    The type of an Online Short Term Rental Platform
                                 </td>
                                 <td property="skos:scopeNote">
                                     Values can take small, micro or medium.
@@ -2713,7 +2713,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         
                             <tr id="RegistrationNumber.identifies"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/dentifies"
+                                resource="https://w3id.org/str/identifies"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifies%20in%20Registration Number&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23RegistrationNumber.identifies" target="_blank" rel="noopener noreferrer" >
@@ -2722,9 +2722,9 @@ This definition is consistent with the more detailed definition of a "public sec
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/dentifies"
+                                        <a href="https://w3id.org/str/identifies"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/dentifies"
+                                           data-content="https://w3id.org/str/identifies"
                                            data-placement="right">
                                         identifies</a>
                                 </td>
@@ -7458,20 +7458,18 @@ companies, vehicles, licences, buildings, locations and roads.
                                 <td>
                                     
                                         
-                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
+                                            <a href="#Output" data-placement="right">Output</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    This property defines the output of the service as a data resource available
-and managed by a Base Registry Service.
+                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    The output must be also
-described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
+                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
                                 </td>
 				<!--
                                 <td>
@@ -7503,18 +7501,20 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                                 <td>
                                     
                                         
-                                            <a href="#Output" data-placement="right">Output</a>
+                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..1
+                                    0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
+                                    This property defines the output of the service as a data resource available
+and managed by a Base Registry Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
+                                    The output must be also
+described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                                 </td>
 				<!--
                                 <td>
@@ -7766,10 +7766,10 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
         
 The examples in this section are fictitious; their sole purpose is to illustrate the metadata. 
 <h3>Providing information about a unit</h3>
-<p>In the below example a natural person, acting as host, having its identifier, contact point and address, provides information a unit.</p>
+<p>In the below example a natural person, acting as host, having its identifier, contact point and address, provides information about a unit.</p>
 <div class="h3 examples" id="example-natural_person_unit">Example 1 - Natural person provides information about a unit</div>
 <h3>Registration procedure issues Registration number</h3>
-<p>In the below example a registration procedure takes the information provided before and issues a registration number.<p>
+<p>In the below example a registration procedure takes the information provided in the example before and issues a registration number.<p>
 <p>The unit is then listed into Online Short Term Rental Platform so the host can provide the service.</p>
 <div class="h3 examples" id="example-registration_procedure">Example 2 - Registration Procedure issues Registration Number</div>
 
@@ -9310,7 +9310,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td>Optional</td>
+								<td></td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
@@ -9320,7 +9320,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
@@ -9355,7 +9355,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">https://w3id.org/str/RegistrationNumber</div></td>
 								<td></td>
 								<td><a href="#RegistrationNumber.identifies">identifies </a></td>
-								<td><div class="shorten">https://w3id.org/str/dentifies</div></td>
+								<td><div class="shorten">https://w3id.org/str/identifies</div></td>
 							</tr>
 						
 					
