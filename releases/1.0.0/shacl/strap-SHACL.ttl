@@ -638,7 +638,7 @@
   shacl:path <http://data.europa.eu/m8g/registeredAddress> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.offers";
-  shacl:class <https://w3id.org/str/ShortTermAccomondationRentalService>;
+  shacl:class <https://w3id.org/str/ShortTermAccomodationRentalService>;
   shacl:description "It indicates the rental service offered."@en;
   shacl:name "offers"@en;
   shacl:path <https://w3id.org/str/offers> .
@@ -745,14 +745,14 @@
   shacl:targetClass <https://w3id.org/str/OnlineShortTermRentalPlatform> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
-  shacl:description "The type of an Online Short Term Rental Platform"@en;
+  shacl:description "The type of an Online Short Term Rental Platform."@en;
   shacl:maxCount 1;
   shacl:name "type"@en;
   shacl:path dc:type .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
   shacl:class skos:Concept;
-  shacl:description "The type of an Online Short Term Rental Platform"@en;
+  shacl:description "The type of an Online Short Term Rental Platform."@en;
   shacl:name "type"@en;
   shacl:path dc:type .
 
@@ -775,7 +775,7 @@
   shacl:path <https://w3id.org/str/publishes> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
-  shacl:description "The type of an Online Short Term Rental Platform"@en;
+  shacl:description "The type of an Online Short Term Rental Platform."@en;
   shacl:minCount 1;
   shacl:name "type"@en;
   shacl:path dc:type .
@@ -972,7 +972,7 @@
   shacl:path <https://w3id.org/str/isReferredIn> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.offers";
-  shacl:class <https://w3id.org/str/ShortTermAccomondationRentalService>;
+  shacl:class <https://w3id.org/str/ShortTermAccomodationRentalService>;
   shacl:description "It indicates the rental service offered."@en;
   shacl:name "offers"@en;
   shacl:path <https://w3id.org/str/offers> .
@@ -1361,7 +1361,7 @@ and managed by a Base Registry Service."""@en;
   shacl:closed false;
   shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485>;
-  shacl:targetClass <https://w3id.org/str/ShortTermAccomondationRentalService> .
+  shacl:targetClass <https://w3id.org/str/ShortTermAccomodationRentalService> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ShortTermAccomodationRentalService.providesaccessto";
   shacl:class <https://w3id.org/str/OnlineShortTermRentalPlatform>;
@@ -1430,7 +1430,7 @@ and managed by a Base Registry Service."""@en;
   shacl:path <https://w3id.org/str/isSubjectToAuthorization> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/184e142eab427c6c7e47283d042326282a61dfd1> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.purpose";
-  shacl:description "It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes."@en;
+  shacl:description "It indicates whether the unit is offered as a part or whole of the host's primary or secondary residence, or for other purposes."@en;
   shacl:minCount 1;
   shacl:name "purpose"@en;
   shacl:path <https://w3id.org/str/purpose> .
@@ -1442,7 +1442,7 @@ and managed by a Base Registry Service."""@en;
   shacl:path dc:type .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/30c2de1b85595fb7b8ff738893031cf824165ba1> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.purpose";
-  shacl:description "It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes."@en;
+  shacl:description "It indicates whether the unit is offered as a part or whole of the host's primary or secondary residence, or for other purposes."@en;
   shacl:maxCount 1;
   shacl:name "purpose"@en;
   shacl:path <https://w3id.org/str/purpose> .
@@ -1527,7 +1527,7 @@ and managed by a Base Registry Service."""@en;
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/8662a1e162ca0ebe52611bf26791584c89c3de70> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.purpose";
   shacl:datatype rdf:langString;
-  shacl:description "It indicates whether the unit is offered as a part or whole of the hosts primary or secondary residence, or for other purposes."@en;
+  shacl:description "It indicates whether the unit is offered as a part or whole of the host's primary or secondary residence, or for other purposes."@en;
   shacl:name "purpose"@en;
   shacl:path <https://w3id.org/str/purpose> .
 

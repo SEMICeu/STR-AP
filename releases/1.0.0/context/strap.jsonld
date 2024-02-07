@@ -426,7 +426,7 @@
       "@id": "http://data.europa.eu/m8g/hasCost",
       "@type": "@id"
     },
-    "ShortTermAccomodationRentalService": "https://w3id.org/str/ShortTermAccomondationRentalService",
+    "ShortTermAccomodationRentalService": "https://w3id.org/str/ShortTermAccomodationRentalService",
     "ShortTermAccomodationRentalService.providesAccessTo": {
       "@container": "@set",
       "@id": "https://w3id.org/str/providesAccessTo",
