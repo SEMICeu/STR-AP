@@ -132,20 +132,12 @@
       "@type": "@id"
     },
     "Document": "http://xmlns.com/foaf/0.1/Document",
-    "Document.describes": {
+    "Double": "http://www.w3.org/2001/XMLSchema#double",
+    "Evidence": "http://data.europa.eu/m8g/Evidence",
+    "Evidence.describes": {
       "@id": "https://w3id.org/str/describes",
       "@type": "@id"
     },
-    "Document.submissionDate": {
-      "@id": "https://w3id.org/str/submissionDate",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Document.updateDate": {
-      "@id": "https://w3id.org/str/updateDate",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Double": "http://www.w3.org/2001/XMLSchema#double",
-    "Evidence": "http://data.europa.eu/m8g/Evidence",
     "Evidence.identifier": {
       "@id": "http://purl.org/dc/terms/identifier"
     },
@@ -158,6 +150,14 @@
       "@container": "@set",
       "@id": "http://xmlns.com/foaf/0.1/page",
       "@type": "@id"
+    },
+    "Evidence.submissionDate": {
+      "@id": "https://w3id.org/str/submissionDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Evidence.updateDate": {
+      "@id": "https://w3id.org/str/updateDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "Evidence.validityPeriod": {
       "@id": "http://data.europa.eu/m8g/validityPeriod",
@@ -179,12 +179,12 @@
     },
     "LegalEntity.isNotifiedBy": {
       "@container": "@set",
-      "@id": "https://w3id.org/str/legalEntityIsNotifiedBy",
+      "@id": "https://w3id.org/str/isNotifiedBy",
       "@type": "@id"
     },
     "LegalEntity.isReferredIn": {
       "@container": "@set",
-      "@id": "https://w3id.org/str/legalEntityIsReferredIn",
+      "@id": "https://w3id.org/str/isReferredIn",
       "@type": "@id"
     },
     "LegalEntity.legalIdentifier": {
@@ -198,12 +198,12 @@
     },
     "LegalEntity.offers": {
       "@container": "@set",
-      "@id": "https://w3id.org/str/legalEntityOffers",
+      "@id": "https://w3id.org/str/offers",
       "@type": "@id"
     },
     "LegalEntity.provides": {
       "@container": "@set",
-      "@id": "https://w3id.org/str/legalEntityProvides",
+      "@id": "https://w3id.org/str/provides",
       "@type": "@id"
     },
     "LegalEntity.registeredAddress": {
@@ -304,7 +304,7 @@
     },
     "Person.isNotifiedBy": {
       "@container": "@set",
-      "@id": "https://w3id.org/str/personIsNotifiedBy",
+      "@id": "https://w3id.org/str/isNotifiedBy",
       "@type": "@id"
     },
     "Person.isPointOfContactFor": {
@@ -314,17 +314,17 @@
     },
     "Person.isReferredIn": {
       "@container": "@set",
-      "@id": "https://w3id.org/str/personIsReferredIn",
+      "@id": "https://w3id.org/str/isReferredIn",
       "@type": "@id"
     },
     "Person.offers": {
       "@container": "@set",
-      "@id": "https://w3id.org/str/personOffers",
+      "@id": "https://w3id.org/str/offers",
       "@type": "@id"
     },
     "Person.provides": {
       "@container": "@set",
-      "@id": "https://w3id.org/str/personProvides",
+      "@id": "https://w3id.org/str/provides",
       "@type": "@id"
     },
     "PublicOrganisation": "http://data.europa.eu/m8g/PublicOrganisation",
@@ -399,7 +399,6 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "PublicRegistryService.produces": {
-      "@container": "@set",
       "@id": "http://purl.org/vocab/cpsv#produces",
       "@type": "@id"
     },

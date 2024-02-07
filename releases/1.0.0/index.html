@@ -425,9 +425,12 @@ The main entities are those that form the core of the Core Vocabulary.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Evidence.identifier">identifier</a>
+                            For this entity the following properties are defined: <a href="#Evidence.describes">describes</a>
+                            , <a href="#Evidence.identifier">identifier</a>
                             , <a href="#Evidence.name">name</a>
                             , <a href="#Evidence.relateddocumentation">related documentation</a>
+                            , <a href="#Evidence.submissiondate">submission date</a>
+                            , <a href="#Evidence.updatedate">update date</a>
                             , <a href="#Evidence.validityperiod">validity period</a>
                             .
                     </dd>
@@ -467,6 +470,49 @@ The main entities are those that form the core of the Core Vocabulary.
                         </tr>
                     </thead>
                     <tbody class="supertype">
+                        
+                            <tr id="Evidence.describes"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/describes"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20describes%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Evidence.describes" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/describes"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/describes"
+                                           data-placement="right">
+                                        describes</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Unit" data-placement="right">Unit</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    It indicates the Unit described.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
                         
                             <tr id="Evidence.identifier"
                                 typeof="rdfs:Property"
@@ -586,6 +632,92 @@ The main entities are those that form the core of the Core Vocabulary.
                                 </td>
                                 <td property="skos:scopeNote">
                                     For instance, a particular template for an administrative document, an application or a guide on formatting the Evidence.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Evidence.submissiondate"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/submissionDate"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20submission date%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Evidence.submissiondate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/submissionDate"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/submissionDate"
+                                           data-placement="right">
+                                        submission date</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#DateTime" data-placement="right">DateTime</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The date in which the Document has been submitted.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Evidence.updatedate"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/updateDate"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20update date%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Evidence.updatedate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/updateDate"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/updateDate"
+                                           data-placement="right">
+                                        update date</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#DateTime" data-placement="right">DateTime</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The date in which the Document has been updated.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
                                 </td>
 				<!--
                                 <td>
@@ -786,7 +918,7 @@ The main entities are those that form the core of the Core Vocabulary.
                         
                             <tr id="LegalEntity.isnotifiedby"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/legalEntityIsNotifiedBy"
+                                resource="https://w3id.org/str/isNotifiedBy"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is notified by%20in%20Legal Entity&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23LegalEntity.isnotifiedby" target="_blank" rel="noopener noreferrer" >
@@ -795,9 +927,9 @@ The main entities are those that form the core of the Core Vocabulary.
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/legalEntityIsNotifiedBy"
+                                        <a href="https://w3id.org/str/isNotifiedBy"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/legalEntityIsNotifiedBy"
+                                           data-content="https://w3id.org/str/isNotifiedBy"
                                            data-placement="right">
                                         is notified by</a>
                                 </td>
@@ -829,7 +961,7 @@ The main entities are those that form the core of the Core Vocabulary.
                         
                             <tr id="LegalEntity.isreferredin"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/legalEntityIsReferredIn"
+                                resource="https://w3id.org/str/isReferredIn"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is referred in%20in%20Legal Entity&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23LegalEntity.isreferredin" target="_blank" rel="noopener noreferrer" >
@@ -838,9 +970,9 @@ The main entities are those that form the core of the Core Vocabulary.
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/legalEntityIsReferredIn"
+                                        <a href="https://w3id.org/str/isReferredIn"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/legalEntityIsReferredIn"
+                                           data-content="https://w3id.org/str/isReferredIn"
                                            data-placement="right">
                                         is referred in</a>
                                 </td>
@@ -959,7 +1091,7 @@ A business might have more than one legal name, particularly in countries with m
                         
                             <tr id="LegalEntity.offers"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/legalEntityOffers"
+                                resource="https://w3id.org/str/offers"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20offers%20in%20Legal Entity&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23LegalEntity.offers" target="_blank" rel="noopener noreferrer" >
@@ -968,9 +1100,9 @@ A business might have more than one legal name, particularly in countries with m
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/legalEntityOffers"
+                                        <a href="https://w3id.org/str/offers"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/legalEntityOffers"
+                                           data-content="https://w3id.org/str/offers"
                                            data-placement="right">
                                         offers</a>
                                 </td>
@@ -1002,7 +1134,7 @@ A business might have more than one legal name, particularly in countries with m
                         
                             <tr id="LegalEntity.provides"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/legalEntityProvides"
+                                resource="https://w3id.org/str/provides"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20provides%20in%20Legal Entity&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23LegalEntity.provides" target="_blank" rel="noopener noreferrer" >
@@ -1011,16 +1143,16 @@ A business might have more than one legal name, particularly in countries with m
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/legalEntityProvides"
+                                        <a href="https://w3id.org/str/provides"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/legalEntityProvides"
+                                           data-content="https://w3id.org/str/provides"
                                            data-placement="right">
                                         provides</a>
                                 </td>
                                 <td>
                                     
                                         
-                                            <a href="#Document" data-placement="right">Document</a>
+                                            <a href="#Evidence" data-placement="right">Evidence</a>
                                         
                                     
                                 </td>
@@ -1028,7 +1160,7 @@ A business might have more than one legal name, particularly in countries with m
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It indicates the Document provided by the Legal Entity.
+                                    It indicates the Evidence provided.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1876,7 +2008,7 @@ A business might have more than one legal name, particularly in countries with m
                         
                             <tr id="Person.isnotifiedby"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/personIsNotifiedBy"
+                                resource="https://w3id.org/str/isNotifiedBy"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is notified by%20in%20Person&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Person.isnotifiedby" target="_blank" rel="noopener noreferrer" >
@@ -1885,9 +2017,9 @@ A business might have more than one legal name, particularly in countries with m
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/personIsNotifiedBy"
+                                        <a href="https://w3id.org/str/isNotifiedBy"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/personIsNotifiedBy"
+                                           data-content="https://w3id.org/str/isNotifiedBy"
                                            data-placement="right">
                                         is notified by</a>
                                 </td>
@@ -1962,7 +2094,7 @@ A business might have more than one legal name, particularly in countries with m
                         
                             <tr id="Person.isreferredin"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/personIsReferredIn"
+                                resource="https://w3id.org/str/isReferredIn"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is referred in%20in%20Person&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Person.isreferredin" target="_blank" rel="noopener noreferrer" >
@@ -1971,9 +2103,9 @@ A business might have more than one legal name, particularly in countries with m
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/personIsReferredIn"
+                                        <a href="https://w3id.org/str/isReferredIn"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/personIsReferredIn"
+                                           data-content="https://w3id.org/str/isReferredIn"
                                            data-placement="right">
                                         is referred in</a>
                                 </td>
@@ -2005,7 +2137,7 @@ A business might have more than one legal name, particularly in countries with m
                         
                             <tr id="Person.offers"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/personOffers"
+                                resource="https://w3id.org/str/offers"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20offers%20in%20Person&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Person.offers" target="_blank" rel="noopener noreferrer" >
@@ -2014,9 +2146,9 @@ A business might have more than one legal name, particularly in countries with m
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/personOffers"
+                                        <a href="https://w3id.org/str/offers"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/personOffers"
+                                           data-content="https://w3id.org/str/offers"
                                            data-placement="right">
                                         offers</a>
                                 </td>
@@ -2048,7 +2180,7 @@ A business might have more than one legal name, particularly in countries with m
                         
                             <tr id="Person.provides"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/personProvides"
+                                resource="https://w3id.org/str/provides"
                                 class="class mandatory">
                                 <td>
 				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20provides%20in%20Person&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Person.provides" target="_blank" rel="noopener noreferrer" >
@@ -2057,16 +2189,16 @@ A business might have more than one legal name, particularly in countries with m
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/personProvides"
+                                        <a href="https://w3id.org/str/provides"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/personProvides"
+                                           data-content="https://w3id.org/str/provides"
                                            data-placement="right">
                                         provides</a>
                                 </td>
                                 <td>
                                     
                                         
-                                            <a href="#Document" data-placement="right">Document</a>
+                                            <a href="#Evidence" data-placement="right">Evidence</a>
                                         
                                     
                                 </td>
@@ -2074,7 +2206,7 @@ A business might have more than one legal name, particularly in countries with m
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It indicates the Document provided by the person.
+                                    It indicates the Evidence provided.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -6037,181 +6169,12 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         Properties
                     </dt>
                     
-                        <dd>
-                            For this entity the following properties are defined: <a href="#Document.describes">describes</a>
-                            , <a href="#Document.submissiondate">submission date</a>
-                            , <a href="#Document.updatedate">update date</a>
-                            .
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
                     </dd>
                 
             </dl>
         </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-			    -->
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="Document.describes"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str/describes"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20describes%20in%20Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Document.describes" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str/describes"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/describes"
-                                           data-placement="right">
-                                        describes</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Unit" data-placement="right">Unit</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the Unit described.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Document.submissiondate"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str/submissionDate"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20submission date%20in%20Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Document.submissiondate" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str/submissionDate"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/submissionDate"
-                                           data-placement="right">
-                                        submission date</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#DateTime" data-placement="right">DateTime</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The date in which the Document has been submitted.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="Document.updatedate"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str/updateDate"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20update date%20in%20Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Document.updatedate" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str/updateDate"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/updateDate"
-                                           data-placement="right">
-                                        update date</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#DateTime" data-placement="right">DateTime</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The date in which the Document has been updated.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
         
     </div>
 </section>
@@ -7458,18 +7421,20 @@ companies, vehicles, licences, buildings, locations and roads.
                                 <td>
                                     
                                         
-                                            <a href="#Output" data-placement="right">Output</a>
+                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..1
+                                    0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
+                                    This property defines the output of the service as a data resource available
+and managed by a Base Registry Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
+                                    The output must be also
+described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                                 </td>
 				<!--
                                 <td>
@@ -7501,20 +7466,18 @@ companies, vehicles, licences, buildings, locations and roads.
                                 <td>
                                     
                                         
-                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
+                                            <a href="#Output" data-placement="right">Output</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    This property defines the output of the service as a data resource available
-and managed by a Base Registry Service.
+                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    The output must be also
-described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
+                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
                                 </td>
 				<!--
                                 <td>
@@ -8387,51 +8350,13 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 			</tr>
 		
 				
-					
-						
-					
-						
-					
-						
-					
-					
-						
-					
-						
-					
-						
-					
-					
-						
-							<tr>
-								<td><a href="#Document">Document</a></td>
-								<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
-								<td></td>
-								<td><a href="#Document.describes">describes </a></td>
-								<td><div class="shorten">https://w3id.org/str/describes</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Document">Document</a></td>
-								<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
-								<td></td>
-								<td><a href="#Document.submissiondate">submission date </a></td>
-								<td><div class="shorten">https://w3id.org/str/submissionDate</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Document">Document</a></td>
-								<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
-								<td></td>
-								<td><a href="#Document.updatedate">update date </a></td>
-								<td><div class="shorten">https://w3id.org/str/updateDate</div></td>
-							</tr>
-						
-					
+					<tr>
+						<td><a href="#Document">Document</a></td>
+						<td><div class="shorten">http://xmlns.com/foaf/0.1/Document</div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
 				
 			</tr>
 		
@@ -8445,6 +8370,12 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+						
+					
 					
 						
 					
@@ -8454,6 +8385,22 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
+								<td><a href="#Evidence.describes">describes </a></td>
+								<td><div class="shorten">https://w3id.org/str/describes</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -8482,6 +8429,26 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Evidence.relateddocumentation">related documentation </a></td>
 								<td><div class="shorten">http://xmlns.com/foaf/0.1/page</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
+								<td><a href="#Evidence.submissiondate">submission date </a></td>
+								<td><div class="shorten">https://w3id.org/str/submissionDate</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Evidence">Evidence</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/Evidence</div></td>
+								<td></td>
+								<td><a href="#Evidence.updatedate">update date </a></td>
+								<td><div class="shorten">https://w3id.org/str/updateDate</div></td>
 							</tr>
 						
 					
@@ -8593,7 +8560,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://www.w3.org/ns/legal#LegalEntity</div></td>
 								<td></td>
 								<td><a href="#LegalEntity.isnotifiedby">is notified by </a></td>
-								<td><div class="shorten">https://w3id.org/str/legalEntityIsNotifiedBy</div></td>
+								<td><div class="shorten">https://w3id.org/str/isNotifiedBy</div></td>
 							</tr>
 						
 					
@@ -8603,7 +8570,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://www.w3.org/ns/legal#LegalEntity</div></td>
 								<td></td>
 								<td><a href="#LegalEntity.isreferredin">is referred in </a></td>
-								<td><div class="shorten">https://w3id.org/str/legalEntityIsReferredIn</div></td>
+								<td><div class="shorten">https://w3id.org/str/isReferredIn</div></td>
 							</tr>
 						
 					
@@ -8633,7 +8600,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://www.w3.org/ns/legal#LegalEntity</div></td>
 								<td></td>
 								<td><a href="#LegalEntity.offers">offers </a></td>
-								<td><div class="shorten">https://w3id.org/str/legalEntityOffers</div></td>
+								<td><div class="shorten">https://w3id.org/str/offers</div></td>
 							</tr>
 						
 					
@@ -8643,7 +8610,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://www.w3.org/ns/legal#LegalEntity</div></td>
 								<td></td>
 								<td><a href="#LegalEntity.provides">provides </a></td>
-								<td><div class="shorten">https://w3id.org/str/legalEntityProvides</div></td>
+								<td><div class="shorten">https://w3id.org/str/provides</div></td>
 							</tr>
 						
 					
@@ -9030,7 +8997,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://www.w3.org/ns/person#Person</div></td>
 								<td></td>
 								<td><a href="#Person.isnotifiedby">is notified by </a></td>
-								<td><div class="shorten">https://w3id.org/str/personIsNotifiedBy</div></td>
+								<td><div class="shorten">https://w3id.org/str/isNotifiedBy</div></td>
 							</tr>
 						
 					
@@ -9050,7 +9017,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://www.w3.org/ns/person#Person</div></td>
 								<td></td>
 								<td><a href="#Person.isreferredin">is referred in </a></td>
-								<td><div class="shorten">https://w3id.org/str/personIsReferredIn</div></td>
+								<td><div class="shorten">https://w3id.org/str/isReferredIn</div></td>
 							</tr>
 						
 					
@@ -9060,7 +9027,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://www.w3.org/ns/person#Person</div></td>
 								<td></td>
 								<td><a href="#Person.offers">offers </a></td>
-								<td><div class="shorten">https://w3id.org/str/personOffers</div></td>
+								<td><div class="shorten">https://w3id.org/str/offers</div></td>
 							</tr>
 						
 					
@@ -9070,7 +9037,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><div class="shorten">http://www.w3.org/ns/person#Person</div></td>
 								<td></td>
 								<td><a href="#Person.provides">provides </a></td>
-								<td><div class="shorten">https://w3id.org/str/personProvides</div></td>
+								<td><div class="shorten">https://w3id.org/str/provides</div></td>
 							</tr>
 						
 					
@@ -9310,7 +9277,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
@@ -9320,7 +9287,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td>Optional</td>
+								<td></td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>

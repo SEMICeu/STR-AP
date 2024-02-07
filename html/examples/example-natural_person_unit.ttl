@@ -19,7 +19,7 @@ ex:person1 foaf:familyName "Magritte"@fr ;
 	cv:contactPoint ex:contactPoint1 ;
 	cv:domicile ex:address1 ;
 	adms:identifier ex:identifier1 ;
-    str:provides ex:document1;
+    str:provides ex:evidence1;
 	a person:Person .
 
 ex:contactPoint1 cv:email "rene@magritte.be" ;
@@ -32,9 +32,11 @@ ex:address1 locn:fullAddress "Rue Esseghem 135, 1090 Bruxelles, Belgique"@fr ;
 ex:identifier1 skos:notation "123.456.789" ;
 	a adms:identifier .
 
-ex:document1 str:submissionDate "2024-01-28T09:00:00"^^xsd:dateTime ;
+ex:evidence1 dct:identifier "evi-123" ;
+	dct:title "Information about the unit1" ;
+	str:submissionDate "2024-01-28T09:00:00"^^xsd:dateTime ;
 	str:describes ex:unit1 ;
-	a foaf:Document .
+	a cv:Evidence .
 
 ex:unit1 str:numberOfBedrooms 1 ;
 	str:occupancy 2 ;

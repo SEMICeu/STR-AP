@@ -280,6 +280,42 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/42c749b4eb19506d98ebe732f87b81ae28e6d368",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.updatedate",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "The date in which the Document has been updated."
+          },
+          "sh:name": {
+            "en": "update date"
+          },
+          "sh:path": "https://w3id.org/str/updateDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/58f2bb146c1acc13d00df887f8005ac509470906",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.submissiondate",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "The date in which the Document has been submitted."
+          },
+          "sh:name": {
+            "en": "submission date"
+          },
+          "sh:path": "https://w3id.org/str/submissionDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/6065b86a462e0eb1d5964d166fbccf077716ffe5",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.describes",
+          "sh:description": {
+            "en": "It indicates the Unit described."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "describes"
+          },
+          "sh:path": "https://w3id.org/str/describes"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.identifier",
           "sh:description": {
@@ -328,6 +364,30 @@
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/973c218c87e5004e247def216f50a940ac2e9738",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.updatedate",
+          "sh:description": {
+            "en": "The date in which the Document has been updated."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "update date"
+          },
+          "sh:path": "https://w3id.org/str/updateDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.submissiondate",
+          "sh:description": {
+            "en": "The date in which the Document has been submitted."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "submission date"
+          },
+          "sh:path": "https://w3id.org/str/submissionDate"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.identifier",
           "sh:description": {
@@ -340,6 +400,18 @@
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.submissiondate",
+          "sh:description": {
+            "en": "The date in which the Document has been submitted."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "submission date"
+          },
+          "sh:path": "https://w3id.org/str/submissionDate"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/d9911793c7598a1d08612413f10901fbeefdb61d",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.relateddocumentation",
           "sh:class": "http://xmlns.com/foaf/0.1/Document",
@@ -350,6 +422,18 @@
             "en": "related documentation"
           },
           "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/e64b135aa5770a921a6738287316722c7a7dd679",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.describes",
+          "sh:class": "https://w3id.org/str/Unit",
+          "sh:description": {
+            "en": "It indicates the Unit described."
+          },
+          "sh:name": {
+            "en": "describes"
+          },
+          "sh:path": "https://w3id.org/str/describes"
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Evidence"
@@ -766,9 +850,9 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces",
-          "sh:class": "http://data.europa.eu/m8g/Output",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
           "sh:description": {
-            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
+            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
           },
           "sh:name": {
             "en": "produces"
@@ -778,9 +862,9 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces",
-          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:class": "http://data.europa.eu/m8g/Output",
           "sh:description": {
-            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
+            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
           },
           "sh:name": {
             "en": "produces"
@@ -1175,7 +1259,7 @@
           "sh:name": {
             "en": "is notified by"
           },
-          "sh:path": "https://w3id.org/str/legalEntityIsNotifiedBy"
+          "sh:path": "https://w3id.org/str/isNotifiedBy"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/2d7ae974de8cf6bf9f79f4d5bd3e490544d0bd9a",
@@ -1187,7 +1271,7 @@
           "sh:name": {
             "en": "is referred in"
           },
-          "sh:path": "https://w3id.org/str/legalEntityIsReferredIn"
+          "sh:path": "https://w3id.org/str/isReferredIn"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/35a0c5bc0ce5ab144bd063c0f462c983de54579b",
@@ -1223,19 +1307,19 @@
           "sh:name": {
             "en": "offers"
           },
-          "sh:path": "https://w3id.org/str/legalEntityOffers"
+          "sh:path": "https://w3id.org/str/offers"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/71b69bfe1f117f65960a52027da4905f447de695",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.provides",
-          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:description": {
-            "en": "It indicates the Document provided by the Legal Entity."
+            "en": "It indicates the Evidence provided."
           },
           "sh:name": {
             "en": "provides"
           },
-          "sh:path": "https://w3id.org/str/legalEntityProvides"
+          "sh:path": "https://w3id.org/str/provides"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/7732c779d9ef9b53ab85a7c61b415537d57aafba",
@@ -1606,7 +1690,7 @@
           "sh:name": {
             "en": "is notified by"
           },
-          "sh:path": "https://w3id.org/str/personIsNotifiedBy"
+          "sh:path": "https://w3id.org/str/isNotifiedBy"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/1572a063cf6e42858dabf5017baf40a96bf7155d",
@@ -1630,7 +1714,7 @@
           "sh:name": {
             "en": "is referred in"
           },
-          "sh:path": "https://w3id.org/str/personIsReferredIn"
+          "sh:path": "https://w3id.org/str/isReferredIn"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b",
@@ -1642,7 +1726,7 @@
           "sh:name": {
             "en": "offers"
           },
-          "sh:path": "https://w3id.org/str/personOffers"
+          "sh:path": "https://w3id.org/str/offers"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/55b5451dbdf7a52f51562f996bc320d6e00bf47d",
@@ -1731,14 +1815,14 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/71b69bfe1f117f65960a52027da4905f447de695",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.provides",
-          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
           "sh:description": {
-            "en": "It indicates the Document provided by the person."
+            "en": "It indicates the Evidence provided."
           },
           "sh:name": {
             "en": "provides"
           },
-          "sh:path": "https://w3id.org/str/personProvides"
+          "sh:path": "https://w3id.org/str/provides"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
@@ -1819,92 +1903,7 @@
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/42c749b4eb19506d98ebe732f87b81ae28e6d368",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.updatedate",
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-          "sh:description": {
-            "en": "The date in which the Document has been updated."
-          },
-          "sh:name": {
-            "en": "update date"
-          },
-          "sh:path": "https://w3id.org/str/updateDate"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/58f2bb146c1acc13d00df887f8005ac509470906",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.submissiondate",
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-          "sh:description": {
-            "en": "The date in which the Document has been submitted."
-          },
-          "sh:name": {
-            "en": "submission date"
-          },
-          "sh:path": "https://w3id.org/str/submissionDate"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/6065b86a462e0eb1d5964d166fbccf077716ffe5",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.describes",
-          "sh:description": {
-            "en": "It indicates the Unit described."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "describes"
-          },
-          "sh:path": "https://w3id.org/str/describes"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/973c218c87e5004e247def216f50a940ac2e9738",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.updatedate",
-          "sh:description": {
-            "en": "The date in which the Document has been updated."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "update date"
-          },
-          "sh:path": "https://w3id.org/str/updateDate"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.submissiondate",
-          "sh:description": {
-            "en": "The date in which the Document has been submitted."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "submission date"
-          },
-          "sh:path": "https://w3id.org/str/submissionDate"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.submissiondate",
-          "sh:description": {
-            "en": "The date in which the Document has been submitted."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "submission date"
-          },
-          "sh:path": "https://w3id.org/str/submissionDate"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/e64b135aa5770a921a6738287316722c7a7dd679",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.describes",
-          "sh:class": "https://w3id.org/str/Unit",
-          "sh:description": {
-            "en": "It indicates the Unit described."
-          },
-          "sh:name": {
-            "en": "describes"
-          },
-          "sh:path": "https://w3id.org/str/describes"
-        }
-      ],
+      "sh:property": [],
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
     },
     {

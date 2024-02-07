@@ -15,19 +15,20 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ex:registrationProcedure1 dct:identifier "2015-01-28-09-00-00-123" ;
+	dct:description "Provision of registration number for Rene Magritte for shared house"@en ;
+	dct:title "Registration number service 123"@en ;
+	cpsv:hasInput ex:evidence1 ;
+	cpsv:produces ex:registrationNumber1 ;
+	cv:hasCompetentAuthority ex:publicOrganisation1 ;
+	a str:RegistrationProcedure .
+
 ex:registrationNumber1 dct:identifier "2025-01-28_12345" ;
 	dct:title "Registration number 12345"@en ;
 	str:identifies ex:unit1 ;
 	dct:issued "2024-01-28T12:00:00"^^xsd:dateTime ;
 	adms:status ex:validStatus ;
 	a str:RegistrationNumber .
-
-ex:registrationProcedure1 dct:identifier "2015-01-28-09-00-00-123" ;
-	dct:description "Provision of registration number for Rene Magritte for shared house"@en ;
-	dct:title "Registration number service 123"@en ;
-	cpsv:produces ex:registrationNumber1 ;
-	cv:hasCompetentAuthority ex:publicOrganisation1 ;
-	a str:RegistrationProcedure .
 
 ex:publicOrganisation1 skos:prefLabel "Jette municipality"@en ;
 	locn:address ex:address2 ;

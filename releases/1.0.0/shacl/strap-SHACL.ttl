@@ -465,66 +465,24 @@
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/42c749b4eb19506d98ebe732f87b81ae28e6d368>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/58f2bb146c1acc13d00df887f8005ac509470906>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/6065b86a462e0eb1d5964d166fbccf077716ffe5>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/973c218c87e5004e247def216f50a940ac2e9738>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/e64b135aa5770a921a6738287316722c7a7dd679>;
   shacl:targetClass foaf:Document .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/42c749b4eb19506d98ebe732f87b81ae28e6d368> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.updatedate";
-  shacl:datatype xsd:dateTime;
-  shacl:description "The date in which the Document has been updated."@en;
-  shacl:name "update date"@en;
-  shacl:path <https://w3id.org/str/updateDate> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/58f2bb146c1acc13d00df887f8005ac509470906> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.submissiondate";
-  shacl:datatype xsd:dateTime;
-  shacl:description "The date in which the Document has been submitted."@en;
-  shacl:name "submission date"@en;
-  shacl:path <https://w3id.org/str/submissionDate> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/6065b86a462e0eb1d5964d166fbccf077716ffe5> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.describes";
-  shacl:description "It indicates the Unit described."@en;
-  shacl:maxCount 1;
-  shacl:name "describes"@en;
-  shacl:path <https://w3id.org/str/describes> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/973c218c87e5004e247def216f50a940ac2e9738> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.updatedate";
-  shacl:description "The date in which the Document has been updated."@en;
-  shacl:maxCount 1;
-  shacl:name "update date"@en;
-  shacl:path <https://w3id.org/str/updateDate> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.submissiondate";
-  shacl:description "The date in which the Document has been submitted."@en;
-  shacl:maxCount 1;
-  shacl:name "submission date"@en;
-  shacl:path <https://w3id.org/str/submissionDate> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.submissiondate";
-  shacl:description "The date in which the Document has been submitted."@en;
-  shacl:minCount 1;
-  shacl:name "submission date"@en;
-  shacl:path <https://w3id.org/str/submissionDate> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#DocumentShape/e64b135aa5770a921a6738287316722c7a7dd679> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Document.describes";
-  shacl:class <https://w3id.org/str/Unit>;
-  shacl:description "It indicates the Unit described."@en;
-  shacl:name "describes"@en;
-  shacl:path <https://w3id.org/str/describes> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/42c749b4eb19506d98ebe732f87b81ae28e6d368>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/58f2bb146c1acc13d00df887f8005ac509470906>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/6065b86a462e0eb1d5964d166fbccf077716ffe5>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/77624c6165c7831ff00bd33e017e6d0b364809b3>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/88c2d105acc4e11c2a394a9e5f60d2851e4c2120>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/973c218c87e5004e247def216f50a940ac2e9738>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/c0d17764e84e711728581fda7356a51e99a9040a>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/d9911793c7598a1d08612413f10901fbeefdb61d>;
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/d9911793c7598a1d08612413f10901fbeefdb61d>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/e64b135aa5770a921a6738287316722c7a7dd679>;
   shacl:targetClass <http://data.europa.eu/m8g/Evidence> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.name";
@@ -532,6 +490,24 @@
   shacl:description "The official Name of the piece of Evidence."@en;
   shacl:name "name"@en;
   shacl:path dc:title .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/42c749b4eb19506d98ebe732f87b81ae28e6d368> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.updatedate";
+  shacl:datatype xsd:dateTime;
+  shacl:description "The date in which the Document has been updated."@en;
+  shacl:name "update date"@en;
+  shacl:path <https://w3id.org/str/updateDate> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/58f2bb146c1acc13d00df887f8005ac509470906> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.submissiondate";
+  shacl:datatype xsd:dateTime;
+  shacl:description "The date in which the Document has been submitted."@en;
+  shacl:name "submission date"@en;
+  shacl:path <https://w3id.org/str/submissionDate> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/6065b86a462e0eb1d5964d166fbccf077716ffe5> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.describes";
+  shacl:description "It indicates the Unit described."@en;
+  shacl:maxCount 1;
+  shacl:name "describes"@en;
+  shacl:path <https://w3id.org/str/describes> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.identifier";
   shacl:description "An Identifier for the piece of Evidence."@en;
@@ -557,17 +533,41 @@
   shacl:name "name"@en;
   shacl:path dc:title .
 
+<https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/973c218c87e5004e247def216f50a940ac2e9738> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.updatedate";
+  shacl:description "The date in which the Document has been updated."@en;
+  shacl:maxCount 1;
+  shacl:name "update date"@en;
+  shacl:path <https://w3id.org/str/updateDate> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.submissiondate";
+  shacl:description "The date in which the Document has been submitted."@en;
+  shacl:maxCount 1;
+  shacl:name "submission date"@en;
+  shacl:path <https://w3id.org/str/submissionDate> .
+
 <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/c0d17764e84e711728581fda7356a51e99a9040a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.identifier";
   shacl:description "An Identifier for the piece of Evidence."@en;
   shacl:maxCount 1;
   shacl:name "identifier"@en;
   shacl:path dc:identifier .
 
+<https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.submissiondate";
+  shacl:description "The date in which the Document has been submitted."@en;
+  shacl:minCount 1;
+  shacl:name "submission date"@en;
+  shacl:path <https://w3id.org/str/submissionDate> .
+
 <https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/d9911793c7598a1d08612413f10901fbeefdb61d> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.relateddocumentation";
   shacl:class foaf:Document;
   shacl:description "The documentation that contains information."@en;
   shacl:name "related documentation"@en;
   shacl:path foaf:page .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#EvidenceShape/e64b135aa5770a921a6738287316722c7a7dd679> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Evidence.describes";
+  shacl:class <https://w3id.org/str/Unit>;
+  shacl:description "It indicates the Unit described."@en;
+  shacl:name "describes"@en;
+  shacl:path <https://w3id.org/str/describes> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape> a shacl:NodeShape;
   shacl:closed false;
@@ -617,13 +617,13 @@
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "It indicates the competent auhority notifying."@en;
   shacl:name "is notified by"@en;
-  shacl:path <https://w3id.org/str/legalEntityIsNotifiedBy> .
+  shacl:path <https://w3id.org/str/isNotifiedBy> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/2d7ae974de8cf6bf9f79f4d5bd3e490544d0bd9a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.isreferredin";
   shacl:class <https://w3id.org/str/Order>;
   shacl:description "It indicates the Order in which the host is referred."@en;
   shacl:name "is referred in"@en;
-  shacl:path <https://w3id.org/str/legalEntityIsReferredIn> .
+  shacl:path <https://w3id.org/str/isReferredIn> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/35a0c5bc0ce5ab144bd063c0f462c983de54579b> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.legalidentifier";
   shacl:class <http://www.w3.org/ns/adms#identifier>;
@@ -641,13 +641,13 @@
   shacl:class <https://w3id.org/str/ShortTermAccomondationRentalService>;
   shacl:description "It indicates the rental service offered."@en;
   shacl:name "offers"@en;
-  shacl:path <https://w3id.org/str/legalEntityOffers> .
+  shacl:path <https://w3id.org/str/offers> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/71b69bfe1f117f65960a52027da4905f447de695> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.provides";
-  shacl:class foaf:Document;
-  shacl:description "It indicates the Document provided by the Legal Entity."@en;
+  shacl:class <http://data.europa.eu/m8g/Evidence>;
+  shacl:description "It indicates the Evidence provided."@en;
   shacl:name "provides"@en;
-  shacl:path <https://w3id.org/str/legalEntityProvides> .
+  shacl:path <https://w3id.org/str/provides> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntityShape/7732c779d9ef9b53ab85a7c61b415537d57aafba> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#LegalEntity.haslegalrepresentative";
   shacl:description "It indicates the Person that can represent legally an organization."@en;
@@ -957,7 +957,7 @@
   shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
   shacl:description "It indicates the competent auhority notifying."@en;
   shacl:name "is notified by"@en;
-  shacl:path <https://w3id.org/str/personIsNotifiedBy> .
+  shacl:path <https://w3id.org/str/isNotifiedBy> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/1572a063cf6e42858dabf5017baf40a96bf7155d> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.familyname";
   shacl:datatype rdf:langString;
@@ -969,13 +969,13 @@
   shacl:class <https://w3id.org/str/Order>;
   shacl:description "It indicates the Order in which the host is referred."@en;
   shacl:name "is referred in"@en;
-  shacl:path <https://w3id.org/str/personIsReferredIn> .
+  shacl:path <https://w3id.org/str/isReferredIn> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.offers";
   shacl:class <https://w3id.org/str/ShortTermAccomondationRentalService>;
   shacl:description "It indicates the rental service offered."@en;
   shacl:name "offers"@en;
-  shacl:path <https://w3id.org/str/personOffers> .
+  shacl:path <https://w3id.org/str/offers> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/55b5451dbdf7a52f51562f996bc320d6e00bf47d> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.domicile";
   shacl:class <http://www.w3.org/ns/locn#Address>;
@@ -1020,10 +1020,10 @@
   shacl:path <http://www.w3.org/ns/adms#identifier> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/71b69bfe1f117f65960a52027da4905f447de695> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.provides";
-  shacl:class foaf:Document;
-  shacl:description "It indicates the Document provided by the person."@en;
+  shacl:class <http://data.europa.eu/m8g/Evidence>;
+  shacl:description "It indicates the Evidence provided."@en;
   shacl:name "provides"@en;
-  shacl:path <https://w3id.org/str/personProvides> .
+  shacl:path <https://w3id.org/str/provides> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.contactpoint";
   shacl:class <http://data.europa.eu/m8g/ContactPoint>;
@@ -1199,11 +1199,11 @@
   shacl:path dc:title .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces";
-  shacl:class <http://data.europa.eu/m8g/Output>,
-    dcat:Resource;
-  shacl:description "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en,
-    """This property defines the output of the service as a data resource available
-and managed by a Base Registry Service."""@en;
+  shacl:class dcat:Resource,
+    <http://data.europa.eu/m8g/Output>;
+  shacl:description """This property defines the output of the service as a data resource available
+and managed by a Base Registry Service."""@en,
+    "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en;
   shacl:name "produces"@en;
   shacl:path <http://purl.org/vocab/cpsv#produces> .
 

@@ -38,6 +38,12 @@
      },
      "adms:identifier" : {
        "@id": "ex:identifier1"
+     },
+     "adms:identifier" : {
+       "@id": "ex:identifier1"
+     },
+     "str:provides" : {
+       "@id": "ex:evidence1"
      }
     },
     {
@@ -65,7 +71,7 @@
       "dct:identifier" : "evi-123",
       "dct:title" : {
         "@language": "en",
-        "@value": "Information about the unit"
+        "@value": "Information about the unit1"
       },
       "str:submissionDate": {
         "@type": "xsd:dateTime",
@@ -73,10 +79,7 @@
       },
       "str:describes": {
         "@id": "ex:unit1"
-      },
-      "cv:isProvidedBy" : {
-       "@id": "ex:person1"
-     }
+      }
     },
     {
       "@id": "ex:unit1",

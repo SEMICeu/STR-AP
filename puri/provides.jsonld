@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://w3id.org/str/legalEntityOffers",
+    "@id": "https://w3id.org/str/provides",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -8,7 +8,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "It indicates the rental service offered."
+        "@value": "It indicates the Evidence provided."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -19,7 +19,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "offers"
+        "@value": "provides"
       }
     ]
   }
