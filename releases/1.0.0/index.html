@@ -3307,6 +3307,17 @@ This definition is consistent with the more detailed definition of a "public sec
                 </dd>
                 
                 
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        It does not include the following:
+<ul>
+<li>(a) hotels and similar accommodation including resort hotels, suite or apartment hotels ¦and motels as described in NACE Rev. 2, group 55.1 (hotels and similar accommodation) and hostels as described in NACE Rev. 2, group 55.2 (holiday and other short-stay accommodation) of Annex I to Regulation (EC) No 1893/2006 of the European Parliament and of the Council24;</li>
+<li>(b) the provision of accommodation in camping grounds, recreational vehicle parks and trailer parks, as described in NACE Rev. 2 group 55.3 of Annex I to Regulation 1893/2006.</li>
+</ul>
+                    </dd>
+                
                 
                     <dt>
                         Properties
@@ -7421,20 +7432,18 @@ companies, vehicles, licences, buildings, locations and roads.
                                 <td>
                                     
                                         
-                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
+                                            <a href="#Output" data-placement="right">Output</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    This property defines the output of the service as a data resource available
-and managed by a Base Registry Service.
+                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    The output must be also
-described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
+                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
                                 </td>
 				<!--
                                 <td>
@@ -7466,18 +7475,20 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                                 <td>
                                     
                                         
-                                            <a href="#Output" data-placement="right">Output</a>
+                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..1
+                                    0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
+                                    This property defines the output of the service as a data resource available
+and managed by a Base Registry Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
+                                    The output must be also
+described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                                 </td>
 				<!--
                                 <td>
@@ -9277,7 +9288,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td>Optional</td>
+								<td></td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
@@ -9287,7 +9298,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
