@@ -23,66 +23,66 @@
     {
       "@id": "ex:registrationProcedure1",
       "@type": "RegistrationProcedure",
-      "dct:identifier": "2015-01-28-09-00-00-123",
-      "dct:description": {
+      "PublicRegistryService.identifier": "2015-01-28-09-00-00-123",
+      "PublicRegistryService.description": {
         "@language": "en",
         "@value": "Provision of registration number for Rene Magritte for shared house"
       },
-      "dct:title": {
+      "PublicRegistryService.name": {
         "@language": "en",
         "@value": "Registration number service 123"
       },
-      "cpsv:hasInpt": {
+      "PublicRegistryService.hasInput": {
        "@id": "ex:evidence1"
       },
-      "cpsv:produces": {
+      "PublicRegistryService.produces": {
        "@id": "ex:registrationNumber1"
       },
-      "cv:hasCompetentAuthority": {
+      "PublicRegistryService.hasCompetentAuthority": {
        "@id": "ex:publicOrganisation1"
       }
     },
     {
       "@id": "ex:registrationNumber1",
       "@type": "RegistrationNumber",
-      "dct:identifier": "2025-01-28_12345",
-      "dct:title": {
+      "Output.identifier": "2025-01-28_12345",
+      "Output.name": {
         "@language": "en",
         "@value": "Registration number 12345"
       },
-      "str:identifies": {
+      "RegistrationNumber.identifies": {
        "@id": "ex:unit1"
       },
-      "dct:issued": {
+      "RegistrationNumber.issueDate": {
         "@type": "xsd:dateTime",
         "@value": "2024-01-28T12:00:00"
       },
-      "adms:status": {
+      "RegistrationNumber.status": {
         "@id": "ex:validStatus"
       }
     },
     {
       "@id": "ex:publicOrganisation1",
       "@type": "PublicOrganisation",
-      "skos:prefLabel": {
+      "PublicOrganisation.preferredLabel": {
         "@language": "en",
         "@value": "Jette municipality"
       },
-      "locn:address": {
+      "PublicOrganisation.address": {
        "@id": "ex:address2"
       }  
     },
     {
       "@id": "ex:STRentalservice1",
       "@type": "ShortTermAccomodationRentalService",
-      "str:providesAccessTo": {
+      "ShortTermAccomodationRentalService.providesAccessTo": {
        "@id": "ex:onlineSTRentalPlatform1"
      }
     },
     {
       "@id": "ex:onlineSTRentalPlatform1",
       "@type": "OnlineShortTermRentalPlatform",
-      "str:publishes": {
+      "OnlineShortTermRentalPlatform.publishes": {
        "@id": "ex:dataset1"
      },
       "dct:type": {
@@ -92,21 +92,21 @@
     {
       "@id": "ex:dataset1",
       "@type": "Dataset",
-      "dcat:distribution": {
+      "Dataset.datasetDistribution": {
        "@id": "ex:distribution1"
      }
     },
     {
       "@id": "ex:distribution1",
       "@type": "Distribution",
-      "str:hasListing": {
+      "Distribution.hasListing": {
        "@id": "ex:unit1"
      }
     },
     {
       "@id": "ex:person1",
       "@type": "Person",
-      "str:offers": {
+      "Person.offers": {
        "@id": "ex:STRentalservice1"
      }
     },

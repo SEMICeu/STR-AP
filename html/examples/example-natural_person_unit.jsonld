@@ -22,40 +22,37 @@
     {
      "@id": "ex:person1",
      "@type": "Person",
-     "foaf:familyName" : {
+     "Person.familyName" : {
        "@language": "fr",
        "@value": "Magritte"
      },
-     "foaf:givenName" : {
+     "Person.givenName" : {
        "@language": "fr",
        "@value": "René François Ghislain"
      },
-     "cv:contactPoint" : {
+     "Person.contactPoint" : {
        "@id": "ex:contactPoint1"
      },
-     "cv:domicile" : {
+     "Person.domicile" : {
        "@id": "ex:address1"
      },
-     "adms:identifier" : {
+     "Person.identifier" : {
        "@id": "ex:identifier1"
      },
-     "adms:identifier" : {
-       "@id": "ex:identifier1"
-     },
-     "str:provides" : {
+     "Person.provides" : {
        "@id": "ex:evidence1"
      }
     },
     {
       "@id": "ex:contactPoint1",
       "@type": "ContactPoint",
-      "cv:email": "rene@magritte.be",
-      "cv:telephone": "+32 012 345 678"
+      "ContactPoint.hasEmail": "rene@magritte.be",
+      "ContactPoint.hasTelephone": "+32 012 345 678"
     },
     {
       "@id": "ex:address1",
       "@type": "Address",
-      "locn:fullAddress": {
+      "Address.fullAddress": {
         "@language": "fr",
         "@value": "Rue Esseghem 135, 1090 Bruxelles, Belgique"
       }
@@ -63,47 +60,47 @@
     {
       "@id": "ex:identifier1",
       "@type": "Identifier",
-      "skos:notation": "123.456.789"
+      "Identifier.notation": "123.456.789"
     },
     {
       "@id": "ex:evidence1",
       "@type": "Evidence",
-      "dct:identifier" : "evi-123",
-      "dct:title" : {
+      "Evidence.identifier" : "evi-123",
+      "Evidence.name" : {
         "@language": "en",
         "@value": "Information about the unit1"
       },
-      "str:submissionDate": {
+      "Evidence.submissionDate": {
         "@type": "xsd:dateTime",
         "@value": "2024-01-28T09:00:00"
       },
-      "str:describes": {
+      "Evidence.describes": {
         "@id": "ex:unit1"
       }
     },
     {
       "@id": "ex:unit1",
       "@type": "Unit",
-      "str:numberOfBedrooms": {
+      "Unit.numberOfBedrooms": {
         "@type": "xsd:integer",
         "@value": "1"
       },
-      "str:occupancy": {
+      "Unit.occupancy": {
         "@type": "xsd:integer",
         "@value": "2"
       },
-      "str:floorLevel": {
+      "Unit.floorLevel": {
         "@language": "fr",
         "@value": "2eme étage"
       },
-      "str:purpose" : {
+      "Unit.purpose" : {
         "@language": "fr",
         "@value": "Maison partagée avec étage privé"
       },
-      "dct:type" : {
+      "Unit.type" : {
         "@id": "ex:sharedHouse"
       },
-      "str:hasUnitAddress" : {
+      "Unit.hasUnitAddress" : {
         "@id": "ex:address1"
       }
     },
