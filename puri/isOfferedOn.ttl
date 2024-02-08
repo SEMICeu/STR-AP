@@ -2,9 +2,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://w3id.org/str/isReferredIn> a rdf:Property,
+<https://w3id.org/str/isOfferedOn> a rdf:Property,
         owl:ObjectProperty ;
-    rdfs:label "is referred in"@en ;
-    rdfs:comment "It indicates the Order in which the host is referred."@en ;
+    rdfs:label "is offered on"@en ;
+    rdfs:comment "The Online Short Term Rental Platform where the Unit is declared."@en ;
     rdfs:isDefinedBy <https://w3id.org/str/> .
 

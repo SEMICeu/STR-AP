@@ -1199,11 +1199,11 @@
   shacl:path dc:title .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces";
-  shacl:class <http://data.europa.eu/m8g/Output>,
-    dcat:Resource;
-  shacl:description "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en,
-    """This property defines the output of the service as a data resource available
-and managed by a Base Registry Service."""@en;
+  shacl:class dcat:Resource,
+    <http://data.europa.eu/m8g/Output>;
+  shacl:description """This property defines the output of the service as a data resource available
+and managed by a Base Registry Service."""@en,
+    "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en;
   shacl:name "produces"@en;
   shacl:path <http://purl.org/vocab/cpsv#produces> .
 
@@ -1406,6 +1406,7 @@ and managed by a Base Registry Service."""@en;
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/6658fd8bec456983088457c514485a6c839cd056>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/6bb9c69c7d6569fccff76c410d1540010c5b07c7>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/7a928e438d136a1ab39d0f9768bd3bf1017b405a>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/7b1e8bc2a7da114c53a53f3ff7fb5a372ec28c25>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/8662a1e162ca0ebe52611bf26791584c89c3de70>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/9b3612c89abb019f783fec2020641c8dcad8b320>,
@@ -1414,6 +1415,7 @@ and managed by a Base Registry Service."""@en;
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/c0c453532d8bf22ffafb3d0aefa0a88e4f12348f>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/e5becd8a26ce63dce7f0c84e338a2ceef2611f83>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/e763fbdcae0f8d423dba57b9f0f572a108520c5b>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/ef003961d29fc6f49d4064fde9cf146a04b2fa63>;
   shacl:targetClass <https://w3id.org/str/Unit> .
 
@@ -1519,6 +1521,12 @@ and managed by a Base Registry Service."""@en;
   shacl:name "type"@en;
   shacl:path dc:type .
 
+<https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/7a928e438d136a1ab39d0f9768bd3bf1017b405a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.isofferedon";
+  shacl:class <https://w3id.org/str/OnlineShortTermRentalPlatform>;
+  shacl:description "The Online Short Term Rental Platform where the Unit is declared."@en;
+  shacl:name "is offered on"@en;
+  shacl:path <https://w3id.org/str/isOfferedOn> .
+
 <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/7b1e8bc2a7da114c53a53f3ff7fb5a372ec28c25> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.issubjecttoauthorization";
   shacl:datatype xsd:boolean;
   shacl:description "It indicates whether the Unit is subject to authorization."@en;
@@ -1566,6 +1574,12 @@ and managed by a Base Registry Service."""@en;
   shacl:maxCount 1;
   shacl:name "number of bedrooms"@en;
   shacl:path <https://w3id.org/str/numberOfBedrooms> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/e763fbdcae0f8d423dba57b9f0f572a108520c5b> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.isofferedon";
+  shacl:description "The Online Short Term Rental Platform where the Unit is declared."@en;
+  shacl:maxCount 1;
+  shacl:name "is offered on"@en;
+  shacl:path <https://w3id.org/str/isOfferedOn> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/ef003961d29fc6f49d4064fde9cf146a04b2fa63> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.occupancy";
   shacl:description "The maximum number of guests that the unit accommodates."@en;

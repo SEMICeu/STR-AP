@@ -61,12 +61,12 @@
       xref: "web-platform",
       doJsonLd: true,
       logos: [{
-        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
-        url: "https://semic.eu",
-        alt: "SEMIC",
+        src: "./html/DG-Grow.jpg",
+        url: "https://single-market-economy.ec.europa.eu/index_en,
+        alt: "DG GROW",
         width: 154,
-        height: 140,
-        id: "semic-logo",
+        height: 154,
+        id: "grow-logo",
       },],
       generatedSubtitle: "",
       additionalCopyrightHolders: "",
@@ -3330,6 +3330,7 @@ This definition is consistent with the more detailed definition of a "public sec
                             , <a href="#Unit.hasauthorization">has authorization</a>
                             , <a href="#Unit.hasunitaddress">has unit address</a>
                             , <a href="#Unit.isauthorizationobtained">is authorization obtained</a>
+                            , <a href="#Unit.isofferedon">is offered on</a>
                             , <a href="#Unit.issubjecttoauthorization">is subject to authorization</a>
                             , <a href="#Unit.numberofbedrooms">number of bedrooms</a>
                             , <a href="#Unit.occupancy">occupancy</a>
@@ -3618,6 +3619,49 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                                 <td property="rdfs:comment">
                                     it indicates whether the host has obtained an authorisation for the Unit.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Unit.isofferedon"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/isOfferedOn"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is offered on%20in%20Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Unit.isofferedon" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/isOfferedOn"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/isOfferedOn"
+                                           data-placement="right">
+                                        is offered on</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#OnlineShortTermRentalPlatform" data-placement="right">Online Short Term Rental Platform</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The Online Short Term Rental Platform where the Unit is declared.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -7432,18 +7476,20 @@ companies, vehicles, licences, buildings, locations and roads.
                                 <td>
                                     
                                         
-                                            <a href="#Output" data-placement="right">Output</a>
+                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..1
+                                    0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
+                                    This property defines the output of the service as a data resource available
+and managed by a Base Registry Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
+                                    The output must be also
+described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                                 </td>
 				<!--
                                 <td>
@@ -7475,20 +7521,18 @@ companies, vehicles, licences, buildings, locations and roads.
                                 <td>
                                     
                                         
-                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
+                                            <a href="#Output" data-placement="right">Output</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    This property defines the output of the service as a data resource available
-and managed by a Base Registry Service.
+                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    The output must be also
-described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
+                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
                                 </td>
 				<!--
                                 <td>
@@ -9288,7 +9332,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
@@ -9298,7 +9342,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td>Optional</td>
+								<td></td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
@@ -9447,6 +9491,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -9528,6 +9576,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Unit.isauthorizationobtained">is authorization obtained </a></td>
 								<td><div class="shorten">https://w3id.org/str/isAuthorizationObtained</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Unit">Unit</a></td>
+								<td><div class="shorten">https://w3id.org/str/Unit</div></td>
+								<td></td>
+								<td><a href="#Unit.isofferedon">is offered on </a></td>
+								<td><div class="shorten">https://w3id.org/str/isOfferedOn</div></td>
 							</tr>
 						
 					

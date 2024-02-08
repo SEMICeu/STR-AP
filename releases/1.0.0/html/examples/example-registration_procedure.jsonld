@@ -73,13 +73,6 @@
       }  
     },
     {
-      "@id": "ex:STRentalservice1",
-      "@type": "ShortTermAccomodationRentalService",
-      "ShortTermAccomodationRentalService.providesAccessTo": {
-       "@id": "ex:onlineSTRentalPlatform1"
-     }
-    },
-    {
       "@id": "ex:onlineSTRentalPlatform1",
       "@type": "OnlineShortTermRentalPlatform",
       "OnlineShortTermRentalPlatform.publishes": {
@@ -97,10 +90,23 @@
      }
     },
     {
+      "@id": "ex:unit1",
+      "Unit.isOfferedOn": {
+        "@id": "ex:onlineSTRentalPlatform1"
+      }
+    },
+    {
       "@id": "ex:distribution1",
       "@type": "Distribution",
       "Distribution.hasListing": {
        "@id": "ex:unit1"
+     }
+    },
+    {
+      "@id": "ex:STRentalservice1",
+      "@type": "ShortTermAccomodationRentalService",
+      "ShortTermAccomodationRentalService.providesAccessTo": {
+       "@id": "ex:onlineSTRentalPlatform1"
      }
     },
     {

@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://w3id.org/str/isReferredIn",
+    "@id": "https://w3id.org/str/isOfferedOn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -8,7 +8,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "It indicates the Order in which the host is referred."
+        "@value": "The Online Short Term Rental Platform where the Unit is declared."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -19,7 +19,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "is referred in"
+        "@value": "is offered on"
       }
     ]
   }
