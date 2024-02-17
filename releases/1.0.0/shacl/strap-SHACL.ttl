@@ -584,13 +584,13 @@
   shacl:targetClass <http://www.w3.org/ns/adms#identifier> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/3b534bf26cc294dd6e8dc80832da269189e4cbf3> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.notation";
-  shacl:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype."@en;
+  shacl:description "A string of characters to uniquely identify a concept."@en;
   shacl:minCount 1;
   shacl:name "notation"@en;
   shacl:path skos:notation .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.notation";
-  shacl:description "A string that is an identifier in the context of the identifier scheme referenced by its datatype."@en;
+  shacl:description "A string of characters to uniquely identify a concept."@en;
   shacl:maxCount 1;
   shacl:name "notation"@en;
   shacl:path skos:notation .
@@ -1014,7 +1014,7 @@
   shacl:path <http://data.europa.eu/m8g/contactPoint> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.identifier";
-  shacl:description "Links a resource to an adms:Identifier class."@en;
+  shacl:description "The unambiguous structured reference to the Person."@en;
   shacl:minCount 1;
   shacl:name "identifier"@en;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
@@ -1038,7 +1038,7 @@
   shacl:path <https://w3id.org/str/isPointOfContactFor> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/c0d17764e84e711728581fda7356a51e99a9040a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.identifier";
-  shacl:description "Links a resource to an adms:Identifier class."@en;
+  shacl:description "The unambiguous structured reference to the Person."@en;
   shacl:maxCount 1;
   shacl:name "identifier"@en;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
@@ -1051,7 +1051,7 @@
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/e2017f72421063cd9ff494011ec78f35f9632a4a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.identifier";
   shacl:class <http://www.w3.org/ns/adms#identifier>;
-  shacl:description "Links a resource to an adms:Identifier class."@en;
+  shacl:description "The unambiguous structured reference to the Person."@en;
   shacl:name "identifier"@en;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
 
@@ -1199,11 +1199,11 @@
   shacl:path dc:title .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces";
-  shacl:class dcat:Resource,
-    <http://data.europa.eu/m8g/Output>;
-  shacl:description """This property defines the output of the service as a data resource available
-and managed by a Base Registry Service."""@en,
-    "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en;
+  shacl:class <http://data.europa.eu/m8g/Output>,
+    dcat:Resource;
+  shacl:description "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en,
+    """This property defines the output of the service as a data resource available
+and managed by a Base Registry Service."""@en;
   shacl:name "produces"@en;
   shacl:path <http://purl.org/vocab/cpsv#produces> .
 

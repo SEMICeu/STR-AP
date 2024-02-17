@@ -53,7 +53,7 @@
       edDraftURI: "https://semiceu.github.io/STR-AP/releases/1.0.0",
       latestVersion: "https://semiceu.github.io/STR-AP/releases/1.0.0/",
       specStatus: "LD",
-      publishDate: "2024-01-28",
+      publishDate: "2024-02-17",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/STR-AP",
@@ -193,10 +193,11 @@ This Regulation is without prejudice to the rules laid down by other Union legal
 This Application Profile specifies a semantic data model and it consists of terms with their constraints. </p>
 <p>The specification is based on the [[ISA2]] [[SEMIC]] Core Vocabularies and Application Profiles, in particular:
 <ul>
-<li><a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.2/">Core Location Vocabulary 2.0.2</a> including Address, Geometry and Location</li>
-<li><a href="https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/">Core Person Vocabulary 2.1.0</a> including Person with its Address, Identifier and Contact Point</li>
-<li><a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/">Core Business Vocabulary 2.1.0</a> including Legal Entity with its Address, Identifier and Contact Point</li>
-<li><a href="https://semiceu.github.io/CPOV/releases/2.1.0/">Core Public Organisation Vocabulary 2.1.0</a> including Public Organisation, Address</li>
+<li><a href="https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/">Core Location Vocabulary 2.1.0</a> including Address, Geometry and Location</li>
+<li><a href="https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/">Core Person Vocabulary 2.1.1</a> including Person with its Address, Identifier and Contact Point</li>
+<li><a href="https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/">Core Business Vocabulary 2.2.0</a> including Legal Entity with its Address, Identifier and Contact Point</li>
+<li><a href="https://semiceu.github.io/CPOV/releases/2.1.1/">Core Public Organisation Vocabulary 2.1.1</a> including Public Organisation, Address</li>
+<li><a href="https://semiceu.github.io/CPSV-AP/releases/3.2.0/">Core Public Service Application Profile (CPSV-AP) 3.2.0</a> including Public Service, Evidence and Output</li>
 <li><a href="https://semiceu.github.io/uri.semic.eu-generated/BRegDCAT-AP/releases/3.0.0/">BregDCAT-AP 3.0.0</a> including Public Service, Dataset, Distribution, Catalogue and Data Service</li>
 </ul>
 </p>
@@ -209,7 +210,7 @@ This Application Profile specifies a semantic data model and it consists of term
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Application Profile has the status Working Draft published at 2024-01-28.
+            This Application Profile has the status Working Draft published at 2024-02-17.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/STR-AP/blob/master/releases/1.0.0/Changelog.md">Changelog</a>.
@@ -294,6 +295,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
                             This document describes the usage of the following main entities for a correct usage of the Core Vocabulary:
                             <br />
                             |
+			      <a href="#ActivityData">Activity Data</a> |
 			      <a href="#Evidence">Evidence</a> |
 			      <a href="#LegalEntity">Legal Entity</a> |
 			      <a href="#OnlineShortTermRentalPlatform">Online Short Term Rental Platform</a> |
@@ -303,13 +305,13 @@ This specification uses the following prefixes to shorten the URIs for readibili
 			      <a href="#RegistrationNumber">Registration Number</a> |
 			      <a href="#RegistrationProcedure">Registration Procedure</a> |
 			      <a href="#ShortTermAccomodationRentalService">Short Term Accomodation Rental Service</a> |
+			      <a href="#SingleDigitalEntryPoint">Single Digital Entry Point</a> |
 			      <a href="#Unit">Unit</a> |
                         </p>
                         <p>
                             The main entities are supported by:
                             <br />
                             |
-			      <a href="#ActivityData">Activity Data</a> |
 			      <a href="#Address">Address</a> |
 			      <a href="#Catalogue">Catalogue</a> |
 			      <a href="#CatalogueRecord">Catalogue Record</a> |
@@ -330,7 +332,6 @@ This specification uses the following prefixes to shorten the URIs for readibili
 			      <a href="#Output">Output</a> |
 			      <a href="#Periodoftime">Period of time</a> |
 			      <a href="#PublicRegistryService">Public Registry Service</a> |
-			      <a href="#SingleDigitalEntryPoint">Single Digital Entry Point</a> |
                         </p>
                 
                 
@@ -359,6 +360,216 @@ This specification uses the following prefixes to shorten the URIs for readibili
    Main Entities
 </h2>
 The main entities are those that form the core of the Core Vocabulary.
+
+
+
+   
+        <section>
+            <h3 id="ActivityData">
+                <a href="https://w3id.org/str/ActivityData"
+                   data-toggle="tooltip"
+                   data-content="https://w3id.org/str/ActivityData"
+                   data-placement="right">Activity Data</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20ActivityData&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    The number of nights for which a unit is rented and the number of guests that the unit was rented to per night, and their country of residence, in accordance with Regulation (EU) 692/2011.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#ActivityData.countryofresidence">country of residence</a>
+                            , <a href="#ActivityData.numberofguests">number of guests</a>
+                            , <a href="#ActivityData.temporal">temporal</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="ActivityData.countryofresidence"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/countryOfResidence"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20country of residence%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.countryofresidence" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/countryOfResidence"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/countryOfResidence"
+                                           data-placement="right">
+                                        country of residence</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Location" data-placement="right">Location</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The country of residence of the guests.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="ActivityData.numberofguests"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/numberOfGuests"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20number of guests%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.numberofguests" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/numberOfGuests"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/numberOfGuests"
+                                           data-placement="right">
+                                        number of guests</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Integer" data-placement="right">Integer</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The number of guest that the unit was rented to per night.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="ActivityData.temporal"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/temporal"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20temporal%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.temporal" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/temporal"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/temporal"
+                                           data-placement="right">
+                                        temporal</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Periodoftime" data-placement="right">Period of time</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    It indicates the period of time associated.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
 
 
 
@@ -809,7 +1020,7 @@ The main entities are those that form the core of the Core Vocabulary.
                     Definition
                 </dt>
                 <dd>
-                    A self-empoyed person,company,or organization that has legal rights and obligations.
+                    A self-employed person, company, or organization that has legal rights and obligations.
                 </dd>
                 
                 
@@ -817,7 +1028,9 @@ The main entities are those that form the core of the Core Vocabulary.
                         Usage Note
                     </dt>
                     <dd>
-                        A Legal Entity able to transact business, typically registered with a body able to confer legal status such as a national business register. It is able to trade, is legally liable for its actions, accounts, tax affairs etc. This makes Legal Entities distinct from the concept of organisations, groups or sole traders. Many organisations exist that are not Legal Entities, yet to the outside world they have staff, hierarchies, locations etc. Other organisations exist that are an umbrella for several Legal Entities (universities are often good examples of this). This vocabulary is concerned solely with registered Legal Entities and does not attempt to cover all possible trading bodies.
+                        A Legal Entity able to transact business, typically registered with a body able to confer legal status such as a national business register. It is able to trade, is legally liable for its actions, accounts, tax affairs etc. This makes Legal Entities distinct from the concept of organisations or groups. Many organisations exist that are not Legal Entities, yet to the outside world they have staff, hierarchies, locations etc. Other organisations exist that are an umbrella for several Legal Entities (universities are often good examples of this).
+
+In STR, a legal person acting as a "host", that provides, or intends to provide, on a professional or non-professional basis, on a regular or on a temporary basis, a short-term accommodation rental service provided for remuneration through an online short-term rental platform.
                     </dd>
                 
                 
@@ -1733,7 +1946,9 @@ A business might have more than one legal name, particularly in countries with m
                         Usage Note
                     </dt>
                     <dd>
-                        The fact that a person in the context of Core Person Vocabulary cannot be imaginary makes person:Person a subclass of both foaf:Person and schema:Person which both cover imaginary characters as well as real people.
+                        In STR, a natural person acting as a "host", that provides, or intends to provide, on a professional or non-professional basis, on a regular or on a temporary basis, a short-term accommodation rental service provided for remuneration through an online short-term rental platform.
+
+It can also be a person appointed as national coordinator for a Single Digital Entry Point.
                     </dd>
                 
                 
@@ -1991,10 +2206,10 @@ A business might have more than one legal name, particularly in countries with m
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    Links a resource to an adms:Identifier class.
+                                    The unambiguous structured reference to the Person.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    Examples include a national identification number, a student ID, national fiscal number, etc. We also refer to the <a href="http://data.europa.eu/eli/reg/2014/910/oj">eIDAS regulation</a> on "electronic identification and trust services" and its <a href="https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eIDAS%2BeID%2BProfile?preview%3D/82773108/148898847/eIDAS%2520SAML%2520Attribute%2520Profile%2520v1.2%2520Final.pdf&sa=D&source=editors&ust=1619073953427000&usg=AFQjCNFMJFPCmHjV0gLJjf8dSHqGUY3ulw">mapping</a> to the Core Person Vocabulary.
                                 </td>
 				<!--
                                 <td>
@@ -3281,6 +3496,47 @@ This definition is consistent with the more detailed definition of a "public sec
 
 
 
+   
+        <section>
+            <h3 id="SingleDigitalEntryPoint">
+                <a href="https://w3id.org/str/SingleDigitalEntryPoint"
+                   data-toggle="tooltip"
+                   data-content="https://w3id.org/str/SingleDigitalEntryPoint"
+                   data-placement="right">Single Digital Entry Point</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20SingleDigitalEntryPoint&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A gateway for the electronic transmission of data between online short-term rental platforms and competent authorities, ensuring timely, reliable and efficient data sharing processes
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                    <dd>
+                        This specification does not impose any additional requirements to properties for this entity.
+                    </dd>
+                
+            </dl>
+        </div>
+        
+    </div>
+</section>
+
+
+
 
 
    
@@ -3913,216 +4169,6 @@ They are included in the Core Vocabulary because they form the range of properti
 
 
 
-   
-        <section>
-            <h3 id="ActivityData">
-                <a href="https://w3id.org/str/ActivityData"
-                   data-toggle="tooltip"
-                   data-content="https://w3id.org/str/ActivityData"
-                   data-placement="right">Activity Data</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20ActivityData&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    The number of nights for which a unit is rented and the number of guests that the unit was rented to per night, and their country of residence, in accordance with Regulation (EU) 692/2011.
-                </dd>
-                
-                
-                
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                        <dd>
-                            For this entity the following properties are defined: <a href="#ActivityData.countryofresidence">country of residence</a>
-                            , <a href="#ActivityData.numberofguests">number of guests</a>
-                            , <a href="#ActivityData.temporal">temporal</a>
-                            .
-                    </dd>
-                
-            </dl>
-        </div>
-        
-            <div class="u-table-overflow">
-                <table class="data-table simple" id="table-mandatory-classes">
-                    <thead>
-                        <tr class="data-table__header">
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                            </th>
-                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
-                                Property
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:14%">
-                                Range
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:6%">
-                                Card
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Definition 
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:30%">
-                                Usage
-                            </th>
-			    <!--
-                            <th class="data-table__header-title--sortable" style="width:3%">
-                                Codelist
-                            </th>
-                            <th class="data-table__header-title--sortable" style="width:5%">
-                                DCAT
-                            </th>
-			    -->
-                        </tr>
-                    </thead>
-                    <tbody class="supertype">
-                        
-                            <tr id="ActivityData.countryofresidence"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str/countryOfResidence"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20country of residence%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.countryofresidence" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str/countryOfResidence"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/countryOfResidence"
-                                           data-placement="right">
-                                        country of residence</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Location" data-placement="right">Location</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The country of residence of the guests.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="ActivityData.numberofguests"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str/numberOfGuests"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20number of guests%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.numberofguests" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str/numberOfGuests"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/numberOfGuests"
-                                           data-placement="right">
-                                        number of guests</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Integer" data-placement="right">Integer</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    The number of guest that the unit was rented to per night.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                            <tr id="ActivityData.temporal"
-                                typeof="rdfs:Property"
-                                resource="http://purl.org/dc/terms/temporal"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20temporal%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.temporal" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://purl.org/dc/terms/temporal"
-                                           data-toggle="tooltip"
-                                           data-content="http://purl.org/dc/terms/temporal"
-                                           data-placement="right">
-                                        temporal</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Periodoftime" data-placement="right">Period of time</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    It indicates the period of time associated.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        
-    </div>
-</section>
-
-
-
 
 
    
@@ -4351,7 +4397,7 @@ The datatype of addressID is indicated as Literal (keeping backward compatibilit
                                     The name of the uppermost level of the address, almost always a country.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.
+                                    Best practice is to use the <a href="https://www.iso.org/standard/72482.html">ISO 3166-1</a> code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country controlled vocabulary</a> from the Publications Office can be reused for this.
                                 </td>
 				<!--
                                 <td>
@@ -5247,7 +5293,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         Usage Note
                     </dt>
                     <dd>
-                        The Core Public Organization Vocabulary defines properties for telephone number, e-mail address and opening hours although it is noteworthy that the class is based on schema.org's ContactPoint class (http://schema.org/ContactPoint) that has additional properties that some implementations may find useful.
+                        The Core Public Organization Vocabulary defines properties for telephone number, e-mail address and opening hours although it is noteworthy that the class is based on schema.org's <a href="http://schema.org/ContactPoint">ContactPoint</a> class that has additional properties that some implementations may find useful.
                     </dd>
                 
                 
@@ -6346,9 +6392,16 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     Definition
                 </dt>
                 <dd>
-                    An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages t
+                    A structured reference that identifies an entity.
                 </dd>
                 
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        The Identifier class is based on the <a href="https://www.gs1.org/standards/edi/gs1-un-cefact-xml/2012">UN/CEFACT</a> class of the same name and is defined under the ADMS namespace.
+                    </dd>
                 
                 
                     <dt>
@@ -6424,7 +6477,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    A string that is an identifier in the context of the identifier scheme referenced by its datatype.
+                                    A string of characters to uniquely identify a concept.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -7476,20 +7529,18 @@ companies, vehicles, licences, buildings, locations and roads.
                                 <td>
                                     
                                         
-                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
+                                            <a href="#Output" data-placement="right">Output</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..*
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    This property defines the output of the service as a data resource available
-and managed by a Base Registry Service.
+                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    The output must be also
-described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
+                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
                                 </td>
 				<!--
                                 <td>
@@ -7521,18 +7572,20 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                                 <td>
                                     
                                         
-                                            <a href="#Output" data-placement="right">Output</a>
+                                            <a href="#CataloguedResource" data-placement="right">Catalogued Resource</a>
                                         
                                     
                                 </td>
                                 <td>
-                                    0..1
+                                    0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service.
+                                    This property defines the output of the service as a data resource available
+and managed by a Base Registry Service.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    Outputs can be any resource, for instance a document, artefact or anything else being produced as a result of executing the Public Service.
+                                    The output must be also
+described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
                                 </td>
 				<!--
                                 <td>
@@ -7558,47 +7611,6 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
 
 
 
-
-
-
-   
-        <section>
-            <h3 id="SingleDigitalEntryPoint">
-                <a href="https://w3id.org/str/SingleDigitalEntryPoint"
-                   data-toggle="tooltip"
-                   data-content="https://w3id.org/str/SingleDigitalEntryPoint"
-                   data-placement="right">Single Digital Entry Point</a>
-
-            </h3>
-	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
-		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20SingleDigitalEntryPoint&body=Explain%20your%20issue"}}>
-                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
-		</a>
-		-->
-            <dl>
-                <dt>
-                    Definition
-                </dt>
-                <dd>
-                    A gateway for the electronic transmission of data between online short-term rental platforms and competent authorities, ensuring timely, reliable and efficient data sharing processes
-                </dd>
-                
-                
-                
-                    <dt>
-                        Properties
-                    </dt>
-                    
-                    <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
-                    </dd>
-                
-            </dl>
-        </div>
-        
-    </div>
-</section>
 
 
 
@@ -9332,7 +9344,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td>Optional</td>
+								<td></td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>
@@ -9342,7 +9354,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							<tr>
 								<td><a href="#PublicRegistryService">Public Registry Service</a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#PublicService</div></td>
-								<td></td>
+								<td>Optional</td>
 								<td><a href="#PublicRegistryService.produces">produces </a></td>
 								<td><div class="shorten">http://purl.org/vocab/cpsv#produces</div></td>
 							</tr>

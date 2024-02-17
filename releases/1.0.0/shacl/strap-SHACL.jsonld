@@ -850,9 +850,9 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces",
-          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:class": "http://data.europa.eu/m8g/Output",
           "sh:description": {
-            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
+            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
           },
           "sh:name": {
             "en": "produces"
@@ -862,9 +862,9 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces",
-          "sh:class": "http://data.europa.eu/m8g/Output",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
           "sh:description": {
-            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
+            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
           },
           "sh:name": {
             "en": "produces"
@@ -1054,7 +1054,7 @@
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/3b534bf26cc294dd6e8dc80832da269189e4cbf3",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.notation",
           "sh:description": {
-            "en": "A string that is an identifier in the context of the identifier scheme referenced by its datatype."
+            "en": "A string of characters to uniquely identify a concept."
           },
           "sh:minCount": "1",
           "sh:name": {
@@ -1066,7 +1066,7 @@
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Identifier.notation",
           "sh:description": {
-            "en": "A string that is an identifier in the context of the identifier scheme referenced by its datatype."
+            "en": "A string of characters to uniquely identify a concept."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -1804,7 +1804,7 @@
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.identifier",
           "sh:description": {
-            "en": "Links a resource to an adms:Identifier class."
+            "en": "The unambiguous structured reference to the Person."
           },
           "sh:minCount": "1",
           "sh:name": {
@@ -1852,7 +1852,7 @@
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/c0d17764e84e711728581fda7356a51e99a9040a",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.identifier",
           "sh:description": {
-            "en": "Links a resource to an adms:Identifier class."
+            "en": "The unambiguous structured reference to the Person."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -1877,7 +1877,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.identifier",
           "sh:class": "http://www.w3.org/ns/adms#identifier",
           "sh:description": {
-            "en": "Links a resource to an adms:Identifier class."
+            "en": "The unambiguous structured reference to the Person."
           },
           "sh:name": {
             "en": "identifier"
