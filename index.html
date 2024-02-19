@@ -273,6 +273,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
 	<tr><td><code>person</code></td><td><code>http://www.w3.org/ns/person#</code></td></tr>
 	<tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
 	<tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+	<tr><td><code>schema</code></td><td><code>https://schema.org/</code></td></tr>
 	<tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
 	<tr><td><code>str</code></td><td><code>https://w3id.org/str/</code></td></tr>
 	<tr><td><code>time</code></td><td><code>http://www.w3.org/2006/time#</code></td></tr>
@@ -338,7 +339,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
                         <p>
                             And supported by these datatypes:
                             <br />
-                            | <a href="#Boolean">Boolean</a> | <a href="#DateTime">DateTime</a> | <a href="#Double">Double</a> | <a href="#Integer">Integer</a> | <a href="#langString">langString</a> | <a href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> |
+                            | <a href="#Boolean">Boolean</a> | <a href="#DateTime">DateTime</a> | <a href="#Double">Double</a> | <a href="#Integer">Integer</a> | <a href="#langString">langString</a> | <a href="#TemporalLiteral">Temporal Literal</a> | <a href="#Timeinstant">Time instant</a> | <a href="#URL">URL</a> |
                         </p>
                 
     </div>
@@ -1799,8 +1800,8 @@ A business might have more than one legal name, particularly in countries with m
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Order.undefined"></a>
-                            , <a href="#Order.concerns">concerns</a>
+                            For this entity the following properties are defined: <a href="#Order.concerns">concerns</a>
+                            , <a href="#Order.identifier">identifier</a>
                             , <a href="#Order.reason">reason</a>
                             , <a href="#Order.sentto">sent to</a>
                             .
@@ -1842,50 +1843,6 @@ A business might have more than one legal name, particularly in countries with m
                     </thead>
                     <tbody class="supertype">
                         
-                            <tr id="Order.undefined"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str/identifier"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20%20in%20Order&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Order.undefined" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str/identifier"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/identifier"
-                                           data-placement="right">
-                                        </a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Literal" data-placement="right">Literal</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-
-                                <td>
-                                    
-                                </td>
-				-->
-                            </tr>
-                        
                             <tr id="Order.concerns"
                                 typeof="rdfs:Property"
                                 resource="https://w3id.org/str/concerns"
@@ -1915,6 +1872,50 @@ A business might have more than one legal name, particularly in countries with m
                                 </td>
                                 <td property="rdfs:comment">
                                     It indicated the Registration Number concerned.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Order.identifier"
+                                typeof="rdfs:Property"
+                                resource="http://purl.org/dc/terms/identifier"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifier%20in%20Order&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Order.identifier" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/identifier"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/identifier"
+                                           data-placement="right">
+                                        identifier</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An Identifier for the Order.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -3721,8 +3722,7 @@ This definition is consistent with the more detailed definition of a "public sec
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Unit.undefined"></a>
-                            , <a href="#Unit.description">description</a>
+                            For this entity the following properties are defined: <a href="#Unit.description">description</a>
                             , <a href="#Unit.floorlevel">floor level</a>
                             , <a href="#Unit.hasauthorization">has authorization</a>
                             , <a href="#Unit.hasunitaddress">has unit address</a>
@@ -3733,6 +3733,7 @@ This definition is consistent with the more detailed definition of a "public sec
                             , <a href="#Unit.occupancy">occupancy</a>
                             , <a href="#Unit.purpose">purpose</a>
                             , <a href="#Unit.type">type</a>
+                            , <a href="#Unit.url">url</a>
                             .
                     </dd>
                 
@@ -3771,50 +3772,6 @@ This definition is consistent with the more detailed definition of a "public sec
                         </tr>
                     </thead>
                     <tbody class="supertype">
-                        
-                            <tr id="Unit.undefined"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str/url"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20%20in%20Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Unit.undefined" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str/url"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/url"
-                                           data-placement="right">
-                                        </a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Literal" data-placement="right">Literal</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..1
-                                </td>
-                                <td property="rdfs:comment">
-                                    
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-
-                                <td>
-                                    
-                                </td>
-				-->
-                            </tr>
                         
                             <tr id="Unit.description"
                                 typeof="rdfs:Property"
@@ -4285,6 +4242,50 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                                 <td property="rdfs:comment">
                                     A classification of the unit.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Unit.url"
+                                typeof="rdfs:Property"
+                                resource="https://schema.org/URL"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20url%20in%20Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Unit.url" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://schema.org/URL"
+                                           data-toggle="tooltip"
+                                           data-content="https://schema.org/URL"
+                                           data-placement="right">
+                                        url</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#URL" data-placement="right">URL</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    URL of the item.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -7950,6 +7951,22 @@ described as a dcat:Catalog, a dcat:Dataset or a dcat:DataService.
 		</td><td>
                     A temporal entity with zero extent or duration
 		</td></tr>
+		<tr><td>
+                   <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20Url&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="URL">
+                        <a href="https://schema.org/URL"
+                           data-toggle="tooltip"
+                           data-content="https://schema.org/URL"
+                           data-placement="right">URL</a>
+                    </div>
+                
+		</td><td>
+                    
+		</td></tr>
             </tbody>
 	</table>
 
@@ -9052,8 +9069,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Order">Order</a></td>
 								<td><div class="shorten">https://w3id.org/str/Order</div></td>
 								<td></td>
-								<td><a href="#Order.undefined"> </a></td>
-								<td><div class="shorten">https://w3id.org/str/identifier</div></td>
+								<td><a href="#Order.concerns">concerns </a></td>
+								<td><div class="shorten">https://w3id.org/str/concerns</div></td>
 							</tr>
 						
 					
@@ -9062,8 +9079,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Order">Order</a></td>
 								<td><div class="shorten">https://w3id.org/str/Order</div></td>
 								<td></td>
-								<td><a href="#Order.concerns">concerns </a></td>
-								<td><div class="shorten">https://w3id.org/str/concerns</div></td>
+								<td><a href="#Order.identifier">identifier </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
 						
 					
@@ -9760,16 +9777,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Unit">Unit</a></td>
 								<td><div class="shorten">https://w3id.org/str/Unit</div></td>
 								<td></td>
-								<td><a href="#Unit.undefined"> </a></td>
-								<td><div class="shorten">https://w3id.org/str/url</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Unit">Unit</a></td>
-								<td><div class="shorten">https://w3id.org/str/Unit</div></td>
-								<td></td>
 								<td><a href="#Unit.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
@@ -9875,6 +9882,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 							</tr>
 						
 					
+						
+							<tr>
+								<td><a href="#Unit">Unit</a></td>
+								<td><div class="shorten">https://w3id.org/str/Unit</div></td>
+								<td></td>
+								<td><a href="#Unit.url">url </a></td>
+								<td><div class="shorten">https://schema.org/URL</div></td>
+							</tr>
+						
+					
 				
 			</tr>
 		
@@ -9902,6 +9919,7 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 			{'pref':'person:', 'ns': 'http://www.w3.org/ns/person#'},
 			{'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
 			{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+			{'pref':'schema:', 'ns': 'https://schema.org/'},
 			{'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
 			{'pref':'str:', 'ns': 'https://w3id.org/str/'},
 			{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},

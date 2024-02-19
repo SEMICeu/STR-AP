@@ -1914,6 +1914,13 @@
       "sh:targetClass": "http://xmlns.com/foaf/0.1/Group"
     },
     {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#URLShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://schema.org/URL"
+    },
+    {
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -2195,13 +2202,6 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0c2f1ebdbaf105d73a0a1a6d978bba7f5184d75d",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.",
-          "sh:description": "",
-          "sh:minCount": "1",
-          "sh:path": "https://w3id.org/str/identifier"
-        },
-        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0f790ab49df619643eac3389c633494bfbaf74d0",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.concerns",
           "sh:description": {
@@ -2274,6 +2274,18 @@
           "sh:path": "https://w3id.org/str/reason"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.identifier",
+          "sh:description": {
+            "en": "An Identifier for the Order."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/7a6112ed05520b889083ad602edef6b4ae90e8f0",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.concerns",
           "sh:description": {
@@ -2286,11 +2298,16 @@
           "sh:path": "https://w3id.org/str/concerns"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/ce012334c76fbb8723d52324457cb619f53f2527",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.",
-          "sh:description": "",
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.identifier",
+          "sh:description": {
+            "en": "An Identifier for the Order."
+          },
           "sh:maxCount": "1",
-          "sh:path": "https://w3id.org/str/identifier"
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5",
@@ -2656,6 +2673,18 @@
           "sh:path": "https://w3id.org/str/occupancy"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/5f54c788429b24cc8716ee5e0bf63522a49f95e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.url",
+          "sh:description": {
+            "en": "URL of the item."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "url"
+          },
+          "sh:path": "https://schema.org/URL"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/652baf9ce9c2a6ac8ffb513df060b75499e8148a",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.floorlevel",
           "sh:description": {
@@ -2752,6 +2781,18 @@
           "sh:path": "https://w3id.org/str/purpose"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/99a5581200a6990692abd7446ef78762a79ee8da",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.url",
+          "sh:class": "https://schema.org/URL",
+          "sh:description": {
+            "en": "URL of the item."
+          },
+          "sh:name": {
+            "en": "url"
+          },
+          "sh:path": "https://schema.org/URL"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/9b3612c89abb019f783fec2020641c8dcad8b320",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.occupancy",
           "sh:description": {
@@ -2798,13 +2839,6 @@
             "en": "has authorization"
           },
           "sh:path": "https://w3id.org/str/hasAuthorization"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/ce012334c76fbb8723d52324457cb619f53f2527",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.",
-          "sh:description": "",
-          "sh:maxCount": "1",
-          "sh:path": "https://w3id.org/str/url"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
