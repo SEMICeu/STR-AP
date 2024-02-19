@@ -58,7 +58,10 @@
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/733a0398421d35cbce9fb5765feabf6299469337>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7648f6ef74f83c3728d9dbd1b25eab4460d97c6a>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7a6cec8e4c96d05cad8e2cee9ae88b24727c55b3>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e>;
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/dd5acd5f2a95b2d54489e871f39a1756b0157962>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c>;
   shacl:targetClass <https://w3id.org/str/ActivityData> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/0abcdba49f8d12b77739b38a2a574e78372940b7> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.temporal";
@@ -109,11 +112,29 @@
   shacl:name "country of residence"@en;
   shacl:path <https://w3id.org/str/countryOfResidence> .
 
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout";
+  shacl:description "The Unit associated to the activity data."@en;
+  shacl:minCount 1;
+  shacl:name "is about"@en;
+  shacl:path <https://w3id.org/str/isAbout> .
+
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.numberofguests";
   shacl:description "The number of guest that the unit was rented to per night."@en;
   shacl:maxCount 1;
   shacl:name "number of guests"@en;
   shacl:path <https://w3id.org/str/numberOfGuests> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/dd5acd5f2a95b2d54489e871f39a1756b0157962> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout";
+  shacl:description "The Unit associated to the activity data."@en;
+  shacl:maxCount 1;
+  shacl:name "is about"@en;
+  shacl:path <https://w3id.org/str/isAbout> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout";
+  shacl:class <https://w3id.org/str/Unit>;
+  shacl:description "The Unit associated to the activity data."@en;
+  shacl:name "is about"@en;
+  shacl:path <https://w3id.org/str/isAbout> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#AddressShape> a shacl:NodeShape;
   shacl:closed false;
@@ -459,7 +480,7 @@
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#DistributionShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Distribution.haslisting";
   shacl:class <https://w3id.org/str/Unit>;
-  shacl:description "It indicates the Unit listed."@en;
+  shacl:description "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."@en;
   shacl:name "has listing"@en;
   shacl:path <https://w3id.org/str/hasListing> .
 
@@ -788,16 +809,23 @@
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0f790ab49df619643eac3389c633494bfbaf74d0>,
+  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0c2f1ebdbaf105d73a0a1a6d978bba7f5184d75d>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0f790ab49df619643eac3389c633494bfbaf74d0>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0fa383047260f8432938e4f5aa14282db5376221>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/1c61fa1d29718c4e8813811b251890449cd4f23d>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/1f53ac638f602797a2c6f9a508ea32f75aab7093>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/3a597ba103cfec924c0dcf0aad7777a76554a268>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/6c16de1b23a2324b79a66111d1ee2a7a1e84c597>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/7a6112ed05520b889083ad602edef6b4ae90e8f0>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/ce012334c76fbb8723d52324457cb619f53f2527>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/e98e308b7a2188aca75320dc2dff19d748a78f71>;
   shacl:targetClass <https://w3id.org/str/Order> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0c2f1ebdbaf105d73a0a1a6d978bba7f5184d75d> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.";
+  shacl:description "";
+  shacl:minCount 1;
+  shacl:path <https://w3id.org/str/identifier> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0f790ab49df619643eac3389c633494bfbaf74d0> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.concerns";
   shacl:description "It indicated the Registration Number concerned."@en;
@@ -840,6 +868,11 @@
   shacl:maxCount 1;
   shacl:name "concerns"@en;
   shacl:path <https://w3id.org/str/concerns> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/ce012334c76fbb8723d52324457cb619f53f2527> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.";
+  shacl:description "";
+  shacl:maxCount 1;
+  shacl:path <https://w3id.org/str/identifier> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.reason";
   shacl:description "The statement indicating the reason of the Order."@en;
@@ -1394,7 +1427,6 @@ and managed by a Base Registry Service."""@en,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/184e142eab427c6c7e47283d042326282a61dfd1>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/30c2de1b85595fb7b8ff738893031cf824165ba1>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/31111627cb358a7f982659fa9ae497c12260ab23>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/362d1bf0eab8051024cf5ec1345eb1ce50762580>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/3ec87c43233a2d71be8fe9937319cfbff29cc5bd>,
@@ -1413,6 +1445,7 @@ and managed by a Base Registry Service."""@en,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/9fc8f49ed06ee6935fcbc6ff935df6485e3416e7>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/bb233272ce969ce614137a62d27506e28b5feee1>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/c0c453532d8bf22ffafb3d0aefa0a88e4f12348f>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/ce012334c76fbb8723d52324457cb619f53f2527>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/e5becd8a26ce63dce7f0c84e338a2ceef2611f83>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/e763fbdcae0f8d423dba57b9f0f572a108520c5b>,
@@ -1448,12 +1481,6 @@ and managed by a Base Registry Service."""@en,
   shacl:maxCount 1;
   shacl:name "purpose"@en;
   shacl:path <https://w3id.org/str/purpose> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/31111627cb358a7f982659fa9ae497c12260ab23> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.hasactivitydata";
-  shacl:class <https://w3id.org/str/ActivityData>;
-  shacl:description "The activity data associated to the Unit."@en;
-  shacl:name "has activity data"@en;
-  shacl:path <https://w3id.org/str/hasActivityData> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.type";
   shacl:class skos:Concept;
@@ -1562,6 +1589,11 @@ and managed by a Base Registry Service."""@en,
   shacl:description "It indicated the document attesting the authorization."@en;
   shacl:name "has authorization"@en;
   shacl:path <https://w3id.org/str/hasAuthorization> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/ce012334c76fbb8723d52324457cb619f53f2527> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.";
+  shacl:description "";
+  shacl:maxCount 1;
+  shacl:path <https://w3id.org/str/url> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.description";
   shacl:datatype rdf:langString;

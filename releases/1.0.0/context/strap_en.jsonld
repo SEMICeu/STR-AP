@@ -5,6 +5,10 @@
       "@id": "https://w3id.org/str/countryOfResidence",
       "@type": "@id"
     },
+    "ActivityData.isAbout": {
+      "@id": "https://w3id.org/str/isAbout",
+      "@type": "@id"
+    },
     "ActivityData.numberOfGuests": {
       "@id": "https://w3id.org/str/numberOfGuests",
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
@@ -247,6 +251,9 @@
       "@id": "https://w3id.org/str/concerns",
       "@type": "@id"
     },
+    "Order.identifier": {
+      "@id": "https://w3id.org/str/identifier"
+    },
     "Order.reason": {
       "@id": "https://w3id.org/str/reason",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -443,11 +450,6 @@
       "@id": "https://w3id.org/str/floorLevel",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Unit.hasActivityData": {
-      "@container": "@set",
-      "@id": "https://w3id.org/str/hasActivityData",
-      "@type": "@id"
-    },
     "Unit.hasAuthorization": {
       "@id": "https://w3id.org/str/hasAuthorization",
       "@type": "@id"
@@ -483,6 +485,9 @@
     "Unit.type": {
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
+    },
+    "Unit.url": {
+      "@id": "https://w3id.org/str/url"
     }
   }
 }

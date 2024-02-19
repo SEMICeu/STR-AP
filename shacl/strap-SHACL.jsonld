@@ -1227,7 +1227,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Distribution.haslisting",
           "sh:class": "https://w3id.org/str/Unit",
           "sh:description": {
-            "en": "It indicates the Unit listed."
+            "en": "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."
           },
           "sh:name": {
             "en": "has listing"
@@ -2015,6 +2015,18 @@
           "sh:path": "https://w3id.org/str/countryOfResidence"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout",
+          "sh:description": {
+            "en": "The Unit associated to the activity data."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "is about"
+          },
+          "sh:path": "https://w3id.org/str/isAbout"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.numberofguests",
           "sh:description": {
@@ -2025,6 +2037,30 @@
             "en": "number of guests"
           },
           "sh:path": "https://w3id.org/str/numberOfGuests"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/dd5acd5f2a95b2d54489e871f39a1756b0157962",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout",
+          "sh:description": {
+            "en": "The Unit associated to the activity data."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is about"
+          },
+          "sh:path": "https://w3id.org/str/isAbout"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout",
+          "sh:class": "https://w3id.org/str/Unit",
+          "sh:description": {
+            "en": "The Unit associated to the activity data."
+          },
+          "sh:name": {
+            "en": "is about"
+          },
+          "sh:path": "https://w3id.org/str/isAbout"
         }
       ],
       "sh:targetClass": "https://w3id.org/str/ActivityData"
@@ -2159,6 +2195,13 @@
       "sh:closed": false,
       "sh:property": [
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0c2f1ebdbaf105d73a0a1a6d978bba7f5184d75d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.",
+          "sh:description": "",
+          "sh:minCount": "1",
+          "sh:path": "https://w3id.org/str/identifier"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0f790ab49df619643eac3389c633494bfbaf74d0",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.concerns",
           "sh:description": {
@@ -2241,6 +2284,13 @@
             "en": "concerns"
           },
           "sh:path": "https://w3id.org/str/concerns"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/ce012334c76fbb8723d52324457cb619f53f2527",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://w3id.org/str/identifier"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5",
@@ -2534,18 +2584,6 @@
           "sh:path": "https://w3id.org/str/purpose"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/31111627cb358a7f982659fa9ae497c12260ab23",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.hasactivitydata",
-          "sh:class": "https://w3id.org/str/ActivityData",
-          "sh:description": {
-            "en": "The activity data associated to the Unit."
-          },
-          "sh:name": {
-            "en": "has activity data"
-          },
-          "sh:path": "https://w3id.org/str/hasActivityData"
-        },
-        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/322371a77364a50f049d46180f6192532eea26dc",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2760,6 +2798,13 @@
             "en": "has authorization"
           },
           "sh:path": "https://w3id.org/str/hasAuthorization"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/ce012334c76fbb8723d52324457cb619f53f2527",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Unit.",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://w3id.org/str/url"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0",

@@ -53,7 +53,7 @@
       edDraftURI: "https://semiceu.github.io/STR-AP/releases/1.0.0",
       latestVersion: "https://semiceu.github.io/STR-AP/releases/1.0.0/",
       specStatus: "LD",
-      publishDate: "2024-02-17",
+      publishDate: "2024-02-19",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/STR-AP",
@@ -210,7 +210,7 @@ This Application Profile specifies a semantic data model and it consists of term
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Application Profile has the status Working Draft published at 2024-02-17.
+            This Application Profile has the status Working Draft published at 2024-02-19.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/STR-AP/blob/master/releases/1.0.0/Changelog.md">Changelog</a>.
@@ -394,6 +394,7 @@ The main entities are those that form the core of the Core Vocabulary.
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#ActivityData.countryofresidence">country of residence</a>
+                            , <a href="#ActivityData.isabout">is about</a>
                             , <a href="#ActivityData.numberofguests">number of guests</a>
                             , <a href="#ActivityData.temporal">temporal</a>
                             .
@@ -464,6 +465,50 @@ The main entities are those that form the core of the Core Vocabulary.
                                 </td>
                                 <td property="rdfs:comment">
                                     The country of residence of the guests.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="ActivityData.isabout"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/isAbout"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20is about%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.isabout" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/isAbout"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/isAbout"
+                                           data-placement="right">
+                                        is about</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Unit" data-placement="right">Unit</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The Unit associated to the activity data.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -1754,7 +1799,8 @@ A business might have more than one legal name, particularly in countries with m
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Order.concerns">concerns</a>
+                            For this entity the following properties are defined: <a href="#Order.undefined"></a>
+                            , <a href="#Order.concerns">concerns</a>
                             , <a href="#Order.reason">reason</a>
                             , <a href="#Order.sentto">sent to</a>
                             .
@@ -1795,6 +1841,50 @@ A business might have more than one legal name, particularly in countries with m
                         </tr>
                     </thead>
                     <tbody class="supertype">
+                        
+                            <tr id="Order.undefined"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/identifier"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20%20in%20Order&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Order.undefined" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/identifier"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/identifier"
+                                           data-placement="right">
+                                        </a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
                         
                             <tr id="Order.concerns"
                                 typeof="rdfs:Property"
@@ -3631,9 +3721,9 @@ This definition is consistent with the more detailed definition of a "public sec
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Unit.description">description</a>
+                            For this entity the following properties are defined: <a href="#Unit.undefined"></a>
+                            , <a href="#Unit.description">description</a>
                             , <a href="#Unit.floorlevel">floor level</a>
-                            , <a href="#Unit.hasactivitydata">has activity data</a>
                             , <a href="#Unit.hasauthorization">has authorization</a>
                             , <a href="#Unit.hasunitaddress">has unit address</a>
                             , <a href="#Unit.isauthorizationobtained">is authorization obtained</a>
@@ -3681,6 +3771,50 @@ This definition is consistent with the more detailed definition of a "public sec
                         </tr>
                     </thead>
                     <tbody class="supertype">
+                        
+                            <tr id="Unit.undefined"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/url"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20%20in%20Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Unit.undefined" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/url"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/url"
+                                           data-placement="right">
+                                        </a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
                         
                             <tr id="Unit.description"
                                 typeof="rdfs:Property"
@@ -3755,50 +3889,6 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                                 <td property="rdfs:comment">
                                     The level of the floor of the Unit as textual description.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-
-                                <td>
-                                    
-                                </td>
-				-->
-                            </tr>
-                        
-                            <tr id="Unit.hasactivitydata"
-                                typeof="rdfs:Property"
-                                resource="https://w3id.org/str/hasActivityData"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20has activity data%20in%20Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Unit.hasactivitydata" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="https://w3id.org/str/hasActivityData"
-                                           data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/hasActivityData"
-                                           data-placement="right">
-                                        has activity data</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#ActivityData" data-placement="right">Activity Data</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    0..*
-                                </td>
-                                <td property="rdfs:comment">
-                                    The activity data associated to the Unit.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -6303,7 +6393,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    It indicates the Unit listed.
+                                    The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -8032,6 +8122,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -8047,6 +8141,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#ActivityData.countryofresidence">country of residence </a></td>
 								<td><div class="shorten">https://w3id.org/str/countryOfResidence</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#ActivityData">Activity Data</a></td>
+								<td><div class="shorten">https://w3id.org/str/ActivityData</div></td>
+								<td></td>
+								<td><a href="#ActivityData.isabout">is about </a></td>
+								<td><div class="shorten">https://w3id.org/str/isAbout</div></td>
 							</tr>
 						
 					
@@ -8931,6 +9035,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
 					
 						
 					
@@ -8938,6 +9044,18 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Order">Order</a></td>
+								<td><div class="shorten">https://w3id.org/str/Order</div></td>
+								<td></td>
+								<td><a href="#Order.undefined"> </a></td>
+								<td><div class="shorten">https://w3id.org/str/identifier</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -9642,6 +9760,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Unit">Unit</a></td>
 								<td><div class="shorten">https://w3id.org/str/Unit</div></td>
 								<td></td>
+								<td><a href="#Unit.undefined"> </a></td>
+								<td><div class="shorten">https://w3id.org/str/url</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Unit">Unit</a></td>
+								<td><div class="shorten">https://w3id.org/str/Unit</div></td>
+								<td></td>
 								<td><a href="#Unit.description">description </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
 							</tr>
@@ -9654,16 +9782,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Unit.floorlevel">floor level </a></td>
 								<td><div class="shorten">https://w3id.org/str/floorLevel</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Unit">Unit</a></td>
-								<td><div class="shorten">https://w3id.org/str/Unit</div></td>
-								<td></td>
-								<td><a href="#Unit.hasactivitydata">has activity data </a></td>
-								<td><div class="shorten">https://w3id.org/str/hasActivityData</div></td>
 							</tr>
 						
 					
