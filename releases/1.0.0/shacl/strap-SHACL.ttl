@@ -109,7 +109,7 @@
   shacl:path <https://w3id.org/str/countryOfResidence> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7a6cec8e4c96d05cad8e2cee9ae88b24727c55b3> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryofresidence";
-  shacl:class dc:Location;
+  shacl:class skos:Concept;
   shacl:description "The country of residence of the guests."@en;
   shacl:name "country of residence"@en;
   shacl:path <https://w3id.org/str/countryOfResidence> .
@@ -1236,11 +1236,11 @@
   shacl:path dc:title .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces";
-  shacl:class dcat:Resource,
-    <http://data.europa.eu/m8g/Output>;
-  shacl:description """This property defines the output of the service as a data resource available
-and managed by a Base Registry Service."""@en,
-    "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en;
+  shacl:class <http://data.europa.eu/m8g/Output>,
+    dcat:Resource;
+  shacl:description "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en,
+    """This property defines the output of the service as a data resource available
+and managed by a Base Registry Service."""@en;
   shacl:name "produces"@en;
   shacl:path <http://purl.org/vocab/cpsv#produces> .
 

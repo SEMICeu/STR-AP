@@ -850,9 +850,9 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces",
-          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:class": "http://data.europa.eu/m8g/Output",
           "sh:description": {
-            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
+            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
           },
           "sh:name": {
             "en": "produces"
@@ -862,9 +862,9 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#PublicRegistryService.produces",
-          "sh:class": "http://data.europa.eu/m8g/Output",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
           "sh:description": {
-            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
+            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
           },
           "sh:name": {
             "en": "produces"
@@ -2012,7 +2012,7 @@
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7a6cec8e4c96d05cad8e2cee9ae88b24727c55b3",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryofresidence",
-          "sh:class": "http://purl.org/dc/terms/Location",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "en": "The country of residence of the guests."
           },
