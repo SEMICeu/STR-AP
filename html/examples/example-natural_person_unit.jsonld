@@ -12,6 +12,7 @@
     "org": "http://www.w3.org/ns/org#",
     "person": "http://www.w3.org/ns/person#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "str": "https://w3id.org/str/",
     "time": "http://www.w3.org/2006/time#",

@@ -10,6 +10,7 @@
 @prefix person: <http://www.w3.org/ns/person#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix str: <https://w3id.org/str/> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -36,15 +37,17 @@ ex:publicOrganisation1 skos:prefLabel "Jette municipality"@en ;
 
 ex:onlineSTRentalPlatform1 str:publishes ex:dataset1 ;
 	dct:type ex:micro ;
+	dct:identifier "platform123" ;
 	a str:OnlineSTRentalPlatform .
 
 ex:dataset1 dcat:distribution ex:distribution1 ;
 	a dcat:Dataset .
 
-ex:unit1 str:isOfferedOn ex:onlineSTRentalPlatform1 .
-
 ex:distribution1 str:hasListing ex:unit1 ;
 	a dcat:Distribution .
+
+ex:unit1 str:isOfferedOn ex:onlineSTRentalPlatform1 ;
+	schema:url "http://example.com/unit/unit1" .
 
 ex:STRentalservice1 str:providesAccessTo ex:onlineSTRentalPlatform1 ;
 	a str:STAccomondationRentalService .

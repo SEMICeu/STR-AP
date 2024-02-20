@@ -1885,6 +1885,18 @@
           "sh:path": "http://www.w3.org/ns/adms#identifier"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/e36214901bf5fa28a83dfe0220a4e86b3dc6d3c2",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.ispointofcontactfor",
+          "sh:description": {
+            "en": "The Single Digital Entry point for which the person acts as contact point for all matters related."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is point of contact for"
+          },
+          "sh:path": "https://w3id.org/str/isPointOfContactFor"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/f888a185270cac3f6e32d6e1a22eb6a89d617ba8",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.givenname",
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
@@ -2110,6 +2122,15 @@
       "sh:closed": false,
       "sh:property": [
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/0c2f1ebdbaf105d73a0a1a6d978bba7f5184d75d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.",
+          "sh:description": {
+            "en": "An Identifier for the OnlineShortTermRentalPlatform"
+          },
+          "sh:minCount": "1",
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type",
           "sh:description": {
@@ -2192,6 +2213,15 @@
             "en": "provides information to"
           },
           "sh:path": "https://w3id.org/str/providesInformationTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/ce012334c76fbb8723d52324457cb619f53f2527",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.",
+          "sh:description": {
+            "en": "An Identifier for the OnlineShortTermRentalPlatform"
+          },
+          "sh:maxCount": "1",
+          "sh:path": "http://purl.org/dc/terms/identifier"
         }
       ],
       "sh:targetClass": "https://w3id.org/str/OnlineShortTermRentalPlatform"

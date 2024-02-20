@@ -232,6 +232,9 @@
       "@id": "https://w3id.org/str/checks",
       "@type": "@id"
     },
+    "OnlineShortTermRentalPlatform.identifier": {
+      "@id": "http://purl.org/dc/terms/identifier"
+    },
     "OnlineShortTermRentalPlatform.providesInformationTo": {
       "@container": "@set",
       "@id": "https://w3id.org/str/providesInformationTo",
@@ -315,7 +318,6 @@
       "@type": "@id"
     },
     "Person.isPointOfContactFor": {
-      "@container": "@set",
       "@id": "https://w3id.org/str/isPointOfContactFor",
       "@type": "@id"
     },

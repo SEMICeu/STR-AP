@@ -758,14 +758,21 @@
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a>,
+  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/0c2f1ebdbaf105d73a0a1a6d978bba7f5184d75d>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976>;
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/ce012334c76fbb8723d52324457cb619f53f2527>;
   shacl:targetClass <https://w3id.org/str/OnlineShortTermRentalPlatform> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/0c2f1ebdbaf105d73a0a1a6d978bba7f5184d75d> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.";
+  shacl:description "An Identifier for the OnlineShortTermRentalPlatform"@en;
+  shacl:minCount 1;
+  shacl:path dc:identifier .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
   shacl:description "The type of an Online Short Term Rental Platform."@en;
@@ -808,6 +815,11 @@
   shacl:description "It indicates the Single Digital Entry Point receiving information."@en;
   shacl:name "provides information to"@en;
   shacl:path <https://w3id.org/str/providesInformationTo> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/ce012334c76fbb8723d52324457cb619f53f2527> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.";
+  shacl:description "An Identifier for the OnlineShortTermRentalPlatform"@en;
+  shacl:maxCount 1;
+  shacl:path dc:identifier .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape> a shacl:NodeShape;
   shacl:closed false;
@@ -987,6 +999,7 @@
     <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/c0d17764e84e711728581fda7356a51e99a9040a>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/e09cd456fcf49bd50cfb019fe828ae733d4a0fd2>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/e2017f72421063cd9ff494011ec78f35f9632a4a>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/e36214901bf5fa28a83dfe0220a4e86b3dc6d3c2>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/f888a185270cac3f6e32d6e1a22eb6a89d617ba8>;
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
 
@@ -1091,6 +1104,12 @@
   shacl:description "The unambiguous structured reference to the Person."@en;
   shacl:name "identifier"@en;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/e36214901bf5fa28a83dfe0220a4e86b3dc6d3c2> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.ispointofcontactfor";
+  shacl:description "The Single Digital Entry point for which the person acts as contact point for all matters related."@en;
+  shacl:maxCount 1;
+  shacl:name "is point of contact for"@en;
+  shacl:path <https://w3id.org/str/isPointOfContactFor> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#PersonShape/f888a185270cac3f6e32d6e1a22eb6a89d617ba8> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Person.givenname";
   shacl:datatype rdf:langString;
