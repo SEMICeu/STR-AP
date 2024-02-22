@@ -466,6 +466,7 @@
       "@type": "@id"
     },
     "SingleDigitalEntryPoint": "https://w3id.org/str/SingleDigitalEntryPoint",
+    "String": "https://www.w3.org/2001/XMLSchema#string",
     "TemporalLiteral": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "TimeInstant": "http://www.w3.org/2006/time#Instant",
     "Unit": "https://w3id.org/str/Unit",

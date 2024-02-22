@@ -3047,6 +3047,13 @@
         }
       ],
       "sh:targetClass": "https://w3id.org/str/Unit"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#stringShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }
