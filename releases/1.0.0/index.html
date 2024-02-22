@@ -53,7 +53,7 @@
       edDraftURI: "https://semiceu.github.io/STR-AP/releases/1.0.0",
       latestVersion: "https://semiceu.github.io/STR-AP/releases/1.0.0/",
       specStatus: "LD",
-      publishDate: "2024-02-20",
+      publishDate: "2024-02-22",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/STR-AP",
@@ -210,7 +210,7 @@ This Application Profile specifies a semantic data model and it consists of term
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Application Profile has the status Working Draft published at 2024-02-20.
+            This Application Profile has the status Working Draft published at 2024-02-22.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/STR-AP/blob/master/releases/1.0.0/Changelog.md">Changelog</a>.
@@ -394,7 +394,7 @@ The main entities are those that form the core of the Core Vocabulary.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#ActivityData.countryofresidence">country of residence</a>
+                            For this entity the following properties are defined: <a href="#ActivityData.countryoftheguests">country of the guests</a>
                             , <a href="#ActivityData.isabout">is about</a>
                             , <a href="#ActivityData.numberofguests">number of guests</a>
                             , <a href="#ActivityData.temporal">temporal</a>
@@ -437,22 +437,22 @@ The main entities are those that form the core of the Core Vocabulary.
                     </thead>
                     <tbody class="supertype">
                         
-                            <tr id="ActivityData.countryofresidence"
+                            <tr id="ActivityData.countryoftheguests"
                                 typeof="rdfs:Property"
-                                resource="https://w3id.org/str/countryOfResidence"
+                                resource="https://w3id.org/str/countryOfGuests"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20country of residence%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.countryofresidence" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20country of the guests%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23ActivityData.countryoftheguests" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/str/countryOfResidence"
+                                        <a href="https://w3id.org/str/countryOfGuests"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/str/countryOfResidence"
+                                           data-content="https://w3id.org/str/countryOfGuests"
                                            data-placement="right">
-                                        country of residence</a>
+                                        country of the guests</a>
                                 </td>
                                 <td>
                                     
@@ -1544,6 +1544,7 @@ A business might have more than one legal name, particularly in countries with m
                             , <a href="#OnlineShortTermRentalPlatform.identifier">identifier</a>
                             , <a href="#OnlineShortTermRentalPlatform.providesinformationto">provides information to</a>
                             , <a href="#OnlineShortTermRentalPlatform.publishes">publishes</a>
+                            , <a href="#OnlineShortTermRentalPlatform.requestsarea">requests area</a>
                             , <a href="#OnlineShortTermRentalPlatform.type">type</a>
                             .
                     </dd>
@@ -1760,6 +1761,50 @@ A business might have more than one legal name, particularly in countries with m
 				-->
                             </tr>
                         
+                            <tr id="OnlineShortTermRentalPlatform.requestsarea"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/requestsArea"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20requests area%20in%20Online Short Term Rental Platform&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23OnlineShortTermRentalPlatform.requestsarea" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/requestsArea"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/requestsArea"
+                                           data-placement="right">
+                                        requests area</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Geometry" data-placement="right">Geometry</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The area requested by the Online Short Term Rental Platform.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
                             <tr id="OnlineShortTermRentalPlatform.type"
                                 typeof="rdfs:Property"
                                 resource="http://purl.org/dc/terms/type"
@@ -1846,6 +1891,7 @@ A business might have more than one legal name, particularly in countries with m
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#Order.concerns">concerns</a>
+                            , <a href="#Order.haslisting">has listing</a>
                             , <a href="#Order.identifier">identifier</a>
                             , <a href="#Order.reason">reason</a>
                             , <a href="#Order.sentto">sent to</a>
@@ -1917,6 +1963,50 @@ A business might have more than one legal name, particularly in countries with m
                                 </td>
                                 <td property="rdfs:comment">
                                     It indicated the Registration Number concerned.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Order.haslisting"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/hasListing"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20has listing%20in%20Order&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Order.haslisting" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/hasListing"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/hasListing"
+                                           data-placement="right">
+                                        has listing</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Unit" data-placement="right">Unit</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -6531,21 +6621,254 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     Definition
                 </dt>
                 <dd>
-                    The locn:Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system.
+                    A shape or form of a Location.
                 </dd>
                 
+                
+                    <dt>
+                        Usage Note
+                    </dt>
+                    <dd>
+                        This class defines the notion of "geometry" at the conceptual level, and it shall be encoded by using different formats (see usage note of the locn:geometry property). Can be a point, line or polygon, expressed using coordinates in some coordinate reference system. 
+                    </dd>
                 
                 
                     <dt>
                         Properties
                     </dt>
                     
-                    <dd>
-                        This specification does not impose any additional requirements to properties for this entity.
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Geometry.coordinates">coordinates</a>
+                            , <a href="#Geometry.geometrytype">geometry type</a>
+                            , <a href="#Geometry.latitude">latitude</a>
+                            , <a href="#Geometry.longitude">longitude</a>
+                            .
                     </dd>
                 
             </dl>
         </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Geometry.coordinates"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/coordinates"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20coordinates%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Geometry.coordinates" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/coordinates"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/coordinates"
+                                           data-placement="right">
+                                        coordinates</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#string"
+                                               data-toggle="tooltip"
+                                               data-content="https://www.w3.org/2001/XMLSchema#string"
+                                               data-placement="right">string</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A list of geographic coordinates that define the extent of the Geometry.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Can be expressed as longitude, latitude, elevation.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Geometry.geometrytype"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/geometryType"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20geometry type%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Geometry.geometrytype" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/geometryType"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/geometryType"
+                                           data-placement="right">
+                                        geometry type</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Concept" data-placement="right">Concept</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The classification of the Geometry.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Can be a point, line or polygon.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Geometry.latitude"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/latitude"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20latitude%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Geometry.latitude" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/latitude"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/latitude"
+                                           data-placement="right">
+                                        latitude</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#string"
+                                               data-toggle="tooltip"
+                                               data-content="https://www.w3.org/2001/XMLSchema#string"
+                                               data-placement="right">string</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The geographic coordinate that specifies the north / south position of the Geomerty on the Earth&#39;s surface.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
+                            <tr id="Geometry.longitude"
+                                typeof="rdfs:Property"
+                                resource="http://data.europa.eu/m8g/longitude"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20longitude%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.0%23Geometry.longitude" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/m8g/longitude"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/m8g/longitude"
+                                           data-placement="right">
+                                        longitude</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#string"
+                                               data-toggle="tooltip"
+                                               data-content="https://www.w3.org/2001/XMLSchema#string"
+                                               data-placement="right">string</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The geographic coordinate that specifies the east / west position of the Geometry on the Earth&#39;s surface.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    
+                                </td>
+				-->
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         
     </div>
 </section>
@@ -8201,8 +8524,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#ActivityData">Activity Data</a></td>
 								<td><div class="shorten">https://w3id.org/str/ActivityData</div></td>
 								<td></td>
-								<td><a href="#ActivityData.countryofresidence">country of residence </a></td>
-								<td><div class="shorten">https://w3id.org/str/countryOfResidence</div></td>
+								<td><a href="#ActivityData.countryoftheguests">country of the guests </a></td>
+								<td><div class="shorten">https://w3id.org/str/countryOfGuests</div></td>
 							</tr>
 						
 					
@@ -8805,13 +9128,65 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 			</tr>
 		
 				
-					<tr>
-						<td><a href="#Geometry">Geometry</a></td>
-						<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.coordinates">coordinates </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/coordinates</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.geometrytype">geometry type </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/geometryType</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.latitude">latitude </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/latitude</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.longitude">longitude </a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/longitude</div></td>
+							</tr>
+						
+					
 				
 			</tr>
 		
@@ -9038,6 +9413,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -9095,6 +9474,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#OnlineShortTermRentalPlatform">Online Short Term Rental Platform</a></td>
 								<td><div class="shorten">https://w3id.org/str/OnlineShortTermRentalPlatform</div></td>
 								<td></td>
+								<td><a href="#OnlineShortTermRentalPlatform.requestsarea">requests area </a></td>
+								<td><div class="shorten">https://w3id.org/str/requestsArea</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#OnlineShortTermRentalPlatform">Online Short Term Rental Platform</a></td>
+								<td><div class="shorten">https://w3id.org/str/OnlineShortTermRentalPlatform</div></td>
+								<td></td>
 								<td><a href="#OnlineShortTermRentalPlatform.type">type </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/type</div></td>
 							</tr>
@@ -9113,6 +9502,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -9130,6 +9523,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Order.concerns">concerns </a></td>
 								<td><div class="shorten">https://w3id.org/str/concerns</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Order">Order</a></td>
+								<td><div class="shorten">https://w3id.org/str/Order</div></td>
+								<td></td>
+								<td><a href="#Order.haslisting">has listing </a></td>
+								<td><div class="shorten">https://w3id.org/str/hasListing</div></td>
 							</tr>
 						
 					

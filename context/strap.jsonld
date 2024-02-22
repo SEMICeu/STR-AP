@@ -1,8 +1,8 @@
 {
   "@context": {
     "ActivityData": "https://w3id.org/str/ActivityData",
-    "ActivityData.countryOfResidence": {
-      "@id": "https://w3id.org/str/countryOfResidence",
+    "ActivityData.countryOfTheGuests": {
+      "@id": "https://w3id.org/str/countryOfGuests",
       "@type": "@id"
     },
     "ActivityData.isAbout": {
@@ -168,6 +168,22 @@
       "@type": "@id"
     },
     "Geometry": "http://www.w3.org/ns/locn#Geometry",
+    "Geometry.coordinates": {
+      "@id": "http://data.europa.eu/m8g/coordinates",
+      "@type": "https://www.w3.org/2001/XMLSchema#string"
+    },
+    "Geometry.geometryType": {
+      "@id": "http://data.europa.eu/m8g/geometryType",
+      "@type": "@id"
+    },
+    "Geometry.latitude": {
+      "@id": "http://data.europa.eu/m8g/latitude",
+      "@type": "https://www.w3.org/2001/XMLSchema#string"
+    },
+    "Geometry.longitude": {
+      "@id": "http://data.europa.eu/m8g/longitude",
+      "@type": "https://www.w3.org/2001/XMLSchema#string"
+    },
     "Group": "http://xmlns.com/foaf/0.1/Group",
     "Identifier": "http://www.w3.org/ns/adms#identifier",
     "Identifier.notation": {
@@ -245,6 +261,11 @@
       "@id": "https://w3id.org/str/publishes",
       "@type": "@id"
     },
+    "OnlineShortTermRentalPlatform.requestsArea": {
+      "@container": "@set",
+      "@id": "https://w3id.org/str/requestsArea",
+      "@type": "@id"
+    },
     "OnlineShortTermRentalPlatform.type": {
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
@@ -252,6 +273,10 @@
     "Order": "https://w3id.org/str/Order",
     "Order.concerns": {
       "@id": "https://w3id.org/str/concerns",
+      "@type": "@id"
+    },
+    "Order.hasListing": {
+      "@id": "https://w3id.org/str/hasListing",
       "@type": "@id"
     },
     "Order.identifier": {

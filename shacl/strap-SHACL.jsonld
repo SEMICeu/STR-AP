@@ -1672,7 +1672,80 @@
       "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/331cf2ea8867ce3c429e5a9d027ddb833f1b0ddf",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.coordinates",
+          "sh:description": {
+            "en": "A list of geographic coordinates that define the extent of the Geometry."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "coordinates"
+          },
+          "sh:path": "http://data.europa.eu/m8g/coordinates"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/81e55300529fd60d92d5fdf443d58a5ace7cdac7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.geometrytype",
+          "sh:description": {
+            "en": "The classification of the Geometry."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "geometry type"
+          },
+          "sh:path": "http://data.europa.eu/m8g/geometryType"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/acd4519f8a344a34ae7df55d8eda55e513235b44",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.geometrytype",
+          "sh:description": {
+            "en": "The classification of the Geometry."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "geometry type"
+          },
+          "sh:path": "http://data.europa.eu/m8g/geometryType"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/c4c5a330094eed7f4bd65784d8d8dadd41db5b3f",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.latitude",
+          "sh:description": {
+            "en": "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "latitude"
+          },
+          "sh:path": "http://data.europa.eu/m8g/latitude"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/ca5cb8f65688161c75fba16f6ca94e3bd5250c35",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.longitude",
+          "sh:description": {
+            "en": "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "longitude"
+          },
+          "sh:path": "http://data.europa.eu/m8g/longitude"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/f60bfb563ce6b7e3e6e0da53601a109f44fa56e8",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.geometrytype",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The classification of the Geometry."
+          },
+          "sh:name": {
+            "en": "geometry type"
+          },
+          "sh:path": "http://data.europa.eu/m8g/geometryType"
+        }
+      ],
       "sh:targetClass": "http://www.w3.org/ns/locn#Geometry"
     },
     {
@@ -1974,18 +2047,6 @@
           "sh:path": "https://w3id.org/str/numberOfGuests"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/49a6320b7777187095496984ab0658fb4fe18432",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryofresidence",
-          "sh:description": {
-            "en": "The country of residence of the guests."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "country of residence"
-          },
-          "sh:path": "https://w3id.org/str/countryOfResidence"
-        },
-        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/6aa30c70cdf1269774f13637e328efc4a99b0f8f",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.numberofguests",
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#integer",
@@ -2010,30 +2071,6 @@
           "sh:path": "http://purl.org/dc/terms/temporal"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7648f6ef74f83c3728d9dbd1b25eab4460d97c6a",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryofresidence",
-          "sh:description": {
-            "en": "The country of residence of the guests."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "en": "country of residence"
-          },
-          "sh:path": "https://w3id.org/str/countryOfResidence"
-        },
-        {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7a6cec8e4c96d05cad8e2cee9ae88b24727c55b3",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryofresidence",
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "en": "The country of residence of the guests."
-          },
-          "sh:name": {
-            "en": "country of residence"
-          },
-          "sh:path": "https://w3id.org/str/countryOfResidence"
-        },
-        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout",
           "sh:description": {
@@ -2044,6 +2081,30 @@
             "en": "is about"
           },
           "sh:path": "https://w3id.org/str/isAbout"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/a721940e5ab24b4ac9001379bd382ce2e0cb567b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryoftheguests",
+          "sh:description": {
+            "en": "The country of residence of the guests."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "country of the guests"
+          },
+          "sh:path": "https://w3id.org/str/countryOfGuests"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d0703210a0d648ab1aeb9031031cbf1d0205e807",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryoftheguests",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The country of residence of the guests."
+          },
+          "sh:name": {
+            "en": "country of the guests"
+          },
+          "sh:path": "https://w3id.org/str/countryOfGuests"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e",
@@ -2068,6 +2129,18 @@
             "en": "is about"
           },
           "sh:path": "https://w3id.org/str/isAbout"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/e7abaa6d437ffe68d6556c427cdff4b763a8d679",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryoftheguests",
+          "sh:description": {
+            "en": "The country of residence of the guests."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "country of the guests"
+          },
+          "sh:path": "https://w3id.org/str/countryOfGuests"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c",
@@ -2132,6 +2205,18 @@
             "en": "type"
           },
           "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/28e69099c556de06ed172f6febce3d8d3f83374e",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.requestsarea",
+          "sh:class": "http://www.w3.org/ns/locn#Geometry",
+          "sh:description": {
+            "en": "The area requested by the Online Short Term Rental Platform."
+          },
+          "sh:name": {
+            "en": "requests area"
+          },
+          "sh:path": "https://w3id.org/str/requestsArea"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc",
@@ -2286,6 +2371,18 @@
           "sh:path": "https://w3id.org/str/sentTo"
         },
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/25ce12ba2eedf05462d49212e69df3250118f526",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.haslisting",
+          "sh:description": {
+            "en": "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has listing"
+          },
+          "sh:path": "https://w3id.org/str/hasListing"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/3a597ba103cfec924c0dcf0aad7777a76554a268",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.sentto",
           "sh:class": "https://w3id.org/str/OnlineShortTermRentalPlatform",
@@ -2296,6 +2393,18 @@
             "en": "sent to"
           },
           "sh:path": "https://w3id.org/str/sentTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/3f78d43549383b59be651bf7e3ccc6adc123e491",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.haslisting",
+          "sh:description": {
+            "en": "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has listing"
+          },
+          "sh:path": "https://w3id.org/str/hasListing"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/6c16de1b23a2324b79a66111d1ee2a7a1e84c597",
@@ -2344,6 +2453,18 @@
             "en": "identifier"
           },
           "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.haslisting",
+          "sh:class": "https://w3id.org/str/Unit",
+          "sh:description": {
+            "en": "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."
+          },
+          "sh:name": {
+            "en": "has listing"
+          },
+          "sh:path": "https://w3id.org/str/hasListing"
         },
         {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5",

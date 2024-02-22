@@ -55,14 +55,14 @@
   shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/0abcdba49f8d12b77739b38a2a574e78372940b7>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/29aa6e1be7c2c9073f050ca9a3ce2e6c2a958033>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/3a4c02661ce8324d5c49a14a15bcf5cef62004aa>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/49a6320b7777187095496984ab0658fb4fe18432>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/6aa30c70cdf1269774f13637e328efc4a99b0f8f>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/733a0398421d35cbce9fb5765feabf6299469337>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7648f6ef74f83c3728d9dbd1b25eab4460d97c6a>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7a6cec8e4c96d05cad8e2cee9ae88b24727c55b3>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/a721940e5ab24b4ac9001379bd382ce2e0cb567b>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d0703210a0d648ab1aeb9031031cbf1d0205e807>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/dd5acd5f2a95b2d54489e871f39a1756b0157962>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/e7abaa6d437ffe68d6556c427cdff4b763a8d679>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c>;
   shacl:targetClass <https://w3id.org/str/ActivityData> .
 
@@ -84,12 +84,6 @@
   shacl:name "number of guests"@en;
   shacl:path <https://w3id.org/str/numberOfGuests> .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/49a6320b7777187095496984ab0658fb4fe18432> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryofresidence";
-  shacl:description "The country of residence of the guests."@en;
-  shacl:maxCount 1;
-  shacl:name "country of residence"@en;
-  shacl:path <https://w3id.org/str/countryOfResidence> .
-
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/6aa30c70cdf1269774f13637e328efc4a99b0f8f> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.numberofguests";
   shacl:datatype xsd:integer;
   shacl:description "The number of guest that the unit was rented to per night."@en;
@@ -102,23 +96,23 @@
   shacl:name "temporal"@en;
   shacl:path dc:temporal .
 
-<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7648f6ef74f83c3728d9dbd1b25eab4460d97c6a> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryofresidence";
-  shacl:description "The country of residence of the guests."@en;
-  shacl:minCount 1;
-  shacl:name "country of residence"@en;
-  shacl:path <https://w3id.org/str/countryOfResidence> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/7a6cec8e4c96d05cad8e2cee9ae88b24727c55b3> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryofresidence";
-  shacl:class skos:Concept;
-  shacl:description "The country of residence of the guests."@en;
-  shacl:name "country of residence"@en;
-  shacl:path <https://w3id.org/str/countryOfResidence> .
-
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout";
   shacl:description "The Unit associated to the activity data."@en;
   shacl:minCount 1;
   shacl:name "is about"@en;
   shacl:path <https://w3id.org/str/isAbout> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/a721940e5ab24b4ac9001379bd382ce2e0cb567b> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryoftheguests";
+  shacl:description "The country of residence of the guests."@en;
+  shacl:minCount 1;
+  shacl:name "country of the guests"@en;
+  shacl:path <https://w3id.org/str/countryOfGuests> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d0703210a0d648ab1aeb9031031cbf1d0205e807> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryoftheguests";
+  shacl:class skos:Concept;
+  shacl:description "The country of residence of the guests."@en;
+  shacl:name "country of the guests"@en;
+  shacl:path <https://w3id.org/str/countryOfGuests> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.numberofguests";
   shacl:description "The number of guest that the unit was rented to per night."@en;
@@ -131,6 +125,12 @@
   shacl:maxCount 1;
   shacl:name "is about"@en;
   shacl:path <https://w3id.org/str/isAbout> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/e7abaa6d437ffe68d6556c427cdff4b763a8d679> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryoftheguests";
+  shacl:description "The country of residence of the guests."@en;
+  shacl:maxCount 1;
+  shacl:name "country of the guests"@en;
+  shacl:path <https://w3id.org/str/countryOfGuests> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout";
   shacl:class <https://w3id.org/str/Unit>;
@@ -594,7 +594,49 @@
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/331cf2ea8867ce3c429e5a9d027ddb833f1b0ddf>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/81e55300529fd60d92d5fdf443d58a5ace7cdac7>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/acd4519f8a344a34ae7df55d8eda55e513235b44>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/c4c5a330094eed7f4bd65784d8d8dadd41db5b3f>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/ca5cb8f65688161c75fba16f6ca94e3bd5250c35>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/f60bfb563ce6b7e3e6e0da53601a109f44fa56e8>;
   shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/331cf2ea8867ce3c429e5a9d027ddb833f1b0ddf> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.coordinates";
+  shacl:description "A list of geographic coordinates that define the extent of the Geometry."@en;
+  shacl:maxCount 1;
+  shacl:name "coordinates"@en;
+  shacl:path <http://data.europa.eu/m8g/coordinates> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/81e55300529fd60d92d5fdf443d58a5ace7cdac7> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.geometrytype";
+  shacl:description "The classification of the Geometry."@en;
+  shacl:minCount 1;
+  shacl:name "geometry type"@en;
+  shacl:path <http://data.europa.eu/m8g/geometryType> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/acd4519f8a344a34ae7df55d8eda55e513235b44> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.geometrytype";
+  shacl:description "The classification of the Geometry."@en;
+  shacl:maxCount 1;
+  shacl:name "geometry type"@en;
+  shacl:path <http://data.europa.eu/m8g/geometryType> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/c4c5a330094eed7f4bd65784d8d8dadd41db5b3f> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.latitude";
+  shacl:description "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."@en;
+  shacl:maxCount 1;
+  shacl:name "latitude"@en;
+  shacl:path <http://data.europa.eu/m8g/latitude> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/ca5cb8f65688161c75fba16f6ca94e3bd5250c35> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.longitude";
+  shacl:description "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."@en;
+  shacl:maxCount 1;
+  shacl:name "longitude"@en;
+  shacl:path <http://data.europa.eu/m8g/longitude> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#GeometryShape/f60bfb563ce6b7e3e6e0da53601a109f44fa56e8> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Geometry.geometrytype";
+  shacl:class skos:Concept;
+  shacl:description "The classification of the Geometry."@en;
+  shacl:name "geometry type"@en;
+  shacl:path <http://data.europa.eu/m8g/geometryType> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#GroupShape> a shacl:NodeShape;
   shacl:closed false;
@@ -759,6 +801,7 @@
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/28e69099c556de06ed172f6febce3d8d3f83374e>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2>,
@@ -774,6 +817,12 @@
   shacl:maxCount 1;
   shacl:name "type"@en;
   shacl:path dc:type .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/28e69099c556de06ed172f6febce3d8d3f83374e> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.requestsarea";
+  shacl:class <http://www.w3.org/ns/locn#Geometry>;
+  shacl:description "The area requested by the Online Short Term Rental Platform."@en;
+  shacl:name "requests area"@en;
+  shacl:path <https://w3id.org/str/requestsArea> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#OnlineShortTermRentalPlatform.type";
   shacl:class skos:Concept;
@@ -829,11 +878,14 @@
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/0fa383047260f8432938e4f5aa14282db5376221>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/1c61fa1d29718c4e8813811b251890449cd4f23d>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/1f53ac638f602797a2c6f9a508ea32f75aab7093>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/25ce12ba2eedf05462d49212e69df3250118f526>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/3a597ba103cfec924c0dcf0aad7777a76554a268>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/3f78d43549383b59be651bf7e3ccc6adc123e491>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/6c16de1b23a2324b79a66111d1ee2a7a1e84c597>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/7a6112ed05520b889083ad602edef6b4ae90e8f0>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/c0d17764e84e711728581fda7356a51e99a9040a>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/e98e308b7a2188aca75320dc2dff19d748a78f71>;
   shacl:targetClass <https://w3id.org/str/Order> .
@@ -862,11 +914,23 @@
   shacl:name "sent to"@en;
   shacl:path <https://w3id.org/str/sentTo> .
 
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/25ce12ba2eedf05462d49212e69df3250118f526> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.haslisting";
+  shacl:description "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."@en;
+  shacl:minCount 1;
+  shacl:name "has listing"@en;
+  shacl:path <https://w3id.org/str/hasListing> .
+
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/3a597ba103cfec924c0dcf0aad7777a76554a268> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.sentto";
   shacl:class <https://w3id.org/str/OnlineShortTermRentalPlatform>;
   shacl:description "It indicates the receiver of the Order."@en;
   shacl:name "sent to"@en;
   shacl:path <https://w3id.org/str/sentTo> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/3f78d43549383b59be651bf7e3ccc6adc123e491> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.haslisting";
+  shacl:description "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."@en;
+  shacl:maxCount 1;
+  shacl:name "has listing"@en;
+  shacl:path <https://w3id.org/str/hasListing> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/6c16de1b23a2324b79a66111d1ee2a7a1e84c597> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.reason";
   shacl:datatype rdf:langString;
@@ -891,6 +955,12 @@
   shacl:maxCount 1;
   shacl:name "identifier"@en;
   shacl:path dc:identifier .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.haslisting";
+  shacl:class <https://w3id.org/str/Unit>;
+  shacl:description "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."@en;
+  shacl:name "has listing"@en;
+  shacl:path <https://w3id.org/str/hasListing> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#Order.reason";
   shacl:description "The statement indicating the reason of the Order."@en;
