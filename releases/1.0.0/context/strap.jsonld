@@ -2,6 +2,7 @@
   "@context": {
     "ActivityData": "https://w3id.org/str/ActivityData",
     "ActivityData.countryOfTheGuests": {
+      "@container": "@set",
       "@id": "https://w3id.org/str/countryOfGuests",
       "@type": "@id"
     },
@@ -454,6 +455,10 @@
       "@type": "@id"
     },
     "RegistrationProcedure": "https://w3id.org/str/RegistrationProcedure",
+    "RegistrationProcedure.appliesTo": {
+      "@id": "https://w3id.org/str/appliesTo",
+      "@type": "@id"
+    },
     "RegistrationProcedure.hasCost": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hasCost",

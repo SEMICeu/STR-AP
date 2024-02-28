@@ -1,0 +1,67 @@
+materialdesignicons F064D Hosts
+materialdesignicons F02E3 "STR Platforms" as STR
+materialdesignicons F01EE "Single Digital Entry Point" as SDEP
+// participantgroup #lightblue **Competent Authorities**
+// materialdesignicons F01BC Registries
+materialdesignicons F0070 "Competent Authorities" as CA
+// end
+autonumber 1
+// registering for registration number
+// If necessary, the host requests a registration number through the\nregistry platform operated by the Competent Authorities.
+box over Hosts, CA:Use Case 1
+Hosts-->CA:Host and unit data
+CA-->Hosts:Registration number
+
+// listing unit on str platform
+// The host posts their listing on the STR Platform.
+box over Hosts, STR:Use Case 2
+Hosts-->STR:List unit (with registration number)
+
+// str platform checks if a registration number is required
+// The STR Platform obtains a list from the Competent Authorities\nindicating the areas where registration numbers are required.
+box over STR, CA:Use Case 3
+STR->SDEP: GET: /area
+activate SDEP
+SDEP->CA: Gets area data
+activate CA
+CA->SDEP: List of area's where registration is required
+deactivate CA
+SDEP->STR:200 OK
+deactivate SDEP
+
+
+// str platform checks status of registration number
+// The STR Platform informs the CA of a new listing which is subject to the policy based on its adress
+box over STR, CA:Use Case 4
+STR->STR: publish listing
+STR->SDEP: POST: /listing
+activate SDEP
+SDEP->CA: Listing data (URL, address, registration number, ...)
+activate CA
+CA->SDEP: Received succesfully message
+deactivate CA
+SDEP->STR: 202 Accepted
+deactivate SDEP
+
+
+// str platform checks the orders queue
+// The STR Platform checks with the SDEP for any outstanding orders in regards to their listings
+box over STR, CA:Use Case 5
+STR->SDEP: GET: /orders
+activate SDEP
+SDEP->CA: Gets the list of orders from a queue database
+activate CA
+CA->SDEP: Orders of listings to be removed (id, reason, ...)
+deactivate CA
+SDEP->STR: 200 OK
+deactivate SDEP
+STR-->STR: Delete listing if ordered
+
+
+
+// str platform shares data to competent authorities
+// The STR Platform provides Competent Authorities with datasets\ncontaining activity data, along with the corresponding registration numbers and URLs.
+box over STR, CA:Use Case 6
+STR->SDEP:POST: /activity-data
+
+SDEP->CA:Activity Data

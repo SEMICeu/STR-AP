@@ -2131,18 +2131,6 @@
           "sh:path": "https://w3id.org/str/isAbout"
         },
         {
-          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/e7abaa6d437ffe68d6556c427cdff4b763a8d679",
-          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryoftheguests",
-          "sh:description": {
-            "en": "The country of residence of the guests."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "country of the guests"
-          },
-          "sh:path": "https://w3id.org/str/countryOfGuests"
-        },
-        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout",
           "sh:class": "https://w3id.org/str/Unit",
@@ -2639,6 +2627,30 @@
       "sh:closed": false,
       "sh:property": [
         {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/4a36eadba7fa9f0241d157ffef2d5015fa032f1d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedure.appliesto",
+          "sh:class": "http://www.w3.org/ns/locn#Geometry",
+          "sh:description": {
+            "en": "The area in which the registration procedure applies."
+          },
+          "sh:name": {
+            "en": "applies to"
+          },
+          "sh:path": "https://w3id.org/str/appliesTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/75506c1584df621e8b8c58cbf90ddfe6220db0c1",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedure.appliesto",
+          "sh:description": {
+            "en": "The area in which the registration procedure applies."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "applies to"
+          },
+          "sh:path": "https://w3id.org/str/appliesTo"
+        },
+        {
           "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4",
           "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedure.hascost",
           "sh:class": "http://data.europa.eu/m8g/Cost",
@@ -2649,6 +2661,18 @@
             "en": "has cost"
           },
           "sh:path": "http://data.europa.eu/m8g/hasCost"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/dcac78fd034c122633142a4b1bf85baeeb4dd584",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedure.appliesto",
+          "sh:description": {
+            "en": "The area in which the registration procedure applies."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "applies to"
+          },
+          "sh:path": "https://w3id.org/str/appliesTo"
         }
       ],
       "sh:targetClass": "https://w3id.org/str/RegistrationProcedure"

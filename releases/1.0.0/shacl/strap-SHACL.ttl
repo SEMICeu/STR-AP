@@ -63,7 +63,6 @@
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d0703210a0d648ab1aeb9031031cbf1d0205e807>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/dd5acd5f2a95b2d54489e871f39a1756b0157962>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/e7abaa6d437ffe68d6556c427cdff4b763a8d679>,
     <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c>;
   shacl:targetClass <https://w3id.org/str/ActivityData> .
 
@@ -126,12 +125,6 @@
   shacl:maxCount 1;
   shacl:name "is about"@en;
   shacl:path <https://w3id.org/str/isAbout> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/e7abaa6d437ffe68d6556c427cdff4b763a8d679> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.countryoftheguests";
-  shacl:description "The country of residence of the guests."@en;
-  shacl:maxCount 1;
-  shacl:name "country of the guests"@en;
-  shacl:path <https://w3id.org/str/countryOfGuests> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#ActivityData.isabout";
   shacl:class <https://w3id.org/str/Unit>;
@@ -1473,14 +1466,35 @@ and managed by a Base Registry Service."""@en,
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4>;
+  shacl:property <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/4a36eadba7fa9f0241d157ffef2d5015fa032f1d>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/75506c1584df621e8b8c58cbf90ddfe6220db0c1>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4>,
+    <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/dcac78fd034c122633142a4b1bf85baeeb4dd584>;
   shacl:targetClass <https://w3id.org/str/RegistrationProcedure> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/4a36eadba7fa9f0241d157ffef2d5015fa032f1d> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedure.appliesto";
+  shacl:class <http://www.w3.org/ns/locn#Geometry>;
+  shacl:description "The area in which the registration procedure applies."@en;
+  shacl:name "applies to"@en;
+  shacl:path <https://w3id.org/str/appliesTo> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/75506c1584df621e8b8c58cbf90ddfe6220db0c1> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedure.appliesto";
+  shacl:description "The area in which the registration procedure applies."@en;
+  shacl:minCount 1;
+  shacl:name "applies to"@en;
+  shacl:path <https://w3id.org/str/appliesTo> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedure.hascost";
   shacl:class <http://data.europa.eu/m8g/Cost>;
   shacl:description """	It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service."""@en;
   shacl:name "has cost"@en;
   shacl:path <http://data.europa.eu/m8g/hasCost> .
+
+<https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedureShape/dcac78fd034c122633142a4b1bf85baeeb4dd584> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.0#RegistrationProcedure.appliesto";
+  shacl:description "The area in which the registration procedure applies."@en;
+  shacl:maxCount 1;
+  shacl:name "applies to"@en;
+  shacl:path <https://w3id.org/str/appliesTo> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.0#ResourceShape> a shacl:NodeShape;
   shacl:closed false;
