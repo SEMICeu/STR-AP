@@ -10,13 +10,11 @@
 | Document Author | PwC EU Services |
 | Project Owner |  DG GROW - European Commission |
 | Project Manager | Travers Wouter  - PwC EU Services |
-| Doc. Version | v00.01 |
-| Date | 29-02-2024 |
-| Status |  Draft Version |
+
 
 | Disclaimer  |
 |-----------|
-| This report was prepared for DG Grow  by PwC EU Services. The views expressed in this report are purely those of the authors and may not, in any circumstances, be interpreted as stating an official position of the European Commission. The European Commission does not guarantee the accuracy of the information included in this report, nor does it accept any responsibility for any use thereof. Reference herein to any specific products, specifications, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation, or favouring by the European Commission. All care has been taken by the author to ensure that s/he has obtained, where necessary, permission to use any parts of manuscripts including illustrations, maps, and graphs, on which intellectual property rights already exist from the titular holder(s) of such rights or from her/his or their legal representative.|
+| This report was prepared for DG Grow by PwC EU Services. The views expressed in this report are purely those of the authors and may not, in any circumstances, be interpreted as stating an official position of the European Commission. The European Commission does not guarantee the accuracy of the information included in this report, nor does it accept any responsibility for any use thereof. Reference herein to any specific products, specifications, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation, or favouring by the European Commission. All care has been taken by the author to ensure that s/he has obtained, where necessary, permission to use any parts of manuscripts including illustrations, maps, and graphs, on which intellectual property rights already exist from the titular holder(s) of such rights or from her/his or their legal representative.|
 
 # Table of Content
 
@@ -24,7 +22,7 @@
    - 1.1. [Context and target audience](#11-context-and-target-audience)
    - 1.2. [Objectives and scope](#12-objectives-and-scope)
    - 1.3. [List of Abbreviations](#13-list-of-abbreviations)
-2. [Interoperable standards](#2-interoperable-standards)
+ 2. [Interoperable standards](#2-interoperable-standards)
    - 2.1. [Key concepts and definitions](#21-key-concepts-and-definitions)
    - 2.2. [Importance of interoperability](#22-importance-of-interoperability)
 3. [Main results and benefits of the best practices and recommendations](#3-main-results-and-benefits-of-the-best-practices-and-recommendations)
@@ -50,23 +48,21 @@
 4. [Conclusion](#4-conclusion)
 
 # 1. Introduction  
-This chapter sets the stage by defining the context and identifying the target audience for this document, ensuring relevance and clarity for the readers. It outlines the objectives and scope, providing a roadmap of the goals and boundaries of the report's analysis. A list of abbreviations is included for easy reference to terms used throughout the text. Lastly, it details a series of organised activities, including preparation, community interactions, bilateral discussions, and focused webinars on topics related to short-term rental interoperability and the Single Digital Entry Point (SDEP).
+This chapter sets the stage by defining the context and identifying the target audience for this document, ensuring relevance and clarity for the readers. It outlines the objectives and scope, providing a roadmap of the goals and boundaries of the report's analysis. A list of abbreviations is included for easy reference to terms used throughout the text. 
 
 ## 1.1. Context and target audience  
 
-This report aims to provide Member State public authorities with a comprehensive guide on best practices for the establishment of Short Term Rental (STR) registries, Single Digital Entry Points (SDEP), and data exchanges. The primary goal is to facilitate the seamless sharing and reuse of information about short term rental accommodations among EU Member States and STR Platforms, while ensuring efficient access, data integrity, and security. By aligning definitions, data models, architectures, data quality, data security policies, governance frameworks, API standards for Base Registries and the SDEP Member State public authorities can enhance the effectiveness and interoperability of these systems.
+This report provides a comprehensive guide on setting up and operating STR registries, SDEPs, and data exchanges for Member State authorities and STR platforms. The goal is to enable smooth and interoperable information sharing and reuse on short term rentals among EU Member States and STR platforms, with efficient access, data integrity, and security.
 
-To create STR registries that promote easy sharing of information and efficient management of data, it is crucial to adopt standardised approaches. This includes aligning definitions, a data model, and architecture to ensure consistency and compatibility across different systems. Focusing on important concepts and terminologies used in the short term rental industry facilitates accurate interpretation and exchange of information. Additionally, raising awareness about effective data and information management practices ensures the reliability and integrity of data within STR registries.
+This requires using interoperable standards for STR base registries that facilitate information sharing and management. This involves using consistent and compatible definitions, a data model, and communication protocols across systems, as well as understanding the key concepts and terms in the short term rental industry. Additionally, this involves applying effective data and information management practices to ensure data quality and trustworthiness within STR registries.
 
-Establishing a Single Digital Entry Point requires adherence to best practices to ensure efficient access to information and services. Standardised data formats, protocols, and interfaces enable interoperability and compatibility across systems and platforms. Robust data security measures, including strong authentication mechanisms and access controls, safeguard sensitive information during access and transmission. Effective governance frameworks and coordination mechanisms among stakeholders ensure the smooth functioning and optimal utilisation of the SDEP. In this case, efficient and data exchanges among Member State public authorities and STR platforms are crucial for effective collaboration and information sharing.
+Setting up a SDEP requires following best practices to ensure efficient access to information and services. This includes using standardised data formats, protocols, and interfaces for interoperability and compatibility across systems and platforms, as well as implementing robust data security measures, such as strong authentication and access controls, to protect sensitive information. This also includes establishing effective governance frameworks and coordination mechanisms among stakeholders to ensure the smooth functioning and optimal utilisation of the SDEP. In this context, efficient data exchanges among Member State authorities and STR platforms are essential for effective collaboration and information sharing.
 
-Furthermore, focusing on important concepts and terminologies in the short term rental industry and raising awareness about effective data and information management practices contribute to the success of these systems. 
-
-Ultimately, these best practices aim to enhance collaboration and efficiency among EU Member States and Platforms.
+Moreover, focusing on important concepts and terminologies in the short term rental industry and raising awareness about effective data and information management practices are key to the success of these systems.
 
 ## 1.2. Objectives and scope  
 
-The goal of providing best practices is to give guidance and recommendations. In the case of short term rentals, the aim is to promote practices that make it easier to understand and share information. 
+These best practices aim to enhance collaboration and efficiency among EU Member States and Platforms.
 
 <p align="center">
   <img src="images/STRframework.png" alt="STR framework">
@@ -74,22 +70,15 @@ The goal of providing best practices is to give guidance and recommendations. In
 
 The best practices are following the STR framework legal documents. In order to ensure a smooth understanding of the STR framework, let us briefly recap its functioning as described by the regulation. 
 
-
 The first step involves hosts registering their units (1a) through the appropriate registration procedure at the relevant CA. This Authority can be at the national, regional, or local level. Once registered, hosts are required to declare their received registration number (1b) to the platform when listing their unit. 
 
 Platforms have the responsibility to regularly verify the validity (2) of the registration numbers and declarations provided by the hosts. This verification process is facilitated through the SDEP (3). The declarations pertain to hosts who must declare whether their unit is located in an area that necessitates a registration procedure and number. The list of these areas is made public through the SDEP (4) to enable effective checks. Any invalid registration numbers or declarations are to be reported to the CA. 
 
 Lastly, platforms are obligated to submit monthly activity data (5) to the CA in areas where a registration procedure is required, using the SDEP. 
 
-The best practices described in this report cover different areas, like how to name things, how to organise information, and how to handle data. By using recommended naming conventions, everyone can understand and use the same terms. Following syntax guidelines helps make sure that data can be easily combined and understood. Good organisation and management of information make it easier to handle and keep track of data.
-
-It's also important to consider technical tools that can automatically check if everything follows the recommended practices and transform ideas into a formal way of representing information. These tools help make sure that everyone is using the same standards and can easily work together.
-
-The bigger goal of promoting semantic and technical interoperability among EU Member States and platforms is achieved by using standards and giving advice on how to make different systems work together. 
+The bigger goal of promoting semantic and technical interoperability among EU Member States and platforms is achieved by using interoperable data and technical standards and giving advice on how to make different systems work together. 
 
 We want to highlight that this is an open source document allowing anyone to contribute, modify, and improve upon it. This collaborative approach brings together a diverse range of knowledge and expertise, resulting in more comprehensive and up-to-date best practices and recommendations. 
-
-In summary, providing best practices is a helpful guide for people in the short term rental industry. It gives recommendations on how to make information easier to understand and manage. By following these practices, organisations can contribute to the bigger goal of making sure different systems can work together smoothly.
 
 | <span style="background-color:#1c4fa4; color:white">Guidelines</span>  |  |
 |----------|----------|
@@ -125,6 +114,7 @@ In summary, providing best practices is a helpful guide for people in the short 
 | SDEP   | Single Digital Entry Point        |
 | DPIA   | Data Protection Impact Assessment      |
 | REST  | Representational State Transfer   |
+
 
 # 2. Interoperable standards 
 This section highlights the critical role of **interoperable standards** in enabling different systems and organisations to communicate and work together seamlessly. By adopting such standards, platforms and Member States can ensure compatibility, facilitate data sharing, and support collaborative innovation. The importance of these standards lies in their ability to reduce complexity, lower integration costs, and create a more efficient and accessible digital environment.
@@ -182,13 +172,9 @@ This chapter outlines best practices for Base Registries, the Single Digital Ent
 | G | Obligate an harmonised and common data schema across the participating countries   |
 | G | Leverage existing Core Vocabularies and Application Profiles, such as the Core Location Vocabulary, Core Person Vocabulary, Core Business Vocabulary, Core Public Organisation Vocabulary, and BregDCAT-AP.        |
 
-The Short Term Rental Application Profile (STR-AP) is a comprehensive data model that has been developed based on the concepts expressed in the current proposed Regulation on short-term accommodation rental services. The STR-AP aims to capture and standardise the data elements and entities relevant to the regulation, providing a structured framework for data generation and sharing in the short-term rental sector.
-
-The working group will be given a month (till 31/03/24)  to provide feedback and contribute to the refinement of the data model. The technical details and specifications of the STR-AP can be accessed on Github via this link https://semiceu.github.io/STR-AP/ ensuring transparency and accessibility for all interested parties.
+The Short Term Rental Application Profile (STR-AP) (https://semiceu.github.io/STR-AP/) s a comprehensive data model that has been developed based on the concepts expressed in the current proposed Regulation on short-term accommodation rental services. The STR-AP aims to capture and standardise the data elements and entities relevant to the regulation, providing a structured framework for data generation and sharing in the short-term rental sector.
 
 The data model is organised into several sections, starting with an abstract and introduction to provide an overview of the STR-AP. It further includes sections on status, licence, conformance, and terminology to establish the context and guidelines for implementation. The overview section provides a high-level overview of the data model, while the main entities section defines the core entities such as evidence, legal entity, online short-term rental platform, order, person, public organisation, registration number, registration procedure, short-term accommodation rental service, and unit.
-
-Additionally, the STR-AP includes supportive entities that complement the main entities, such as activity data, address, catalogue, catalogue record, catalogued resource, concept, contact point, coordination group, cost, data service, dataset, distribution, document, geometry, group, identifier, literal, location, output, period of time, public registry service, and single digital entry point. These entities collectively form a comprehensive framework for capturing and organising the relevant data in the short-term rental sector.
 
 The data model also provides datatypes and examples to guide the implementation and usage of the STR-AP. It offers specific examples, such as providing information about a unit and addressing registration procedure issues related to registration numbers. Usage guidelines are provided to support the implementation process, validation procedures, and governance requirements for versioning and re-used assets.
 
@@ -220,8 +206,6 @@ The information layer forms the foundation of the architecture and encompasses c
 The national level interconnection layer facilitates data exchange between different regions. Standardised protocols and data formats should be adopted to ensure seamless interoperability between regional-level base registries. Mechanisms for data synchronisation should be implemented to maintain consistency and uniqueness of registration numbers at the national level. Additionally, data validation processes should be in place to verify the accuracy and uniqueness of registration numbers received from other regions, instilling trust in rental platforms.
 
 The publication Layer is responsible for exposing registered room data to rental platforms. To effectively manage and secure access to APIs, a National Level API Gateway should be implemented as a centralised entry point. API Management components should handle the management, monitoring, and authentication of APIs, ensuring their availability and security. Data transformation processes should be employed to standardise the registered room data format, enabling compatibility with rental platforms. The SDEP component should implement communication protocols and standards for seamless data exchange with rental platforms. This will be explained in a later section. 
-
-In conclusion, achieving technical interoperability in base registries requires the adoption of best practices and recommendations across various layers. A modular and loosely coupled service-oriented architecture, coupled with user-friendly interfaces, robust data storage and access mechanisms, secure authentication and authorization processes, standardised interconnection protocols, and effective publication mechanisms, will contribute to the success of base registries. 
 
 ### 3.2.2. Data Quality
 This section delves deeper into the data quality - or data validation process as defined in the STR regulation. The process is shown on the figure below: 
@@ -310,7 +294,7 @@ Collaboration methods are essential for effective governance of base registries.
 
 #### 3.2.4.3. API Governance  
 
-This section focuses on API governance within base registries, specifically addressing the need for interoperability and standardisation across domains and data products. Effective API governance is crucial for ensuring seamless data integration, promoting collaboration, and enabling efficient access to base registry data. This section highlights the importance of defining global and domain-level API development standards, enforcing them through testing and validation, and publishing API metadata through a data cataloguing solution.
+This section focuses on API governance within base registries, specifically addressing the need for interoperability and standardisation across domains and data products. Effective API governance is crucial for ensuring seamless data integration, promoting collaboration, and enabling efficient access to base registry data. This section highlights the importance of defining global and domain-level API development standards, enforcing them through testing and validation, and publishing API metadata through a data cataloging solution.
 
 <p align="center">
   <img src="images/APIgovernance.png" alt="STR framework">
@@ -350,7 +334,7 @@ The enterprise architect, also known as the data architect, plays a crucial role
 Data roles and responsibilities within base registries are essential for the effective governance and management of data. The registry owner sets the strategic direction, while the data steward ensures the day-to-day execution of the data management strategy. The data custodian provides the technical infrastructure for data storage and delivery, while the data user utilises the data for analytical or operational purposes. The enterprise architect ensures the overall coherence and alignment of the data architecture. By assigning and fulfilling these roles and responsibilities, base registries can ensure the quality, integrity, and accessibility of data, ultimately benefiting both the registry owner and the data users.
 
 ### 3.2.6. Metrics on data management 
-In the realm of short-term rental platforms, where hosts are required to register their units, the management of data within base registries emerges as a critical facet of regulatory compliance and operational efficiency. These base registries, overseen by competent authorities at various levels such as national, regional, or local, serve as repositories for essential data provided by hosts to obtain registration numbers for their rental units. In line with the European Interoperability Framework (EIF) recommendations 37 to 40, these registries must adhere to stringent standards concerning data security, privacy, interoperability, and quality assurance. Recommendation 37 underscores the importance of implementing access and control mechanisms to safeguard the security and privacy of the personal data stored in the registries, while recommendation 38 emphasises the development of interfaces and documentation for seamless information exchange between Competent Authorities and STR Platforms. Furthermore, recommendation 39 underscores the necessity of metadata to describe the registry's content, access conditions, and relevant licences, among other details, ensuring transparency and accountability. Lastly, recommendation 40 stresses the need for robust data quality assurance plans to maintain the integrity and reliability of the data stored within these registries. Delving deeper into the key performance indicators (KPIs) associated with these recommendations offers insights into the effectiveness and efficiency of data management practices within base registries, providing a comprehensive understanding of their role in facilitating regulatory compliance and enabling smooth operations within the short-term rental ecosystem.
+In the realm of short-term rental platforms, where hosts are required to register their units, the management of data within base registries emerges as a critical facet of regulatory compliance and operational efficiency. These base registries, overseen by competent authorities at various levels such as national, regional, or local, serve as repositories for essential data provided by hosts to obtain registration numbers for their rental units. In line with the European Interoperability Framework (EIF) recommendations 37 to 40, (https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf)  these registries must adhere to stringent standards concerning data security, privacy, interoperability, and quality assurance. Recommendation 37 underscores the importance of implementing access and control mechanisms to safeguard the security and privacy of the personal data stored in the registries, while recommendation 38 emphasises the development of interfaces and documentation for seamless information exchange between Competent Authorities and STR Platforms. Furthermore, recommendation 39 underscores the necessity of metadata to describe the registry's content, access conditions, and relevant licences, among other details, ensuring transparency and accountability. Lastly, recommendation 40 stresses the need for robust data quality assurance plans to maintain the integrity and reliability of the data stored within these registries. Delving deeper into the key performance indicators (KPIs) associated with these recommendations offers insights into the effectiveness and efficiency of data management practices within base registries, providing a comprehensive understanding of their role in facilitating regulatory compliance and enabling smooth operations within the short-term rental ecosystem.
 
 Two KPIs can be defined to assess the implementation of recommendation 37 in the context of STR registries.
 
@@ -378,9 +362,9 @@ Lastly, two KPIs can be defined for the assessment of recommendation 40.
 
 The exact cost of developing STR registries in a specific country is difficult to determine, because it can significantly differ from country to country depending on which authority is responsible for the implementation of the STR regulation (national, regional or local). Furthermore, the cost of setting up STR registries and a registration platform greatly depends if these systems are developed in-house (taking into account the necessary capabilities are present) or by an external contractor. 
 
-Nevertheless, by the example of Ireland, which is already at a mature stage of development of its registration system and which will be operated in an online capacity, a comprehensive overview of the expenses and efforts could be given. Ireland (Fáilte Ireland) has assigned a dedicated team of 10 staff members to develop, establish, maintain, and implement the STR register. This team is supported by other teams within Ireland, including Legal, ICT, and Finance. The development of technical solutions for the register includes creating an online registration portal, an Application Programming Interface (API), a back-end database, and updating Ireland's website to provide information about the STTL register to the public. External contractors have been engaged to assist with developing the registration portal, translation services (for Irish language content), customer service agents for handling public queries, and external communications for a public information campaign prior to the register's launch. 
+Nevertheless, by the example from one of the Member States, already at a mature stage of development of its registration system and which will be operated in an online capacity, a comprehensive overview of the expenses and efforts could be given. The Member State has assigned a dedicated team of 10 staff members to develop, establish, maintain, and implement the STR register. This team is supported by other teams within the Member State, including Legal, ICT, and Finance. The development of technical solutions for the register includes creating an online registration portal, an API, a back-end database, and updating the Member State’s website to provide information about the STTL register to the public. External contractors have been engaged to assist with developing the registration portal, translation services (for the Member State’s official language content), customer service agents for handling public queries, and external communications for a public information campaign prior to the register’s launch.
 
-Reflecting on the user story of Ireland and the diverse components assembled to initiate their system, one could leverage this insight to estimate the costs involved in establishing similar components for their own country. This assessment would draw upon their personal experiences in setting up analogous components.
+Reflecting on the user story of the Member State and the diverse components assembled to initiate their system, one could leverage this insight to estimate the costs involved in establishing similar components for their own country. This assessment would draw upon their personal experiences in setting up analogous components.
 
 ## 3.3. SDEP: API standards
 
@@ -415,16 +399,6 @@ HTTP is the principal and recommended protocol used in RESTful API communication
 * PATCH: Apply partial modifications to a resource on the server.
 * 
 Each method serves a different function in the API ecosystem and aligns with the principles of REST.
-
-HTTP status codes are issued by a server in response to a client's request. They are grouped into five classes:
-
-* 1xx (Informational): Request received, continuing process.
-* 2xx (Success): The action was successfully received, understood, and accepted.
-* 3xx (Redirection): Further action must be taken to complete the request.
-* 4xx (Client Error): The request contains bad syntax or cannot be fulfilled.
-* 5xx (Server Error): The server failed to fulfill an apparently valid request.
-
-Status codes like 200 OK, 201 Created, 400 Bad Request, 404 Not Found, and 500 Internal Server Error are commonly encountered. 
 
 REST APIs use standard MIME types to define the format of the data being communicated. The recommended format is application/json which indicates that the data is in JSON format.
 To secure communications, The OAuth 2.0 authorization framework has been selected to provide robust security for RESTful API communications. OAuth 2.0 enables third-party applications to obtain limited access to an HTTP service, either on behalf of a resource owner or by allowing the third-party application to obtain access on its own behalf. This is achieved through access tokens, which are granted by an authorization server and used by the client application to access protected resources hosted by the resource server.
@@ -615,9 +589,7 @@ HTTP response status codes are a fundamental aspect of the RESTful API design an
 
 # 4. Conclusion  
 
-In conclusion, the establishment of Short-Term Rental (STR) registries by Member State public authorities, as well as the development of a Single Digital Entry Point (SDEP), are critical steps towards ensuring a harmonised, secure, and efficient interoperable and efficient framework. The recommendations outlined in this report aim to facilitate the seamless exchange and validation of data between STR platforms and Competent Authorities, fostering transparency and compliance with the EU regulation.
-
-To maximise the effectiveness of STR registries and the SDEP, Member States are encouraged to adopt best practices and explore reusable solutions, thereby promoting interoperability and minimising redundant efforts. The adoption of common specifications for data exchanges will enable a uniform approach to data sharing, enhancing the quality and reliability of the data received. Validation checks should be implemented to ensure the accuracy and integrity of data, thus supporting effective monitoring and enforcement activities.
+To maximise the effectiveness of STR registries and the SDEP, Member States are encouraged to adopt best practices, an interoperable data model and explore reusable solutions, thereby promoting interoperability and minimising redundant efforts. The adoption of common specifications for data exchanges will enable a uniform approach to data sharing, enhancing the quality and reliability of the data received. Validation checks should be implemented to ensure the accuracy and integrity of data, thus supporting effective monitoring and enforcement activities.
 
 It is crucial for public authorities to engage in continuous dialogue with all stakeholders, including STR platforms, local communities, and industry associations. This collaborative approach is essential for addressing the diverse challenges and opportunities within the STR market. 
 
@@ -626,3 +598,5 @@ The European Commission acknowledges the importance of technical assistance and 
 In the spirit of cooperation and mutual benefit, the Member States are invited to consider the recommendations presented in this report. By doing so, they will contribute to a cohesive and resilient digital ecosystem that upholds the values and regulations of the European Union. The successful implementation of these initiatives will be a testament to Europe's commitment to digital transformation and a testament to the collective resolve to advance the digital economy for the benefit of all European citizens.
 
 The Commission remains steadfast in its commitment to providing a framework that supports innovation while ensuring a fair, transparent, and accountable digital economy. As we move forward, the actions taken today by Member States in implementing STR registries and the SDEP will pave the way for a more connected and prosperous Europe. The Commission looks forward to witnessing the positive outcomes that will arise from these efforts and to continuing its role in facilitating this important work.
+
+
