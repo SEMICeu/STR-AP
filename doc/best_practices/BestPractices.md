@@ -484,7 +484,7 @@ The need for efficient data exchange between STR platforms and regulatory bodies
 JSON is a lightweight data interchange format that is derived from JavaScript but is language-independent. It is built on two structures:
 * A collection of name/value pairs, which in various languages is realised as an object, record, struct, dictionary, hash table, keyed list, or associative array.
 * An ordered list of values, which is commonly realised as an array, vector, list, or sequence.
-* 
+
 JSON encodes data structures like objects and arrays, along with basic data types such as strings, numbers, booleans, and null.
 
 JSON offers several advantages for data transmission, including:
