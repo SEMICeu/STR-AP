@@ -22,7 +22,7 @@
    - 1.1. [Context and target audience](#11-context-and-target-audience)
    - 1.2. [Objectives and scope](#12-objectives-and-scope)
    - 1.3. [List of Abbreviations](#13-list-of-abbreviations)
- 2. [Interoperable standards](#2-interoperable-standards)
+2. [Interoperable standards](#2-interoperable-standards)
    - 2.1. [Key concepts and definitions](#21-key-concepts-and-definitions)
    - 2.2. [Importance of interoperability](#22-importance-of-interoperability)
 3. [Main results and benefits of the best practices and recommendations](#3-main-results-and-benefits-of-the-best-practices-and-recommendations)
@@ -397,7 +397,7 @@ HTTP is the principal and recommended protocol used in RESTful API communication
 * PUT: Update a resource on the server.
 * DELETE: Remove a resource from the server.
 * PATCH: Apply partial modifications to a resource on the server.
-* 
+
 Each method serves a different function in the API ecosystem and aligns with the principles of REST.
 
 REST APIs use standard MIME types to define the format of the data being communicated. The recommended format is application/json which indicates that the data is in JSON format.
@@ -477,7 +477,6 @@ Integrating OAuth 2.0 with a RESTful API is a secure and effective way to manage
 In the rapidly evolving landscape of digital information exchange, Short-Term Rental (STR) platforms are increasingly required to share activity data with Competent Authorities in a secure, structured, and standardised manner. To meet this requirement, We proposed two prominent data interchange formats: JSON (JavaScript Object Notation) and JSON-LD (JavaScript Object Notation for Linked Data). Both formats offer distinct advantages and have their own unique features that make them suitable for various use cases within the context of data interchange via the SDEP. 
 
 JSON is a widely-accepted, text-based data interchange format that is easy for humans to read and write, as well as easy for machines to parse and generate. This paper aims to articulate the benefits of using JSON, its structure, and an example of its application in a RESTful API for data transmission.
-
 
 The need for efficient data exchange between STR platforms and regulatory bodies is critical for compliance and oversight. JSON stands out as a preferred format for many web-based APIs due to its simplicity and compatibility across various systems. This paper outlines the use of JSON for transmitting structured data and presents an example demonstrating its implementation.
 
