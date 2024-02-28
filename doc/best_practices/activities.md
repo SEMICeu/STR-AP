@@ -10,9 +10,6 @@
 | Document Author | PwC EU Services |
 | Project Owner |  DG GROW - European Commission |
 | Project Manager | Travers Wouter  - PwC EU Services |
-| Doc. Version | v00.01 |
-| Date | 29-02-2024 |
-| Status |  Draft Version |
 
 | Disclaimer  |
 |-----------|
