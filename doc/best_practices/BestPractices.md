@@ -74,7 +74,7 @@ The first step involves hosts registering their units (1a) through the appropria
 
 Platforms have the responsibility to regularly verify the validity (2) of the registration numbers and declarations provided by the hosts. This verification process is facilitated through the SDEP (3). The declarations pertain to hosts who must declare whether their unit is located in an area that necessitates a registration procedure and number. The list of these areas is made public through the SDEP (4) to enable effective checks. Any invalid registration numbers or declarations are to be reported to the CA. 
 
-Lastly, platforms are obligated to submit monthly activity data (5) to the CA in areas where a registration procedure is required, using the SDEP. 
+Lastly, platforms are obligated to submit activity data (5) to the CA in areas where a registration procedure is required, using the SDEP. 
 
 The bigger goal of promoting semantic and technical interoperability among EU Member States and platforms is achieved by using interoperable data and technical standards and giving advice on how to make different systems work together. 
 
