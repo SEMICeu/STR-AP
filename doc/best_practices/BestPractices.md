@@ -180,17 +180,17 @@ The data model also provides datatypes and examples to guide the implementation 
 
 ## 3.2. Base Registries
 
-| Guidelines      |    |
-|-----------|---------------|
-| G  |  Adopt a modular and loosely coupled service-oriented architecture (SOA) approach to achieve technical interoperability.    |
-| G | Develop a user-friendly web application for the Presentation Layer that is intuitive, easy to navigate, and accessible across different devices.   |
-| G | Employ a central database or distributed ledger system in the Information Layer to ensure data integrity and consistency.   |
-| G| Implement standardised protocols and data formats for seamless interoperability between regional-level base registries in the National Level Interconnection Layer      |
-| G  |  Implement a standard Data Quality Process   |
-| G  |  Make authoritative sources of information available to others while implementing access and control mechanisms to ensure security and privacy in accordance with the relevant legislation.   |
-| G | Develop interfaces with base registries and authoritative sources of information, publish the semantic and technical means and documentation needed for others to connect and reuse available information.  |
-| G | Match each base registry with appropriate metadata including the description of its content, service assurance and responsibilities, the type of master data it keeps, conditions of access and the relevant licences, terminology, a glossary, and information about any master data it uses from other base registries.  |
-| G| Create and follow data quality assurance plans for base registries and related master data.      |
+| Guidelines |
+|--------------------------|
+| Adopt a modular and loosely coupled service-oriented architecture (SOA) approach to achieve technical interoperability.    |
+|Develop a user-friendly web application for the Presentation Layer that is intuitive, easy to navigate, and accessible across different devices.   |
+|Employ a central database or distributed ledger system in the Information Layer to ensure data integrity and consistency.   |
+|Implement standardised protocols and data formats for seamless interoperability between regional-level base registries in the National Level Interconnection Layer      |
+|Implement a standard Data Quality Process   |
+|Make authoritative sources of information available to others while implementing access and control mechanisms to ensure security and privacy in accordance with the relevant legislation.   |
+|Develop interfaces with base registries and authoritative sources of information, publish the semantic and technical means and documentation needed for others to connect and reuse available information.  |
+|Match each base registry with appropriate metadata including the description of its content, service assurance and responsibilities, the type of master data it keeps, conditions of access and the relevant licences, terminology, a glossary, and information about any master data it uses from other base registries.  |
+|Create and follow data quality assurance plans for base registries and related master data.      |
 
 ### 3.2.1. Architecture
 <p align="center">
@@ -368,14 +368,14 @@ Reflecting on the user story of the Member State and the diverse components asse
 
 ## 3.3. SDEP: API standards
 
-| Guidelines      |    |
-|-----------|---------------|
-| G  | Follow RESTful API principles   |
-| G | Utilise standard HTTP Methods to perform different operations on resources  |
-| G  | Leverage JSON for Simplicity and Wide Support   |
-| G | Understand and handle HTTP status Codes  |
-| G| Implement OAuth 2.0 for secure communications    |
-| G| Test and validate API communications    |
+| Guidelines|
+|--------------------------|
+| Follow RESTful API principles   |
+|Utilise standard HTTP Methods to perform different operations on resources  |
+|Leverage JSON for Simplicity and Wide Support   |
+|Understand and handle HTTP status Codes  |
+|Implement OAuth 2.0 for secure communications    |
+|Test and validate API communications    |
 
 ### 3.3.1 Communication Protocols 
 
