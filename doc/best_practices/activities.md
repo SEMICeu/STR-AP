@@ -95,8 +95,6 @@ The regulation includes the implementation of a SDEP for data transmission and t
 
 Throughout the webinar, participants were encouraged to provide their input and support for the working group that will be formed to further develop the framework and standards for data exchange and validation. The collaboration and active participation of the participants were deemed crucial in achieving the objectives of the regulation.
 
-In conclusion, the webinar aimed to address the challenges faced by public authorities in regulating STR accommodations and proposed a regulation to improve transparency and efficiency in the sector. The participants were urged to actively engage in the working group and provide their expertise, documentation, and support to ensure the successful implementation of the STR framework, but also the development of best practices and recommendations. 
-
 #### 1.4.4.2. Webinar 2: Deep-Dive into STR registries  
 
 This webinar delved into the the topic of STR Base Registries. The webinar served as a platform to explore and share insights on the most effective approaches and strategies for managing base registries within the Member states. The discussions held during the webinar shed light on the significance of implementing robust data models, establishing efficient data architectures, and ensuring high data quality standards in base registry management.
