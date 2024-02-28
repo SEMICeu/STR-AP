@@ -80,25 +80,25 @@ The bigger goal of promoting semantic and technical interoperability among EU Me
 
 We want to highlight that this is an open source document allowing anyone to contribute, modify, and improve upon it. This collaborative approach brings together a diverse range of knowledge and expertise, resulting in more comprehensive and up-to-date best practices and recommendations. 
 
-| <span style="background-color:#1c4fa4; color:white">Guidelines</span>  |  |
-|----------|----------|
-| G   | Encourage a harmonised approach to registration schemes for hosts across the EU.        |
-| G    | Leverage existing Core Vocabularies and Application Profiles, such as the Core Location Vocabulary, Core Person Vocabulary, Core Business Vocabulary, Core Public Organisation Vocabulary, and BregDCAT-AP       |
-| G  |  Adopt a modular and loosely coupled service-oriented architecture (SOA) approach to achieve technical interoperability.    |
-| G | Develop a user-friendly web application for the Presentation Layer that is intuitive, easy to navigate, and accessible across different devices.   |
-| G | Employ a central database or distributed ledger system in the Information Layer to ensure data integrity and consistency.   |
-| G| Implement standardised protocols and data formats for seamless interoperability between regional-level base registries in the National Level Interconnection Layer      |
-| G  |  Implement a standard Data Quality Process   |
-| G  |  Make authoritative sources of information available to others while implementing access and control mechanisms to ensure security and privacy in accordance with the relevant legislation.   |
-| G | Develop interfaces with base registries and authoritative sources of information, publish the semantic and technical means and documentation needed for others to connect and reuse available information.  |
-| G | Match each base registry with appropriate metadata including the description of its content, service assurance and responsibilities, the type of master data it keeps, conditions of access and the relevant licences, terminology, a glossary, and information about any master data it uses from other base registries.  |
-| G| Create and follow data quality assurance plans for base registries and related master data.      |
-| G   | Follow RESTful API principles        |
-| G   | Utilise standard HTTP Methods to perform different operations on resources        |
-| G| Leverage JSON for Simplicity and Wide Support        |
-| G   | Understand and handle HTTP status Codes        |
-| G    | Implement OAuth 2.0 for secure communications       |
-| G| Test and validate API communications        |
+| <span style="background-color:#1c4fa4; color:white">Guidelines</span>|
+|--------------------|
+|Encourage a harmonised approach to registration schemes for hosts across the EU.        |
+|Leverage existing Core Vocabularies and Application Profiles, such as the Core Location Vocabulary, Core Person Vocabulary, Core Business Vocabulary, Core Public Organisation Vocabulary, and BregDCAT-AP       |
+|Adopt a modular and loosely coupled service-oriented architecture (SOA) approach to achieve technical interoperability.    |
+|Develop a user-friendly web application for the Presentation Layer that is intuitive, easy to navigate, and accessible across different devices.   |
+|Employ a central database or distributed ledger system in the Information Layer to ensure data integrity and consistency.   |
+|Implement standardised protocols and data formats for seamless interoperability between regional-level base registries in the National Level Interconnection Layer      |
+|Implement a standard Data Quality Process   |
+|Make authoritative sources of information available to others while implementing access and control mechanisms to ensure security and privacy in accordance with the relevant legislation.   |
+|Develop interfaces with base registries and authoritative sources of information, publish the semantic and technical means and documentation needed for others to connect and reuse available information.  |
+|Match each base registry with appropriate metadata including the description of its content, service assurance and responsibilities, the type of master data it keeps, conditions of access and the relevant licences, terminology, a glossary, and information about any master data it uses from other base registries.  |
+|Create and follow data quality assurance plans for base registries and related master data.      |
+|Follow RESTful API principles        |
+|Utilise standard HTTP Methods to perform different operations on resources        |
+|Leverage JSON for Simplicity and Wide Support        |
+|Understand and handle HTTP status Codes        |
+|Implement OAuth 2.0 for secure communications       |
+|Test and validate API communications        |
 
 
 ## 1.3. List of Abbreviations  
