@@ -477,7 +477,7 @@ Integrating OAuth 2.0 with a RESTful API is a secure and effective way to manage
 
 To share activity data with Competent Authorities in a secure, structured, and standardised manner we propose a JSON format. 
 
-JSON is a widely-accepted, text-based data interchange format that is easy for humans to read and write, as well as easy for machines to parse and generate. This paper aims to articulate the benefits of using JSON, its structure, and an example of its application in a RESTful API for data transmission.
+JSON is a widely-accepted, text-based data interchange format that is easy for humans to read and write, as well as easy for machines to parse and generate. 
 
 The need for efficient data exchange between STR platforms and regulatory bodies is critical for compliance and oversight. JSON stands out as a preferred format for many web-based APIs due to its simplicity and compatibility across various systems. 
 
