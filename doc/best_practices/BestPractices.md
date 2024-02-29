@@ -449,20 +449,6 @@ The OAuth 2.0 framework's roles remain consistent within a REST architecture:
 
 * Authorization Server: The authorization server is the server that authenticates the identity of the STR platform and issues access tokens after getting proper authorization from the resource owner. In some cases, the authorization server may be a separate entity from the resource server, but it can also be part of the same system. For a government authority, the authorization server would likely be a secure system that ensures only authorised entities can access the API.
 
-The Client Credentials Grant is appropriate for machine-to-machine communication where the client is a trusted server. The RESTful API will serve as the interface through which the STR platform's activity data is securely accessed:
-
-1. The Competent Authority's system sends a POST request to the STR platform's Authorization Server's token endpoint, including its client ID and client secret in the authorization header or body.
-2. The Authorization Server authenticates the client and issues an access token in JSON format, which is returned in the response body.
-3. The Member States’ (as on a national level) system includes the access token in the Authorization header as a Bearer token when making requests to the STR platform's RESTful API.
-4. The RESTful API validates the access token and, if valid, processes the request and sends back the requested activity data in the response body in JSON format. 
-
-To further enhance security in the RESTful API context, the following measures can be adopted:
-* Use TLS to ensure data encryption and secure transmission of requests and responses.
-* Implement token expiration and renewal strategies to mitigate the risk associated with token leakage.
-* Define scopes narrowly to limit the Member States’ (as on a national level)  access to only the data necessary for their functions.
-* Use API gateways or service meshes that provide additional security features like rate limiting, logging, and anomaly detection.
-* Validate input data on the RESTful API to prevent injection attacks and ensure data integrity.
-
 When integrating OAuth 2.0 with a RESTful API, certain best practices should be followed:
 * Keep the Authorization Server separate from the Resource Server for improved security and scalability.
 * Use stateless access tokens, such as JWT (JSON Web Tokens), which can be self-contained and validated without needing to store session state.
@@ -470,7 +456,7 @@ When integrating OAuth 2.0 with a RESTful API, certain best practices should be 
 * Monitor and log all access to the RESTful API to detect and respond to suspicious activities promptly.
 * Ensure compliance with relevant data protection regulations such as GDPR or CCPA when handling personal data.
 
-Integrating OAuth 2.0 with a RESTful API is a secure and effective way to manage the authorization of data transmissions between an STR platform and a Member States’ (as on a national level) . By using the Client Credentials Grant and adhering to security best practices, the STR platform can provide authorised access to its data while maintaining the confidentiality, integrity, and availability of the information exchanged. 
+Integrating OAuth 2.0 with a RESTful API is a secure and effective way to manage the authorization of data transmissions between an STR platform and a CA. By using the Client Credentials Grant and adhering to security best practices, the STR platform can provide authorised access to its data while maintaining the confidentiality, integrity, and availability of the information exchanged. 
 
 
 ### 3.3.3 Data Format 
