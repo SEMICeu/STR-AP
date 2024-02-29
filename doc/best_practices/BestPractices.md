@@ -502,7 +502,7 @@ The most relevant requests in case of the STR framework are:
 
 2. POST: The POST request is used to submit data. 
 
-This report aims to provide a comprehensive understanding of the specific requests involved in the STR framework, their purpose, and their role in enabling effective communication and data exchange between clients and the CA.  These are subject to discussion. In the end an agreement needs to be made on: 
+This section aims to provide a comprehensive understanding of the specific requests involved in the STR framework and their purpose.  These are subject to discussion. In the end an agreement needs to be made on: 
 
 - **Endpoints (method, name, purpose)**
 - **Response / Request bodies (what data in which format)**
