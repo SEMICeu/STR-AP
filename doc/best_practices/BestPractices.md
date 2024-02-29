@@ -304,7 +304,7 @@ To achieve interoperability and standardisation, governance teams must define AP
 
 Once API development standards are defined, governance teams must enforce them through rigorous testing and validation processes. API testing involves verifying the functionality, performance, and security of APIs to ensure they meet the defined standards. Automated metadata structure validation ensures that the API metadata adheres to the specified format, schema, and guidelines. These validation processes help identify and rectify any deviations or inconsistencies, ensuring that APIs are compliant with the defined standards.
 
-API metadata, along with associated specifications and reference guides, should be published through a data cataloguing solution. A data cataloguing solution serves as a centralised repository for API metadata, providing a comprehensive and easily accessible source of information for developers, stakeholders, and users. The catalogue should include detailed documentation, such as API endpoints, data models, authentication methods, and usage guidelines. 
+API metadata, along with associated specifications and reference guides, should be published through a data cataloguing solution. A data cataloguing solution serves as a centralised repository for API metadata, providing a comprehensive and easily accessible source of information for developers, stakeholders, and users. The catalogue should include detailed documentation, such as API endpoints, authentication methods, and usage guidelines. 
 
 API governance plays a critical role in ensuring interoperability and standardisation within base registries. By defining global and domain-level API development standards, governance teams establish guidelines that promote consistency and compatibility across different domains. Enforcing these standards through API testing and automated metadata structure validation helps maintain compliance and identify any deviations. Publishing API metadata via a data cataloguing solution provides a centralised source of information, enabling transparency and facilitating collaboration among developers, stakeholders, and users. By implementing robust API governance practices, base registries can enhance interoperability, streamline data integration, and promote efficient access to base registry data.
 
@@ -362,7 +362,7 @@ Lastly, two KPIs can be defined for the assessment of recommendation 40.
 
 The exact cost of developing STR registries in a specific country is difficult to determine, because it can significantly differ from country to country depending on which authority is responsible for the implementation of the STR regulation (national, regional or local). Furthermore, the cost of setting up STR registries and a registration platform greatly depends if these systems are developed in-house (taking into account the necessary capabilities are present) or by an external contractor. 
 
-Nevertheless, by the example from one of the Member States, already at a mature stage of development of its registration system and which will be operated in an online capacity, a comprehensive overview of the expenses and efforts could be given. The Member State has assigned a dedicated team of 10 staff members to develop, establish, maintain, and implement the STR register. This team is supported by other teams within the Member State, including Legal, ICT, and Finance. The development of technical solutions for the register includes creating an online registration portal, an API, a back-end database, and updating the Member State’s website to provide information about the STTL register to the public. External contractors have been engaged to assist with developing the registration portal, translation services (for the Member State’s official language content), customer service agents for handling public queries, and external communications for a public information campaign prior to the register’s launch.
+Nevertheless, by the example from one of the Member States, already at a mature stage of development of its registration system and which will be operated in an online capacity, a comprehensive overview of the expenses and efforts could be given. The Member State has assigned a dedicated team of 10 staff members to develop, establish, maintain, and implement the STR register. This team is supported by other teams within the Member State, including Legal, ICT, and Finance. The development of technical solutions for the register includes creating an online registration portal, an API, a back-end database, and updating the Member State’s website to provide information about the STR register to the public. External contractors have been engaged to assist with developing the registration portal, translation services (for the Member State’s official language content), customer service agents for handling public queries, and external communications for a public information campaign prior to the register’s launch.
 
 Reflecting on the user story of the Member State and the diverse components assembled to initiate their system, one could leverage this insight to estimate the costs involved in establishing similar components for their own country. This assessment would draw upon their personal experiences in setting up analogous components.
 
@@ -370,7 +370,7 @@ Reflecting on the user story of the Member State and the diverse components asse
 
 | Guidelines|
 |--------------------------|
-| Follow RESTful API principles   |
+|Follow RESTful API principles   |
 |Utilise standard HTTP Methods to perform different operations on resources  |
 |Leverage JSON for Simplicity and Wide Support   |
 |Understand and handle HTTP status Codes  |
@@ -401,6 +401,7 @@ HTTP is the principal and recommended protocol used in RESTful API communication
 Each method serves a different function in the API ecosystem and aligns with the principles of REST.
 
 REST APIs use standard MIME types to define the format of the data being communicated. The recommended format is application/json which indicates that the data is in JSON format.
+
 To secure communications, The OAuth 2.0 authorization framework has been selected to provide robust security for RESTful API communications. OAuth 2.0 enables third-party applications to obtain limited access to an HTTP service, either on behalf of a resource owner or by allowing the third-party application to obtain access on its own behalf. This is achieved through access tokens, which are granted by an authorization server and used by the client application to access protected resources hosted by the resource server.
 
 OAuth 2.0 provides various grant types for different use cases, such as:
@@ -431,7 +432,7 @@ By integrating OAuth 2.0 into the RESTful API architecture, developers can ensur
 7. Validation of Access Token and Receipt of Data:
    * The SDEP Resource Server validates the access token and then receives the activity data from the Platform.
 8. Data Processing and Forwarding:
-   * The SDEP processes the data, typically in JSON format, and forwards it to the Competent Authority.
+   * The SDEP processes the data, in JSON format, and forwards it to the Competent Authority.
 
 Communication protocols are the backbone of RESTful APIs, enabling the structured and secure exchange of information over the web. By adhering to the principles of REST and utilising the standard methods and status codes of HTTP,  Member States at national level can create an API that is efficient and reliable to receive activity data from the platforms.  
 
@@ -474,15 +475,11 @@ Integrating OAuth 2.0 with a RESTful API is a secure and effective way to manage
 
 ### 3.3.3 Data Format 
 
-In the rapidly evolving landscape of digital information exchange, Short-Term Rental (STR) platforms are increasingly required to share activity data with Competent Authorities in a secure, structured, and standardised manner. To meet this requirement, We proposed two prominent data interchange formats: JSON (JavaScript Object Notation) and JSON-LD (JavaScript Object Notation for Linked Data). Both formats offer distinct advantages and have their own unique features that make them suitable for various use cases within the context of data interchange via the SDEP. 
+To share activity data with Competent Authorities in a secure, structured, and standardised manner we propose a JSON format. 
 
 JSON is a widely-accepted, text-based data interchange format that is easy for humans to read and write, as well as easy for machines to parse and generate. This paper aims to articulate the benefits of using JSON, its structure, and an example of its application in a RESTful API for data transmission.
 
-The need for efficient data exchange between STR platforms and regulatory bodies is critical for compliance and oversight. JSON stands out as a preferred format for many web-based APIs due to its simplicity and compatibility across various systems. This paper outlines the use of JSON for transmitting structured data and presents an example demonstrating its implementation.
-
-JSON is a lightweight data interchange format that is derived from JavaScript but is language-independent. It is built on two structures:
-* A collection of name/value pairs, which in various languages is realised as an object, record, struct, dictionary, hash table, keyed list, or associative array.
-* An ordered list of values, which is commonly realised as an array, vector, list, or sequence.
+The need for efficient data exchange between STR platforms and regulatory bodies is critical for compliance and oversight. JSON stands out as a preferred format for many web-based APIs due to its simplicity and compatibility across various systems. 
 
 JSON encodes data structures like objects and arrays, along with basic data types such as strings, numbers, booleans, and null.
 
@@ -494,8 +491,7 @@ JSON offers several advantages for data transmission, including:
   
 JSON uses a straightforward syntax that represents objects as collections of key-value pairs enclosed in curly braces {} and arrays as ordered lists of values enclosed in square brackets []. Keys are strings, and values can be strings, numbers, objects, arrays, true, false, or null.
 
-JSON is an effective format for data interchange between an STR platform and a Competent Authority, providing a straightforward, readable, and lightweight method of structuring data. Its ease of use and widespread support make it a practical choice for RESTful API development and integration. The example provided demonstrates how JSON can be used to encapsulate detailed activity data in a format that is easily consumed and processed by the receiving authority. By using JSON, STR platforms can ensure efficient and clear communication with Competent Authorities, facilitating compliance and operational transparency.
-
+JSON is an effective format for data interchange between an STR platform and a Competent Authority, providing a straightforward, readable, and lightweight method of structuring data. Its ease of use and widespread support make it a practical choice for RESTful API development and integration. 
 
 ### 3.3.4 Specific Requests
 Specific requests, in the context of the SDEP, refer to the various types of HTTP requests that clients can make to interact with the SDEP and perform specific actions or operations on the available resources. 
@@ -506,7 +502,7 @@ The most relevant requests in case of the STR framework are:
 
 2. POST: The POST request is used to submit data. 
 
-This report aims to provide a comprehensive understanding of the specific requests involved in the STR framework, their purpose, and their role in enabling effective communication and data exchange between clients and the CA. Each time an example response body is shown. These are subject to discussion. In the end an agreement needs to be made on: 
+This report aims to provide a comprehensive understanding of the specific requests involved in the STR framework, their purpose, and their role in enabling effective communication and data exchange between clients and the CA.  These are subject to discussion. In the end an agreement needs to be made on: 
 
 - **Endpoints (method, name, purpose)**
 - **Response / Request bodies (what data in which format)**
@@ -542,7 +538,7 @@ Purpose: This request enables the sharing of activity data with the CA.
 </p>
 
 ### 3.3.5 Response Codes
-This report offers a comprehensive examination of HTTP response status codes as they pertain to RESTful API communication. These status codes are an integral part of the HTTP protocol and provide immediate feedback about the result of an HTTP request. They play a critical role in design of the SDEP and client-server interaction by helping to quickly identify the nature of the response, whether it indicates success, redirection, client error, or server error. The correct use of HTTP status codes enhances the robustness of the SDEP and aids developers in troubleshooting and handling responses appropriately.
+This section offers a comprehensive examination of HTTP response status codes as they pertain to RESTful API communication. These status codes are an integral part of the HTTP protocol and provide immediate feedback about the result of an HTTP request. They play a critical role in design of the SDEP and client-server interaction by helping to quickly identify the nature of the response, whether it indicates success, redirection, client error, or server error. The correct use of HTTP status codes enhances the robustness of the SDEP and aids developers in troubleshooting and handling responses appropriately.
 
 RESTful APIs operate on the principles of the HTTP protocol, which includes a system of response status codes that are returned by the server to indicate the outcome of a client's request. These codes are standardised and understood universally by HTTP clients, making them a vital component of the API ecosystem. This report delves into the recommended categories and specific codes regarding the within those categories, explaining their meanings and implications in the context of RESTful APIs.
 
@@ -583,7 +579,7 @@ Using HTTP status codes effectively involves more than simply returning the corr
 * **Consistency**: Apply status codes consistently across your API to avoid confusing consumers.
 * **Informative Error Responses**: When errors occur, provide additional information in the body of the response to help clients understand and resolve the issue.
 
-HTTP response status codes are a fundamental aspect of the RESTful API design and are critical for effective client-server communication. By returning the appropriate status codes, API developers can provide clear and actionable information about the result of each request, aiding in the development of resilient and user-friendly APIs. Adhering to the best practices for using HTTP status codes will ensure that API consumers have a consistent and informative experience, reducing confusion and simplifying error handling. Understanding and correctly implementing these response codes is essential for any professional involved in API development and integration.
+HTTP response status codes are a fundamental aspect of the RESTful API design and are critical for effective client-server communication. By returning the appropriate status codes, API developers can provide clear and actionable information about the result of each request, aiding in the development of resilient and user-friendly APIs. 
 
 
 # 4. Conclusion  
