@@ -540,7 +540,7 @@ Purpose: This request enables the sharing of activity data with the CA.
 ### 3.3.5 Response Codes
 This section offers a comprehensive examination of HTTP response status codes as they pertain to RESTful API communication. These status codes are an integral part of the HTTP protocol and provide immediate feedback about the result of an HTTP request. They play a critical role in design of the SDEP and client-server interaction by helping to quickly identify the nature of the response, whether it indicates success, redirection, client error, or server error. The correct use of HTTP status codes enhances the robustness of the SDEP and aids developers in troubleshooting and handling responses appropriately.
 
-RESTful APIs operate on the principles of the HTTP protocol, which includes a system of response status codes that are returned by the server to indicate the outcome of a client's request. These codes are standardised and understood universally by HTTP clients, making them a vital component of the API ecosystem. This report delves into the recommended categories and specific codes regarding the within those categories, explaining their meanings and implications in the context of RESTful APIs.
+RESTful APIs operate on the principles of the HTTP protocol, which includes a system of response status codes that are returned by the server to indicate the outcome of a client's request. These codes are standardised and understood universally by HTTP clients, making them a vital component of the API ecosystem. 
 
 HTTP response status codes are divided into five categories, each signifying a general type of response:
 * 1xx (Informational): Indicative of an ongoing process or a provisional response.
