@@ -1,3 +1,3 @@
-## STR-AP 1.0
+## STR-AP 1.0.1
 
-This is the first version of STR-AP.
+Use cases have been replaced with user stories.
