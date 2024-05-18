@@ -1,0 +1,3083 @@
+{
+  "@context": {
+    "@vocab": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qb:codeList": {
+      "@id": "qb:codeList",
+      "@type": "@id"
+    },
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf:first": {
+      "@type": "@id"
+    },
+    "rdf:rest": {
+      "@type": "@id"
+    },
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdfs:comment": {
+      "@id": "rdfs:comment"
+    },
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sh:and": {
+      "@container": "@set",
+      "@id": "sh:and",
+      "@type": "@id"
+    },
+    "sh:class": {
+      "@id": "sh:class",
+      "@type": "@id"
+    },
+    "sh:datatype": {
+      "@id": "sh:datatype",
+      "@type": "@id"
+    },
+    "sh:description": {
+      "@container": "@language",
+      "@id": "sh:description"
+    },
+    "sh:hasValue": {
+      "@id": "sh:hasValue",
+      "@type": "@id"
+    },
+    "sh:in": {
+      "@container": "@set",
+      "@id": "sh:in",
+      "@type": "@id"
+    },
+    "sh:maxCount": {
+      "@id": "sh:maxCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:minCount": {
+      "@id": "sh:minCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:name": {
+      "@container": "@language",
+      "@id": "sh:name"
+    },
+    "sh:node": {
+      "@id": "sh:node",
+      "@type": "@id"
+    },
+    "sh:nodeKind": {
+      "@id": "sh:nodeKind",
+      "@type": "@id"
+    },
+    "sh:or": {
+      "@container": "@set",
+      "@id": "sh:or",
+      "@type": "@id"
+    },
+    "sh:path": {
+      "@id": "sh:path",
+      "@type": "@id"
+    },
+    "sh:property": {
+      "@id": "sh:property",
+      "@type": "@id"
+    },
+    "sh:severity": {
+      "@id": "sh:severity",
+      "@type": "@id"
+    },
+    "sh:targetClass": {
+      "@id": "sh:targetClass",
+      "@type": "@id"
+    },
+    "sh:uniqueLang": {
+      "@id": "sh:uniqueLang",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "shapes": {
+      "@id": "rdfs:member",
+      "@type": "@id"
+    },
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "vl": "https://purl.eu/ns/shacl#",
+    "vl:message": {
+      "@container": "@language",
+      "@id": "vl:message"
+    }
+  },
+  "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl",
+  "shapes": [
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ContactPointShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ContactPointShape/4a468954b931f560241136ea65630a06ec4bb505",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ContactPoint.hasemail",
+          "sh:description": {
+            "en": "An electronic address through which the Contact Point can be contacted."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has email"
+          },
+          "sh:path": "http://data.europa.eu/m8g/email"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ContactPointShape/770d9db86878079ce427403cf452c6c437b53f51",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ContactPoint.hastelephone",
+          "sh:description": {
+            "en": "A telephone number through which the Contact Point can be contacted."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has telephone"
+          },
+          "sh:path": "http://data.europa.eu/m8g/telephone"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ContactPointShape/8a3c934728a58ad51e90a565cb978716f92ccd09",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ContactPoint.hastelephone",
+          "sh:description": {
+            "en": "A telephone number through which the Contact Point can be contacted."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has telephone"
+          },
+          "sh:path": "http://data.europa.eu/m8g/telephone"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ContactPointShape/e4f2b3833f778a98436604ce52726eddde0c9231",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ContactPoint.hasemail",
+          "sh:description": {
+            "en": "An electronic address through which the Contact Point can be contacted."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has email"
+          },
+          "sh:path": "http://data.europa.eu/m8g/email"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/ContactPoint"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape/1f3895e40402964778aff822b36b6820050ecd8a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Cost.hasvalue",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#double",
+          "sh:description": {
+            "en": "A numeric value indicating the amount of the Cost.\t"
+          },
+          "sh:name": {
+            "en": "has value"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasValue"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape/27def7eb440d8b57d5ca39f8cf98cf9599cdab8a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Cost.currency",
+          "sh:description": {
+            "en": "The currency in which the Cost needs to be paid and the value of the Cost is expressed."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "currency"
+          },
+          "sh:path": "http://data.europa.eu/m8g/currency"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape/3435304b8a2fc3277d3acac5245bbb3489465288",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Cost.currency",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The currency in which the Cost needs to be paid and the value of the Cost is expressed."
+          },
+          "sh:name": {
+            "en": "currency"
+          },
+          "sh:path": "http://data.europa.eu/m8g/currency"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape/52adccb60392267e3398249f4f1904467f99ad1c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Cost.hasvalue",
+          "sh:description": {
+            "en": "A numeric value indicating the amount of the Cost.\t"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has value"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasValue"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Cost.identifier",
+          "sh:description": {
+            "en": "An Identifier for the Cost."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Cost.identifier",
+          "sh:description": {
+            "en": "An Identifier for the Cost."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape/c4f15287b75d12299cd366f2b4ea6c1f18f5b5be",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Cost.hasvalue",
+          "sh:description": {
+            "en": "A numeric value indicating the amount of the Cost.\t"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has value"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasValue"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CostShape/c4ff2a5f9b7cd2f0a3ffbf0acf9d19bd508759bf",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Cost.currency",
+          "sh:description": {
+            "en": "The currency in which the Cost needs to be paid and the value of the Cost is expressed."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "currency"
+          },
+          "sh:path": "http://data.europa.eu/m8g/currency"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Cost"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The official Name of the piece of Evidence."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/42c749b4eb19506d98ebe732f87b81ae28e6d368",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.updatedate",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "The date in which the Document has been updated."
+          },
+          "sh:name": {
+            "en": "update date"
+          },
+          "sh:path": "https://w3id.org/str/updateDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/58f2bb146c1acc13d00df887f8005ac509470906",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.submissiondate",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "The date in which the Document has been submitted."
+          },
+          "sh:name": {
+            "en": "submission date"
+          },
+          "sh:path": "https://w3id.org/str/submissionDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/6065b86a462e0eb1d5964d166fbccf077716ffe5",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.describes",
+          "sh:description": {
+            "en": "It indicates the Unit described."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "describes"
+          },
+          "sh:path": "https://w3id.org/str/describes"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.identifier",
+          "sh:description": {
+            "en": "An Identifier for the piece of Evidence."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/77624c6165c7831ff00bd33e017e6d0b364809b3",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.validityperiod",
+          "sh:class": "http://purl.org/dc/terms/PeriodOfTime",
+          "sh:description": {
+            "en": "Period of Time during which the Evidence holds true or has force."
+          },
+          "sh:name": {
+            "en": "validity period"
+          },
+          "sh:path": "http://data.europa.eu/m8g/validityPeriod"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/88c2d105acc4e11c2a394a9e5f60d2851e4c2120",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.validityperiod",
+          "sh:description": {
+            "en": "Period of Time during which the Evidence holds true or has force."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "validity period"
+          },
+          "sh:path": "http://data.europa.eu/m8g/validityPeriod"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.name",
+          "sh:description": {
+            "en": "The official Name of the piece of Evidence."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/973c218c87e5004e247def216f50a940ac2e9738",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.updatedate",
+          "sh:description": {
+            "en": "The date in which the Document has been updated."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "update date"
+          },
+          "sh:path": "https://w3id.org/str/updateDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/b9f9e95c4a68d68085e747c68bb75c511d3435fc",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.submissiondate",
+          "sh:description": {
+            "en": "The date in which the Document has been submitted."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "submission date"
+          },
+          "sh:path": "https://w3id.org/str/submissionDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.identifier",
+          "sh:description": {
+            "en": "An Identifier for the piece of Evidence."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/d4f51dbf11becea4cd3f5b19d25cbf0791e66636",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.submissiondate",
+          "sh:description": {
+            "en": "The date in which the Document has been submitted."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "submission date"
+          },
+          "sh:path": "https://w3id.org/str/submissionDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/d9911793c7598a1d08612413f10901fbeefdb61d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.relateddocumentation",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "The documentation that contains information."
+          },
+          "sh:name": {
+            "en": "related documentation"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/page"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#EvidenceShape/e64b135aa5770a921a6738287316722c7a7dd679",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Evidence.describes",
+          "sh:class": "https://w3id.org/str/Unit",
+          "sh:description": {
+            "en": "It indicates the Unit described."
+          },
+          "sh:name": {
+            "en": "describes"
+          },
+          "sh:path": "https://w3id.org/str/describes"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Evidence"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OutputShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OutputShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Output.name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The official Name of the Output."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OutputShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Output.identifier",
+          "sh:description": {
+            "en": "An Identifier for the Output."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OutputShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Output.name",
+          "sh:description": {
+            "en": "The official Name of the Output."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OutputShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Output.identifier",
+          "sh:description": {
+            "en": "An Identifier for the Output."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/Output"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/06950e17e8d4a67fa64194ac4c46abad5ae7b92e",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.address",
+          "sh:description": {
+            "en": "The Address of a Public Organization."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#address"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/322ac30abbb777e02239ab84ebf7d14ebde22688",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.preferredlabel",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/457bf175ff67fd5e72b40c88fde5f6b2be2c2b3f",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.address",
+          "sh:description": {
+            "en": "The Address of a Public Organization."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#address"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/5a5e497cd4aac2c4b16f93c81e1a030120562545",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.establishes",
+          "sh:description": {
+            "en": "It indicates the Single Digital Entry Point being managed."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "establishes"
+          },
+          "sh:path": "https://w3id.org/str/establishes"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/5de4ef5193a558e17a34633888421d09b957d267",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.address",
+          "sh:class": "http://www.w3.org/ns/locn#Address",
+          "sh:description": {
+            "en": "The Address of a Public Organization."
+          },
+          "sh:name": {
+            "en": "address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#address"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/7c93fd6b0b01f01edd22c5d427afec4f20ec2b88",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.hasnationalcoordinator",
+          "sh:class": "http://www.w3.org/ns/person#Person",
+          "sh:description": {
+            "en": "It indicates the Person appointed as national coordinator."
+          },
+          "sh:name": {
+            "en": "has national coordinator"
+          },
+          "sh:path": "https://w3id.org/str/hasNationalCoordinator"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/8662a1e162ca0ebe52611bf26791584c89c3de70",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.purpose",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "This property describes the reasons of existence of an Organization."
+          },
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "http://www.w3.org/ns/org#purpose"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/936884d6e1539aaa027a5f975b124acfdd169126",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.verifies",
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
+          "sh:description": {
+            "en": "It indicates the Evidence verified."
+          },
+          "sh:name": {
+            "en": "verifies"
+          },
+          "sh:path": "https://w3id.org/str/verifies"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/a315bc125916d6005403a8ad2001b5d86d5b17bb",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.hasnationalcoordinator",
+          "sh:description": {
+            "en": "It indicates the Person appointed as national coordinator."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has national coordinator"
+          },
+          "sh:path": "https://w3id.org/str/hasNationalCoordinator"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/b2058b4ad9511a1d9d91e1dd9ec1ef8ecfcad387",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.establishes",
+          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
+          "sh:description": {
+            "en": "It indicates the Single Digital Entry Point being managed."
+          },
+          "sh:name": {
+            "en": "establishes"
+          },
+          "sh:path": "https://w3id.org/str/establishes"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/b9d7391deffceb182bef20e69771e5bfcf511f96",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.classification",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The categorisation of the Public Organization."
+          },
+          "sh:name": {
+            "en": "classification"
+          },
+          "sh:path": "http://www.w3.org/ns/org#classification"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/c9fffe20eccf0e1883a426d0976d6e66c16f6c71",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.issues",
+          "sh:class": "https://w3id.org/str/Order",
+          "sh:description": {
+            "en": "It indicates ther Order issued."
+          },
+          "sh:name": {
+            "en": "issues"
+          },
+          "sh:path": "https://w3id.org/str/issues"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The textual description of the Public Organization."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/d94c14fe5ee5bbb147447229b6bae0a2668fffd6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.alternativelabel",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "An alternative or informal name(s) of a Public Organization, irrespective of language."
+          },
+          "sh:name": {
+            "en": "alternative label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#altLabel"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicOrganisationShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicOrganisation.preferredlabel",
+          "sh:description": {
+            "en": "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "preferred label"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
+        }
+      ],
+      "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LocationShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LocationShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Location.geometry",
+          "sh:class": "http://www.w3.org/ns/locn#Geometry",
+          "sh:description": {
+            "en": "The corresponding geometry for a resource"
+          },
+          "sh:name": {
+            "en": "geometry"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#geometry"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LocationShape/caa9d15ad38096046fd527702c7620800aea178b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Location.centroid",
+          "sh:description": {
+            "en": "The geographic center (centroid) of a resource."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "centroid"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#centroid"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LocationShape/d75cb3222eabce83fa3e236344cbf419e465f10e",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Location.bbox",
+          "sh:description": {
+            "en": "The geographic bounding box of a resource."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "bbox"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#bbox"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LocationShape/dde6f1d3b53e457ed56cd01d51f110aea62f5d72",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Location.geometry",
+          "sh:description": {
+            "en": "The corresponding geometry for a resource"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "geometry"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#geometry"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/dc/terms/Location"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PeriodOfTimeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PeriodOfTimeShape/238fde7d71612ea8f00826d9c60106d3ef9c4063",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Periodoftime.beginning",
+          "sh:description": {
+            "en": "The beginning of a period or interval."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "beginning"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasBeginning"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PeriodOfTimeShape/3648a78b9b0570b660934474f131e41284725cd8",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Periodoftime.end",
+          "sh:description": {
+            "en": "The end of a period or interval"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "end"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasEnd"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PeriodOfTimeShape/734ca37cb57eb7386e624ca5375d566ae94864ef",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Periodoftime.enddate",
+          "sh:description": {
+            "en": "The end of the period"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "end date"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#endDate"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PeriodOfTimeShape/9053142781444816deeb00f184b765d8cb15b929",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Periodoftime.end",
+          "sh:class": "http://www.w3.org/2006/time#Instant",
+          "sh:description": {
+            "en": "The end of a period or interval"
+          },
+          "sh:name": {
+            "en": "end"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasEnd"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PeriodOfTimeShape/eb883e24d5d0a294a30545021f24e485d59d1e47",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Periodoftime.beginning",
+          "sh:class": "http://www.w3.org/2006/time#Instant",
+          "sh:description": {
+            "en": "The beginning of a period or interval."
+          },
+          "sh:name": {
+            "en": "beginning"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasBeginning"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PeriodOfTimeShape/f72c3efebeb551122e98eb731aa0ec8af8b4c1b7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Periodoftime.startdate",
+          "sh:description": {
+            "en": "The start of the period"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "start date"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#startDate"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/dc/terms/PeriodOfTime"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/1aaa988702b5b8caa5aab67b1bc340dce40a1783",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.hascompetentauthority",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "It links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service."
+          },
+          "sh:name": {
+            "en": "has competent authority"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/263a563c5bed08cdaadf4a0fd0a5fb9874d742bc",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.name",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The official Name of the Public Service."
+          },
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.produces",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:description": {
+            "en": "This property defines the output of the service as a data resource available\r\nand managed by a Base Registry Service."
+          },
+          "sh:name": {
+            "en": "produces"
+          },
+          "sh:path": "http://purl.org/vocab/cpsv#produces"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.produces",
+          "sh:class": "http://data.europa.eu/m8g/Output",
+          "sh:description": {
+            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
+          },
+          "sh:name": {
+            "en": "produces"
+          },
+          "sh:path": "http://purl.org/vocab/cpsv#produces"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.identifier",
+          "sh:description": {
+            "en": "A formally-issued Identifier for the Public Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/890d65bb958b3ca08d5ae1fda0d6ccfce64db7a1",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.produces",
+          "sh:description": {
+            "en": "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "produces"
+          },
+          "sh:path": "http://purl.org/vocab/cpsv#produces"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/8a3280969b2451d149380977f83dbc56d8f3e851",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.hascompetentauthority",
+          "sh:description": {
+            "en": "It links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has competent authority"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/8e469beea96ca1eac530a78c7268fb9aa72ba6a0",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.hasinput",
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
+          "sh:description": {
+            "en": "It links a Public Service to one or more instances of the Evidence class."
+          },
+          "sh:name": {
+            "en": "has input"
+          },
+          "sh:path": "http://purl.org/vocab/cpsv#hasInput"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/8f61614144aa7bca188b24f5976593dc08aad0e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.description",
+          "sh:description": {
+            "en": "A free text Description of the Public Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.name",
+          "sh:description": {
+            "en": "The official Name of the Public Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "name"
+          },
+          "sh:path": "http://purl.org/dc/terms/title"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.identifier",
+          "sh:description": {
+            "en": "A formally-issued Identifier for the Public Service."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A free text Description of the Public Service."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PublicServiceShape/f04e304095842b2d788f1262685ae592d4a3f8da",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.hascompetentauthority",
+          "sh:description": {
+            "en": "It links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has competent authority"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasCompetentAuthority"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#langStringShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LiteralShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#TemporalLiteralShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#booleanShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#dateTimeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#doubleShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#integerShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ConceptShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#TimeInstantShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2006/time#Instant"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#IdentifierShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#IdentifierShape/3b534bf26cc294dd6e8dc80832da269189e4cbf3",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Identifier.notation",
+          "sh:description": {
+            "en": "A string of characters to uniquely identify a concept."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "notation"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#IdentifierShape/e02208f9fa32c429dc5023f2799d03368703b974",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Identifier.notation",
+          "sh:description": {
+            "en": "A string of characters to uniquely identify a concept."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "notation"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/adms#identifier"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CatalogShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CatalogShape/337cf55721093cc585693a5397601643d59a4c46",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Catalogue.record",
+          "sh:class": "http://www.w3.org/ns/dcat#CatalogRecord",
+          "sh:description": {
+            "en": "A Catalogue Record that is part of the Catalogue."
+          },
+          "sh:name": {
+            "en": "record"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#record"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CatalogShape/7b94c69361e00163d16d78016cd994668c7fccda",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Catalogue.dataset",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "A Dataset that is part of the Catalogue."
+          },
+          "sh:name": {
+            "en": "dataset"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#dataset"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CatalogShape/c26f8a3ac6445e9f36176f951acd9d235af5ffd9",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Catalogue.service",
+          "sh:class": "http://www.w3.org/ns/dcat#DataService",
+          "sh:description": {
+            "en": "A site or end-point (Data Service) that is listed in the Catalogue."
+          },
+          "sh:name": {
+            "en": "service"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#service"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Catalog"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CatalogRecordShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CatalogRecordShape/65eafe0643a998b84fc2d253de401f9ad8355770",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#CatalogueRecord.primarytopic",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CatalogRecordShape/c65d45ed7195ead5f643ec8c8afd29c6dd9662bf",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#CatalogueRecord.primarytopic",
+          "sh:class": "http://www.w3.org/ns/dcat#Resource",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CatalogRecordShape/edc684c84677aa4924b66988491caddda1a1e68b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#CatalogueRecord.primarytopic",
+          "sh:description": {
+            "en": "A link to the Dataset, Data service or Catalog described in the record."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "primary topic"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#CatalogRecord"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#DataServiceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#DataServiceShape/1a61f733fafb015548fe0e21203d559c9cb4d228",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#DataService.servesdataset",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "This property refers to a collection of data that this data service can distribute."
+          },
+          "sh:name": {
+            "en": "serves dataset"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#servesDataset"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#DataService"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#DatasetShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#DatasetShape/2ab9813b47309d4af98fdfe34189ea24baecc8cd",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Dataset.datasetdistribution",
+          "sh:class": "http://www.w3.org/ns/dcat#Distribution",
+          "sh:description": {
+            "en": "An available Distribution for the Dataset."
+          },
+          "sh:name": {
+            "en": "dataset distribution"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#distribution"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Dataset"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#DistributionShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#DistributionShape/7434c99492683a2fb06dcdcf1f238671caf3d462",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Distribution.accessservice",
+          "sh:class": "http://www.w3.org/ns/dcat#DataService",
+          "sh:description": {
+            "en": "A data service that gives access to the distribution of the dataset."
+          },
+          "sh:name": {
+            "en": "access service"
+          },
+          "sh:path": "http://www.w3.org/ns/dcat#accessService"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#DistributionShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Distribution.haslisting",
+          "sh:class": "https://w3id.org/str/Unit",
+          "sh:description": {
+            "en": "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."
+          },
+          "sh:name": {
+            "en": "has listing"
+          },
+          "sh:path": "https://w3id.org/str/hasListing"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Distribution"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ResourceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#Resource"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/0e159f840ef049893a46a2425cfce1a80e06ece6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.isnotifiedby",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "It indicates the competent auhority notifying."
+          },
+          "sh:name": {
+            "en": "is notified by"
+          },
+          "sh:path": "https://w3id.org/str/isNotifiedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/2d7ae974de8cf6bf9f79f4d5bd3e490544d0bd9a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.isreferredin",
+          "sh:class": "https://w3id.org/str/Order",
+          "sh:description": {
+            "en": "It indicates the Order in which the host is referred."
+          },
+          "sh:name": {
+            "en": "is referred in"
+          },
+          "sh:path": "https://w3id.org/str/isReferredIn"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/35a0c5bc0ce5ab144bd063c0f462c983de54579b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.legalidentifier",
+          "sh:class": "http://www.w3.org/ns/adms#identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference assigned to the Legal Entity by the legal authority that registered it."
+          },
+          "sh:name": {
+            "en": "legal identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/legal#legalIdentifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/4cea8c6e04de6690136463ad0aab56273707c110",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.registeredaddress",
+          "sh:description": {
+            "en": "The address at which the Legal Entity is legally registered."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "registered address"
+          },
+          "sh:path": "http://data.europa.eu/m8g/registeredAddress"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.offers",
+          "sh:class": "https://w3id.org/str/ShortTermAccomodationRentalService",
+          "sh:description": {
+            "en": "It indicates the rental service offered."
+          },
+          "sh:name": {
+            "en": "offers"
+          },
+          "sh:path": "https://w3id.org/str/offers"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/71b69bfe1f117f65960a52027da4905f447de695",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.provides",
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
+          "sh:description": {
+            "en": "It indicates the Evidence provided."
+          },
+          "sh:name": {
+            "en": "provides"
+          },
+          "sh:path": "https://w3id.org/str/provides"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/7732c779d9ef9b53ab85a7c61b415537d57aafba",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.haslegalrepresentative",
+          "sh:description": {
+            "en": "It indicates the Person that can represent legally an organization."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has legal representative"
+          },
+          "sh:path": "https://w3id.org/str/hasLegalRepresentative"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/7d73074765293c6ee57c5af79f568751c1a4bde7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.haslegalrepresentative",
+          "sh:class": "http://www.w3.org/ns/person#Person",
+          "sh:description": {
+            "en": "It indicates the Person that can represent legally an organization."
+          },
+          "sh:name": {
+            "en": "has legal representative"
+          },
+          "sh:path": "https://w3id.org/str/hasLegalRepresentative"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/866f7a83c3007ee916031153fda619f2402ac69c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.legalidentifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference assigned to the Legal Entity by the legal authority that registered it."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "legal identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/legal#legalIdentifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/88c7bac3bf428d0c0abcd15cc9806d565ab6e8b4",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.legalname",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name under which the Legal Entity is legally registered."
+          },
+          "sh:name": {
+            "en": "legal name"
+          },
+          "sh:path": "http://www.w3.org/ns/legal#legalName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/b9716ca355369848896467f0c8629b34b21eef0a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.legalidentifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference assigned to the Legal Entity by the legal authority that registered it."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "legal identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/legal#legalIdentifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/c663e850a5fa78c005c3ac58b8d2ba84f243aafe",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.legalname",
+          "sh:description": {
+            "en": "The name under which the Legal Entity is legally registered."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "legal name"
+          },
+          "sh:path": "http://www.w3.org/ns/legal#legalName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/cf9602ea5422d929eccf1b7ba9f66046b2fce096",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.registeredaddress",
+          "sh:class": "http://www.w3.org/ns/locn#Address",
+          "sh:description": {
+            "en": "The address at which the Legal Entity is legally registered."
+          },
+          "sh:name": {
+            "en": "registered address"
+          },
+          "sh:path": "http://data.europa.eu/m8g/registeredAddress"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#LegalEntityShape/de2f724cdefc23d93959af9f25030c2a9e4483a7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#LegalEntity.registeredaddress",
+          "sh:description": {
+            "en": "The address at which the Legal Entity is legally registered."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "registered address"
+          },
+          "sh:path": "http://data.europa.eu/m8g/registeredAddress"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/legal#LegalEntity"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/17384dfa4a75117e7dd2bc0f2bbf61ac91fd8676",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.thoroughfare",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/17d7efb2d6ddf8707800da023b4ec8b8a786f068",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.fulladdress",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/362b7c3261b1d5eb024e72e4868babc25ed0c7ce",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.administrativeunitlevel1",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/470060a15e97aeacd56fcc5beb701e647a6aa56e",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.addressarea",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressArea"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/55cf47fe54e6f7cb41a1ca42a8a8a68b05a4519a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.administrativeunitlevel2",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/5cd2021f8d057d680e03f666c5a6228c3aa9c1c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.landregister",
+          "sh:description": {
+            "en": "The land register in which the Address is registered in."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "land register"
+          },
+          "sh:path": "https://w3id.org/str/landRegister"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/6189a49a5cedd230bdea41d224948fe9e0e81091",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.landregister",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "The land register in which the Address is registered in."
+          },
+          "sh:name": {
+            "en": "land register"
+          },
+          "sh:path": "https://w3id.org/str/landRegister"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/854a17171901a9c000eff34a7ccd77814891e3d5",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.administrativeunitlevel2",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."
+          },
+          "sh:name": {
+            "en": "administrative unit level 2"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/8cdc8ea2985ba7820ce90020c745a8e6242343ed",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.postcode",
+          "sh:description": {
+            "en": "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "post code"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postCode"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/98016263ed1fd03fc2066e397f3ae3343ce3bf79",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.postname",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/9963aa8e6c0930f345efb860840632c3683f0721",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.addressarea",
+          "sh:description": {
+            "en": "The name of a geographic area that groups Addresses."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "address area"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressArea"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/b67bae280cfbd78657d62e7aeb28c6ba907c82ea",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.addressID",
+          "sh:description": {
+            "en": "A globally unique identifier for each instance of an Address."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "address ID"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#addressId"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/c7982f0ec4b5e8e3eaa2c72beb037d90a9bff2ce",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.locatorname",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/ceb906d82a458ab953d0ca21b351b2b3410f47f8",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.postofficebox",
+          "sh:description": {
+            "en": "A location designator for a postal delivery point at a post office, usually a number."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "post office box"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#poBox"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/d75b5d4c221e6b0bf47c853c0be92d078c39e391",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.locatorname",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "Proper noun(s) applied to the real world entity identified by the locator."
+          },
+          "sh:name": {
+            "en": "locator name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/da24e553019459ec81ebf5e285b182886281c9df",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.locatordesignator",
+          "sh:description": {
+            "en": "A number or sequence of characters that uniquely identifies the locator within the relevant scope."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "locator designator"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#locatorDesignator"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/dee03556e405a14f1e410c960b43b8eee149efe7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.fulladdress",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The complete address written as a string."
+          },
+          "sh:name": {
+            "en": "full address"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#fullAddress"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/e46a136574af7aa2d423b302480c56fd38255dda",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.administrativeunitlevel1",
+          "sh:description": {
+            "en": "The name of the uppermost level of the address, almost always a country."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "administrative unit level 1"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/edf517a4066ee468a174711e33c96a64fb7364a6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.thoroughfare",
+          "sh:description": {
+            "en": "The name of a passage or way through from one location to another."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "thoroughfare"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#thoroughfare"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#AddressShape/fb0e32fb7f38c269210ffbd1af5a2814de765ca6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Address.postname",
+          "sh:description": {
+            "en": "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "post name"
+          },
+          "sh:path": "http://www.w3.org/ns/locn#postName"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/locn#Address"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#GeometryShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#GeometryShape/331cf2ea8867ce3c429e5a9d027ddb833f1b0ddf",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Geometry.coordinates",
+          "sh:description": {
+            "en": "A list of geographic coordinates that define the extent of the Geometry."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "coordinates"
+          },
+          "sh:path": "http://data.europa.eu/m8g/coordinates"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#GeometryShape/81e55300529fd60d92d5fdf443d58a5ace7cdac7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Geometry.geometrytype",
+          "sh:description": {
+            "en": "The classification of the Geometry."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "geometry type"
+          },
+          "sh:path": "http://data.europa.eu/m8g/geometryType"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#GeometryShape/acd4519f8a344a34ae7df55d8eda55e513235b44",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Geometry.geometrytype",
+          "sh:description": {
+            "en": "The classification of the Geometry."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "geometry type"
+          },
+          "sh:path": "http://data.europa.eu/m8g/geometryType"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#GeometryShape/c4c5a330094eed7f4bd65784d8d8dadd41db5b3f",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Geometry.latitude",
+          "sh:description": {
+            "en": "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "latitude"
+          },
+          "sh:path": "http://data.europa.eu/m8g/latitude"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#GeometryShape/ca5cb8f65688161c75fba16f6ca94e3bd5250c35",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Geometry.longitude",
+          "sh:description": {
+            "en": "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "longitude"
+          },
+          "sh:path": "http://data.europa.eu/m8g/longitude"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#GeometryShape/f60bfb563ce6b7e3e6e0da53601a109f44fa56e8",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Geometry.geometrytype",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The classification of the Geometry."
+          },
+          "sh:name": {
+            "en": "geometry type"
+          },
+          "sh:path": "http://data.europa.eu/m8g/geometryType"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/locn#Geometry"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/0e159f840ef049893a46a2425cfce1a80e06ece6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.isnotifiedby",
+          "sh:class": "http://data.europa.eu/m8g/PublicOrganisation",
+          "sh:description": {
+            "en": "It indicates the competent auhority notifying."
+          },
+          "sh:name": {
+            "en": "is notified by"
+          },
+          "sh:path": "https://w3id.org/str/isNotifiedBy"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/1572a063cf6e42858dabf5017baf40a96bf7155d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.familyname",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The hereditary surname of a family."
+          },
+          "sh:name": {
+            "en": "family name"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/familyName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/2d7ae974de8cf6bf9f79f4d5bd3e490544d0bd9a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.isreferredin",
+          "sh:class": "https://w3id.org/str/Order",
+          "sh:description": {
+            "en": "It indicates the Order in which the host is referred."
+          },
+          "sh:name": {
+            "en": "is referred in"
+          },
+          "sh:path": "https://w3id.org/str/isReferredIn"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/538e6f882ea8f8f56d0cfa8fd6a259a1d2072d6b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.offers",
+          "sh:class": "https://w3id.org/str/ShortTermAccomodationRentalService",
+          "sh:description": {
+            "en": "It indicates the rental service offered."
+          },
+          "sh:name": {
+            "en": "offers"
+          },
+          "sh:path": "https://w3id.org/str/offers"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/55b5451dbdf7a52f51562f996bc320d6e00bf47d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.domicile",
+          "sh:class": "http://www.w3.org/ns/locn#Address",
+          "sh:description": {
+            "en": "The place that the Person treats as permanent home."
+          },
+          "sh:name": {
+            "en": "domicile"
+          },
+          "sh:path": "http://data.europa.eu/m8g/domicile"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/578fe53d9dfe43a6910ddf42d990ee2d7e26e120",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.domicile",
+          "sh:description": {
+            "en": "The place that the Person treats as permanent home."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "domicile"
+          },
+          "sh:path": "http://data.europa.eu/m8g/domicile"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/5beb6d2bee0a07aad0d15fbfd5f9a85917beaebf",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.givenname",
+          "sh:description": {
+            "en": "The name(s) that identify the Person within a family with a common surname."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "given name"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/givenName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/61f072497c90b6f48b2efa7269eb306c26bb4757",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.givenname",
+          "sh:description": {
+            "en": "The name(s) that identify the Person within a family with a common surname."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "given name"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/givenName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/66aadf8f2f30ec822961e903241612a4a0f876d8",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.familyname",
+          "sh:description": {
+            "en": "The hereditary surname of a family."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "family name"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/familyName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/68dc6d1df6d91b2d33990e6db3c5af31b3d51de8",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.contactpoint",
+          "sh:description": {
+            "en": "The main contact information of the resource.\t"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://data.europa.eu/m8g/contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference to the Person."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/71b69bfe1f117f65960a52027da4905f447de695",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.provides",
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
+          "sh:description": {
+            "en": "It indicates the Evidence provided."
+          },
+          "sh:name": {
+            "en": "provides"
+          },
+          "sh:path": "https://w3id.org/str/provides"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.contactpoint",
+          "sh:class": "http://data.europa.eu/m8g/ContactPoint",
+          "sh:description": {
+            "en": "The main contact information of the resource.\t"
+          },
+          "sh:name": {
+            "en": "contact point"
+          },
+          "sh:path": "http://data.europa.eu/m8g/contactPoint"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/ab0e6b0fb6366e55bccc49a6801563c185f8a209",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.ispointofcontactfor",
+          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
+          "sh:description": {
+            "en": "The Single Digital Entry point for which the person acts as contact point for all matters related."
+          },
+          "sh:name": {
+            "en": "is point of contact for"
+          },
+          "sh:path": "https://w3id.org/str/isPointOfContactFor"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference to the Person."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/e09cd456fcf49bd50cfb019fe828ae733d4a0fd2",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.familyname",
+          "sh:description": {
+            "en": "The hereditary surname of a family."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "family name"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/familyName"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/e2017f72421063cd9ff494011ec78f35f9632a4a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.identifier",
+          "sh:class": "http://www.w3.org/ns/adms#identifier",
+          "sh:description": {
+            "en": "The unambiguous structured reference to the Person."
+          },
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/e36214901bf5fa28a83dfe0220a4e86b3dc6d3c2",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.ispointofcontactfor",
+          "sh:description": {
+            "en": "The Single Digital Entry point for which the person acts as contact point for all matters related."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is point of contact for"
+          },
+          "sh:path": "https://w3id.org/str/isPointOfContactFor"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#PersonShape/f888a185270cac3f6e32d6e1a22eb6a89d617ba8",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Person.givenname",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The name(s) that identify the Person within a family with a common surname."
+          },
+          "sh:name": {
+            "en": "given name"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/givenName"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/person#Person"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#DocumentShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Document"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#GroupShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://xmlns.com/foaf/0.1/Group"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#URLShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://schema.org/URL"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/0abcdba49f8d12b77739b38a2a574e78372940b7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.temporal",
+          "sh:description": {
+            "en": "It indicates the period of time associated."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "temporal"
+          },
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/29aa6e1be7c2c9073f050ca9a3ce2e6c2a958033",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.temporal",
+          "sh:class": "http://purl.org/dc/terms/PeriodOfTime",
+          "sh:description": {
+            "en": "It indicates the period of time associated."
+          },
+          "sh:name": {
+            "en": "temporal"
+          },
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/3a4c02661ce8324d5c49a14a15bcf5cef62004aa",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.numberofguests",
+          "sh:description": {
+            "en": "The number of guest that the unit was rented to per night."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "number of guests"
+          },
+          "sh:path": "https://w3id.org/str/numberOfGuests"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/6aa30c70cdf1269774f13637e328efc4a99b0f8f",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.numberofguests",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "sh:description": {
+            "en": "The number of guest that the unit was rented to per night."
+          },
+          "sh:name": {
+            "en": "number of guests"
+          },
+          "sh:path": "https://w3id.org/str/numberOfGuests"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/733a0398421d35cbce9fb5765feabf6299469337",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.temporal",
+          "sh:description": {
+            "en": "It indicates the period of time associated."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "temporal"
+          },
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/81cc0ae833ea6f13aaaa73620b37f37ec5c500b6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.isabout",
+          "sh:description": {
+            "en": "The Unit associated to the activity data."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "is about"
+          },
+          "sh:path": "https://w3id.org/str/isAbout"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/a721940e5ab24b4ac9001379bd382ce2e0cb567b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.countryoftheguests",
+          "sh:description": {
+            "en": "The country of residence of the guests."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "country of the guests"
+          },
+          "sh:path": "https://w3id.org/str/countryOfGuests"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/d0703210a0d648ab1aeb9031031cbf1d0205e807",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.countryoftheguests",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The country of residence of the guests."
+          },
+          "sh:name": {
+            "en": "country of the guests"
+          },
+          "sh:path": "https://w3id.org/str/countryOfGuests"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/d2543c857bf30cc4c53f6507bd59a3a5a4c1269e",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.numberofguests",
+          "sh:description": {
+            "en": "The number of guest that the unit was rented to per night."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "number of guests"
+          },
+          "sh:path": "https://w3id.org/str/numberOfGuests"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/dd5acd5f2a95b2d54489e871f39a1756b0157962",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.isabout",
+          "sh:description": {
+            "en": "The Unit associated to the activity data."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is about"
+          },
+          "sh:path": "https://w3id.org/str/isAbout"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ActivityDataShape/ef5e8b6c5a21c44b1ee5c98c4246fc32995a7e2c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ActivityData.isabout",
+          "sh:class": "https://w3id.org/str/Unit",
+          "sh:description": {
+            "en": "The Unit associated to the activity data."
+          },
+          "sh:name": {
+            "en": "is about"
+          },
+          "sh:path": "https://w3id.org/str/isAbout"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/str/ActivityData"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CoordinationGroupShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CoordinationGroupShape/5940c6557e0c9e80dde239449ccb3245e6e3d71b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#CoordinationGroup.member",
+          "sh:description": {
+            "en": "Indicates a member of a Group."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "member"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/member"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#CoordinationGroupShape/d875a34c2a5b0d03bcfe904f1f9b83872f37ed3b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#CoordinationGroup.member",
+          "sh:class": "http://www.w3.org/ns/person#Person",
+          "sh:description": {
+            "en": "Indicates a member of a Group."
+          },
+          "sh:name": {
+            "en": "member"
+          },
+          "sh:path": "http://xmlns.com/foaf/0.1/member"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/str/CoordinationGroup"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/236f0210baaf149903750c43bbe7012c21debb2a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.type",
+          "sh:description": {
+            "en": "The type of an Online Short Term Rental Platform."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/28e69099c556de06ed172f6febce3d8d3f83374e",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.requestsarea",
+          "sh:class": "http://www.w3.org/ns/locn#Geometry",
+          "sh:description": {
+            "en": "The area requested by the Online Short Term Rental Platform."
+          },
+          "sh:name": {
+            "en": "requests area"
+          },
+          "sh:path": "https://w3id.org/str/requestsArea"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The type of an Online Short Term Rental Platform."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/3e15e6e0c5511299358490526953a6ededc17a80",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.checks",
+          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
+          "sh:description": {
+            "en": "It indicates the Single Digital Entry Point being checked."
+          },
+          "sh:name": {
+            "en": "checks"
+          },
+          "sh:path": "https://w3id.org/str/checks"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/4d415636d98365e40342149d9f65b18fc2458ce2",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.publishes",
+          "sh:class": "http://www.w3.org/ns/dcat#Dataset",
+          "sh:description": {
+            "en": "It indicates the Dataset of listings published."
+          },
+          "sh:name": {
+            "en": "publishes"
+          },
+          "sh:path": "https://w3id.org/str/publishes"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/6bf751178e70dd5cf6a01ff95bb80b88d143ea87",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.publishes",
+          "sh:description": {
+            "en": "It indicates the Dataset of listings published."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "publishes"
+          },
+          "sh:path": "https://w3id.org/str/publishes"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.identifier",
+          "sh:description": {
+            "en": "An Identifier for the OnlineShortTermRentalPlatform"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/74feba662f4f65577bf45a8dd94f8faec0f03592",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.type",
+          "sh:description": {
+            "en": "The type of an Online Short Term Rental Platform."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/b6285f89dda6bd805366461b7512216d5c21b976",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.providesinformationto",
+          "sh:class": "https://w3id.org/str/SingleDigitalEntryPoint",
+          "sh:description": {
+            "en": "It indicates the Single Digital Entry Point receiving information."
+          },
+          "sh:name": {
+            "en": "provides information to"
+          },
+          "sh:path": "https://w3id.org/str/providesInformationTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OnlineShortTermRentalPlatformShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#OnlineShortTermRentalPlatform.identifier",
+          "sh:description": {
+            "en": "An Identifier for the OnlineShortTermRentalPlatform"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/str/OnlineShortTermRentalPlatform"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/0f790ab49df619643eac3389c633494bfbaf74d0",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.concerns",
+          "sh:description": {
+            "en": "It indicated the Registration Number concerned."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "concerns"
+          },
+          "sh:path": "https://w3id.org/str/concerns"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/0fa383047260f8432938e4f5aa14282db5376221",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.reason",
+          "sh:description": {
+            "en": "The statement indicating the reason of the Order."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "reason"
+          },
+          "sh:path": "https://w3id.org/str/reason"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/1c61fa1d29718c4e8813811b251890449cd4f23d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.concerns",
+          "sh:class": "https://w3id.org/str/RegistrationNumber",
+          "sh:description": {
+            "en": "It indicated the Registration Number concerned."
+          },
+          "sh:name": {
+            "en": "concerns"
+          },
+          "sh:path": "https://w3id.org/str/concerns"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/1f53ac638f602797a2c6f9a508ea32f75aab7093",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.sentto",
+          "sh:description": {
+            "en": "It indicates the receiver of the Order."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "sent to"
+          },
+          "sh:path": "https://w3id.org/str/sentTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/25ce12ba2eedf05462d49212e69df3250118f526",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.haslisting",
+          "sh:description": {
+            "en": "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has listing"
+          },
+          "sh:path": "https://w3id.org/str/hasListing"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/3a597ba103cfec924c0dcf0aad7777a76554a268",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.sentto",
+          "sh:class": "https://w3id.org/str/OnlineShortTermRentalPlatform",
+          "sh:description": {
+            "en": "It indicates the receiver of the Order."
+          },
+          "sh:name": {
+            "en": "sent to"
+          },
+          "sh:path": "https://w3id.org/str/sentTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/3f78d43549383b59be651bf7e3ccc6adc123e491",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.haslisting",
+          "sh:description": {
+            "en": "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has listing"
+          },
+          "sh:path": "https://w3id.org/str/hasListing"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/6c16de1b23a2324b79a66111d1ee2a7a1e84c597",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.reason",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The statement indicating the reason of the Order."
+          },
+          "sh:name": {
+            "en": "reason"
+          },
+          "sh:path": "https://w3id.org/str/reason"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/6c7c1bd2ab3b7761e5be759a078a9fd93f411a57",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.identifier",
+          "sh:description": {
+            "en": "An Identifier for the Order."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/7a6112ed05520b889083ad602edef6b4ae90e8f0",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.concerns",
+          "sh:description": {
+            "en": "It indicated the Registration Number concerned."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "concerns"
+          },
+          "sh:path": "https://w3id.org/str/concerns"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/c0d17764e84e711728581fda7356a51e99a9040a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.identifier",
+          "sh:description": {
+            "en": "An Identifier for the Order."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifier"
+          },
+          "sh:path": "http://purl.org/dc/terms/identifier"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/c7ecd93f60c48c9f633d07b58f076d10dc7c016c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.haslisting",
+          "sh:class": "https://w3id.org/str/Unit",
+          "sh:description": {
+            "en": "The reference to a unit offered for short-term accommodation rental services and published on an online short-term rental platforms website."
+          },
+          "sh:name": {
+            "en": "has listing"
+          },
+          "sh:path": "https://w3id.org/str/hasListing"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/d5bbe6d4a89fed58024f1fcf843523ceb45feee5",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.reason",
+          "sh:description": {
+            "en": "The statement indicating the reason of the Order."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "reason"
+          },
+          "sh:path": "https://w3id.org/str/reason"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#OrderShape/e98e308b7a2188aca75320dc2dff19d748a78f71",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Order.sentto",
+          "sh:description": {
+            "en": "It indicates the receiver of the Order."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "sent to"
+          },
+          "sh:path": "https://w3id.org/str/sentTo"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/str/Order"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/0abcdba49f8d12b77739b38a2a574e78372940b7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.temporal",
+          "sh:description": {
+            "en": "It indicates the period of time associated."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "temporal"
+          },
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/0f6cb927d0d26f3819cba3fb903a075cd426180d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.status",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "The status of the Asset in the context of a particular workflow process."
+          },
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/249a618d97b482025f1521943d524057731176c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.issuedate",
+          "sh:description": {
+            "en": "Date of formal issuance of the resource."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "issue date"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/29aa6e1be7c2c9073f050ca9a3ce2e6c2a958033",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.temporal",
+          "sh:class": "http://purl.org/dc/terms/PeriodOfTime",
+          "sh:description": {
+            "en": "It indicates the period of time associated."
+          },
+          "sh:name": {
+            "en": "temporal"
+          },
+          "sh:path": "http://purl.org/dc/terms/temporal"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.status",
+          "sh:description": {
+            "en": "The status of the Asset in the context of a particular workflow process."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/559dab14a90a8ddc0150dd1d09a443ecb37b90dd",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.status",
+          "sh:description": {
+            "en": "The status of the Asset in the context of a particular workflow process."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "status"
+          },
+          "sh:path": "http://www.w3.org/ns/adms#status"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/599cfcbb2b4e3ba9087895064d0d317f47f98c92",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.issuedate",
+          "sh:description": {
+            "en": "Date of formal issuance of the resource."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "issue date"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/7b58580d6ba4b19971bff315fc2642c01ff708aa",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.identifies",
+          "sh:description": {
+            "en": "The Unit identified by the Registration Number."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "identifies"
+          },
+          "sh:path": "https://w3id.org/str/identifies"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/92c625adec226bb66dd55def6f53b661050aed71",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.issuedate",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "en": "Date of formal issuance of the resource."
+          },
+          "sh:name": {
+            "en": "issue date"
+          },
+          "sh:path": "http://purl.org/dc/terms/issued"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/a3d3b83f183d8280701382025f8beda6c06befb3",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.identifies",
+          "sh:description": {
+            "en": "The Unit identified by the Registration Number."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "identifies"
+          },
+          "sh:path": "https://w3id.org/str/identifies"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationNumberShape/c623dd0ee9911f8266a229393e26001684e14eaf",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationNumber.identifies",
+          "sh:class": "https://w3id.org/str/Unit",
+          "sh:description": {
+            "en": "The Unit identified by the Registration Number."
+          },
+          "sh:name": {
+            "en": "identifies"
+          },
+          "sh:path": "https://w3id.org/str/identifies"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/str/RegistrationNumber"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationProcedureShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationProcedureShape/4a36eadba7fa9f0241d157ffef2d5015fa032f1d",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationProcedure.appliesto",
+          "sh:class": "http://www.w3.org/ns/locn#Geometry",
+          "sh:description": {
+            "en": "The area in which the registration procedure applies."
+          },
+          "sh:name": {
+            "en": "applies to"
+          },
+          "sh:path": "https://w3id.org/str/appliesTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationProcedureShape/75506c1584df621e8b8c58cbf90ddfe6220db0c1",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationProcedure.appliesto",
+          "sh:description": {
+            "en": "The area in which the registration procedure applies."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "applies to"
+          },
+          "sh:path": "https://w3id.org/str/appliesTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationProcedureShape/7b30a2f1323d719049e6047b06a8b969f7f14cf4",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationProcedure.hascost",
+          "sh:class": "http://data.europa.eu/m8g/Cost",
+          "sh:description": {
+            "en": "\tIt indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service."
+          },
+          "sh:name": {
+            "en": "has cost"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasCost"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#RegistrationProcedureShape/dcac78fd034c122633142a4b1bf85baeeb4dd584",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#RegistrationProcedure.appliesto",
+          "sh:description": {
+            "en": "The area in which the registration procedure applies."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "applies to"
+          },
+          "sh:path": "https://w3id.org/str/appliesTo"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/str/RegistrationProcedure"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ShortTermAccomodationRentalServiceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ShortTermAccomodationRentalServiceShape/01e5482bfac98ded83d336f448b64a8293650cd7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ShortTermAccomodationRentalService.providesaccessto",
+          "sh:class": "https://w3id.org/str/OnlineShortTermRentalPlatform",
+          "sh:description": {
+            "en": "It indicates the Online Short Term Rental Platform being accessed by the service."
+          },
+          "sh:name": {
+            "en": "provides access to"
+          },
+          "sh:path": "https://w3id.org/str/providesAccessTo"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#ShortTermAccomodationRentalServiceShape/4cd3a2dc8ec7bcbcca856dbd1efe0e6c3f9e9485",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#ShortTermAccomodationRentalService.providesaccessto",
+          "sh:description": {
+            "en": "It indicates the Online Short Term Rental Platform being accessed by the service."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "provides access to"
+          },
+          "sh:path": "https://w3id.org/str/providesAccessTo"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/str/ShortTermAccomodationRentalService"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#SingleDigitalEntryPointShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://w3id.org/str/SingleDigitalEntryPoint"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/0ce49fb97d596316baca7f55a091ceb00385e97c",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.isauthorizationobtained",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+          "sh:description": {
+            "en": "it indicates whether the host has obtained an authorisation for the Unit."
+          },
+          "sh:name": {
+            "en": "is authorization obtained"
+          },
+          "sh:path": "https://w3id.org/str/isAuthorizationObtained"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/12c9a7f8405aaa436e890397da9bca16d34e102a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.issubjecttoauthorization",
+          "sh:description": {
+            "en": "It indicates whether the Unit is subject to authorization."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is subject to authorization"
+          },
+          "sh:path": "https://w3id.org/str/isSubjectToAuthorization"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/184e142eab427c6c7e47283d042326282a61dfd1",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.purpose",
+          "sh:description": {
+            "en": "It indicates whether the unit is offered as a part or whole of the host's primary or secondary residence, or for other purposes."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "https://w3id.org/str/purpose"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/236f0210baaf149903750c43bbe7012c21debb2a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.type",
+          "sh:description": {
+            "en": "A classification of the unit."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/30c2de1b85595fb7b8ff738893031cf824165ba1",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.purpose",
+          "sh:description": {
+            "en": "It indicates whether the unit is offered as a part or whole of the host's primary or secondary residence, or for other purposes."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "https://w3id.org/str/purpose"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/322371a77364a50f049d46180f6192532eea26dc",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.type",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "en": "A classification of the unit."
+          },
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/362d1bf0eab8051024cf5ec1345eb1ce50762580",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.description",
+          "sh:description": {
+            "en": "An account of the resource."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/3ec87c43233a2d71be8fe9937319cfbff29cc5bd",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.numberofbedrooms",
+          "sh:description": {
+            "en": "The maximum number of available bed places."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "number of bedrooms"
+          },
+          "sh:path": "https://w3id.org/str/numberOfBedrooms"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/4fcd7e63e9610cb497f4953a2ca6d75712f31d3f",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.floorlevel",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "The level of the floor of the Unit as textual description."
+          },
+          "sh:name": {
+            "en": "floor level"
+          },
+          "sh:path": "https://w3id.org/str/floorLevel"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/53d180ae4c9433263fc38d0a7ce200289bcc91b3",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.hasunitaddress",
+          "sh:description": {
+            "en": "The specific address of the Unit."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has unit address"
+          },
+          "sh:path": "https://w3id.org/str/hasUnitAddress"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/53f7190678e85e0de9a2f418dd6db3f0d847bd31",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.occupancy",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "sh:description": {
+            "en": "The maximum number of guests that the unit accommodates."
+          },
+          "sh:name": {
+            "en": "occupancy"
+          },
+          "sh:path": "https://w3id.org/str/occupancy"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/5f54c788429b24cc8716ee5e0bf63522a49f95e6",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.url",
+          "sh:description": {
+            "en": "URL of the item."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "url"
+          },
+          "sh:path": "https://schema.org/URL"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/652baf9ce9c2a6ac8ffb513df060b75499e8148a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.floorlevel",
+          "sh:description": {
+            "en": "The level of the floor of the Unit as textual description."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "floor level"
+          },
+          "sh:path": "https://w3id.org/str/floorLevel"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/65edd2fc49d0d7e78bf5cabfaaa813725308a9c4",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.hasauthorization",
+          "sh:description": {
+            "en": "It indicated the document attesting the authorization."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "has authorization"
+          },
+          "sh:path": "https://w3id.org/str/hasAuthorization"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/6658fd8bec456983088457c514485a6c839cd056",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.numberofbedrooms",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "sh:description": {
+            "en": "The maximum number of available bed places."
+          },
+          "sh:name": {
+            "en": "number of bedrooms"
+          },
+          "sh:path": "https://w3id.org/str/numberOfBedrooms"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/6bb9c69c7d6569fccff76c410d1540010c5b07c7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.hasunitaddress",
+          "sh:description": {
+            "en": "The specific address of the Unit."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "has unit address"
+          },
+          "sh:path": "https://w3id.org/str/hasUnitAddress"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/74feba662f4f65577bf45a8dd94f8faec0f03592",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.type",
+          "sh:description": {
+            "en": "A classification of the unit."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/7a928e438d136a1ab39d0f9768bd3bf1017b405a",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.isofferedon",
+          "sh:class": "https://w3id.org/str/OnlineShortTermRentalPlatform",
+          "sh:description": {
+            "en": "The Online Short Term Rental Platform where the Unit is declared."
+          },
+          "sh:name": {
+            "en": "is offered on"
+          },
+          "sh:path": "https://w3id.org/str/isOfferedOn"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/7b1e8bc2a7da114c53a53f3ff7fb5a372ec28c25",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.issubjecttoauthorization",
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+          "sh:description": {
+            "en": "It indicates whether the Unit is subject to authorization."
+          },
+          "sh:name": {
+            "en": "is subject to authorization"
+          },
+          "sh:path": "https://w3id.org/str/isSubjectToAuthorization"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/8662a1e162ca0ebe52611bf26791584c89c3de70",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.purpose",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "It indicates whether the unit is offered as a part or whole of the host's primary or secondary residence, or for other purposes."
+          },
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "https://w3id.org/str/purpose"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/99a5581200a6990692abd7446ef78762a79ee8da",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.url",
+          "sh:class": "https://schema.org/URL",
+          "sh:description": {
+            "en": "URL of the item."
+          },
+          "sh:name": {
+            "en": "url"
+          },
+          "sh:path": "https://schema.org/URL"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/9b3612c89abb019f783fec2020641c8dcad8b320",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.occupancy",
+          "sh:description": {
+            "en": "The maximum number of guests that the unit accommodates."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "occupancy"
+          },
+          "sh:path": "https://w3id.org/str/occupancy"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/9fc8f49ed06ee6935fcbc6ff935df6485e3416e7",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.isauthorizationobtained",
+          "sh:description": {
+            "en": "it indicates whether the host has obtained an authorisation for the Unit."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is authorization obtained"
+          },
+          "sh:path": "https://w3id.org/str/isAuthorizationObtained"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/bb233272ce969ce614137a62d27506e28b5feee1",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.hasunitaddress",
+          "sh:class": "http://www.w3.org/ns/locn#Address",
+          "sh:description": {
+            "en": "The specific address of the Unit."
+          },
+          "sh:name": {
+            "en": "has unit address"
+          },
+          "sh:path": "https://w3id.org/str/hasUnitAddress"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/c0c453532d8bf22ffafb3d0aefa0a88e4f12348f",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.hasauthorization",
+          "sh:class": "http://xmlns.com/foaf/0.1/Document",
+          "sh:description": {
+            "en": "It indicated the document attesting the authorization."
+          },
+          "sh:name": {
+            "en": "has authorization"
+          },
+          "sh:path": "https://w3id.org/str/hasAuthorization"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.description",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "en": "An account of the resource."
+          },
+          "sh:name": {
+            "en": "description"
+          },
+          "sh:path": "http://purl.org/dc/terms/description"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/e5becd8a26ce63dce7f0c84e338a2ceef2611f83",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.numberofbedrooms",
+          "sh:description": {
+            "en": "The maximum number of available bed places."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "number of bedrooms"
+          },
+          "sh:path": "https://w3id.org/str/numberOfBedrooms"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/e763fbdcae0f8d423dba57b9f0f572a108520c5b",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.isofferedon",
+          "sh:description": {
+            "en": "The Online Short Term Rental Platform where the Unit is declared."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "is offered on"
+          },
+          "sh:path": "https://w3id.org/str/isOfferedOn"
+        },
+        {
+          "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#UnitShape/ef003961d29fc6f49d4064fde9cf146a04b2fa63",
+          "rdfs:seeAlso": "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.occupancy",
+          "sh:description": {
+            "en": "The maximum number of guests that the unit accommodates."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "en": "occupancy"
+          },
+          "sh:path": "https://w3id.org/str/occupancy"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/str/Unit"
+    },
+    {
+      "@id": "https://semiceu.github.io/STR-AP/releases/1.0.1/shacl/strap-SHACL.ttl#stringShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

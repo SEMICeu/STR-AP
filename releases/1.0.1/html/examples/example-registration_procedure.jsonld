@@ -1,0 +1,135 @@
+{
+  "@context": [
+  "https://semiceu.github.io/STR-AP/releases/1.0.0/context/strap.jsonld",
+   {
+    "adms": "http://www.w3.org/ns/adms#",
+    "cpsv": "http://purl.org/vocab/cpsv#",
+    "cv": "http://data.europa.eu/m8g/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "ex": "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "org": "http://www.w3.org/ns/org#",
+    "person": "http://www.w3.org/ns/person#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "str": "https://w3id.org/str/",
+    "time": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+   }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:registrationProcedure1",
+      "@type": "RegistrationProcedure",
+      "PublicRegistryService.identifier": "2015-01-28-09-00-00-123",
+      "PublicRegistryService.description": {
+        "@language": "en",
+        "@value": "Provision of registration number for Rene Magritte for shared house"
+      },
+      "PublicRegistryService.name": {
+        "@language": "en",
+        "@value": "Registration number service 123"
+      },
+      "PublicRegistryService.hasInput": {
+       "@id": "ex:evidence1"
+      },
+      "PublicRegistryService.produces": {
+       "@id": "ex:registrationNumber1"
+      },
+      "PublicRegistryService.hasCompetentAuthority": {
+       "@id": "ex:publicOrganisation1"
+      }
+    },
+    {
+      "@id": "ex:registrationNumber1",
+      "@type": "RegistrationNumber",
+      "Output.identifier": "2025-01-28_12345",
+      "Output.name": {
+        "@language": "en",
+        "@value": "Registration number 12345"
+      },
+      "RegistrationNumber.identifies": {
+       "@id": "ex:unit1"
+      },
+      "RegistrationNumber.issueDate": {
+        "@type": "xsd:dateTime",
+        "@value": "2024-01-28T12:00:00"
+      },
+      "RegistrationNumber.status": {
+        "@id": "ex:validStatus"
+      }
+    },
+    {
+      "@id": "ex:publicOrganisation1",
+      "@type": "PublicOrganisation",
+      "PublicOrganisation.preferredLabel": {
+        "@language": "en",
+        "@value": "Jette municipality"
+      },
+      "PublicOrganisation.address": {
+       "@id": "ex:address2"
+      }  
+    },
+    {
+      "@id": "ex:onlineSTRentalPlatform1",
+      "@type": "OnlineShortTermRentalPlatform",
+      "OnlineShortTermRentalPlatform.identifier" : "platform123",
+      "OnlineShortTermRentalPlatform.publishes": {
+       "@id": "ex:dataset1"
+     },
+      "dct:type": {
+       "@id": "ex:micro"
+     }
+    },
+    {
+      "@id": "ex:dataset1",
+      "@type": "Dataset",
+      "Dataset.datasetDistribution": {
+       "@id": "ex:distribution1"
+     }
+    },
+    {
+      "@id": "ex:distribution1",
+      "@type": "Distribution",
+      "Distribution.hasListing": {
+       "@id": "ex:unit1"
+     }
+    },
+    {
+      "@id": "ex:unit1",
+      "Unit.isOfferedOn": {
+        "@id": "ex:onlineSTRentalPlatform1"
+      }
+      "Unit.url": "http://example.com/unit/unit1" ;
+    },
+    {
+      "@id": "ex:STRentalservice1",
+      "@type": "ShortTermAccomodationRentalService",
+      "ShortTermAccomodationRentalService.providesAccessTo": {
+       "@id": "ex:onlineSTRentalPlatform1"
+     }
+    },
+    {
+      "@id": "ex:person1",
+      "@type": "Person",
+      "Person.offers": {
+       "@id": "ex:STRentalservice1"
+     }
+    },
+    {
+      "@id": "ex:address2",
+      "@type": "Address"
+    },
+    {
+      "@id": "ex:micro",
+      "@type": "Concept"
+    },
+    {
+      "@id": "ex:validStatus",
+      "@type": "Concept"
+    }
+  ]
+}
