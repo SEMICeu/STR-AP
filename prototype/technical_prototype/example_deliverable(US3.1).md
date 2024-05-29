@@ -121,6 +121,7 @@ Each record in this topic represents an entry of activity data submitted by an S
 {
   "status": "error",
   "message": "An unexpected error occurred."
+}
 ```
 
 
