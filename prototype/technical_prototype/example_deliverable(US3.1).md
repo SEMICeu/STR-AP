@@ -23,8 +23,9 @@ This document outlines the architecture and implementation details for sharing a
 ## 2.3 FLOW
 **1. Data Submission by STR Platforms:**
 - The STR platform sends a POST request to the SDEP endpoint /api/v0/str/activity-data with the activity data.
-- 
+  
 **2. Decompose data object**
+  
 **3. Data Validation:**
   
 Example Validation Checks:
