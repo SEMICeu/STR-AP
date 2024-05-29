@@ -52,7 +52,6 @@ Each record in this topic represents an entry of activity data submitted by an S
 - Authentication: Bearer Token (JWT)
   
 **Request Body:**
-To include the request body JSON in a Markdown code block for your README, you can use triple backticks (\```) to create a fenced code block. Here's how you can format the request body JSON in Markdown:
 
 ```json
 {
