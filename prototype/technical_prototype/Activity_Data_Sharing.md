@@ -20,6 +20,20 @@ This document outlines the architecture and implementation details for sharing a
 - Messaging: Kafka
 - Deployment: Kubernetes, HELM
 
++-------------------------+                  +-----------------------+                 +-------------------------+
+|       STR Platform      |                  |          SDEP         |                 |    Competent Authority  |
++-------------------------+                  +-----------------------+                 +-------------------------+
+|                         |                  |                       |                 |                         |
+| 1. POST /api/activity-data                 |                       |                 |                         |
+|    (Submit Activity Data) ---------------> |                       |                 |                         |
+|                         | 2. Decompose     |                       |                 |                         |
+|                         |   data object    |                       |                 |                         |
+|                         | 3. validation    | 4. Produce to Kafka   |                 |                         |
+|                         |    of body       |    Topic: `activity-  |                 |                         |
+|                         |                  |    data`              |                 |                         |
++-------------------------+                  +-----------------------+                 +-------------------------+
+
+
 ## 2.3 FLOW
 **1. Data Submission by STR Platforms:**
 - The STR platform sends a POST request to the SDEP endpoint /api/v0/str/activity-data with the activity data.
