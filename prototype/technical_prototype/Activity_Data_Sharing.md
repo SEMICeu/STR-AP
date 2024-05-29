@@ -20,19 +20,17 @@ This document outlines the architecture and implementation details for sharing a
 - Messaging: Kafka
 - Deployment: Kubernetes, HELM
 
-+-------------------------+                  +-----------------------+                 +-------------------------+  
-|       STR Platform      |                  |          SDEP         |                 |    Competent Authority  |  
-+-------------------------+                  +-----------------------+                 +-------------------------+  
-|                         |                  |                       |                 |                         |  
-| 1. POST /api/activity-data                 |                       |                 |                         |  
-|    (Submit Activity Data) ---------------> |                       |                 |                         |  
-|                         | 2. Decompose     |                       |                 |                         |  
-|                         |   data object    |                       |                 |                         |  
-|                         | 3. validation    | 4. Produce to Kafka   |                 |                         |  
-|                         |    of body       |    Topic: `activity-  |                 |                         |  
-|                         |                  |    data`              |                 |                         |  
-+-------------------------+                  +-----------------------+                 +-------------------------+  
 
+|       STR Platform      |                  |          SDEP         |                 |    Competent Authority  |
+|-------------------------|                  |-----------------------|                 |-------------------------|
+|                         |                  |                       |                 |                         |
+| 1. POST /api/activity-data                 |                       |                 |                         |
+|    (Submit Activity Data) ---------------> |                       |                 |                         |
+|                         | 2. Decompose     |                       |                 |                         |
+|                         |   data object    |                       |                 |                         |
+|                         | 3. validation    | 4. Produce to Kafka   |                 |                         |
+|                         |    of body       |    Topic: `activity-  |                 |                         |
+|                         |                  |    data`              |                 |                         |
 
 
 ## 2.3 FLOW
