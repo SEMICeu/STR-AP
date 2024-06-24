@@ -1,3 +1,10 @@
+# EU STR - Single Digital Entry Point
+Base URL: eu-str.sdep-pilot.eu/api/v0
+
+A gateway for teh electronic transmission of data between online short-term rental platforms and competent authorities, ensuring priority of development is: 1. listings, 2. orders, 3. activity, 4. area. 
+
+To obtain API credentials, please contact: wouter.travers@pwc.com via email. 
+
 ## Setup
 This notebook is a collection of `curl` commands that can be executed in the terminal to validate the API endpoints\.
 Besides `curl` also `jq` is used for formatting purposes\. 
