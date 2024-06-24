@@ -1,5 +1,6 @@
 # EU STR - Single Digital Entry Point
 Base URL: eu-str.sdep-pilot.eu/api/v0
+Swagger: https://eu-str.sdep-pilot.eu/swagger/index.html#/
 
 A gateway for teh electronic transmission of data between online short-term rental platforms and competent authorities, ensuring priority of development is: 1. listings, 2. orders, 3. activity, 4. area. 
 
