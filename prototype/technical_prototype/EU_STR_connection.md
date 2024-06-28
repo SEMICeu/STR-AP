@@ -3,7 +3,7 @@ Base URL: eu-str.sdep-pilot.eu/api/v0
 
 Swagger: https://eu-str.sdep-pilot.eu/swagger/index.html#/
 
-A gateway for teh electronic transmission of data between online short-term rental platforms and competent authorities, ensuring priority of development is: 1. listings, 2. orders, 3. activity, 4. area. 
+A gateway for teh electronic transmission of data between online short-term rental platforms and competent authorities, ensuring priority of development is: 1. listings, 2. activity data, 3. area. 
 
 To obtain API credentials, please contact: wouter.travers@pwc.com via email. 
 
