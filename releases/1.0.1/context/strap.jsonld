@@ -238,7 +238,6 @@
       "@type": "@id"
     },
     "hasListing": {
-      "@container": "@set",
       "@id": "https://w3id.org/str/hasListing",
       "@type": "@id"
     },
