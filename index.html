@@ -53,7 +53,7 @@
       edDraftURI: "https://semiceu.github.io/STR-AP/releases/1.0.1",
       latestVersion: "https://semiceu.github.io/STR-AP/releases/1.0.0/",
       specStatus: "LD",
-      publishDate: "2024-05-18",
+      publishDate: "2024-07-10",
       editors: myeditors,
       authors: myauthors,
       github: "SEMICeu/STR-AP",
@@ -210,7 +210,7 @@ This Application Profile specifies a semantic data model and it consists of term
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This Application Profile has the status Working Draft published at 2024-05-18.
+            This Application Profile has the status Working Draft published at 2024-07-10.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://github.com/SEMICeu/STR-AP/blob/master/releases/1.0.1/Changelog.md">Changelog</a>.
@@ -394,7 +394,8 @@ The main entities are those that form the core of the Core Vocabulary.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#ActivityData.countryoftheguests">country of the guests</a>
+                            For this entity the following properties are defined: <a href="#ActivityData.activityrecordID">activity record ID</a>
+                            , <a href="#ActivityData.countryoftheguests">country of the guests</a>
                             , <a href="#ActivityData.isabout">is about</a>
                             , <a href="#ActivityData.numberofguests">number of guests</a>
                             , <a href="#ActivityData.temporal">temporal</a>
@@ -437,6 +438,50 @@ The main entities are those that form the core of the Core Vocabulary.
                         </tr>
                     </thead>
                     <tbody class="supertype">
+                        
+                            <tr id="ActivityData.activityrecordID"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/activityRecordID"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20activity record ID%20in%20Activity Data&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.1%23ActivityData.activityrecordID" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/activityRecordID"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/activityRecordID"
+                                           data-placement="right">
+                                        activity record ID</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The record number that uniquely identifies the activity data
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+               -->
+                                <td>
+                                     <a href="#UserStory3.1">US 3.1</a> 
+                                </td>
+	
+                            </tr>
                         
                             <tr id="ActivityData.countryoftheguests"
                                 typeof="rdfs:Property"
@@ -1184,7 +1229,7 @@ In STR, a legal person acting as a "host", that provides, or intends to provide,
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     NOTE$ea_notes=<a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -1316,7 +1361,7 @@ In STR, a legal person acting as a "host", that provides, or intends to provide,
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     NOTE$ea_notes=<a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -1361,7 +1406,7 @@ A business might have more than one legal name, particularly in countries with m
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -1964,7 +2009,7 @@ A business might have more than one legal name, particularly in countries with m
                                     
                                 </td>
                                 <td>
-                                    1
+                                    0..1
                                 </td>
                                 <td property="rdfs:comment">
                                     It indicated the Registration Number concerned.
@@ -2302,7 +2347,7 @@ It can also be a person appointed as national coordinator for a Single Digital E
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     NOTE$ea_notes=<a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -2390,7 +2435,7 @@ It can also be a person appointed as national coordinator for a Single Digital E
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -2434,7 +2479,7 @@ It can also be a person appointed as national coordinator for a Single Digital E
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -2759,6 +2804,7 @@ This definition is consistent with the more detailed definition of a "public sec
                             , <a href="#PublicOrganisation.description">description</a>
                             , <a href="#PublicOrganisation.establishes">establishes</a>
                             , <a href="#PublicOrganisation.hasnationalcoordinator">has national coordinator</a>
+                            , <a href="#PublicOrganisation.identifier">identifier</a>
                             , <a href="#PublicOrganisation.issues">issues</a>
                             , <a href="#PublicOrganisation.preferredlabel">preferred label</a>
                             , <a href="#PublicOrganisation.purpose">purpose</a>
@@ -3055,6 +3101,50 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                                 <td property="skos:scopeNote">
                                     
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+               -->
+                                <td>
+                                    
+                                </td>
+	
+                            </tr>
+                        
+                            <tr id="PublicOrganisation.identifier"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/adms#identifier"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20identifier%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.1%23PublicOrganisation.identifier" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/adms#identifier"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/adms#identifier"
+                                           data-placement="right">
+                                        identifier</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Identifier" data-placement="right">Identifier</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    	The unambiguous structured reference for the Public Organization.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    Public organizations identifiers are often using (but not limited to) acronyms. For example, among the EU institutions, the ECB is the identifier for the <a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank</a>, OLAF for the <a href="https://anti-fraud.ec.europa.eu/index_en">European Anti-Fraud Office</a>, and so on. These are formally recognised by the European Commission which provides a <a href="https://ec.europa.eu/eurostat/ramon/cybernews/abbreviations.htm">list</a> of such acronyms.
                                 </td>
 				<!--
                                 <td>
@@ -3420,7 +3510,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory1.2">US 1.2</a>, <a href="#UserStory4.1">US 4.1</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory1.2">US 1.2</a> 
                                 </td>
 	
                             </tr>
@@ -3464,7 +3554,7 @@ This definition is consistent with the more detailed definition of a "public sec
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory1.2">US 1.2</a>, <a href="#UserStory4.1">US 4.1</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory1.2">US 1.2</a> 
                                 </td>
 	
                             </tr>
@@ -3914,6 +4004,7 @@ This definition is consistent with the more detailed definition of a "public sec
                         <dd>
                             For this entity the following properties are defined: <a href="#Unit.description">description</a>
                             , <a href="#Unit.floorlevel">floor level</a>
+                            , <a href="#Unit.geometry">geometry</a>
                             , <a href="#Unit.hasauthorization">has authorization</a>
                             , <a href="#Unit.hasunitaddress">has unit address</a>
                             , <a href="#Unit.isauthorizationobtained">is authorization obtained</a>
@@ -4048,6 +4139,50 @@ This definition is consistent with the more detailed definition of a "public sec
                -->
                                 <td>
                                      <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
+                                </td>
+	
+                            </tr>
+                        
+                            <tr id="Unit.geometry"
+                                typeof="rdfs:Property"
+                                resource="http://www.w3.org/ns/locn#geometry"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20geometry%20in%20Unit&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.1%23Unit.geometry" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/ns/locn#geometry"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/ns/locn#geometry"
+                                           data-placement="right">
+                                        geometry</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Geometry" data-placement="right">Geometry</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Associates any Resource with the corresponding Geometry.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+               -->
+                                <td>
+                                     NOTE$ea_notes=<a href="#UserStory3.2">US 3.2</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -5747,7 +5882,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -5791,7 +5926,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -6703,7 +6838,8 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Geometry.coordinates">coordinates</a>
+                            For this entity the following properties are defined: <a href="#Geometry.areaID">area ID</a>
+                            , <a href="#Geometry.coordinates">coordinates</a>
                             , <a href="#Geometry.geometrytype">geometry type</a>
                             , <a href="#Geometry.latitude">latitude</a>
                             , <a href="#Geometry.longitude">longitude</a>
@@ -6746,6 +6882,50 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                         </tr>
                     </thead>
                     <tbody class="supertype">
+                        
+                            <tr id="Geometry.areaID"
+                                typeof="rdfs:Property"
+                                resource="https://w3id.org/str/areaID"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/STR-AP/issues/new?title=Issue%20for%20area ID%20in%20Geometry&body=Explain%20your%20issue%20for%20https://semiceu.github.io/STR-AP/releases/1.0.1%23Geometry.areaID" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/str/areaID"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/str/areaID"
+                                           data-placement="right">
+                                        area ID</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Literal" data-placement="right">Literal</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The unique identifier of the area.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+               -->
+                                <td>
+                                     <a href="#UserStory3.2">US 3.2</a>, <a href="#UserStory4.1">US 4.1</a> 
+                                </td>
+	
+                            </tr>
                         
                             <tr id="Geometry.coordinates"
                                 typeof="rdfs:Property"
@@ -7094,7 +7274,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -7500,7 +7680,7 @@ The datatype of poBox is indicated as Literal (keeping backward compatibility wi
                                 </td>
                -->
                                 <td>
-                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory1.2">US 1.2</a> 
+                                     <a href="#UserStory1.1">US 1.1</a>, <a href="#UserStory1.2">US 1.2</a>, <a href="#UserStory4.1">US 4.1</a> 
                                 </td>
 	
                             </tr>
@@ -8694,6 +8874,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
 					
 						
 					
@@ -8703,6 +8885,18 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#ActivityData">Activity Data</a></td>
+								<td><div class="shorten">https://w3id.org/str/ActivityData</div></td>
+								<td></td>
+								<td><a href="#ActivityData.activityrecordID">activity record ID </a></td>
+								<td><div class="shorten">https://w3id.org/str/activityRecordID</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -9322,6 +9516,8 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
 					
 						
 					
@@ -9331,6 +9527,18 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Geometry">Geometry</a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#Geometry</div></td>
+								<td></td>
+								<td><a href="#Geometry.areaID">area ID </a></td>
+								<td><div class="shorten">https://w3id.org/str/areaID</div></td>
+							</tr>
+						
 					
 						
 							<tr>
@@ -10021,6 +10229,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -10100,6 +10312,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#PublicOrganisation.hasnationalcoordinator">has national coordinator </a></td>
 								<td><div class="shorten">https://w3id.org/str/hasNationalCoordinator</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#PublicOrganisation">Public Organisation</a></td>
+								<td><div class="shorten">http://data.europa.eu/m8g/PublicOrganisation</div></td>
+								<td></td>
+								<td><a href="#PublicOrganisation.identifier">identifier </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/adms#identifier</div></td>
 							</tr>
 						
 					
@@ -10407,6 +10629,10 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
 					
 						
 					
@@ -10450,6 +10676,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Unit.floorlevel">floor level </a></td>
 								<td><div class="shorten">https://w3id.org/str/floorLevel</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Unit">Unit</a></td>
+								<td><div class="shorten">https://w3id.org/str/Unit</div></td>
+								<td></td>
+								<td><a href="#Unit.geometry">geometry </a></td>
+								<td><div class="shorten">http://www.w3.org/ns/locn#geometry</div></td>
 							</tr>
 						
 					
