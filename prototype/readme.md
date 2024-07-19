@@ -71,7 +71,8 @@ Obtain OAuth Token: Follow the provided steps to get an access token for authent
 Test API Endpoints: Execute the curl commands to interact with the endpoints and validate the API functionality.
 Monitor Data Streams (Optional): If you have a Kafka deployment, use the provided commands to monitor data topics.
 
-## Link to notebook 
+[Link to notebook](https://github.com/SEMICeu/STR-AP/tree/main/prototype/1.%20Technical_%20EU%20STR%20-%20Code%20Single%20Digital%20Entry%20Point)
+
 
 # 2. Technical: EU STR - Infra Single Digital Entry Point**
 ## Purpose of This folder
@@ -89,7 +90,7 @@ To effectively use this notebook, you will need:
 ## How to Use This Notebook
 This folder  is a comprehensive guide for managing and deploying infrastructure and applications using Pulumi. It includes detailed instructions for configuring client credentials, setting up Kafka and AWS configurations, and deploying Helm Charts on an EKS cluster. The notebook covers the entire workflow, from building Docker images and updating Helm Charts to verifying deployments using kubectl. Additionally, it provides steps for bootstrapping an AWS account, including activating MFA and configuring IAM users and roles. 
 
-## Link to notebook
+[Link to notebook](https://github.com/SEMICeu/STR-AP/tree/main/prototype/2.%20Technical_%20EU%20STR%20-%20Infra%20Single%20Digital%20Entry%20Point)
 
 # 3. Testing
 ## Purpose of This folder
@@ -105,5 +106,10 @@ This folder includes resources to help you in testing the prototype.  It include
 - **Access to the Slide Deck**: For understanding the technical components of the prototype.
 - **Knowledge of API Endpoints**: Familiarity with the API endpoints.
 
-## Link to notebook
+[Link to notebook](https://github.com/SEMICeu/STR-AP/tree/main/prototype/3.%20Testing)
+
+# 4. Feedback 
+[Link to notebook](https://github.com/SEMICeu/STR-AP/tree/main/prototype/4.%20Feedback%20)
+
+
 
