@@ -1,0 +1,10 @@
+config:
+  aws:region: eu-west-1
+  project:domain: sdep-pilot.eu
+  project:domainHostedZoneId: Z01073105SAGDC764ISD
+  project:hostname: eu-str
+  project:name: eu-str-ap
+  project:namespace: str
+  project:nlbDnsName: aff96b68d9c20426d86c6ad5085fcdd2-909d7836c7796b7e.elb.eu-west-1.amazonaws.com
+  project:nlbHostedZoneId: Z2IFOLAFXWLO4F
+  project:vpcCidr: 10.30.0.0/21

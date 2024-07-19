@@ -1,0 +1,9 @@
+config:
+  aws:region: eu-west-1
+  project:domain: turpin.ch
+  project:domainHostedZoneId: Z01857511ZHXCOF620CLC
+  project:hostname: eu-str
+  project:name: eu-str-ap
+  project:nlbDnsName: aaa502d5c733a46948e320914f5eb6ee-057019931f384024.elb.eu-west-1.amazonaws.com
+  project:nlbHostedZoneId: Z2IFOLAFXWLO4F
+  project:vpcCidr: 10.30.0.0/21

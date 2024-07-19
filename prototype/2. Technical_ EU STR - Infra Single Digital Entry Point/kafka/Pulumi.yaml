@@ -1,0 +1,7 @@
+name: str-ap-infra-internal
+runtime: go
+description: str-ap (Short Term Rental Application Profile)
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go

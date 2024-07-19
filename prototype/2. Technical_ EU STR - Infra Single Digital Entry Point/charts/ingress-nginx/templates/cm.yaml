@@ -1,0 +1,18 @@
+apiVersion: v1
+data:
+  allow-snippet-annotations: "false"
+  proxy-real-ip-cidr: {{ .Values.configmap.proxyRealIpCidr | quote}}
+  use-proxy-protocol: "true"
+  use-forwarded-headers: "true"
+  compute-full-forwarded-for: "true"
+  real-ip-header: "X-Forwarded-For"
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: ingress-nginx
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+    app.kubernetes.io/version: 1.10.1
+  name: ingress-nginx-controller
+  namespace: ingress-nginx

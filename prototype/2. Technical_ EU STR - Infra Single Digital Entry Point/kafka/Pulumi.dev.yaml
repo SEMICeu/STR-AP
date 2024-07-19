@@ -1,0 +1,11 @@
+config:
+  aws:region: eu-west-1
+  confluentcloud:cloudApiKey: PIH3PYR5VBCKB5ZZ
+  confluentcloud:cloudApiSecret:
+    secure: AAABANDM+nxldQnaR3Z/1iyVvhAH1Mpjg+IkwoQkZwsbxVACQzpxxvJDjoZPH4BM9bjlAq8M2COFr7ouXFjrZjZMqgkI2B9Sc0NDwjbvjaL6bveMr7Q7M1PXGXwn7hfV
+  kafka:topics:
+    - listings
+    - activity-data
+  project:name: eu-str-ap
+  pulumi:tags:
+    pulumi:template: aws-go

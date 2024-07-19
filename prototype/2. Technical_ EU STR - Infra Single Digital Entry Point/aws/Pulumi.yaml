@@ -1,0 +1,7 @@
+name: str-ap-infra-internal-aws
+runtime: go
+description: AWS infra
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go
