@@ -1,0 +1,167 @@
+# Default values for str.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+
+env: |-
+  INTERNAL_PORT={{ .Values.service.port | quote}}
+  CERT_FILE="/etc/shared/tls.crt"
+  KEY_FILE="/etc/shared/tls.key"
+  SHAPE_DEST="/opt/shape-files"
+  AUTH0_DOMAIN={{ .Values.auth0.domain | quote }}
+  AUTH0_AUDIENCE={{ .Values.auth0.audience | quote }}
+  GIN_MODE="release"
+  BOOTSTRAP_SERVERS={{ .Values.kafka.boostrapServers | quote }}
+  SECURITY_PROTOCOL=SASL_SSL
+  SASL_MECHANISMS=PLAIN
+  SASL_USERNAME={{ .Values.kafka.username | quote }}
+  SASL_PASSWORD={{ .Values.kafka.password | quote }}
+  HOST={{ (index .Values.ingress.hosts 0).host }}  
+
+kafka:
+  boostrapServers: pkc-***:9092
+  username: "***"
+  password: "***"
+
+auth0:
+  domain: tt-dp-dev.eu.auth0.com
+  audience: https://str.eu
+
+tls:
+  crt: "***"
+  key: "***"
+  createSecret: true
+
+image:
+  repository: "ghcr.io/thierryturpin/str-ap-internal"
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+  # Used to compose the ImagePullSecrets
+  registry: ghcr.io
+  username: thierryturpin
+  password: ghp_***
+
+imagePullSecrets:
+  - name: str-ghcr
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext:
+  capabilities:
+    drop:
+      - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 1001
+
+service:
+  type: NodePort
+  port: 4443
+
+ingress:
+  enabled: true
+  className: "nginx"
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
+    nginx.ingress.kubernetes.io/forwarded-for-header: "X-Forwarded-For"
+  hosts:
+    - host: eu-str.sdep-pilot.eu
+      paths:
+        - path: "/"
+          pathType: Prefix
+
+efsStorage:
+  enabled: true
+  className: efs-sc
+  provisioner: efs.csi.aws.com
+  fileSystemId: fs-***
+
+localPath:
+  enabled: false
+  className: local-path
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+livenessProbe:
+  httpGet:
+    path: /api/v0/ping
+    port: http
+    scheme: HTTPS
+readinessProbe:
+  httpGet:
+    path: /api/v0/ping
+    port: http
+    scheme: HTTPS
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+# Additional volumes on the output Deployment definition.
+volumes:
+  - name: env-config
+    configMap:
+      name: str-env
+  - name: tls-secret
+    secret:
+      # if tls secrets are passed, they will create the secret: str-tls
+      # if another secret provisioning mechanism is used, like cert-manager, set the name of secret to be used
+      secretName: eu-str.sdep-pilot.eu
+  - name: shape-files
+    persistentVolumeClaim:
+      claimName: shape-files
+
+# Additional volumeMounts on the output Deployment definition.
+volumeMounts:
+  - name: env-config
+    mountPath: /opt/.env
+    subPath: .env
+  - name: tls-secret
+    mountPath: /etc/shared/tls.crt
+    subPath: tls.crt
+  - name: tls-secret
+    mountPath: /etc/shared/tls.key
+    subPath: tls.key
+  - name: shape-files
+    mountPath: /opt/shape-files
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

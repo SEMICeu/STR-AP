@@ -1,0 +1,350 @@
+basePath: /api/v0
+definitions:
+  handler.ActivityData:
+    properties:
+      data:
+        items:
+          $ref: '#/definitions/handler.GuestData'
+        type: array
+      metadata:
+        $ref: '#/definitions/handler.Metadata'
+    required:
+    - data
+    - metadata
+    type: object
+  handler.Address:
+    properties:
+      city:
+        example: Diegem
+        type: string
+      country:
+        example: BEL
+        type: string
+      postalCode:
+        example: "1831"
+        type: string
+      street:
+        example: Culliganlaan 5
+        type: string
+    type: object
+  handler.GuestData:
+    properties:
+      address:
+        $ref: '#/definitions/handler.Address'
+      areaId:
+        example: placeholder-area-id
+        type: string
+      countryOfGuests:
+        example:
+        - ITA
+        - NLD
+        items:
+          type: string
+        type: array
+      hostId:
+        example: placeholder-host-id
+        type: string
+      numberOfGuests:
+        example: 3
+        type: integer
+      temporal:
+        $ref: '#/definitions/handler.Temporal'
+      unitId:
+        example: placeholder-unit-id
+        type: string
+    required:
+    - unitId
+    type: object
+  handler.HTTPError:
+    properties:
+      code:
+        example: 400
+        type: integer
+      message:
+        example: status bad request
+        type: string
+    type: object
+  handler.ListingsData:
+    properties:
+      data:
+        items:
+          $ref: '#/definitions/handler.RegistrationData'
+        type: array
+      metadata:
+        $ref: '#/definitions/handler.Metadata'
+    required:
+    - data
+    - metadata
+    type: object
+  handler.Metadata:
+    properties:
+      additionalProp1:
+        type: object
+      platform:
+        example: booking.com
+        type: string
+      submissionDate:
+        example: "2024-07-21T17:32:28Z"
+        type: string
+    type: object
+  handler.RegistrationData:
+    properties:
+      Unit:
+        $ref: '#/definitions/handler.Unit'
+      registrationNumber:
+        type: string
+    type: object
+  handler.ShapefileMetadata:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      timestamp:
+        type: string
+    type: object
+  handler.Status:
+    properties:
+      status:
+        example: ok
+        type: string
+    type: object
+  handler.Temporal:
+    properties:
+      endDateTime:
+        example: "2024-07-25T17:32:28Z"
+        type: string
+      startDateTime:
+        example: "2024-07-21T17:32:28Z"
+        type: string
+    type: object
+  handler.Unit:
+    properties:
+      address:
+        $ref: '#/definitions/handler.Address'
+      description:
+        type: string
+      floorLevel:
+        type: string
+      numberOfRooms:
+        type: integer
+      obtainedAuth:
+        type: boolean
+      occupancy:
+        type: integer
+      purpose:
+        type: string
+      subjectToAuth:
+        type: boolean
+      type:
+        type: string
+      url:
+        type: string
+    type: object
+externalDocs:
+  description: STR Application Profile (STR-AP)
+  url: https://semiceu.github.io/STR-AP/releases/1.0.1/
+info:
+  contact:
+    email: wouter.travers@pwc.com
+    name: Wouter Travers
+  description: |-
+    A gateway for the electronic transmission of data between online short-term rental platforms and competent authorities, ensuring timely, reliable and efficient data sharing processes
+    Priority of development is: 1. listings, 2. orders, 3. activity, 4. area
+    <br>
+    To obtain API credentials, please contact: wouter.travers@pwc.com via e-mail
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: EU STR - Single Digital Entry Point
+paths:
+  /ca/activity-data:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve activity data submitted to the SDEP
+      parameters:
+      - description: limit number of records returned
+        in: query
+        maximum: 100
+        minimum: 1
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.Status'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Retrieve activity data submitted to the SDEP
+      tags:
+      - ca
+  /ca/listings:
+    get:
+      description: Retrieve listings submitted to the SDEP
+      parameters:
+      - description: limit number of records returned
+        in: query
+        maximum: 100
+        minimum: 1
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.ListingsData'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Retrieve listings submitted to the SDEP
+      tags:
+      - ca
+  /ping:
+    get:
+      description: ping test to check application health
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.Status'
+      summary: ping
+      tags:
+      - health
+  /str/activity-data:
+    post:
+      consumes:
+      - application/json
+      description: Submit activity data to the SDEP
+      parameters:
+      - description: json formatted ActivityData
+        in: body
+        name: ActivityData
+        required: true
+        schema:
+          $ref: '#/definitions/handler.ActivityData'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/handler.Status'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Submit activity data to the SDEP
+      tags:
+      - str
+  /str/area:
+    get:
+      description: Retrieve a list of available shapefiles.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.ShapefileMetadata'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Get a list of available shapefiles
+      tags:
+      - str
+    post:
+      consumes:
+      - multipart/form-data
+      description: Upload a new shapefile to the server.
+      parameters:
+      - description: Shapefile to upload
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses: {}
+      security:
+      - OAuth2AccessCode:
+        - write
+      summary: Upload a new shapefile
+      tags:
+      - ca
+  /str/area/{id}:
+    get:
+      description: Retrieve a shapefile by its ID and download it.
+      parameters:
+      - description: Shapefile ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/octet-stream
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: file
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Download a specific shapefile
+      tags:
+      - str
+  /str/listings:
+    post:
+      consumes:
+      - application/json
+      description: submit listing(s) to SDEP
+      parameters:
+      - description: json formatted ListingsData
+        in: body
+        name: ListingsData
+        required: true
+        schema:
+          $ref: '#/definitions/handler.ListingsData'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/handler.Status'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: submit listing(s) to SDEP
+      tags:
+      - str
+securityDefinitions:
+  OAuth2AccessCode:
+    authorizationUrl: https://tt-dp-dev.eu.auth0.com/authorize?audience=https://str.eu
+    flow: accessCode
+    scopes:
+      str: Grants read access
+    tokenUrl: https://tt-dp-dev.eu.auth0.com/oauth/token
+    type: oauth2
+swagger: "2.0"

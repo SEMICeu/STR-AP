@@ -1,0 +1,534 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "A gateway for the electronic transmission of data between online short-term rental platforms and competent authorities, ensuring timely, reliable and efficient data sharing processes\nPriority of development is: 1. listings, 2. orders, 3. activity, 4. area\n\u003cbr\u003e\nTo obtain API credentials, please contact: wouter.travers@pwc.com via e-mail",
+        "title": "EU STR - Single Digital Entry Point",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Wouter Travers",
+            "email": "wouter.travers@pwc.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/api/v0",
+    "paths": {
+        "/ca/activity-data": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Retrieve activity data submitted to the SDEP",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ca"
+                ],
+                "summary": "Retrieve activity data submitted to the SDEP",
+                "parameters": [
+                    {
+                        "maximum": 100,
+                        "minimum": 1,
+                        "type": "integer",
+                        "description": "limit number of records returned",
+                        "name": "limit",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.Status"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.HTTPError"
+                        }
+                    }
+                }
+            }
+        },
+        "/ca/listings": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Retrieve listings submitted to the SDEP",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ca"
+                ],
+                "summary": "Retrieve listings submitted to the SDEP",
+                "parameters": [
+                    {
+                        "maximum": 100,
+                        "minimum": 1,
+                        "type": "integer",
+                        "description": "limit number of records returned",
+                        "name": "limit",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.ListingsData"
+                        }
+                    }
+                }
+            }
+        },
+        "/ping": {
+            "get": {
+                "description": "ping test to check application health",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "health"
+                ],
+                "summary": "ping",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.Status"
+                        }
+                    }
+                }
+            }
+        },
+        "/str/activity-data": {
+            "post": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Submit activity data to the SDEP",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "str"
+                ],
+                "summary": "Submit activity data to the SDEP",
+                "parameters": [
+                    {
+                        "description": "json formatted ActivityData",
+                        "name": "ActivityData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/handler.ActivityData"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/handler.Status"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.HTTPError"
+                        }
+                    }
+                }
+            }
+        },
+        "/str/area": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Retrieve a list of available shapefiles.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "str"
+                ],
+                "summary": "Get a list of available shapefiles",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.ShapefileMetadata"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "write"
+                        ]
+                    }
+                ],
+                "description": "Upload a new shapefile to the server.",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ca"
+                ],
+                "summary": "Upload a new shapefile",
+                "parameters": [
+                    {
+                        "type": "file",
+                        "description": "Shapefile to upload",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/str/area/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Retrieve a shapefile by its ID and download it.",
+                "produces": [
+                    "application/octet-stream"
+                ],
+                "tags": [
+                    "str"
+                ],
+                "summary": "Download a specific shapefile",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Shapefile ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "file"
+                        }
+                    }
+                }
+            }
+        },
+        "/str/listings": {
+            "post": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "submit listing(s) to SDEP",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "str"
+                ],
+                "summary": "submit listing(s) to SDEP",
+                "parameters": [
+                    {
+                        "description": "json formatted ListingsData",
+                        "name": "ListingsData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/handler.ListingsData"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/handler.Status"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.HTTPError"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "handler.ActivityData": {
+            "type": "object",
+            "required": [
+                "data",
+                "metadata"
+            ],
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/handler.GuestData"
+                    }
+                },
+                "metadata": {
+                    "$ref": "#/definitions/handler.Metadata"
+                }
+            }
+        },
+        "handler.Address": {
+            "type": "object",
+            "properties": {
+                "city": {
+                    "type": "string",
+                    "example": "Diegem"
+                },
+                "country": {
+                    "type": "string",
+                    "example": "BEL"
+                },
+                "postalCode": {
+                    "type": "string",
+                    "example": "1831"
+                },
+                "street": {
+                    "type": "string",
+                    "example": "Culliganlaan 5"
+                }
+            }
+        },
+        "handler.GuestData": {
+            "type": "object",
+            "required": [
+                "unitId"
+            ],
+            "properties": {
+                "address": {
+                    "$ref": "#/definitions/handler.Address"
+                },
+                "areaId": {
+                    "type": "string",
+                    "example": "placeholder-area-id"
+                },
+                "countryOfGuests": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "ITA",
+                        "NLD"
+                    ]
+                },
+                "hostId": {
+                    "type": "string",
+                    "example": "placeholder-host-id"
+                },
+                "numberOfGuests": {
+                    "type": "integer",
+                    "example": 3
+                },
+                "temporal": {
+                    "$ref": "#/definitions/handler.Temporal"
+                },
+                "unitId": {
+                    "type": "string",
+                    "example": "placeholder-unit-id"
+                }
+            }
+        },
+        "handler.HTTPError": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "example": 400
+                },
+                "message": {
+                    "type": "string",
+                    "example": "status bad request"
+                }
+            }
+        },
+        "handler.ListingsData": {
+            "type": "object",
+            "required": [
+                "data",
+                "metadata"
+            ],
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/handler.RegistrationData"
+                    }
+                },
+                "metadata": {
+                    "$ref": "#/definitions/handler.Metadata"
+                }
+            }
+        },
+        "handler.Metadata": {
+            "type": "object",
+            "properties": {
+                "additionalProp1": {
+                    "type": "object"
+                },
+                "platform": {
+                    "type": "string",
+                    "example": "booking.com"
+                },
+                "submissionDate": {
+                    "type": "string",
+                    "example": "2024-07-21T17:32:28Z"
+                }
+            }
+        },
+        "handler.RegistrationData": {
+            "type": "object",
+            "properties": {
+                "Unit": {
+                    "$ref": "#/definitions/handler.Unit"
+                },
+                "registrationNumber": {
+                    "type": "string"
+                }
+            }
+        },
+        "handler.ShapefileMetadata": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "timestamp": {
+                    "type": "string"
+                }
+            }
+        },
+        "handler.Status": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "example": "ok"
+                }
+            }
+        },
+        "handler.Temporal": {
+            "type": "object",
+            "properties": {
+                "endDateTime": {
+                    "type": "string",
+                    "example": "2024-07-25T17:32:28Z"
+                },
+                "startDateTime": {
+                    "type": "string",
+                    "example": "2024-07-21T17:32:28Z"
+                }
+            }
+        },
+        "handler.Unit": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "$ref": "#/definitions/handler.Address"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "floorLevel": {
+                    "type": "string"
+                },
+                "numberOfRooms": {
+                    "type": "integer"
+                },
+                "obtainedAuth": {
+                    "type": "boolean"
+                },
+                "occupancy": {
+                    "type": "integer"
+                },
+                "purpose": {
+                    "type": "string"
+                },
+                "subjectToAuth": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "OAuth2AccessCode": {
+            "type": "oauth2",
+            "flow": "accessCode",
+            "authorizationUrl": "https://tt-dp-dev.eu.auth0.com/authorize?audience=https://str.eu",
+            "tokenUrl": "https://tt-dp-dev.eu.auth0.com/oauth/token",
+            "scopes": {
+                "str": "Grants read access"
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "STR Application Profile (STR-AP)",
+        "url": "https://semiceu.github.io/STR-AP/releases/1.0.1/"
+    }
+}
