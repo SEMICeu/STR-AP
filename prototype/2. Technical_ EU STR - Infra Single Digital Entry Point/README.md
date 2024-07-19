@@ -167,7 +167,7 @@ If the new version `v0.0.25` is ready to be deployed, update the version number 
 
 Commit and push this change.
 
-In this repository [infra-internal](https://github.com/SEMICeu/STR-AP/tree/main/prototype/2.%20Technical_%20EU%20STR%20-%20Infra%20Single%20Digital%20Entry%20Point)] a GitHub action is foreseen for Helm charts deployment.
+In this repository [infra-internal](https://github.com/SEMICeu/STR-AP/tree/main/prototype/2.%20Technical_%20EU%20STR%20-%20Infra%20Single%20Digital%20Entry%20Point) a GitHub action is foreseen for Helm charts deployment.
 This workflow needs to be triggered manually.
 
 ![pulumi-charts-run-workflow.png](img/pulumi-charts-run-workflow.png)
