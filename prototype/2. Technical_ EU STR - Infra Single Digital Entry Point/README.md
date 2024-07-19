@@ -18,8 +18,8 @@ kubectl describe deployment your-app -n your-namespace
 
 ```
 ```text
-Name:                   [your-deployment]  
-Namespace:              [your-namespace]  
+Name:                   str  
+Namespace:              str 
 CreationTimestamp:      [Mon, 17 Jun 2024 12:11:50 +0200]  
 Labels:                 app.kubernetes.io/instance=[your-deployment]  
                         app.kubernetes.io/managed-by=[Helm]  
@@ -38,7 +38,7 @@ Pod Template:
                     app.kubernetes.io/name=[your-deployment]  
                     app.kubernetes.io/version=[v0.0.24] (Latest version of the code)  
                     helm.sh/chart=[your-deployment-0.1.0]  
-  Service Account:  [your-service-account]  
+  Service Account:  str 
   Containers:  
    [your-container]:  
     Image:        ghcr.io/[your-org]/[your-repo]:[v0.0.24]  
@@ -69,7 +69,7 @@ pulumi stack output appApiSecret --show-secrets
 ## AWS configuration
 ### template
 # General config  
-pulumi config set aws: [choose region]  
+pulumi config set aws: [eu-west-1]  
 pulumi config set project:name [project name]  
 pulumi config set project:namespace [namespace]  
 pulumi config set project:vpcCidr [CIDR block e.g., "10.30.0.0/21"]  
@@ -108,8 +108,8 @@ pulumi config set tls:key $(base64 -i [your-path]/[your-key-file].pem) --secret
 pulumi config set tls:crt $(base64 -i [your-path]/[your-crt-file].pem) --secret  
   
 Reference to the local chart definition  
-pulumi config set chart:file [your-path]/[your-chart-directory]   
-pulumi config set values:file [your-path]/[your-values-file].yaml  
+pulumi config set chart:file https://github.com/SEMICeu/STR-AP/tree/main/prototype/1.%20Technical_%20EU%20STR%20-%20Code%20Single%20Digital%20Entry%20Point/str-ap-internal-0.0.28/str-ap-internal-0.0.28/chart/str
+pulumi config set values:file  https://github.com/SEMICeu/STR-AP/tree/main/prototype/1.%20Technical_%20EU%20STR%20-%20Code%20Single%20Digital%20Entry%20Point/str-ap-internal-0.0.28/str-ap-internal-0.0.28/values-pilo
   
 References for the app connection towards kafka  
 pulumi config set kafka:boostrapServers [your-kafka-servers]   
@@ -167,7 +167,7 @@ If the new version `v0.0.25` is ready to be deployed, update the version number 
 
 Commit and push this change.
 
-In this repository [https://github.com/your-org/your-repo-infra-internal] a GitHub action is foreseen for Helm charts deployment.
+In this repository [[https://github.com/your-org/your-repo-infra-internal](https://github.com/SEMICeu/STR-AP/tree/main/prototype/2.%20Technical_%20EU%20STR%20-%20Infra%20Single%20Digital%20Entry%20Point)] a GitHub action is foreseen for Helm charts deployment.
 This workflow needs to be triggered manually.
 
 ![pulumi-charts-run-workflow.png](img/pulumi-charts-run-workflow.png)
