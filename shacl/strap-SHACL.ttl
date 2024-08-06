@@ -2134,11 +2134,11 @@
   shacl:path dc:title .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.1#PublicServiceShape/53bd38e3d33ba488ee41d290d32c1df211accc84> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.produces";
-  shacl:class dcat:Resource,
-    <http://data.europa.eu/m8g/Output>;
-  shacl:description """This property defines the output of the service as a data resource available
-and managed by a Base Registry Service."""@en,
-    "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en;
+  shacl:class <http://data.europa.eu/m8g/Output>,
+    dcat:Resource;
+  shacl:description "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en,
+    """This property defines the output of the service as a data resource available
+and managed by a Base Registry Service."""@en;
   shacl:name "produces"@en;
   shacl:path <http://purl.org/vocab/cpsv#produces> .
 
@@ -2215,9 +2215,9 @@ and managed by a Base Registry Service."""@en,
   shacl:path dc:identifier .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.1#PublicServiceShape/c90e5c04bef13b3fd1b18723bae26a49b7b704c1> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.1#PublicRegistryService.produces";
-  shacl:description """This property defines the output of the service as a data resource available
-and managed by a Base Registry Service."""@en,
-    "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en;
+  shacl:description "It links a Public Service to one or more instances of the Output class, describing the actual result of executing a given Public Service."@en,
+    """This property defines the output of the service as a data resource available
+and managed by a Base Registry Service."""@en;
   shacl:name "produces"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://purl.org/vocab/cpsv#produces> .
@@ -2491,7 +2491,6 @@ and managed by a Base Registry Service."""@en,
     <https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/d4d4f2399b8cf2f615ac658920373b714726bed0>,
     <https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/dde6f1d3b53e457ed56cd01d51f110aea62f5d72>,
     <https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/e5becd8a26ce63dce7f0c84e338a2ceef2611f83>,
-    <https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/e763fbdcae0f8d423dba57b9f0f572a108520c5b>,
     <https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/ef003961d29fc6f49d4064fde9cf146a04b2fa63>,
     <https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/f544a89175bc344cf02b7d8c7cfe4ef86624a572>,
     <https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/f99a22d163e98475e81c1931fc5c74d12bcb2f69>;
@@ -2754,12 +2753,6 @@ and managed by a Base Registry Service."""@en,
   shacl:maxCount 1;
   shacl:name "number of bedrooms"@en;
   shacl:path <https://w3id.org/str/numberOfBedrooms> .
-
-<https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/e763fbdcae0f8d423dba57b9f0f572a108520c5b> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.isofferedon";
-  shacl:description "The Online Short Term Rental Platform where the Unit is declared."@en;
-  shacl:maxCount 1;
-  shacl:name "is offered on"@en;
-  shacl:path <https://w3id.org/str/isOfferedOn> .
 
 <https://semiceu.github.io/STR-AP/releases/1.0.1#UnitShape/ef003961d29fc6f49d4064fde9cf146a04b2fa63> rdfs:seeAlso "https://semiceu.github.io/STR-AP/releases/1.0.1#Unit.occupancy";
   shacl:description "The maximum number of guests that the unit accommodates."@en;
