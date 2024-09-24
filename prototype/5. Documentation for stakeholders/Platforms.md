@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="images/STRHeader.png" alt="STR framework">
+  <img src="images/Frontpage.png" alt="STR framework">
 </p>
 
 | <span style="background-color:#1c4fa4; color:white">Settings</span>  | Value |
