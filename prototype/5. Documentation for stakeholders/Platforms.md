@@ -81,7 +81,9 @@ The development of the Short-Term Rental (STR) prototype represents a significan
   
 To achieve these goals, the prototype is based on a set of best practices that were developed earlier, following the guidelines provided in the STR framework legal documents. The STR framework details several key steps that underpin the management of short-term rentals. The process begins with hosts registering their rental units with the appropriate Competent Authority (CA), which could be at the national, regional, or local level (Step 1a). Following registration, hosts are required to declare their registration number when listing their unit on the platform (Step 1b). Platforms then have the responsibility to regularly verify the validity of these registration numbers and declarations (Step 2) through the Single Digital Entry Point (SDEP) (Step 3). The SDEP also plays a crucial role in publicizing the list of areas where registration is required (Step 4), enabling platforms to perform effective compliance checks. Furthermore, platforms are obligated to submit activity data (Step 5) to the relevant CA in regions where registration is mandatory, utilizing the SDEP to facilitate this reporting process.  
   
-![Figure 1: STR Framework](#)  
+<p align="center">
+  <img src="images/figur1.png" alt="STR framework">
+</p> 
   
 While the framework establishes the regulatory groundwork, this report shifts focus towards the technical implementation of the functionality of the STR regulation and the developed recommendations. Specifically, this report covers the API endpoints and their usage, the underlying technical infrastructure, and the implementation steps that Member States can follow to deploy the prototype in their own environments. Additionally, it addresses best practices and security concerns that must be considered to ensure the system's effectiveness and integrity.  
   
@@ -97,19 +99,25 @@ The first user story describes the process for hosts to register their short-ter
   
 In this user story, the focus shifts to how STR platforms handle the listing process for rental units. When a host lists a unit, they must declare their registration number if the unit is located in an area requiring registration. STR platforms are responsible for performing random checks on the existence or not of a registration procedure and the validity of these registration numbers through the Single Digital Entry Point (SDEP). If any discrepancies or issues arise, they must be reported to the CA.  
   
-![Figure 2: Unit Listing](#)  
+<p align="center">
+  <img src="images/figure2.png" alt="STR framework">
+</p>  
   
 ### User Story 3.1: Collection and Transmission of Activity Data Sharing  
   
 This user story details how STR platforms are required to collect and transmit activity data (number of nights for which a unit is rented and the number of guests to whom the unit is rented per night along with the country of residence of each guest) together with the corresponding registration number as provided by the host, the specific address of the unit, and the URL of the listing with public authorities. STR platforms transmit this data via the SDEP using the endpoint `POST/activity-data`, where it is cross-referenced with the CA’s registry to ensure compliance with the regulation.  
   
-![Figure 3: Activity Data Sharing for Regional CAs](#)  
+<p align="center">
+  <img src="images/figure3.png" alt="STR framework">
+</p>  
   
 ### User Story 3.2: Area List Updates  
   
 This user story details how STR platforms can access and stay updated on geographical areas requiring registration and activity data reporting. This can be facilitated by the SDEP but is not mandatory. By using the `GET/area` and `GET/area[UL-ID]` endpoints, platforms can request the lists of areas where registration is mandatory and obtain the corresponding shapefiles. This ensures that platforms have the necessary information to ensure compliance with local regulations.  
   
-![Figure 4: Area List Updates](#)  
+<p align="center">
+  <img src="images/figure4.png" alt="STR framework">
+</p>  
   
 ### User Story 3.3: Dispatching Activity Data  
   
@@ -119,7 +127,9 @@ In this user story, the process of dispatching activity data to the appropriate 
   
 This user story covers the mechanism by which STR platforms share flagged listings with the relevant Competent Authority. While platforms are not obliged to use the SDEP, the SDEP can facilitate and simplify this process. When a platform flags a listing, it uses the SDEP and endpoint `POST/listings` to share this information. The system checks if the flagged listing falls within an area requiring registration, and if so, assigns the relevant Area ID. The Competent Authority can then retrieve flagged listings specific to their jurisdiction, ensuring effective oversight and enforcement. We recommend platforms to call this API on a monthly basis (e.g., every 15th of the month).  
   
-![Figure 5: Share Flagged Listings](#)  
+<p align="center">
+  <img src="images/figure5.png" alt="STR framework">
+</p>    
 
 # 4. API Endpoints and Usage
 
@@ -416,7 +426,11 @@ Integrating OAuth 2.0 with a RESTful API is a secure and effective way to manage
 # 5. Technical Infrastructure  
   
 The SDEP prototype system outlined herein is an architecture designed to ensure high availability, reliability, and security for user and server interactions. The following section provides a structured overview of the key components and their roles within the system, emphasizing the harmonized interplay between modern technologies to deliver an efficient, scalable, and secure service.  
-  
+
+<p align="center">
+  <img src="images/technical.png" alt="STR framework">
+</p>  
+
 ## User and Server Requests  
   
 - **User Requests:** Users access the system via a web interface using `https://.../swagger/`.  
