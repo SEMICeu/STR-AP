@@ -121,7 +121,6 @@ This user story covers the mechanism by which STR platforms share flagged listin
   
 ![Figure 5: Share Flagged Listings](#)  
 
-```markdown
 # 4. API Endpoints and Usage
 
 ## 4.1. Endpoint Specifications
@@ -303,8 +302,7 @@ The shapefiles retrieval endpoint is designed to provide platforms with access t
   "error": "An unexpected error occurred"
 }
 ```
-```
-```markdown
+
 #### Download List of Uploaded Shapefiles by Competent Authorities
 
 **Overview**
@@ -414,6 +412,69 @@ Integrating OAuth 2.0 with a RESTful API provides a secure way for platforms to 
 In the development of the SDEP, we have implemented several best practices to ensure the system's security, efficiency, and compliance with regulations. First, we have separated the authorization server from the resource server. This separation enhances both security and scalability by ensuring that the two functions are managed independently. Additionally, we utilize stateless access tokens in the form of JSON Web Tokens (JWT), which are self-contained and can be validated without the need to store session state, thereby increasing efficiency and reducing overhead.
 
 Integrating OAuth 2.0 with a RESTful API is a secure and effective way to manage the authorization of data transmissions. By using the Client Credentials Grant and adhering to security best practices, the SDEP can provide authorized access to its data while maintaining the confidentiality, integrity, and availability of the information exchanged.
-```
+
+# 5. Technical Infrastructure  
+  
+The SDEP prototype system outlined herein is an architecture designed to ensure high availability, reliability, and security for user and server interactions. The following section provides a structured overview of the key components and their roles within the system, emphasizing the harmonized interplay between modern technologies to deliver an efficient, scalable, and secure service.  
+  
+## User and Server Requests  
+  
+- **User Requests:** Users access the system via a web interface using `https://.../swagger/`.  
+- **Server Requests:** Servers make API calls directly using `https://.../api/v0/`.  
+  
+Both types of requests are directed to a Network Load Balancer (NLB) to manage incoming traffic.  
+  
+## Network Load Balancer (NLB)  
+  
+The NLB is a critical component that distributes incoming traffic across multiple availability zones. Its primary function is to balance the load between backend servers to prevent any single server from becoming overwhelmed. This distribution ensures high availability and reliability of the service, maintaining consistent performance and preventing potential bottlenecks.  
+  
+## Nginx Ingress Controller  
+  
+Once the traffic is managed by the NLB, it is forwarded to the Nginx Ingress Controller. This controller manages external access to the services within the Kubernetes (EKS) cluster. It performs multiple roles:  
+  
+- **Routing:** Directing requests to the appropriate services.  
+- **Load Balancing:** Further balancing the load to manage internal traffic efficiently.  
+- **Rate Limiting:** Enforcing limits on request rates to prevent overloading the system.  
+  
+## Kubernetes Service  
+  
+The Nginx Ingress Controller forwards requests to the designated Kubernetes Service. This service acts as a bridge between the external requests and internal Pods, translating user and server requests into actionable tasks for the internal infrastructure.  
+  
+## Deployment  
+  
+Within the Kubernetes environment, Deployments ensure that the desired number of Pod replicas are running and available to handle incoming requests. This mechanism guarantees scalability and resilience, adapting to varying loads by maintaining an optimal number of Pods.  
+  
+## Pods  
+  
+Pods are the smallest deployable units in Kubernetes, encapsulating application containers and their resources. They are managed by Deployments to ensure availability and scalability, responding to requests with efficiency.  
+  
+### Security  
+  
+- **Kubernetes Secrets:** Secrets are used to manage sensitive information such as API keys, passwords, and certificates. They provide secure storage and access control, ensuring that sensitive data is protected.  
+- **Let's Encrypt:** Let's Encrypt is utilized to obtain SSL/TLS certificates. These certificates secure communications between clients and services, ensuring data integrity and confidentiality.  
+  
+## Persistent Volume Claim (PVC)  
+  
+PVCs are used to request storage resources within the EKS cluster. They enable Pods to persist data beyond their lifecycle, ensuring data continuity and integrity even if Pods are destroyed and recreated.  
+  
+## Apache Kafka Integration  
+  
+In addition to the components outlined above, the SDEP prototype system integrates Apache Kafka to enhance data streaming and messaging capabilities. Kafka plays a crucial role in ensuring real-time data processing, fault tolerance, and scalability across the system.  
+  
+- **Real-Time Data Streaming:** Kafka acts as a high-throughput, low-latency platform for handling real-time data streams. It enables the system to process user and server requests as well as internal events in real-time, ensuring up-to-date information and quick responses.  
+- **Decoupling of Services:** By using Kafka, the system achieves a higher degree of decoupling between services. Different components can produce and consume messages independently, facilitating a more modular and maintainable architecture.  
+- **Fault Tolerance:** Kafka's distributed nature ensures fault tolerance and high availability. Data is replicated across multiple brokers, ensuring that even if one broker fails, the system can continue to operate without data loss.  
+- **Scalability:** Kafka's partitioning feature allows the system to scale horizontally by distributing the data load across multiple partitions. This ensures that the system can handle increasing loads efficiently.  
+- **Event Sourcing:** Kafka is used for event sourcing within the SDEP architecture. Each change in the system state is captured as an event and stored in Kafka. This enables a reliable audit trail and the ability to reconstruct the system state at any point in time.  
+  
+## Infrastructure Management  
+  
+- **Helm:** Helm is a package manager for Kubernetes, used to define, install, and upgrade complex Kubernetes applications. It automates deployment processes, ensuring consistency and reducing manual errors. Helm can also be seen as a kind of template engine, making it possible to provide configuration values and apply them on the template.  
+- **Pulumi:** Pulumi is an infrastructure as code tool that allows the definition of infrastructure using familiar programming languages. It is used to provision and manage infrastructure resources, bridging the gap between development and operations.  
+  
+The SDEP prototype presents a robust architecture leveraging modern technologies to ensure high availability, security, and scalability. From the initial request handling by the NLB to the secure management of sensitive data using Kubernetes Secrets and Let's Encrypt, each component plays a vital role in maintaining the integrity and performance of the system. The use of Helm and Pulumi further enhances the infrastructure management, providing automation and consistency in deployment and operations.  
+  
+This structured and formal architecture ensures that the system can efficiently handle varying loads, secure sensitive data, and maintain high availability.  
+
 
 
