@@ -476,5 +476,160 @@ The SDEP prototype presents a robust architecture leveraging modern technologies
   
 This structured and formal architecture ensures that the system can efficiently handle varying loads, secure sensitive data, and maintain high availability.  
 
+# 6.1. Via Terminal Commands
+
+## 6.1.1. Authentication
+
+First, authenticate via the Privatebin that has been shared via email. Be aware that this link expires after 7 days, so please store your credentials safely. If you have not received credentials yet, please contact [wouter.travers@pwc.com](mailto:wouter.travers@pwc.com) or [victor.vanhullebusch@pwc.com](mailto:victor.vanhullebusch@pwc.com).
+
+```bash
+CLIENT_ID=[Your-ID] \
+CLIENT_SECRET=[Your-Secret]
+```
+
+## 6.1.2. Get the OAUTH Token (from the /token endpoint)
+
+```bash
+# Compose the JSON string using jq
+DATA=$(jq -n \
+          --arg client_id "$CLIENT_ID" \
+          --arg client_secret "$CLIENT_SECRET" \
+          --arg audience "https://str.eu" \
+          --arg grant_type "client_credentials" \
+          '{client_id: $client_id, client_secret: $client_secret, audience: $audience, grant_type: $grant_type}')
+
+# Get the token          
+TOKEN=$(curl -s --request POST \
+  --url https://tt-dp-dev.eu.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data $DATA | jq -r .access_token )
+```
+
+## 6.1.3. Define the HOST
+
+```bash
+HOST=eu-str.sdep-pilot.eu
+```
+
+## 6.1.4. Health Check Endpoint Test (endpoint 1 for platforms)
+
+```bash
+curl -s https://$HOST/api/v0/ping | jq -r .
+```
+
+## 6.1.5. Submitting Activity Data Endpoint (endpoint 2 for platforms)
+
+```bash
+curl -s -X POST https://$HOST/api/v0/str/activity-data \
+--header "Authorization: Bearer $TOKEN" \
+--header "Content-Type: application/json" \
+--data '{
+  "data": [
+    {
+      "numberOfGuests": 10,
+      "countryOfGuests": [
+        "ITZ",
+        "NLD"
+      ],
+      "temporal": {
+        "startDateTime": "2024-07-21T17:32:28Z",
+        "endDateTime": "2024-07-25T17:32:28Z"
+      },
+      "address": {
+        "street": "123 Main St",
+        "city": "Brussels",
+        "postalCode": "1000",
+        "country": "BEL"
+      },
+      "hostId": "placeholder-host-id",
+      "unitId": "placeholder-unit-id",
+      "areaId": "placeholder-area-id"
+    },
+    {
+      "numberOfGuests": 2,
+      "countryOfGuests": [
+        "BEL"
+      ],
+      "temporal": {
+        "startDateTime": "2024-07-21T17:32:28Z",
+        "endDateTime": "2024-07-25T17:32:28Z"
+      },
+      "address": {
+        "street": "123 Main St",
+        "city": "Brussels",
+        "postalCode": "1000",
+        "country": "BEL"
+      },
+      "hostId": "placeholder-host-id",
+      "unitId": "placeholder-unit-id",
+      "areaId": "placeholder-area-id"
+    },
+    {
+      "numberOfGuests": 3,
+      "countryOfGuests": [
+        "BEL"
+      ],
+      "temporal": {
+        "startDateTime": "2024-07-21T17:32:28Z",
+        "endDateTime": "2024-07-25T17:32:28Z"
+      },
+      "address": {
+        "street": "123 Main St",
+        "city": "Brussels",
+        "postalCode": "1000",
+        "country": "BEL"
+      },
+      "hostId": "placeholder-host-id",
+      "unitId": "placeholder-unit-id",
+      "areaId": "placeholder-area-id"
+    }          
+  ],
+  "metadata": {
+    "platform": "placeholder-platform",
+    "submissionDate": "2024-07-21T17:32:28Z",
+    "additionalProp1": {}
+  }
+}
+' \
+| jq .
+```
+
+## 6.1.6. Download Shapefiles Uploaded by Competent Authorities (endpoint 3 for platforms)
+
+```bash
+curl -s https://$HOST/api/v0/str/area/[UL-ID] \
+--header "Authorization: Bearer $TOKEN" \
+-o downloaded_shape_file.zip
+```
+
+## 6.1.7. Download List of Uploaded Shapefiles by Competent Authorities (endpoint 4 for platforms)
+
+```bash
+curl -s https://$HOST/api/v0/str/area \
+--header "Authorization: Bearer $TOKEN" \
+| jq .
+```
+
+# 6.2. Via Postman
+
+To get started with testing the STR application using Postman, follow these steps:
+
+1. **Download and install Postman.**
+
+2. **Import the Collection from the Postman folder:**
+   - Open Postman and go to "File" > "Import".
+   - Select the collection JSON file to import from Github.
+
+3. **Import the Environment:**
+   - Go to "Manage Environments" (the gear icon in the top-right).
+   - Click "Import" and select the environment JSON file from Github.
+
+4. **Set Up Personal Credentials:**
+   - After importing the environment, go to "Manage Environments".
+   - Edit the imported environment and replace placeholder values with actual credentials.
+
+5. After importing the collection, please do not forget to add your personal environment by selecting it in the top right.
+
+By following these steps, you can set up and test the STR application efficiently using Postman.
 
 
