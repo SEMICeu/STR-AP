@@ -97,7 +97,7 @@ The STR prototype was developed based on a set of user stories that were collabo
 This user story outlines the process by which hosts must register their short-term rental units with the relevant Competent Authority (CA). Hosts are required to provide comprehensive details about their unit, including the address, type, and capacity, as well as personal information such as their name, identification number, and contact details. Upon completing the registration process, the CA issues a unique registration number that the host must declare when listing their unit on an STR platform.
 
 <p align="center">
-  <img src="images/host.png" alt="STR framework">
+  <img src="images/Host.png" alt="STR framework">
 </p>
 
 ### User Story 2: Unit Listing  
