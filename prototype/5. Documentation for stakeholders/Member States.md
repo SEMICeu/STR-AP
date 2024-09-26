@@ -137,7 +137,7 @@ In this user story, the focus is on how the Competent Authority (CA) retrieves a
 To obtain the activity data, the CA uses the GET/ActivityData endpoint. This endpoint allows the CA to filter and retrieve data records that have been assigned its CA-ID. By using the CA-ID as a filter, the system ensures that the CA receives only the activity data related to short-term rental units within its jurisdiction.
 
 <p align="center">
-  <img src="images/MS3.png" alt="STR framework">
+  <img src="images/MS4.png" alt="STR framework">
 </p>
 
 **Scenario A - MS with multiple CA’s: User Story 4: Share Flagged Listings**
@@ -149,7 +149,7 @@ To do this, the SDEP checks the address of the flagged listing against the shape
 At a later stage, the CA can retrieve all flagged listings within its area of responsibility by using the GET/Listings endpoint. By filtering listings based on the assigned AreaID, the CA ensures that it only accesses those listings that are relevant to its jurisdiction. This process allows the CA to focus its resources on monitoring and addressing compliance issues within its own region, ensuring effective enforcement of STR regulations. The use of the AreaID as a filter not only streamlines the retrieval process but also helps maintain the accuracy and relevance of the data accessed by the CA.
 
 <p align="center">
-  <img src="images/MS4.png" alt="STR framework">
+  <img src="images/MS5.png" alt="STR framework">
 </p>
 
 **Scenario B - Member States one National Competent Authority**
@@ -163,7 +163,7 @@ When STR platforms submit activity data through the Single Digital Entry Point (
 Without the need for CA-ID filtering, the GET/ActivityData endpoint ensures that the national CA receives complete and relevant data for all STR units within the country. 
 
 <p align="center">
-  <img src="images/MS5.png" alt="STR framework">
+  <img src="images/MS6.png" alt="STR framework">
 </p>
 
 **Scenario B - MS with one National CA: User Story 3.2: Area List Updates**
@@ -180,7 +180,7 @@ This user story describes how the national Competent Authority (CA) handles flag
 All flagged listings are directly sent to the national CA. The GET/Listings endpoint is used to retrieve all flagged listings submitted through the Single Digital Entry Point (SDEP). This streamlined process ensures that the CA receives and manages all relevant flagged listings without additional geographical filtering.
 
 <p align="center">
-  <img src="images/MS6.png" alt="STR framework">
+  <img src="images/MS7.png" alt="STR framework">
 </p>
 
 
