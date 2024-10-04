@@ -142,11 +142,9 @@ To obtain the activity data, the CA uses the GET/ActivityData endpoint. This end
 
 **Scenario A - MS with multiple CA’s: User Story 4: Share Flagged Listings**
 
-In this user story, the Competent Authority (CA) is responsible for managing flagged listings within its jurisdiction. When an STR platform flags a listing, the CA must determine whether the listing falls within its regulated area.
+In this user story, the Competent Authority (CA) is responsible for managing flagged listings within its jurisdiction.
 
-To do this, the SDEP checks the address of the flagged listing against the shapefiles previously uploaded by the CA. If the listing's address is located within the boundaries of the CA's shapefile, the system assigns the corresponding AreaID to that listing. This AreaID links the flagged listing to the specific jurisdiction of the CA.
-
-At a later stage, the CA can retrieve all flagged listings within its area of responsibility by using the GET/Listings endpoint. By filtering listings based on the assigned AreaID, the CA ensures that it only accesses those listings that are relevant to its jurisdiction. This process allows the CA to focus its resources on monitoring and addressing compliance issues within its own region, ensuring effective enforcement of STR regulations. The use of the AreaID as a filter not only streamlines the retrieval process but also helps maintain the accuracy and relevance of the data accessed by the CA.
+The CA can retrieve all flagged listings within its area of responsibility by using the GET/Listings endpoint. By filtering listings based on the assigned AreaID, the CA ensures that it only accesses those listings that are relevant to its jurisdiction. This process allows the CA to focus its resources on monitoring and addressing compliance issues within its own region, ensuring effective enforcement of STR regulations. The use of the AreaID as a filter not only streamlines the retrieval process but also helps maintain the accuracy and relevance of the data accessed by the CA.
 
 <p align="center">
   <img src="images/MS5.png" alt="STR framework">
