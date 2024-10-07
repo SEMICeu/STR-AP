@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "297b50c8-6432-488e-95af-9902d6666965",
+		"name": "STR API validation",
+		"description": "# EU STR - Single Digital Entry Point\n\nBase URL: eu-str.sdep-pilot.eu/api/v0\n\nSwagger: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)\n\nA gateway for teh electronic transmission of data between online short-term rental platforms and competent authorities, ensuring priority of development is: 1. listings, 2. activity data, 3. area.\n\nTo obtain API credentials, please contact: [wouter.travers@pwc.com](https://mailto:wouter.travers@pwc.com) via email.\n\n## Setup\n\nThis notebook is a collection of `curl` commands that can be executed in the terminal to validate the API endpoints.  \nBesides `curl` also `jq` is used for formatting purposes.\n\n### client credentials\n\nThe `bw` command is the Bitwarden password manager CLI command.  \nReplace the CLIENT_ID value, with your personal CLIENT_ID. And provison your CLIENT_SECRET\n\n``` warp-runnable-command\nCLIENT_ID=plQ8P4mNxEoKFLY0NnYvfkO1Ak9HozjG \\\nCLIENT_SECRET=$(bw get password plQ8P4mNxEoKFLY0NnYvfkO1Ak9HozjG)\n\n ```\n\nThe client SECRET can also be captured via CLI read:\n\n``` warp-runnable-command\nread CLIENT_SECRET\n\n ```\n\nGet an OAUTH token ( from the `/token` endpoint)\n\n``` warp-runnable-command\n# Compose the JSON string using jq\nDATA=$(jq -n \\\n          --arg client_id \"$CLIENT_ID\" \\\n          --arg client_secret \"$CLIENT_SECRET\" \\\n          --arg audience \"https://str.eu\" \\\n          --arg grant_type \"client_credentials\" \\\n          '{client_id: $client_id, client_secret: $client_secret, audience: $audience, grant_type: $grant_type}')\n# Get the token          \nTOKEN=$(curl -s --request POST \\\n  --url https://tt-dp-dev.eu.auth0.com/oauth/token \\\n  --header 'content-type: application/json' \\\n  --data $DATA | jq -r .access_token )\n\n ```\n\n### API host\n\n``` warp-runnable-command\nHOST=eu-str.sdep-pilot.eu\n\n ```\n\n## Test API\n\n### Unauthenticated health endpoint\n\n``` warp-runnable-command\ncurl -s https://$HOST/api/v0/ping | jq -r .\n\n ```\n\nThis should return:\n\n``` json\n{\n  \"status\": \"ok\"\n}\n\n ```\n\n## Activity data\n\n### Submit of activity data\n\nMultiple records can be posted at ounce, but will be stored as individual records.  \nFor demo purposes, we can set an invalid country code.\n\n``` warp-runnable-command\ncurl -s -X POST https://$HOST/api/v0/str/activity-data \\\n--header \"Authorization: Bearer $TOKEN\" \\\n--header \"Content-Type: application/json\" \\\n--data '{\n  \"data\": [\n    {\n      \"numberOfGuests\": 10,\n      \"countryOfGuests\": [\n        \"ITZ\",\n        \"NLD\"\n      ],\n      \"temporal\": {\n        \"startDateTime\": \"2024-07-21T17:32:28Z\",\n        \"endDateTime\": \"2024-07-25T17:32:28Z\"\n      },\n      \"address\": {\n        \"street\": \"123 Main St\",\n        \"city\": \"Brussels\",\n        \"postalCode\": \"1000\",\n        \"country\": \"BEL\"\n      },\n      \"hostId\": \"placeholder-host-id\",\n      \"unitId\": \"placeholder-unit-id\",\n      \"areaId\": \"placeholder-area-id\"\n    },\n    {\n      \"numberOfGuests\": 2,\n      \"countryOfGuests\": [\n        \"BEL\"\n      ],\n      \"temporal\": {\n        \"startDateTime\": \"2024-07-21T17:32:28Z\",\n        \"endDateTime\": \"2024-07-25T17:32:28Z\"\n      },\n      \"address\": {\n        \"street\": \"123 Main St\",\n        \"city\": \"Brussels\",\n        \"postalCode\": \"1000\",\n        \"country\": \"BEL\"\n      },\n      \"hostId\": \"placeholder-host-id\",\n      \"unitId\": \"placeholder-unit-id\",\n      \"areaId\": \"placeholder-area-id\"\n    },\n    {\n      \"numberOfGuests\": 3,\n      \"countryOfGuests\": [\n        \"BEL\"\n      ],\n      \"temporal\": {\n        \"startDateTime\": \"2024-07-21T17:32:28Z\",\n        \"endDateTime\": \"2024-07-25T17:32:28Z\"\n      },\n      \"address\": {\n        \"street\": \"123 Main St\",\n        \"city\": \"Brussels\",\n        \"postalCode\": \"1000\",\n        \"country\": \"BEL\"\n      },\n      \"hostId\": \"placeholder-host-id\",\n      \"unitId\": \"placeholder-unit-id\",\n      \"areaId\": \"placeholder-area-id\"\n    }          \n  ],\n  \"metadata\": {\n    \"platform\": \"booking.com\",\n    \"submissionDate\": \"2024-07-21T17:32:28Z\",\n    \"additionalProp1\": {}\n  }\n}\n' \\\n| jq .\n\n ```\n\nData has been pushed to the Kafka topic: `activity-data`\n\n### Only for demonstration purposes, and if you have an own deployment\n\nWe can use `kcat` to list kafka topics and kafka topics content\n\n``` warp-runnable-command\nkcat -L\n\n ```\n\n``` warp-runnable-command\nkcat -C -t activity-data -c 20 -f 'Headers: %h || Message value: %s\\n'\n\n ```\n\nConfluent Kafka also allows to views data in the topics: [https://confluent.cloud/environments/env-d19ry/clusters/lkc-1dm6dj/topics/activity-data/message-viewer](https://confluent.cloud/environments/env-d19ry/clusters/lkc-1dm6dj/topics/activity-data/message-viewer)  \nNote also the header data contains the OAUTH2 app name.\n\n### Retrieve activity data submitted to the SDEP\n\n``` warp-runnable-command\ncurl -s https://$HOST/api/v0/ca/activity-data \\\n--header \"Authorization: Bearer $TOKEN\" \\\n| jq .\n\n ```\n\nNote each consumer has it's offset and will only get \"new\" published data.\n\n## Listings\n\n### Submit of listings data\n\n``` warp-runnable-command\ncurl -s -X POST https://$HOST/api/v0/str/listings \\\n--header \"Authorization: Bearer $TOKEN\" \\\n--header \"Content-Type: application/json\" \\\n--data '\n{\n  \"data\": [\n    {\n      \"registrationNumber\": \"1234\",\n      \"Unit\": {\n        \"description\": \"string\",\n        \"floorLevel\": \"string\",\n        \"address\": {\n          \"street\": \"Culliganlaan 5\",\n          \"city\": \"Diegem\",\n          \"postalCode\": \"1831\",\n          \"country\": \"BEL\"\n        },\n        \"obtainedAuth\": true,\n        \"subjectToAuth\": true,\n        \"numberOfRooms\": 0,\n        \"occupancy\": 0,\n        \"purpose\": \"string\",\n        \"type\": \"string\",\n        \"url\": \"STR-Platform.com/1234\"\n      }\n    }\n  ],\n  \"metadata\": {\n    \"platform\": \"STR-Platform\"\n  }\n}\n'\\\n| jq .\n\n ```\n\n### Only for demonstration purposes, and if you have an own deployment\n\nConsuming data from the kafka topic `listings`\n\n``` warp-runnable-command\nkcat -C -t listings -c 20 -f 'Headers: %h || Message value: %s\\n'\n\n ```\n\n### Retrieving listing data\n\nThe limit parameter is optional.  \nThis data retrieval is also incremental and will only return \"new\" data.\n\n``` warp-runnable-command\ncurl -s https://$HOST/api/v0/ca/listings \\\n--header \"Authorization: Bearer $TOKEN\" \\\n| jq .\n\n ```\n\n## Area\n\n### Shape file upload\n\n``` warp-runnable-command\ncurl -s -X POST https://$HOST/api/v0/ca/area \\\n--header \"Authorization: Bearer $TOKEN\" \\\n-F \"file=@/Users/thierryturpin/GolandProjects/str-ap-internal/BELGIUM_-_Regions.shp\"\n\n ```\n\n### List shape files\n\n``` warp-runnable-command\ncurl -s https://$HOST/api/v0/str/area \\\n--header \"Authorization: Bearer $TOKEN\" \\\n| jq .\n\n ```\n\n### Download of a shape file\n\nSet the ID returned by the previous command\n\n``` warp-runnable-command\ncurl -s https://$HOST/api/v0/str/area/01J0R0GC700000000000000000 \\\n--header \"Authorization: Bearer $TOKEN\" \\\n-o downloaded_shape_file.shp\n\n ```\n\nVerify the downloaded file\n\n``` warp-runnable-command\nfile downloaded_shape_file.shp\n\n ```\n\n### Verify SSL certificate\n\nOnly relevant for own deployments:\n\n``` warp-runnable-command\nexport SERVER_NAME=$HOST\nexport PORT=443 \nopenssl s_client -servername $SERVER_NAME -connect $SERVER_NAME:$PORT | openssl x509 -noout -dates\n\n ```",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36861527"
+	},
+	"item": [
+		{
+			"name": "Healthcheckendpoint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json.",
+						"description": "Health Check Request",
+						"type": "text"
+					}
+				],
+				"url": "https://eu-str.sdep-pilot.eu/api/v0/ping"
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitActivityData",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const tokenExpiry = pm.environment.get(\"token_expiry\");  \r",
+							"const currentTime = Math.floor(Date.now() / 1000); // Current time in seconds  \r",
+							"  \r",
+							"if (tokenExpiry) {  \r",
+							"    const timeLeft = tokenExpiry - currentTime;  \r",
+							"    console.log(`Token is valid for another ${timeLeft} seconds.`);  \r",
+							"      \r",
+							"    if (timeLeft <= 0) {  \r",
+							"        console.log(\"Token has expired. Please refresh the token.\");  \r",
+							"    }  \r",
+							"} else {  \r",
+							"    console.log(\"Token expiry time is not set.\");  \r",
+							"}  \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": [\r\n    {\r\n    \"competentAuthorityId_validated\": \"string\",\r\n    \"competentAuthorityName_validated\": \"string\",\r\n    \"data\": {\r\n      \"URL\": \"placeholder-URL\",\r\n      \"address\": {\r\n        \"city\": \"Diegem\",\r\n        \"country\": \"BEL\",\r\n        \"postalCode\": \"1831\",\r\n        \"street\": \"Culliganlaan 5\"\r\n      },\r\n      \"competentAuthorityId_area\": \"competentAuthorityId_area\",\r\n      \"competentAuthorityName_area\": \"competentAuthorityName_area\",\r\n      \"countryOfGuests\": [\r\n        \"ITA\",\r\n        \"NLD\"\r\n      ],\r\n      \"hostId\": \"placeholder-host-id\",\r\n      \"numberOfGuests\": 3,\r\n      \"registrationNumber\": \"placeholder-registrationNumber\",\r\n      \"temporal\": {\r\n        \"endDateTime\": \"2024-07-25T17:32:28Z\",\r\n        \"startDateTime\": \"2024-07-21T17:32:28Z\"\r\n      }\r\n    },\r\n    \"metadata\": {\r\n      \"additionalProp1\": {},\r\n      \"platform\": \"booking.com\",\r\n      \"submissionDate\": \"2024-07-21T17:32:28Z\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://eu-str.sdep-pilot.eu/api/v0/str/activity-data"
+			},
+			"response": []
+		},
+		{
+			"name": "GetActivityData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://eu-str.sdep-pilot.eu/api/v0/ca/activity-data",
+					"protocol": "https",
+					"host": [
+						"eu-str",
+						"sdep-pilot",
+						"eu"
+					],
+					"path": [
+						"api",
+						"v0",
+						"ca",
+						"activity-data"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShapefileUpload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Shapefile_Belgium",
+							"type": "file",
+							"src": "/C:/Users/vvanhulleb002/Documents/STR/shapefile/BELGIUM_-_Regions.shp"
+						},
+						{
+							"key": "competentAuthorityId",
+							"value": "competentAuthorityId",
+							"type": "text"
+						},
+						{
+							"key": "competentAuthorityName",
+							"value": "competentAuthorityName",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://eu-str.sdep-pilot.eu/api/v0/ca/area"
+			},
+			"response": []
+		},
+		{
+			"name": "ListShapefiles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://eu-str.sdep-pilot.eu/api/v0/str/area"
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadShapefile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/zip",
+						"type": "text"
+					},
+					{
+						"key": "Content-Disposition",
+						"value": "attachment; filename=\"area.zip\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "https://eu-str.sdep-pilot.eu/api/v0/str/area/01J3077PXYAPT2RMFY65KWSHWY"
+			},
+			"response": []
+		},
+		{
+			"name": "Listings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": [\r\n    {\r\n      \"registrationNumber\": \"NL-DH-001\",\r\n      \"Unit\": {\r\n        \"description\": \"string\",\r\n        \"floorLevel\": \"string\",\r\n        \"address\": {\r\n          \"street\": \"Prinsestraat 20, Apartment 1B\",\r\n          \"city\": \"Den Haag\",\r\n          \"postalCode\": \"2513 CD\",\r\n          \"country\": \"NLD\"\r\n        },\r\n        \"obtainedAuth\": true,\r\n        \"subjectToAuth\": true,\r\n        \"numberOfRooms\": 0,\r\n        \"occupancy\": 0,\r\n        \"purpose\": \"string\",\r\n        \"type\": \"string\",\r\n        \"url\": \"https://example.com/listing5\"\r\n      }\r\n    },\r\n    {\r\n      \"registrationNumber\": \"NL-DH-002\",\r\n      \"Unit\": {\r\n        \"description\": \"string\",\r\n        \"floorLevel\": \"string\",\r\n        \"address\": {\r\n          \"street\": \"Denneweg 15, 3rd Floor\",\r\n          \"city\": \"Den Haag\",\r\n          \"postalCode\": \"2514 CG\",\r\n          \"country\": \"NLD\"\r\n        },\r\n        \"obtainedAuth\": true,\r\n        \"subjectToAuth\": true,\r\n        \"numberOfRooms\": 0,\r\n        \"occupancy\": 0,\r\n        \"purpose\": \"string\",\r\n        \"type\": \"string\",\r\n        \"url\": \"https://example.com/listing6\"\r\n      }\r\n    },\r\n    {\r\n      \"registrationNumber\": \"NL-DH-003\",\r\n      \"Unit\": {\r\n        \"description\": \"string\",\r\n        \"floorLevel\": \"string\",\r\n        \"address\": {\r\n          \"street\": \"Frederikstraat 30, Apartment 2C\",\r\n          \"city\": \"Den Haag\",\r\n          \"postalCode\": \"2514 LB\",\r\n          \"country\": \"NLD\"\r\n        },\r\n        \"obtainedAuth\": true,\r\n        \"subjectToAuth\": true,\r\n        \"numberOfRooms\": 0,\r\n        \"occupancy\": 0,\r\n        \"purpose\": \"string\",\r\n        \"type\": \"string\",\r\n        \"url\": \"https://example.com/listing7\"\r\n      }\r\n    },\r\n    {\r\n      \"registrationNumber\": \"NL-DH-004\",\r\n      \"Unit\": {\r\n        \"description\": \"string\",\r\n        \"floorLevel\": \"string\",\r\n        \"address\": {\r\n          \"street\": \"Lange Voorhout 5\",\r\n          \"city\": \"Den Haag\",\r\n          \"postalCode\": \"2514 EA\",\r\n          \"country\": \"NLD\"\r\n        },\r\n        \"obtainedAuth\": true,\r\n        \"subjectToAuth\": true,\r\n        \"numberOfRooms\": 0,\r\n        \"occupancy\": 0,\r\n        \"purpose\": \"string\",\r\n        \"type\": \"string\",\r\n        \"url\": \"https://example.com/listing8\"\r\n      }\r\n    }\r\n  ],\r\n  \"metadata\": {\r\n    \"platform\": \"STR-Platform\"\r\n  }\r\n}\r\n```",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://eu-str.sdep-pilot.eu/api/v0/str/listings"
+			},
+			"response": []
+		},
+		{
+			"name": "GetListingData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{access_token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://eu-str.sdep-pilot.eu/api/v0/ca/listings"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"const client_id = pm.environment.get(\"client_id\");  \r",
+					"const client_secret = pm.environment.get(\"client_secret\");  \r",
+					"const audience = pm.environment.get(\"audience\");  \r",
+					"const token_url = pm.environment.get(\"token_url\");  \r",
+					"  \r",
+					"console.log(\"Client ID:\", client_id);  \r",
+					"console.log(\"Client Secret:\", client_secret);  \r",
+					"console.log(\"Audience:\", audience);  \r",
+					"console.log(\"Token URL:\", token_url);  \r",
+					"  \r",
+					"const getTokenRequest = {  \r",
+					"    url: token_url,  \r",
+					"    method: \"POST\",  \r",
+					"    header: {  \r",
+					"        \"Content-Type\": \"application/json\"  \r",
+					"    },  \r",
+					"    body: {  \r",
+					"        mode: \"raw\",  \r",
+					"        raw: JSON.stringify({  \r",
+					"            client_id: client_id,  \r",
+					"            client_secret: client_secret,  \r",
+					"            audience: audience,  \r",
+					"            grant_type: \"client_credentials\"  \r",
+					"        })  \r",
+					"    }  \r",
+					"};  \r",
+					"  \r",
+					"pm.sendRequest(getTokenRequest, (err, res) => {  \r",
+					"    if (err) {  \r",
+					"        console.error(\"Error fetching token:\", err);  \r",
+					"    } else {  \r",
+					"        const jsonResponse = res.json();  \r",
+					"        console.log(\"Token Response:\", jsonResponse); // Log the entire response for debugging  \r",
+					"          \r",
+					"        if (jsonResponse.access_token) {  \r",
+					"            const accessToken = jsonResponse.access_token;  \r",
+					"            const expiresIn = jsonResponse.expires_in; // Typically in seconds  \r",
+					"            const currentTime = Math.floor(Date.now() / 1000); // Current time in seconds  \r",
+					"            const tokenExpiry = currentTime + expiresIn; // Calculate expiry time  \r",
+					"              \r",
+					"            pm.environment.set(\"access_token\", accessToken);  \r",
+					"            pm.environment.set(\"token_expiry\", tokenExpiry);  \r",
+					"              \r",
+					"            console.log(\"Access token set:\", accessToken);  \r",
+					"            console.log(\"Token expiry time set:\", tokenExpiry);  \r",
+					"        } else {  \r",
+					"            console.error(\"No access token found in response:\", jsonResponse);  \r",
+					"        }  \r",
+					"    }  \r",
+					"});  \r",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
