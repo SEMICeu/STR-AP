@@ -244,35 +244,37 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
 
 ```json
 [
-  {
-    "data": [
-      {
-        "address": {
-          "city": "Diegem",
-          "country": "BEL",
-          "postalCode": "1831",
-          "street": "Culliganlaan 5"
+    {
+        "data": {
+            "address": {
+                "street": "Culliganlaan 5",
+                "city": "Diegem",
+                "postalCode": "1831",
+                "country": "BEL"
+            },
+            "competentAuthorityId_area": "competentAuthorityId_area",
+            "competentAuthorityName_area": "competentAuthorityName_area",
+            "countryOfGuests": [
+                "ITA",
+                "NLD"
+            ],
+            "hostId": "placeholder-host-id",
+            "numberOfGuests": 3,
+            "temporal": {
+                "startDateTime": "2024-07-21T17:32:28Z",
+                "endDateTime": "2024-07-25T17:32:28Z"
+            },
+            "URL": "placeholder-URL",
+            "registrationNumber": "placeholder-registrationNumber"
         },
-        "areaId": "placeholder-area-id",
-        "countryOfGuests": [
-          "ITA",
-          "NLD"
-        ],
-        "hostId": "placeholder-host-id",
-        "numberOfGuests": 3,
-        "temporal": {
-          "endDateTime": "2024-07-25T17:32:28Z",
-          "startDateTime": "2024-07-21T17:32:28Z"
-        },
-        "unitId": "placeholder-unit-id"
-      }
-    ],
-    "metadata": {
-      "additionalProp1": {},
-      "platform": "booking.com",
-      "submissionDate": "2024-07-21T17:32:28Z"
+        "competentAuthorityId_validated": "competentAuthorityId_validated",
+        "competentAuthorityName_validated": "competentAuthorityName_validated",
+        "metadata": {
+            "platform": "Platform-name",
+            "submissionDate": "2024-07-21T17:32:28Z",
+            "additionalProp1": {}
+        }
     }
-  }
 ]
 ```
 
@@ -328,6 +330,8 @@ The shapefiles submission endpoint is designed to upload geospatial data in the 
 {
   "id": "string",
   "name": "string",
+  "competentAuthorityId_area": "competentAuthorityId_area",
+  "competentAuthorityName_area": "competentAuthorityName_area",
   "status": "string",
   "timestamp": "string"
 }
@@ -394,35 +398,35 @@ The listing data retrieval endpoint is designed to facilitate the retrieval of l
 
 ```json
 [
-  {
-    "data": [
-      {
-        "address": {
-          "city": "Diegem",
-          "country": "BEL",
-          "postalCode": "1831",
-          "street": "Culliganlaan 5"
+    {
+        "data": {
+            "registrationNumber": "string",
+            "Unit": {
+                "description": "string",
+                "floorLevel": "string",
+                "address": {
+                    "street": "Culliganlaan 5",
+                    "city": "Diegem",
+                    "postalCode": "1831",
+                    "country": "BEL"
+                },
+                "obtainedAuth": true,
+                "subjectToAuth": true,
+                "numberOfRooms": 0,
+                "occupancy": 0,
+                "purpose": "string",
+                "type": "string",
+                "url": "string"
+            },
+            "competentAuthorityId_area": "competentAuthorityId_area",
+            "competentAuthorityName_area": "competentAuthorityName_area"
         },
-        "areaId": "placeholder-area-id",
-        "countryOfGuests": [
-          "ITA",
-          "NLD"
-        ],
-        "hostId": "placeholder-host-id",
-        "numberOfGuests": 3,
-        "temporal": {
-          "endDateTime": "2024-07-25T17:32:28Z",
-          "startDateTime": "2024-07-21T17:32:28Z"
-        },
-        "unitId": "placeholder-unit-id"
-      }
-    ],
-    "metadata": {
-      "additionalProp1": {},
-      "platform": "booking.com",
-      "submissionDate": "2024-07-21T17:32:28Z"
+        "metadata": {
+            "platform": "platform-name",
+            "submissionDate": "2024-07-21T17:32:28Z",
+            "additionalProp1": {}
+        }
     }
-  }
 ]
 ```
 
@@ -585,9 +589,8 @@ curl -s https://$HOST/api/v0/ca/activity-data \
 ### 6.1.6. Upload Shapefile(s) for Areas where a Registration Procedure Applies (endpoint 3 for Member States)
 
 ```bash
-curl -s -X POST https://$HOST/api/v0/ca/area \
---header "Authorization: Bearer $TOKEN" \
--F "file=@/Users/thierryturpin/GolandProjects/str-ap-internal/BELGIUM_-_Regions.zip"
+curl -s -X POST https://$HOST/api/v0/ca/area --header "Authorization: Bearer $TOKEN" -F "file=@/workspaces/str-ap-internal/sample-data/BELGIUM_Regions.shp" -F "competentAuthorityId=YOUR_COMPETENT_AUTHORITY_ID" -F "competentAuthorityName=YOUR_COMPETENT_AUTHORITY_NAME"  
+
 ```
 
 ### 6.1.7. Retrieving Listing Data Endpoint (Endpoint 4 for Member States)
@@ -607,7 +610,7 @@ To get started with testing the STR application using Postman, follow these step
     - Open Postman and go to "File" > "Import".
     - Select the collection JSON file to import (from GitHub).
 3. **Import the Environment:**
-    - Go to "Manage Environments" (the gear icon in the top-right).
+    - Go to "Environments" (the gear icon in the top-right).
     - Click "Import" and select the environment JSON file (from GitHub).
 4. **Set Up Personal Credentials:**
     - After importing the environment, go to "Manage Environments".
