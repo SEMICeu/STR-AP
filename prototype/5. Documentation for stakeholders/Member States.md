@@ -589,7 +589,7 @@ curl -s https://$HOST/api/v0/ca/activity-data \
 ### 6.1.6. Upload Shapefile(s) for Areas where a Registration Procedure Applies (endpoint 3 for Member States)
 
 ```bash
-curl -s -X POST https://$HOST/api/v0/ca/area --header "Authorization: Bearer $TOKEN" -F "file=@/workspaces/str-ap-internal/sample-data/BELGIUM_Regions.shp" -F "competentAuthorityId=YOUR_COMPETENT_AUTHORITY_ID" -F "competentAuthorityName=YOUR_COMPETENT_AUTHORITY_NAME"  
+curl -s -X POST https://$HOST/api/v0/ca/area --header "Authorization: Bearer $TOKEN" -F "file=@/workspaces/str-ap-internal/sample-data/BELGIUM_Area.zip" -F "competentAuthorityId=YOUR_COMPETENT_AUTHORITY_ID" -F "competentAuthorityName=YOUR_COMPETENT_AUTHORITY_NAME"  
 
 ```
 
