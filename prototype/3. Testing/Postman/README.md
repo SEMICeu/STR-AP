@@ -12,11 +12,10 @@ Open Postman and go to "File" > "Import".
 Select the collection JSON file to import.
 
 - **Import the Environment:**
-Go to "Manage Environments" (the gear icon in the top-right).
 Click "Import" and select the environment JSON file.
 
 - **Set Up Personal Credentials:**
-After importing the environment, go to "Manage Environments". 
+After importing the environment, go to "Environments". 
 Edit the imported environment and replace placeholder values with actual credentials.
 
 - **After importing the collection, please do not forget to add your personal environment by adding it on top right**
