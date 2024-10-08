@@ -80,17 +80,17 @@ By following the detailed instructions and leveraging the resources provided, st
   
 The development of the Short-Term Rental (STR) prototype represents a significant advancement in aligning with the new STR regulations aimed at standardising and improving the management of short-term rental accommodations across EU Member States. This prototype is designed to capture and implement the key functionalities outlined in the STR framework, ensuring compliance with legal requirements and enhancing the efficiency of data exchanges between public authorities and STR platforms.
 
-To achieve these goals, the prototype is based on a set of best practices that were developed earlier, following the guidelines provided in the STR framework legal documents. The STR framework details several key steps that underpin the management of short-term rentals. The process begins with hosts registering their rental units with the appropriate Competent Authority (CA), which could be at the national, regional, or local level (Step 1a). Following registration, hosts are required to declare their registration number when listing their unit on the platform (Step 1b). Platforms then have the responsibility to regularly verify the validity of these registration numbers and declarations (Step 2) through the Single Digital Entry Point (SDEP) (Step 3). The SDEP also plays a crucial role in publicising the list of areas where registration is required (Step 4), enabling platforms to perform effective compliance checks. Furthermore, platforms are obligated to submit activity data (Step 5) to the relevant CA in regions where registration is mandatory, utilising the SDEP to facilitate this reporting process. 
+To achieve these goals, the prototype is based on a set of best practices that were developed earlier, following the guidelines provided in the STR framework legal documents. The STR framework details several key steps that underpin the management of short-term rentals. The process begins with hosts registering their rental units with the appropriate Competent Authority (CA), which could be at the national, regional, or local level (Step 1a). Following registration, hosts are required to declare their registration number when listing their unit on the platform (Step 1b). Platforms then have the responsibility to regularly verify the validity of these registration numbers and declarations (Step 2) through the Single Digital Entry Point (SDEP) (Step 3). The SDEP also plays a crucial role in publishing the list of areas where registration is required (Step 4), enabling platforms to perform effective compliance checks. Furthermore, platforms are obligated to submit activity data (Step 5) to the relevant CA in regions where registration is mandatory, utilising the SDEP to facilitate this reporting process. 
 
 <p align="center">
   <img src="images/MSoverview.png" alt="STR framework">
 </p>
   
-While the framework establishes the regulatory groundwork, this report shifts focus towards the technical implementation of the functionality of the STR regulation and the developed recommendations. Specifically, this report covers the API endpoints and their usage, the underlying technical infrastructure, and the implementation steps that Member States can follow to deploy the prototype in their own environments. Additionally, it addresses best practices and security concerns that must be considered to ensure the system's effectiveness and integrity. 
+While the framework establishes the regulatory groundwork, this report shifts focus towards the technical implementation of the functionality of the STR regulation and the developed recommendations. Specifically, this report covers the API endpoints and their usage, the underlying technical infrastructure, and the implementation steps that Member States can follow to deploy the prototype in their own environments. Additionally, it addresses best practices and security concerns that must be considered to ensure the system's effectiveness and integrity.
   
 ## 3.2. Key Compliance Aspect  
   
-The STR prototype was developed based on a set of user stories that were collaboratively agreed upon by a working group comprising representatives from several EU Member States and STR platforms. These user stories were designed to meet the minimum requirements of the STR regulation for both public authorities and platforms, ensuring that the prototype would effectively support compliance and facilitate the necessary data exchanges. Below is a breakdown of the key user stories relevant to Competent Authorities:  
+The STR prototype was developed based on a set of user stories that were collaboratively agreed upon by a working group comprising representatives from several EU Member States and STR platforms. These user stories were designed to meet the minimum requirements of the STR regulation for both public authorities and platforms, ensuring that the prototype would effectively support compliance and facilitate the necessary data exchanges. Below is a breakdown of the key user stories relevant to Competent Authorities: 
   
 ### User Story 1: Host Registration  
   
@@ -103,16 +103,20 @@ This user story outlines the process by which hosts must register their short-te
 ### User Story 2: Unit Listing  
   
 The second user story focuses on the process of listing a rental unit on an STR platform. However, since this process does not involve any direct actions by the Competent Authority (CA), it is not elaborated further in this version of the report. The primary responsibility for ensuring compliance during the listing process lies with the host and the STR platform, with the CA playing a more passive role in this particular user story.
+
 Regarding the User Stories related to activity data sharing and the sharing of flagged listings, we make the distinction between Member States who have multiple (regional) Competent Authorities and those having only one national Competent Authority. 
  
 **Scenario A - Member States with multiple Competent Authorities**
 
-The following user stories have been divided into 2 scenario’s. The first scenario (A) relates to Member States with multiple Competent Authority (CA) the second (B) refers to a national level CA.  
-Scenario A - MS with multiple CA’s: User Story 3.1: Activity Data Sharing
-This user story focuses on how the Competent Authority (CA) manages and retrieves activity data submitted by STR platforms. The CA plays a crucial role in ensuring that the data received corresponds to rental units within its jurisdiction.
-When STR platforms submit activity data through the Single Digital Entry Point (SDEP), this data initially lacks a direct association with a specific CA. To assign the correct CA-ID, the SDEP uses the GET/RegistrationNumbers endpoint. This call allows the SDEP to cross-reference the registration numbers linked to the activity data with the base registry of the CA(s) in the Member State. If the registration number is present in the CA's registry, the system assigns the corresponding CA-ID to the activity data records.
+The following user stories have been divided into 2 scenario’s. The first scenario (A) relates to Member States with multiple Competent Authority (CA) the second (B) refers to a national level CA.
 
-This process ensures that each piece of activity data is accurately attributed to the appropriate jurisdiction. Once the CA-ID is assigned, the Competent Authority can retrieve and manage the activity data that pertains specifically to its area of responsibility, enabling effective monitoring and enforcement of the STR regulations within its jurisdiction.
+Scenario A - MS with multiple CA’s: User Story 3.1: Activity Data Sharing
+
+This user story focuses on how the Competent Authority (CA) manages and retrieves activity data submitted by STR platforms. The CA plays a crucial role in ensuring that the data received corresponds to rental units within its jurisdiction.
+
+When STR platforms submit activity data through the Single Digital Entry Point (SDEP), this data initially lacks a direct association with a specific Competent Authority. To assign the correct , the SDEP uses the GET/RegistrationNumbers endpoint. This call allows the SDEP to cross-reference the registration numbers linked to the activity data with the base registry of the CA(s) in the Member State. If the registration number is present in the CA's registry, the system assigns the corresponding competentAuthorityId_validated and competentAuthorityName_validated to the activity data records.
+
+This process ensures that each piece of activity data is accurately attributed to the appropriate jurisdiction. Once the competentAuthorityId_validated is assigned, the Competent Authority can retrieve and manage the activity data that pertains specifically to its area of responsibility, enabling effective monitoring and enforcement of the STR regulations within its jurisdiction.
 
 <p align="center">
   <img src="images/MS1.png" alt="STR framework">
@@ -122,7 +126,7 @@ This process ensures that each piece of activity data is accurately attributed t
 
 This user story outlines the role of the Competent Authority (CA) in managing and updating the geographical areas where short-term rental regulations apply. The CA is responsible for defining and maintaining the boundaries of these areas to ensure accurate compliance by hosts and STR platforms.
 
-Through the POST/Shapefiles endpoint, the CA can upload or update shapefiles that define the specific regions within its jurisdiction where registration and activity data reporting are required. When a shapefile is uploaded or modified, the system generates or updates an AreaID for all points within the defined region. This AreaID is then included in the list of areas where registration procedures and data reporting obligations are enforced.
+Through the POST/area endpoint, the CA can upload or update shapefiles that define the specific regions within its jurisdiction where registration and activity data reporting are required. When a shapefile is uploaded or modified, the CA needs to mandatory add the relevant competentAuthorityId_Area and competentAuthorityName_Area . This  is then included in the list of areas where registration procedures and data reporting obligations are enforced.
 
 By managing these shapefiles, the CA ensures that the geographical scope of the regulation is clearly defined and accessible to STR platforms. This allows platforms to accurately determine whether a listing falls within a regulated area and must adhere to the registration and reporting requirements.
 
@@ -132,9 +136,9 @@ By managing these shapefiles, the CA ensures that the geographical scope of the 
 
 **Scenario A - MS with multiple CA’s: User Story 3.3: Dispatching Activity Data**
 
-In this user story, the focus is on how the Competent Authority (CA) retrieves and manages activity data relevant to its jurisdiction. The CA-ID, which is assigned during the earlier data validation process, plays a critical role as an authorization key in ensuring that the CA only accesses data pertinent to its specific area.
+In this user story, the Competent Authority (CA) is responsible for managing flagged listings within its jurisdiction. When an STR platform flags a listing, the CA must determine whether the listing falls within its regulated area. 
 
-To obtain the activity data, the CA uses the GET/ActivityData endpoint. This endpoint allows the CA to filter and retrieve data records that have been assigned its CA-ID. By using the CA-ID as a filter, the system ensures that the CA receives only the activity data related to short-term rental units within its jurisdiction.
+The CA can retrieve all flagged listings within its area of responsibility by using the GET/listings endpoint. By filtering listings based on the assigned competentAuthorityId_Area (added by the STR Platforms), the CA ensures that it only accesses those listings that are relevant to its jurisdiction. This process allows the CA to focus its resources on monitoring and addressing compliance issues within its own region, ensuring effective enforcement of STR regulations. The use of the competentAuthorityId_Area as a filter not only streamlines the retrieval process but also helps maintain the accuracy and relevance of the data accessed by the CA.
 
 <p align="center">
   <img src="images/MS4.png" alt="STR framework">
@@ -144,7 +148,7 @@ To obtain the activity data, the CA uses the GET/ActivityData endpoint. This end
 
 In this user story, the Competent Authority (CA) is responsible for managing flagged listings within its jurisdiction.
 
-The CA can retrieve all flagged listings within its area of responsibility by using the GET/Listings endpoint. By filtering listings based on the assigned AreaID, the CA ensures that it only accesses those listings that are relevant to its jurisdiction. This process allows the CA to focus its resources on monitoring and addressing compliance issues within its own region, ensuring effective enforcement of STR regulations. The use of the AreaID as a filter not only streamlines the retrieval process but also helps maintain the accuracy and relevance of the data accessed by the CA.
+The CA can retrieve all flagged listings within its area of responsibility by using the GET/listings endpoint. By filtering listings based on the assigned competentAuthorityId, the CA ensures that it only accesses those listings that are relevant to its jurisdiction. This process allows the CA to focus its resources on monitoring and addressing compliance issues within its own region, ensuring effective enforcement of STR regulations. The use of the competentAuthorityId as a filter not only streamlines the retrieval process but also helps maintain the accuracy and relevance of the data accessed by the CA.
 
 <p align="center">
   <img src="images/MS5.png" alt="STR framework">
@@ -154,11 +158,11 @@ The CA can retrieve all flagged listings within its area of responsibility by us
 
 **Scenario B - MS with one National CA: User Story 3.1: Activity Data Sharing**
 
-This user story focuses on how the national Competent Authority (CA) retrieves and manages activity data submitted by Short-Term Rental (STR) platforms. With only one national CA responsible for all STR regulations in the Member State, there is no longer a need for a CA-ID to filter the data.
+This user story focuses on how the national Competent Authority (CA) retrieves and manages activity data submitted by Short-Term Rental (STR) platforms. With only one national CA responsible for all STR regulations in the Member State, there is no longer a need for a competentAuthorityId to filter the data.
 
-When STR platforms submit activity data through the Single Digital Entry Point (SDEP), the data is collected without needing to identify multiple CAs. The national CA retrieves all the submitted activity data using the GET/ActivityData endpoint. This endpoint provides access to all activity data that has been transmitted to the SDEP, as the national CA is the sole authority handling this data.
+When STR platforms submit activity data through the Single Digital Entry Point (SDEP), the data is collected without needing to identify multiple CAs. The national CA retrieves all the submitted activity data using the GET/activity-data endpoint. This endpoint provides access to all activity data that has been transmitted to the SDEP, as the national CA is the sole authority handling this data.
 
-Without the need for CA-ID filtering, the GET/ActivityData endpoint ensures that the national CA receives complete and relevant data for all STR units within the country. 
+Without the need for competentAuthorityId filtering, the GET/activity-data endpoint ensures that the national CA receives complete and relevant data for all STR units within the country. 
 
 <p align="center">
   <img src="images/MS6.png" alt="STR framework">
@@ -175,7 +179,7 @@ In the case of a single National Competent Authority, all activity data will be 
 **Scenario B - MS with one National CA: User Story 4: Share Flagged Listings**
 
 This user story describes how the national Competent Authority (CA) handles flagged listings within its jurisdiction. Since the national CA is the sole authority, there is no longer a need to cross-check flagged listings against shapefiles.
-All flagged listings are directly sent to the national CA. The GET/Listings endpoint is used to retrieve all flagged listings submitted through the Single Digital Entry Point (SDEP). This streamlined process ensures that the CA receives and manages all relevant flagged listings without additional geographical filtering.
+All flagged listings are directly sent to the national CA. The GET/listings endpoint is used to retrieve all flagged listings submitted through the Single Digital Entry Point (SDEP). This streamlined process ensures that the CA receives and manages all relevant flagged listings without additional geographical filtering.
 
 <p align="center">
   <img src="images/MS7.png" alt="STR framework">
@@ -449,8 +453,6 @@ The listing data retrieval endpoint is designed to facilitate the retrieval of l
   "error": "An unexpected error occurred"
 }
 ```
-
-
 
 ## 4.2. Authentication and Authorization
 
