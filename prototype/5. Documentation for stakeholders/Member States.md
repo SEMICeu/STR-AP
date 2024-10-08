@@ -478,18 +478,18 @@ The SDEP prototype system outlined herein is an architecture designed to ensure 
   <img src="images/technical.png" alt="STR framework">
 </p>  
 
-## User and Server Requests  
+## 5.1. User and Server Requests  
   
 - **User Requests:** Users access the system via a web interface using `https://.../swagger/`.  
 - **Server Requests:** Servers make API calls directly using `https://.../api/v0/`.  
   
 Both types of requests are directed to a Network Load Balancer (NLB) to manage incoming traffic.  
   
-## Network Load Balancer (NLB)  
+## 5.2. Network Load Balancer (NLB)  
   
 The NLB is a critical component that distributes incoming traffic across multiple availability zones. Its primary function is to balance the load between backend servers to prevent any single server from becoming overwhelmed. This distribution ensures high availability and reliability of the service, maintaining consistent performance and preventing potential bottlenecks.  
   
-## Nginx Ingress Controller  
+## 5.3. Nginx Ingress Controller  
   
 Once the traffic is managed by the NLB, it is forwarded to the Nginx Ingress Controller. This controller manages external access to the services within the Kubernetes (EKS) cluster. It performs multiple roles:  
   
@@ -497,28 +497,28 @@ Once the traffic is managed by the NLB, it is forwarded to the Nginx Ingress Con
 - **Load Balancing:** Further balancing the load to manage internal traffic efficiently.  
 - **Rate Limiting:** Enforcing limits on request rates to prevent overloading the system.  
   
-## Kubernetes Service  
+## 5.4. Kubernetes Service  
   
 The Nginx Ingress Controller forwards requests to the designated Kubernetes Service. This service acts as a bridge between the external requests and internal Pods, translating user and server requests into actionable tasks for the internal infrastructure.  
   
-## Deployment  
+## 5.5. Deployment  
   
 Within the Kubernetes environment, Deployments ensure that the desired number of Pod replicas are running and available to handle incoming requests. This mechanism guarantees scalability and resilience, adapting to varying loads by maintaining an optimal number of Pods.  
   
-## Pods  
+## 5.6. Pods  
   
 Pods are the smallest deployable units in Kubernetes, encapsulating application containers and their resources. They are managed by Deployments to ensure availability and scalability, responding to requests with efficiency.  
   
-### Security  
+## 5.7. Security  
   
 - **Kubernetes Secrets:** Secrets are used to manage sensitive information such as API keys, passwords, and certificates. They provide secure storage and access control, ensuring that sensitive data is protected.  
 - **Let's Encrypt:** Let's Encrypt is utilized to obtain SSL/TLS certificates. These certificates secure communications between clients and services, ensuring data integrity and confidentiality.  
   
-## Persistent Volume Claim (PVC)  
+## 5.8. Persistent Volume Claim (PVC)  
   
 PVCs are used to request storage resources within the EKS cluster. They enable Pods to persist data beyond their lifecycle, ensuring data continuity and integrity even if Pods are destroyed and recreated.  
   
-## Apache Kafka Integration  
+## 5.9. Apache Kafka Integration  
   
 In addition to the components outlined above, the SDEP prototype system integrates Apache Kafka to enhance data streaming and messaging capabilities. Kafka plays a crucial role in ensuring real-time data processing, fault tolerance, and scalability across the system.  
   
@@ -528,7 +528,7 @@ In addition to the components outlined above, the SDEP prototype system integrat
 - **Scalability:** Kafka's partitioning feature allows the system to scale horizontally by distributing the data load across multiple partitions. This ensures that the system can handle increasing loads efficiently.  
 - **Event Sourcing:** Kafka is used for event sourcing within the SDEP architecture. Each change in the system state is captured as an event and stored in Kafka. This enables a reliable audit trail and the ability to reconstruct the system state at any point in time.  
   
-## Infrastructure Management  
+## 5.10. Infrastructure Management  
   
 - **Helm:** Helm is a package manager for Kubernetes, used to define, install, and upgrade complex Kubernetes applications. It automates deployment processes, ensuring consistency and reducing manual errors. Helm can also be seen as a kind of template engine, making it possible to provide configuration values and apply them on the template.  
 - **Pulumi:** Pulumi is an infrastructure as code tool that allows the definition of infrastructure using familiar programming languages. It is used to provision and manage infrastructure resources, bridging the gap between development and operations.  
