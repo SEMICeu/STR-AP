@@ -102,6 +102,9 @@ In this user story, the focus shifts to how STR platforms handle the listing pro
 <p align="center">
   <img src="images/figure2.png" alt="STR framework">
 </p>  
+
+Update, October 14th:
+The meeting with the MS indicated there was misalignment regarding user story 2. Resolution steps are ongoing.
   
 ### User Story 3.1: Collection and Transmission of Activity Data Sharing  
   
