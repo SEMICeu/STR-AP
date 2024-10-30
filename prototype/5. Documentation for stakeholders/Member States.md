@@ -105,6 +105,9 @@ This user story outlines the process by which hosts must register their short-te
 The second user story focuses on the process of listing a rental unit on an STR platform. However, since this process does not involve any direct actions by the Competent Authority (CA), it is not elaborated further in this version of the report. The primary responsibility for ensuring compliance during the listing process lies with the host and the STR platform, with the CA playing a more passive role in this particular user story.
 
 Regarding the User Stories related to activity data sharing and the sharing of flagged listings, we make the distinction between Member States who have multiple (regional) Competent Authorities and those having only one national Competent Authority. 
+
+Update, October 14th:
+The meeting with the MS indicated there was misalignment regarding user story 2. Resolution steps are ongoing.
  
 **Scenario A - Member States with multiple Competent Authorities**
 
