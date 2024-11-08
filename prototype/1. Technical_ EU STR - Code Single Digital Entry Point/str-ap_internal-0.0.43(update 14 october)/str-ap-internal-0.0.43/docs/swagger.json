@@ -1,0 +1,839 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "A gateway for the electronic transmission of data between online short-term rental platforms and competent authorities, ensuring timely, reliable and efficient data sharing processes\nPriority of development is: 1. listings, 2. orders, 3. activity, 4. area\n\u003cbr\u003e\nTo obtain API credentials, please contact: wouter.travers@pwc.com via e-mail",
+        "title": "EU STR - Single Digital Entry Point",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Wouter Travers",
+            "email": "wouter.travers@pwc.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/api/v0",
+    "paths": {
+        "/ca/activity-data": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Retrieve activity data submitted to the SDEP",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ca"
+                ],
+                "summary": "Retrieve activity data submitted to the SDEP",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Maximum number of records to return",
+                        "name": "limit",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/handler.SingleActivityData"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UnauthorizedError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/handler.InternalServerError"
+                        }
+                    }
+                }
+            }
+        },
+        "/ca/area": {
+            "post": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "write"
+                        ]
+                    }
+                ],
+                "description": "Upload a new shapefile to the server.",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ca"
+                ],
+                "summary": "Upload a new shapefile",
+                "parameters": [
+                    {
+                        "type": "file",
+                        "description": "Shapefile to upload",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Id of the Competent Authority",
+                        "name": "competentAuthorityId",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Name of the Competent Authority",
+                        "name": "competentAuthorityName",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UploadResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.BadRequestError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UnauthorizedError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/handler.InternalServerError"
+                        }
+                    }
+                }
+            }
+        },
+        "/ca/area/{luid}": {
+            "delete": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "write"
+                        ]
+                    }
+                ],
+                "description": "Delete a shapefile from the server based on the LUID.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ca"
+                ],
+                "summary": "Delete a shapefile",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "LUID of the shapefile to delete",
+                        "name": "luid",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.DeleteResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.BadRequestError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UnauthorizedError"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/handler.NotFoundError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/handler.InternalServerError"
+                        }
+                    }
+                }
+            }
+        },
+        "/ca/listings": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Retrieve listings submitted to the SDEP",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "ca"
+                ],
+                "summary": "Retrieve listings submitted to the SDEP",
+                "parameters": [
+                    {
+                        "maximum": 100,
+                        "minimum": 1,
+                        "type": "integer",
+                        "description": "limit number of records returned",
+                        "name": "limit",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.ListingsData"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UnauthorizedError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/handler.InternalServerError"
+                        }
+                    }
+                }
+            }
+        },
+        "/ping": {
+            "get": {
+                "description": "ping test to check application health",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "health"
+                ],
+                "summary": "ping",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/handler.Status"
+                        }
+                    }
+                }
+            }
+        },
+        "/str/activity-data": {
+            "post": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Submit activity data to the SDEP",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "str"
+                ],
+                "summary": "Submit activity data to the SDEP",
+                "parameters": [
+                    {
+                        "description": "json formatted ActivityData",
+                        "name": "ActivityData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/handler.ActivityData"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "delivered",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/handler.ActivityData"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.BadRequestError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UnauthorizedError"
+                        }
+                    }
+                }
+            }
+        },
+        "/str/area": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Retrieve a list of available shapefiles.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "str"
+                ],
+                "summary": "Get a list of available shapefiles",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/handler.ShapefileMetadata"
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UnauthorizedError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/handler.InternalServerError"
+                        }
+                    }
+                }
+            }
+        },
+        "/str/area/{luid}": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "Retrieve a shapefile by its ID and download it.",
+                "produces": [
+                    "application/octet-stream"
+                ],
+                "tags": [
+                    "str"
+                ],
+                "summary": "Download a specific shapefile",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Shapefile ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "file"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.BadRequestError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UnauthorizedError"
+                        }
+                    },
+                    "404": {
+                        "description": "Shapefile not Found",
+                        "schema": {
+                            "$ref": "#/definitions/handler.NotFoundError"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/handler.InternalServerError"
+                        }
+                    }
+                }
+            }
+        },
+        "/str/listings": {
+            "post": {
+                "security": [
+                    {
+                        "OAuth2AccessCode": [
+                            "read"
+                        ]
+                    }
+                ],
+                "description": "submit listing(s) to SDEP",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "str"
+                ],
+                "summary": "submit listing(s) to SDEP",
+                "parameters": [
+                    {
+                        "description": "json formatted ListingsData",
+                        "name": "ListingsData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/handler.ListingsData"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/handler.Created"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/handler.BadRequestError"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/handler.UnauthorizedError"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "handler.ActivityData": {
+            "type": "object",
+            "required": [
+                "data",
+                "metadata"
+            ],
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/handler.GuestData"
+                    }
+                },
+                "metadata": {
+                    "$ref": "#/definitions/handler.Metadata"
+                }
+            }
+        },
+        "handler.Address": {
+            "type": "object",
+            "properties": {
+                "city": {
+                    "description": "City name",
+                    "type": "string",
+                    "example": "Diegem"
+                },
+                "country": {
+                    "description": "Country code with ISO 3166-1 alpha-3 validation",
+                    "type": "string",
+                    "example": "BEL"
+                },
+                "postalCode": {
+                    "description": "Postal code",
+                    "type": "string",
+                    "example": "1831"
+                },
+                "street": {
+                    "description": "Street address",
+                    "type": "string",
+                    "example": "Culliganlaan 5"
+                }
+            }
+        },
+        "handler.BadRequestError": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "description": "Error message for bad requests",
+                    "type": "string",
+                    "example": "Wrong data format!"
+                }
+            }
+        },
+        "handler.Created": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "description": "Status of the creation",
+                    "type": "string",
+                    "example": "delivered"
+                }
+            }
+        },
+        "handler.DeleteResponse": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "description": "Status of the delete operation",
+                    "type": "string"
+                }
+            }
+        },
+        "handler.GuestData": {
+            "type": "object",
+            "required": [
+                "registrationNumber"
+            ],
+            "properties": {
+                "URL": {
+                    "type": "string",
+                    "example": "placeholder-URL"
+                },
+                "address": {
+                    "$ref": "#/definitions/handler.Address"
+                },
+                "competentAuthorityId_area": {
+                    "type": "string",
+                    "example": "competentAuthorityId_area"
+                },
+                "competentAuthorityName_area": {
+                    "type": "string",
+                    "example": "competentAuthorityName_area"
+                },
+                "countryOfGuests": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "ITA",
+                        "NLD"
+                    ]
+                },
+                "hostId": {
+                    "type": "string",
+                    "example": "placeholder-host-id"
+                },
+                "numberOfGuests": {
+                    "type": "integer",
+                    "example": 3
+                },
+                "registrationNumber": {
+                    "type": "string",
+                    "example": "placeholder-registrationNumber"
+                },
+                "temporal": {
+                    "$ref": "#/definitions/handler.Temporal"
+                }
+            }
+        },
+        "handler.InternalServerError": {
+            "type": "object",
+            "properties": {
+                "error": {
+                    "description": "Error message for internal server errors",
+                    "type": "string",
+                    "example": "An unexpected error occurred"
+                }
+            }
+        },
+        "handler.ListingsData": {
+            "type": "object",
+            "required": [
+                "data",
+                "metadata"
+            ],
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/handler.RegistrationData"
+                    }
+                },
+                "metadata": {
+                    "$ref": "#/definitions/handler.Metadata"
+                }
+            }
+        },
+        "handler.Metadata": {
+            "type": "object",
+            "properties": {
+                "additionalProp1": {
+                    "description": "Placeholder for additional properties",
+                    "type": "object"
+                },
+                "platform": {
+                    "description": "Platform name",
+                    "type": "string",
+                    "example": "booking.com"
+                },
+                "submissionDate": {
+                    "description": "Date of submission",
+                    "type": "string",
+                    "example": "2024-07-21T17:32:28Z"
+                }
+            }
+        },
+        "handler.NotFoundError": {
+            "type": "object",
+            "properties": {
+                "error": {
+                    "description": "Error message for resource not found",
+                    "type": "string",
+                    "example": "Resource not found"
+                }
+            }
+        },
+        "handler.RegistrationData": {
+            "type": "object",
+            "properties": {
+                "Unit": {
+                    "$ref": "#/definitions/handler.Unit"
+                },
+                "competentAuthorityId_area": {
+                    "type": "string",
+                    "example": "competentAuthorityId_area"
+                },
+                "competentAuthorityName_area": {
+                    "type": "string",
+                    "example": "competentAuthorityName_area"
+                },
+                "registrationNumber": {
+                    "type": "string"
+                }
+            }
+        },
+        "handler.ShapefileMetadata": {
+            "type": "object",
+            "required": [
+                "competentAuthorityId_area",
+                "competentAuthorityName_area"
+            ],
+            "properties": {
+                "competentAuthorityId_area": {
+                    "type": "string",
+                    "example": "competentAuthorityId_area"
+                },
+                "competentAuthorityName_area": {
+                    "type": "string",
+                    "example": "competentAuthorityName_area"
+                },
+                "id": {
+                    "type": "string",
+                    "example": "01J306Z5SJS720QPA5JHJQE7GD"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "Amsterdam.zip"
+                },
+                "timestamp": {
+                    "type": "string",
+                    "example": "2024-07-17T11:28:56.781531428Z"
+                }
+            }
+        },
+        "handler.SingleActivityData": {
+            "type": "object",
+            "required": [
+                "data",
+                "metadata"
+            ],
+            "properties": {
+                "competentAuthorityId_validated": {
+                    "type": "string"
+                },
+                "competentAuthorityName_validated": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/handler.GuestData"
+                },
+                "metadata": {
+                    "$ref": "#/definitions/handler.Metadata"
+                }
+            }
+        },
+        "handler.Status": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "description": "Status message",
+                    "type": "string",
+                    "example": "ok"
+                }
+            }
+        },
+        "handler.Temporal": {
+            "type": "object",
+            "properties": {
+                "endDateTime": {
+                    "type": "string",
+                    "example": "2024-07-25T17:32:28Z"
+                },
+                "startDateTime": {
+                    "type": "string",
+                    "example": "2024-07-21T17:32:28Z"
+                }
+            }
+        },
+        "handler.UnauthorizedError": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "description": "Error message for unauthorized access",
+                    "type": "string",
+                    "example": "JWT is invalid"
+                }
+            }
+        },
+        "handler.Unit": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "$ref": "#/definitions/handler.Address"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "floorLevel": {
+                    "type": "string"
+                },
+                "numberOfRooms": {
+                    "type": "integer"
+                },
+                "obtainedAuth": {
+                    "type": "boolean"
+                },
+                "occupancy": {
+                    "type": "integer"
+                },
+                "purpose": {
+                    "type": "string"
+                },
+                "subjectToAuth": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "handler.UploadResponse": {
+            "type": "object",
+            "properties": {
+                "competentAuthorityId_area": {
+                    "type": "string",
+                    "example": "competentAuthorityId_area"
+                },
+                "competentAuthorityName_area": {
+                    "type": "string",
+                    "example": "competentAuthorityName_area"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "timestamp": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "OAuth2AccessCode": {
+            "type": "oauth2",
+            "flow": "accessCode",
+            "authorizationUrl": "https://tt-dp-dev.eu.auth0.com/authorize?audience=https://str.eu",
+            "tokenUrl": "https://tt-dp-dev.eu.auth0.com/oauth/token",
+            "scopes": {
+                "str": "Grants read access"
+            }
+        }
+    },
+    "externalDocs": {
+        "description": "STR Application Profile (STR-AP)",
+        "url": "https://semiceu.github.io/STR-AP/releases/1.0.1/"
+    }
+}
