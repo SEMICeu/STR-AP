@@ -1,0 +1,109 @@
+@host=str.local
+
+### GET do health or ping request
+GET https://{{host}}/api/v0/ping
+
+### POST listings
+POST https://{{host}}/api/v0/str/listings
+Authorization: Bearer {{$auth.token("eu-str-app")}}
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "registrationNumber": "1234",
+      "Unit": {
+        "description": "string",
+        "floorLevel": "string",
+        "address": {
+          "street": "Culliganlaan 5",
+          "city": "Diegem",
+          "postalCode": "1831",
+          "country": "BEL"
+        },
+        "obtainedAuth": true,
+        "subjectToAuth": true,
+        "numberOfRooms": 0,
+        "occupancy": 0,
+        "purpose": "string",
+        "type": "string",
+        "url": "STR-Platform.com/1234"
+      }
+    }
+  ],
+  "metadata": {
+    "platform": "STR-Platform"
+  }
+}
+
+### GET listings
+GET https://{{host}}/api/v0/ca/listings
+Authorization: Bearer {{$auth.token("eu-str-app")}}
+
+### POST activity-data, with wrong data format
+POST https://{{host}}/api/v0/str/activity-data
+Authorization: Bearer {{$auth.token("eu-str-thierry")}}
+Content-Type: application/json
+
+{
+  "id": 999,
+  "value": "content"
+}
+
+### POST activity-data
+POST https://{{host}}/api/v0/str/activity-data
+Authorization: Bearer {{$auth.token("eu-str-app")}}
+Content-Type: application/json
+
+{
+  "data": [
+    {
+      "numberOfGuests": 20,
+      "countryOfGuests": [
+        "ITA",
+        "NLD"
+      ],
+      "temporal": {
+        "startDateTime": "2024-07-21T17:32:28Z",
+        "endDateTime": "2024-07-25T17:32:28Z"
+      },
+      "address": {
+        "street": "123 Main St",
+        "city": "Brussels",
+        "postalCode": "1000",
+        "country": "BEL"
+      },
+      "hostId": "placeholder-host-id",
+      "unitId": "placeholder-unit-id",
+      "areaId": "placeholder-area-id"
+    },
+    {
+      "numberOfGuests": 3,
+      "countryOfGuests": [
+        "BEL"
+      ],
+      "temporal": {
+        "startDateTime": "2024-07-21T17:32:28Z",
+        "endDateTime": "2024-07-25T17:32:28Z"
+      },
+      "address": {
+        "street": "123 Main St",
+        "city": "Brussels",
+        "postalCode": "1000",
+        "country": "BEL"
+      },
+      "hostId": "placeholder-host-id",
+      "areaId": "placeholder-area-id",
+      "unitId": "demo"
+    }
+  ],
+  "metadata": {
+    "platform": "booking.com",
+    "submissionDate": "2024-07-21T17:32:28Z",
+    "additionalProp1": {}
+  }
+}
+
+### GET activity-data
+GET https://{{host}}/api/v0/ca/activity-data
+Authorization: Bearer {{$auth.token("eu-str-app")}}
