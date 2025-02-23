@@ -37,17 +37,18 @@
     - 5.6. [Persistent Volume Claim (PVC)](#56-persistent-volume-claim-pvc)
     - 5.7. [Apache Kafka Integration](#57-apache-kafka-integration)
     - 5.8. [Infrastructure Management](#58-infrastructure-management)
-6. [Testing Steps](#6-testing-steps)
-    - 6.1. [Via Terminal Commands](#61-via-terminal-commands)
-        - 6.1.1. [Authentication](#611-authentication)
-        - 6.1.2. [Get the OAUTH token (from the /token endpoint)](#612-get-the-oauth-token-from-the-token-endpoint)
-        - 6.1.3. [Define the HOST](#613-define-the-host)
-        -
-      6.1.4. [Health check endpoint test (endpoint 1 for Member States)](#614-health-check-endpoint-test-endpoint-1-for-member-states)
-      -
-      6.1.5. [Retrieving Activity Data endpoint (endpoint 2 for Member States)](#615-retrieving-activity-data-endpoint-endpoint-2-for-member-states)
-      -
-      6.1.6. [Upload Shapefile(s) for areas where a registration procedure applies (endpoint 3 for Member States)](#616-upload-shapefiles-for-areas-where-a-registration-procedure-applies-endpoint-3-for-member-states)
+6.6. [Testing Steps](#6-testing-steps)
+   - 6.1. [Via Terminal Commands](#61-via-terminal-commands)
+       - 6.1.1. [Authentication](#611-authentication)
+       - 6.1.2. [Get the OAUTH Token (from the /token endpoint)](#612-get-the-oauth-token-from-the-token-endpoint)
+       - 6.1.3. [Define the HOST](#613-define-the-host)
+       - 6.1.4. [Health Check Endpoint Test (endpoint 1 for Member States)](#614-health-check-endpoint-test-endpoint-1-for-member-states)
+       - 6.1.5. [Retrieving Activity Data Endpoint (endpoint 2 for Member States)](#615-retrieving-activity-data-endpoint-endpoint-2-for-member-states)
+       - 6.1.6. [Upload Shapefile(s) for Areas where a Registration Procedure Applies (endpoint 3 for Member States)](#616-upload-shapefiles-for-areas-where-a-registration-procedure-applies-endpoint-3-for-member-states)
+       - 6.1.7. [Delete Data Area Shapefile Endpoint](#617-delete-data-area-shapefile-endpoint)
+       - 6.1.8. [Retrieving Listing Data Endpoint (Endpoint 4 for Member States)](#618-retrieving-listing-data-endpoint-endpoint-4-for-member-states)
+       - 6.1.9. [Upload STR Area Shapefile Endpoint](#619-upload-str-area-shapefile-endpoint)
+       - 6.1.10. [Delete STR Area Shapefile Endpoint](#6110-delete-str-area-shapefile-endpoint)
     - 6.2. [Via Postman](#62-via-postman)
 
 # 1. Executive Summary
@@ -1003,16 +1004,42 @@ curl -s https://$HOST/api/v0/ca/activity-data \
 ### 6.1.6. Upload Shapefile(s) for Areas where a Registration Procedure Applies (endpoint 3 for Member States)
 
 ```bash
-curl -s -X POST https://$HOST/api/v0/ca/area --header "Authorization: Bearer $TOKEN" -F "file=@/workspaces/str-ap-internal/sample-data/BELGIUM_Area.zip" -F "competentAuthorityId=YOUR_COMPETENT_AUTHORITY_ID" -F "competentAuthorityName=YOUR_COMPETENT_AUTHORITY_NAME"  
-
+curl -s -X POST https://$HOST/api/v0/ca/data-area \
+--header "Authorization: Bearer $TOKEN" \
+-F "file=@/workspaces/str-ap-internal/sample-data/BELGIUM_Area.zip" \
+-F "competentAuthorityId=YOUR_COMPETENT_AUTHORITY_ID" \
+-F "competentAuthorityName=YOUR_COMPETENT_AUTHORITY_NAME""  
 ```
 
-### 6.1.7. Retrieving Listing Data Endpoint (Endpoint 4 for Member States)
+### 6.1.7. Delete Data Area Shapefile Endpoint
 
 ```bash
-curl -s https://$HOST/api/v0/ca/listings \
+curl -s https://$HOST/api/v0/ca/data-area/12345 \
+--header "Authorization: Bearer $TOKEN"
+```
+
+### 6.1.8. Retrieving Listing Data Endpoint (Endpoint 4 for Member States)
+
+```bash
+curl -s https://$HOST/api/v0/ca/listings?limit=10 \
 --header "Authorization: Bearer $TOKEN" \
 | jq .
+```
+
+### 6.1.9. Upload STR Area Shapefile Endpoint
+
+```bash
+curl -s https://$HOST/api/v0/ca/str-area \
+--header "Authorization: Bearer $TOKEN" \
+-F "file=@/workspaces/str-ap-internal/sample-data/BELGIUM_STR_Area.zip" \
+-F "competentAuthorityId=YOUR_COMPETENT_AUTHORITY_ID" \
+```
+
+### 6.1.10. Delete STR Area Shapefile Endpoint
+
+```bash
+curl -s https://$HOST/api/v0/ca/str-area/67890 \
+--header "Authorization: Bearer $TOKEN"
 ```
 
 # 6.2. Via Postman
