@@ -40,12 +40,16 @@
 6. [Testing Steps](#6-testing-steps)
     - 6.1. [Via Terminal Commands](#61-via-terminal-commands)
         - 6.1.1. [Authentication](#611-authentication)
-        - 6.1.2. [Get the OAUTH token (from the /token endpoint)](#612-get-the-oauth-token-from-the-token-endpoint)
+        - 6.1.2. [Get the OAUTH Token (from the /token endpoint)](#612-get-the-oauth-token-from-the-token-endpoint)
         - 6.1.3. [Define the HOST](#613-define-the-host)
-        - 6.1.4. [Health check endpoint test (endpoint 1 for platforms)](#614-health-check-endpoint-test-endpoint-1-for-platforms)
-        - 6.1.5. [Submitting activity data endpoint (endpoint 2 for platforms)](#615-submitting-activity-data-endpoint-endpoint-2-for-platforms)
+        - 6.1.4. [Health Check Endpoint Test (endpoint 1 for platforms)](#614-health-check-endpoint-test-endpoint-1-for-platforms)
+        - 6.1.5. [Submitting Activity Data Endpoint (endpoint 2 for platforms)](#615-submitting-activity-data-endpoint-endpoint-2-for-platforms)
         - 6.1.6. [Download Shapefiles Uploaded by Competent Authorities (endpoint 3 for platforms)](#616-download-shapefiles-uploaded-by-competent-authorities-endpoint-3-for-platforms)
         - 6.1.7. [Download List of Uploaded Shapefiles by Competent Authorities (endpoint 4 for platforms)](#617-download-list-of-uploaded-shapefiles-by-competent-authorities-endpoint-4-for-platforms)
+        - 6.1.8. [Submit Listings Data Endpoint (endpoint 5 for platforms)](#618-submit-listings-data-endpoint-endpoint-5-for-platforms)
+        - 6.1.9. [Registration Number Validation Check Endpoint (endpoint 6 for platforms)](#619-registration-number-validation-check-endpoint-endpoint-6-for-platforms)
+        - 6.1.10. [Download List of STR Area Shapefiles (endpoint 7 for platforms)](#6110-download-list-of-str-area-shapefiles-endpoint-7-for-platforms)
+        - 6.1.11. [Download STR Area Shapefile (endpoint 8 for platforms)](#6111-download-str-area-shapefile-endpoint-8-for-platforms)
     - 6.2. [Via Postman](#62-via-postman)
 
 
@@ -272,11 +276,11 @@ The activity data submission endpoint is designed to facilitate the transfer of 
 }
 ```
 
-#### Download Shapefiles Uploaded by Competent Authorities where STR regulation is applicable
+#### Download List of Uploaded Shapefiles by Competent Authorities
 
 **Overview**
 
-The shapefiles retrieval endpoint is designed to provide platforms with access to geospatial data in the form of shapefiles where the application procedure applies and where STR regulation is applicable. This endpoint allows platforms to request and download shapefiles. As a shapefile consists of at least 3 mandatory files (.shp, .shx, .dbf) we expect these to be uploaded within a ZIP file to the SDEP, we highly recommend to upload the .prj and .cpg file which are the projection files (with the coordinate system and project information) and the .cpg file which specifies the code page for the .dbf file.
+The shapefiles list retrieval endpoint is designed to provide platforms with a list of all available shapefiles that have been uploaded to the SDEP by competent authorities. This endpoint allows platform applications to query and retrieve metadata about the shapefiles, enabling easier management, selection, and download of geospatial data.
 
 **Technical Implementation**
 
@@ -284,79 +288,7 @@ The shapefiles retrieval endpoint is designed to provide platforms with access t
 
 **Endpoint Details**
 
-- **URL:** `https://eu-str.sdep-pilot.eu/api/v0/str/str-area/{luid}`
-- **Method:** `GET`
-- **Parameters:**
-    - `id` (path parameter, required): Shapefile ID
-
-**Sequencing**
-
-1. Member States upload Shapefiles to the SDEP
-2. Platform sends authentication request
-3. SDEP sends access token to platform
-4. Platform submits request to GET a shapefile (based on the UL-ID)
-5. SDEP sends requested shapefile
-
-**Response Structure**
-
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
-
-
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description |
-|------|-------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description        |
-|------|--------------------|
-| 404  | Shapefile not Found|
-
-```json
-{
-  "error": "Resource not found"
-}
-```
-
-| Code | Description             |
-|------|-------------------------|
-| 500  | Internal Server Error   |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
-
-#### Download List of Uploaded Shapefiles by Competent Authorities where STR regulation is applicable
-
-**Overview**
-
-The shapefiles list retrieval endpoint is designed to provide platforms with a list of all available shapefiles that have been uploaded to the SDEP by competent authorities where STR regulation is applicable. This endpoint allows platform applications to query and retrieve metadata about the shapefiles, enabling easier management, selection, and download of geospatial data.
-
-**Technical Implementation**
-
-- User Story 3.2
-
-**Endpoint Details**
-
-- **URL:** `https://eu-str.sdep-pilot.eu/api/v0/str/str-area`
+- **URL:** `https://eu-str.sdep-pilot.eu/api/v0/str/data-area`
 - **Method:** `GET`
 
 **Sequencing**
@@ -465,68 +397,6 @@ The shapefiles retrieval endpoint is designed to provide platforms with access t
 ```json
 {
   "error": "Resource not found"
-}
-```
-
-| Code | Description             |
-|------|-------------------------|
-| 500  | Internal Server Error   |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
-
-#### Download List of Uploaded Shapefiles by Competent Authorities
-
-**Overview**
-
-The shapefiles list retrieval endpoint is designed to provide platforms with a list of all available shapefiles that have been uploaded to the SDEP by competent authorities. This endpoint allows platform applications to query and retrieve metadata about the shapefiles, enabling easier management, selection, and download of geospatial data.
-
-**Technical Implementation**
-
-- User Story 3.2
-
-**Endpoint Details**
-
-- **URL:** `https://eu-str.sdep-pilot.eu/api/v0/str/data-area`
-- **Method:** `GET`
-
-**Sequencing**
-
-1. Member States upload Shapefiles to the SDEP
-2. Platform sends authentication request
-3. SDEP sends access token to platform
-4. Platform submits request to GET the list of shapefiles on the SDEP
-5. SDEP sends list of all shapefiles on the SDEP
-
-**Response Structure**
-
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
-
-```json
-[
-   {
-      "competentAuthorityId_area": "competentAuthorityId_area",
-      "competentAuthorityName_area": "competentAuthorityName_area",
-      "id": "01J306Z5SJS720QPA5JHJQE7GD",
-      "name": "Amsterdam.zip",
-      "timestamp": "2024-07-17T11:28:56.781531428Z",
-      "type": "str"
-   }
-]
-```
-
-| Code | Description |
-|------|-------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
 }
 ```
 
@@ -737,6 +607,141 @@ This endpoint allows platforms to validate registration numbers.
 }
 ```
 
+#### Download List of Uploaded Shapefiles by Competent Authorities where STR regulation is applicable
+
+**Overview**
+
+The shapefiles list retrieval endpoint is designed to provide platforms with a list of all available shapefiles that have been uploaded to the SDEP by competent authorities where STR regulation is applicable. This endpoint allows platform applications to query and retrieve metadata about the shapefiles, enabling easier management, selection, and download of geospatial data.
+
+**Technical Implementation**
+
+- User Story 3.2
+
+**Endpoint Details**
+
+- **URL:** `https://eu-str.sdep-pilot.eu/api/v0/str/str-area`
+- **Method:** `GET`
+
+**Sequencing**
+
+1. Member States upload Shapefiles to the SDEP
+2. Platform sends authentication request
+3. SDEP sends access token to platform
+4. Platform submits request to GET the list of shapefiles on the SDEP
+5. SDEP sends list of all shapefiles on the SDEP
+
+**Response Structure**
+
+| Code | Description |
+|------|-------------|
+| 200  | OK          |
+
+```json
+[
+   {
+      "competentAuthorityId_area": "competentAuthorityId_area",
+      "competentAuthorityName_area": "competentAuthorityName_area",
+      "id": "01J306Z5SJS720QPA5JHJQE7GD",
+      "name": "Amsterdam.zip",
+      "timestamp": "2024-07-17T11:28:56.781531428Z",
+      "type": "str"
+   }
+]
+```
+
+| Code | Description |
+|------|-------------|
+| 401  | Unauthorized |
+
+```json
+{
+  "message": "JWT is invalid"
+}
+```
+
+| Code | Description             |
+|------|-------------------------|
+| 500  | Internal Server Error   |
+
+```json
+{
+  "error": "An unexpected error occurred"
+}
+```
+
+
+#### Download Shapefiles Uploaded by Competent Authorities where STR regulation is applicable
+
+**Overview**
+
+The shapefiles retrieval endpoint is designed to provide platforms with access to geospatial data in the form of shapefiles where the application procedure applies and where STR regulation is applicable. This endpoint allows platforms to request and download shapefiles. As a shapefile consists of at least 3 mandatory files (.shp, .shx, .dbf) we expect these to be uploaded within a ZIP file to the SDEP, we highly recommend to upload the .prj and .cpg file which are the projection files (with the coordinate system and project information) and the .cpg file which specifies the code page for the .dbf file.
+
+**Technical Implementation**
+
+- User Story 3.2
+
+**Endpoint Details**
+
+- **URL:** `https://eu-str.sdep-pilot.eu/api/v0/str/str-area/{luid}`
+- **Method:** `GET`
+- **Parameters:**
+    - `id` (path parameter, required): Shapefile ID
+
+**Sequencing**
+
+1. Member States upload Shapefiles to the SDEP
+2. Platform sends authentication request
+3. SDEP sends access token to platform
+4. Platform submits request to GET a shapefile (based on the UL-ID)
+5. SDEP sends requested shapefile
+
+**Response Structure**
+
+| Code | Description |
+|------|-------------|
+| 200  | OK          |
+
+
+| Code | Description |
+|------|-------------|
+| 400  | Bad Request |
+
+```json
+{
+  "status": "Wrong data format!"
+}
+```
+
+| Code | Description |
+|------|-------------|
+| 401  | Unauthorized |
+
+```json
+{
+  "message": "JWT is invalid"
+}
+```
+
+| Code | Description        |
+|------|--------------------|
+| 404  | Shapefile not Found|
+
+```json
+{
+  "error": "Resource not found"
+}
+```
+
+| Code | Description             |
+|------|-------------------------|
+| 500  | Internal Server Error   |
+
+```json
+{
+  "error": "An unexpected error occurred"
+}
+```
+
 ## 4.2. Authentication and Authorization
 
 OAuth 2.0 is utilized to handle authentication and authorization processes effectively. It is essential for auditing to be conducted on both the platform and government levels.
@@ -872,7 +877,7 @@ curl -s -X POST https://$HOST/api/v0/str/activity-data \
     {
       "numberOfGuests": 10,
       "countryOfGuests": [
-        "ITZ",
+        "ITA",
         "NLD"
       ],
       "temporal": {
@@ -926,22 +931,21 @@ curl -s -X POST https://$HOST/api/v0/str/activity-data \
       "hostId": "placeholder-host-id",
       "unitId": "placeholder-unit-id",
       "areaId": "placeholder-area-id"
-    }          
+    }
   ],
   "metadata": {
     "platform": "placeholder-platform",
     "submissionDate": "2024-07-21T17:32:28Z",
     "additionalProp1": {}
   }
-}
-' \
+}' \
 | jq .
 ```
 
 ## 6.1.6. Download Shapefiles Uploaded by Competent Authorities (endpoint 3 for platforms)
 
 ```bash
-curl -s https://$HOST/api/v0/str/area/[UL-ID] \
+curl -s https://$HOST/api/v0/str/data-area/[luid] \
 --header "Authorization: Bearer $TOKEN" \
 -o downloaded_shape_file.zip
 ```
@@ -949,9 +953,72 @@ curl -s https://$HOST/api/v0/str/area/[UL-ID] \
 ## 6.1.7. Download List of Uploaded Shapefiles by Competent Authorities (endpoint 4 for platforms)
 
 ```bash
-curl -s https://$HOST/api/v0/str/area \
+curl -s https://$HOST/api/v0/str/data-area \
 --header "Authorization: Bearer $TOKEN" \
 | jq .
+```
+
+## 6.1.8. Submit Listings Data Endpoint (endpoint 5 for platforms)
+
+```bash
+curl -s -X POST https://$HOST/api/v0/str/listings \
+--header "Authorization: Bearer $TOKEN" \
+--header "Content-Type: application/json" \
+--data '{
+  "data": [
+    {
+      "Unit": {
+        "address": {
+          "street": "Culliganlaan 5",
+          "city": "Diegem",
+          "postalCode": "1831",
+          "country": "BEL"
+        },
+        "description": "Luxury apartment",
+        "floorLevel": "2",
+        "numberOfRooms": 3,
+        "obtainedAuth": true,
+        "occupancy": 6,
+        "purpose": "Residential",
+        "subjectToAuth": true,
+        "type": "Apartment",
+        "url": "https://example.com/listing"
+      },
+      "competentAuthorityId_area": "competentAuthorityId_area",
+      "competentAuthorityName_area": "competentAuthorityName_area",
+      "registrationNumber": "placeholder-registrationNumber"
+    }
+  ],
+  "metadata": {
+    "platform": "booking.com",
+    "submissionDate": "2024-07-21T17:32:28Z",
+    "additionalProp1": {}
+  }
+}' \
+| jq .
+```
+
+## 6.1.9. Registration Number Validation Check Endpoint (endpoint 6 for platforms)
+
+```bash
+curl -s https://$HOST/api/v0/str/number-valid-check/placeholder-registrationNumber \
+--header "Authorization: Bearer $TOKEN" \
+| jq .
+```
+## 6.1.10. Download List of STR Area Shapefiles (endpoint 7 for platforms)
+
+```bash
+curl -s https://$HOST/api/v0/str/str-area \
+--header "Authorization: Bearer $TOKEN" \
+| jq .
+```
+
+## 6.1.11. Download List of STR Area Shapefiles (endpoint 7 for platforms)
+
+```bash
+curl -s https://$HOST/api/v0/str/str-area/[luid] \
+--header "Authorization: Bearer $TOKEN" \
+-o downloaded_str_shape_file.zip
 ```
 
 # 6.2. Via Postman
