@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "297b50c8-6432-488e-95af-9902d6666965",
+		"name": "STR API validation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36861527"
+	},
+	"item": [
+		{
+			"name": "Healthcheckendpoint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json.",
+						"description": "Health Check Request",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://eu-str.sdep-pilot.eu/api/v0/ping",
+					"protocol": "https",
+					"host": [
+						"eu-str",
+						"sdep-pilot",
+						"eu"
+					],
+					"path": [
+						"api",
+						"v0",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetActivityData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://eu-str.sdep-pilot.eu/api/v0/ca/activity-data",
+					"protocol": "https",
+					"host": [
+						"eu-str",
+						"sdep-pilot",
+						"eu"
+					],
+					"path": [
+						"api",
+						"v0",
+						"ca",
+						"activity-data"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShapefileUpload-Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Shapefile_Belgium",
+							"type": "file",
+							"src": "/C:/Users/vvanhulleb002/Documents/STR/shapefile/BELGIUM_-_Regions.shp"
+						},
+						{
+							"key": "competentAuthorityId",
+							"value": "competentAuthorityId",
+							"type": "text"
+						},
+						{
+							"key": "competentAuthorityName",
+							"value": "competentAuthorityName",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://eu-str.sdep-pilot.eu/api/v0/ca/area",
+					"protocol": "https",
+					"host": [
+						"eu-str",
+						"sdep-pilot",
+						"eu"
+					],
+					"path": [
+						"api",
+						"v0",
+						"ca",
+						"area"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteShapefile-Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Shapefile_Belgium",
+							"type": "file",
+							"src": "/C:/Users/vvanhulleb002/Documents/STR/shapefile/BELGIUM_-_Regions.shp"
+						},
+						{
+							"key": "competentAuthorityId",
+							"value": "competentAuthorityId",
+							"type": "text"
+						},
+						{
+							"key": "competentAuthorityName",
+							"value": "competentAuthorityName",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://eu-str.sdep-pilot.eu/api/v0/ca/area",
+					"protocol": "https",
+					"host": [
+						"eu-str",
+						"sdep-pilot",
+						"eu"
+					],
+					"path": [
+						"api",
+						"v0",
+						"ca",
+						"area"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetListingData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://eu-str.sdep-pilot.eu/api/v0/ca/listings",
+					"protocol": "https",
+					"host": [
+						"eu-str",
+						"sdep-pilot",
+						"eu"
+					],
+					"path": [
+						"api",
+						"v0",
+						"ca",
+						"listings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShapefileUpload-STR",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Shapefile_Belgium",
+							"type": "file",
+							"src": "/C:/Users/vvanhulleb002/Documents/STR/shapefile/BELGIUM_-_Regions.shp"
+						},
+						{
+							"key": "competentAuthorityId",
+							"value": "competentAuthorityId",
+							"type": "text"
+						},
+						{
+							"key": "competentAuthorityName",
+							"value": "competentAuthorityName",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://eu-str.sdep-pilot.eu/api/v0/ca/area",
+					"protocol": "https",
+					"host": [
+						"eu-str",
+						"sdep-pilot",
+						"eu"
+					],
+					"path": [
+						"api",
+						"v0",
+						"ca",
+						"area"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteShapefile-STR",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Shapefile_Belgium",
+							"type": "file",
+							"src": "/C:/Users/vvanhulleb002/Documents/STR/shapefile/BELGIUM_-_Regions.shp"
+						},
+						{
+							"key": "competentAuthorityId",
+							"value": "competentAuthorityId",
+							"type": "text"
+						},
+						{
+							"key": "competentAuthorityName",
+							"value": "competentAuthorityName",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://eu-str.sdep-pilot.eu/api/v0/ca/area",
+					"protocol": "https",
+					"host": [
+						"eu-str",
+						"sdep-pilot",
+						"eu"
+					],
+					"path": [
+						"api",
+						"v0",
+						"ca",
+						"area"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"const client_id = pm.environment.get(\"client_id\");  \r",
+					"const client_secret = pm.environment.get(\"client_secret\");  \r",
+					"const audience = pm.environment.get(\"audience\");  \r",
+					"const token_url = pm.environment.get(\"token_url\");  \r",
+					"  \r",
+					"console.log(\"Client ID:\", client_id);  \r",
+					"console.log(\"Client Secret:\", client_secret);  \r",
+					"console.log(\"Audience:\", audience);  \r",
+					"console.log(\"Token URL:\", token_url);  \r",
+					"  \r",
+					"const getTokenRequest = {  \r",
+					"    url: token_url,  \r",
+					"    method: \"POST\",  \r",
+					"    header: {  \r",
+					"        \"Content-Type\": \"application/json\"  \r",
+					"    },  \r",
+					"    body: {  \r",
+					"        mode: \"raw\",  \r",
+					"        raw: JSON.stringify({  \r",
+					"            client_id: client_id,  \r",
+					"            client_secret: client_secret,  \r",
+					"            audience: audience,  \r",
+					"            grant_type: \"client_credentials\"  \r",
+					"        })  \r",
+					"    }  \r",
+					"};  \r",
+					"  \r",
+					"pm.sendRequest(getTokenRequest, (err, res) => {  \r",
+					"    if (err) {  \r",
+					"        console.error(\"Error fetching token:\", err);  \r",
+					"    } else {  \r",
+					"        const jsonResponse = res.json();  \r",
+					"        console.log(\"Token Response:\", jsonResponse); // Log the entire response for debugging  \r",
+					"          \r",
+					"        if (jsonResponse.access_token) {  \r",
+					"            const accessToken = jsonResponse.access_token;  \r",
+					"            const expiresIn = jsonResponse.expires_in; // Typically in seconds  \r",
+					"            const currentTime = Math.floor(Date.now() / 1000); // Current time in seconds  \r",
+					"            const tokenExpiry = currentTime + expiresIn; // Calculate expiry time  \r",
+					"              \r",
+					"            pm.environment.set(\"access_token\", accessToken);  \r",
+					"            pm.environment.set(\"token_expiry\", tokenExpiry);  \r",
+					"              \r",
+					"            console.log(\"Access token set:\", accessToken);  \r",
+					"            console.log(\"Token expiry time set:\", tokenExpiry);  \r",
+					"        } else {  \r",
+					"            console.error(\"No access token found in response:\", jsonResponse);  \r",
+					"        }  \r",
+					"    }  \r",
+					"});  \r",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
