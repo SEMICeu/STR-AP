@@ -209,6 +209,15 @@ By managing these shapefiles, the CA ensures that the geographical scope of the 
 accessible to STR platforms. This allows platforms to accurately determine whether a listing falls within a regulated
 area and must adhere to the registration and reporting requirements.
 
+This user story outlines the role of the Competent Authority (CA) in managing and updating the geographical areas where short-term rental (STR) regulations apply. The CA is responsible for defining and maintaining the boundaries of these areas to ensure accurate compliance by hosts and STR platforms.
+
+Through the POST/area endpoint, the CA can upload or update shapefiles that define the specific regions within its jurisdiction where registration and activity data reporting are required. When a shapefile is uploaded or modified, the CA must include the relevant competentAuthorityId_Area and competentAuthorityName_Area. This information is then added to the list of areas where registration procedures and data reporting obligations are enforced.
+
+By managing these shapefiles, the CA ensures that the geographical scope of the regulation is clearly defined and accessible to STR platforms. This allows platforms to accurately determine whether a listing falls within a regulated area and must adhere to the registration and reporting requirements.
+
+Update, February 24th: 
+In the prototype, two additional endpoints have been introduced.  One endpoint (str-area) identifies where STR regulation is applicable, and the other specifies where the Member State wishes to receive activity data (data-area). This approach could serve as a potential path for developing the area endpoint, as these shapefiles will typically be the same for both regulatory and data reporting purposes.
+
 <p align="center">
   <img src="images/MS_figure4.png" alt="STR framework">
 </p>
@@ -427,12 +436,11 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
 }
 ```
 
-#### Upload Shapefile(s) for Areas where a Registration Procedure Applies
+#### Upload Shapefile(s) for Areas where a Member States want to receive Activity Data For
 
 **Overview**
 
-The shapefiles submission endpoint is designed to upload geospatial data in the form of shapefiles where an application
-procedure applies. This allows platforms to request and download shapefiles.
+The shapefiles submission endpoint is designed to upload geospatial data in the form of shapefiles where a Member State wants to receive activity data for. 
 
 **Technical Implementation**
 
@@ -1001,7 +1009,7 @@ curl -s https://$HOST/api/v0/ca/activity-data \
 | jq .
 ```
 
-### 6.1.6. Upload Shapefile(s) for Areas where a Registration Procedure Applies (endpoint 3 for Member States)
+### 6.1.6. Upload Shapefile(s) for Areas where Member States want to receive Activity Data for (endpoint 3 for Member States)
 
 ```bash
 curl -s -X POST https://$HOST/api/v0/ca/data-area \
@@ -1014,7 +1022,7 @@ curl -s -X POST https://$HOST/api/v0/ca/data-area \
 ### 6.1.7. Delete Data Area Shapefile Endpoint
 
 ```bash
-curl -s https://$HOST/api/v0/ca/data-area/12345 \
+curl -s https://$HOST/api/v0/ca/data-area/placeholder-LUID \
 --header "Authorization: Bearer $TOKEN"
 ```
 
@@ -1038,7 +1046,7 @@ curl -s https://$HOST/api/v0/ca/str-area \
 ### 6.1.10. Delete STR Area Shapefile Endpoint
 
 ```bash
-curl -s https://$HOST/api/v0/ca/str-area/67890 \
+curl -s https://$HOST/api/v0/ca/str-area/placeholder-LUID \
 --header "Authorization: Bearer $TOKEN"
 ```
 
