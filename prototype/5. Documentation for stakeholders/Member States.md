@@ -1065,4 +1065,4 @@ To get started with testing the STR application using Postman, follow these step
 4. **Set Up Personal Credentials:**
     - After importing the environment, go to "Manage Environments".
     - Edit the imported environment and replace placeholder values with actual credentials.
-5. After importing the collection, please do not forget to add your personal environment by adding it on the top right.
+5. **After importing the collection, please do not forget to add your personal environment by adding it on the top right.**
