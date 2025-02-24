@@ -1015,18 +1015,18 @@ curl -s https://$HOST/api/v0/ca/activity-data \
 curl -s -X POST https://$HOST/api/v0/ca/data-area \
 --header "Authorization: Bearer $TOKEN" \
 -F "file=@/workspaces/str-ap-internal/sample-data/BELGIUM_Area.zip" \
--F "competentAuthorityId=YOUR_COMPETENT_AUTHORITY_ID" \
--F "competentAuthorityName=YOUR_COMPETENT_AUTHORITY_NAME""  
+-F "competentAuthorityId=placeholder-competentAuthorityId" \
+-F "competentAuthorityName=placeholder-competentAuthorityName" 
 ```
 
-### 6.1.7. Delete Data Area Shapefile Endpoint
+### 6.1.7. Delete Data Area Shapefile Endpoint (endpoint 4 for Member States)
 
 ```bash
 curl -s https://$HOST/api/v0/ca/data-area/placeholder-LUID \
 --header "Authorization: Bearer $TOKEN"
 ```
 
-### 6.1.8. Retrieving Listing Data Endpoint (Endpoint 4 for Member States)
+### 6.1.8. Retrieving Listing Data Endpoint (Endpoint 5 for Member States)
 
 ```bash
 curl -s https://$HOST/api/v0/ca/listings?limit=10 \
@@ -1034,16 +1034,17 @@ curl -s https://$HOST/api/v0/ca/listings?limit=10 \
 | jq .
 ```
 
-### 6.1.9. Upload STR Area Shapefile Endpoint
+### 6.1.9. Upload STR Area Shapefile Endpoint (Endpoint 6 for Member States)
 
 ```bash
 curl -s https://$HOST/api/v0/ca/str-area \
 --header "Authorization: Bearer $TOKEN" \
 -F "file=@/workspaces/str-ap-internal/sample-data/BELGIUM_STR_Area.zip" \
--F "competentAuthorityId=YOUR_COMPETENT_AUTHORITY_ID" \
+-F "competentAuthorityId=placeholder-competentAuthorityId" \
+-F "competentAuthorityName=placeholder-competentAuthorityName"  
 ```
 
-### 6.1.10. Delete STR Area Shapefile Endpoint
+### 6.1.10. Delete STR Area Shapefile Endpoint (Endpoint 7 for Member States)
 
 ```bash
 curl -s https://$HOST/api/v0/ca/str-area/placeholder-LUID \
