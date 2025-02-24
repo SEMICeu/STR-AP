@@ -45,10 +45,10 @@
        - 6.1.4. [Health Check Endpoint Test (endpoint 1 for Member States)](#614-health-check-endpoint-test-endpoint-1-for-member-states)
        - 6.1.5. [Retrieving Activity Data Endpoint (endpoint 2 for Member States)](#615-retrieving-activity-data-endpoint-endpoint-2-for-member-states)
        - 6.1.6. [Upload Shapefile(s) for Areas where a Registration Procedure Applies (endpoint 3 for Member States)](#616-upload-shapefiles-for-areas-where-a-registration-procedure-applies-endpoint-3-for-member-states)
-       - 6.1.7. [Delete Data Area Shapefile Endpoint](#617-delete-data-area-shapefile-endpoint)
-       - 6.1.8. [Retrieving Listing Data Endpoint (Endpoint 4 for Member States)](#618-retrieving-listing-data-endpoint-endpoint-4-for-member-states)
-       - 6.1.9. [Upload STR Area Shapefile Endpoint](#619-upload-str-area-shapefile-endpoint)
-       - 6.1.10. [Delete STR Area Shapefile Endpoint](#6110-delete-str-area-shapefile-endpoint)
+       - 6.1.7. [Delete Data Area Shapefile Endpoint (endpoint 4 for Member States)](#617-delete-data-area-shapefile-endpoint-endpoint-4-for-member-states)
+       - 6.1.8. [Retrieving Listing Data Endpoint (Endpoint 5 for Member States)](#618-retrieving-listing-data-endpoint-endpoint-4-for-member-states-endpoint-5-for-member-states)
+       - 6.1.9. [Upload STR Area Shapefile Endpoint (endpoint 6 for Member States)](#619-upload-str-area-shapefile-endpoint-endpoint-6-for-member-states)
+       - 6.1.10. [Delete STR Area Shapefile Endpoint (endpoint 7 for Member States)](#6110-delete-str-area-shapefile-endpoint-endpoint-7-for-member-states)
     - 6.2. [Via Postman](#62-via-postman)
 
 # 1. Executive Summary
