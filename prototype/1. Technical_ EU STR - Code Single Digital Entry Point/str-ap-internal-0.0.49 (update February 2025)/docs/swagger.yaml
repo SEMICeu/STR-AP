@@ -1,0 +1,825 @@
+basePath: /api/v0
+definitions:
+  handler.ActivityData:
+    properties:
+      data:
+        items:
+          $ref: '#/definitions/handler.GuestData'
+        type: array
+      metadata:
+        $ref: '#/definitions/handler.Metadata'
+    required:
+    - data
+    - metadata
+    type: object
+  handler.Address:
+    properties:
+      city:
+        description: City name
+        example: Diegem
+        type: string
+      country:
+        description: Country code with ISO 3166-1 alpha-3 validation
+        example: BEL
+        type: string
+      postalCode:
+        description: Postal code
+        example: "1831"
+        type: string
+      street:
+        description: Street address
+        example: Culliganlaan 5
+        type: string
+    type: object
+  handler.BadRequestError:
+    properties:
+      status:
+        description: Error message for bad requests
+        example: Wrong data format!
+        type: string
+    type: object
+  handler.DeleteResponse:
+    properties:
+      status:
+        description: Status of the delete operation
+        type: string
+    type: object
+  handler.GuestData:
+    properties:
+      URL:
+        example: placeholder-URL
+        type: string
+      address:
+        $ref: '#/definitions/handler.Address'
+      competentAuthorityId_area:
+        example: competentAuthorityId_area
+        type: string
+      competentAuthorityName_area:
+        example: competentAuthorityName_area
+        type: string
+      countryOfGuests:
+        example:
+        - ITA
+        - NLD
+        items:
+          type: string
+        type: array
+      hostId:
+        example: placeholder-host-id
+        type: string
+      numberOfGuests:
+        example: 3
+        type: integer
+      registrationNumber:
+        example: placeholder-registrationNumber
+        type: string
+      temporal:
+        $ref: '#/definitions/handler.Temporal'
+    type: object
+  handler.HTTPError:
+    properties:
+      code:
+        description: HTTP status code
+        type: integer
+      message:
+        description: Error message
+        type: string
+    type: object
+  handler.InternalServerError:
+    properties:
+      error:
+        description: Error message for internal server errors
+        example: An unexpected error occurred
+        type: string
+    type: object
+  handler.ListingsData:
+    properties:
+      data:
+        items:
+          $ref: '#/definitions/handler.RegistrationData'
+        type: array
+      metadata:
+        $ref: '#/definitions/handler.Metadata'
+    required:
+    - data
+    - metadata
+    type: object
+  handler.Metadata:
+    properties:
+      additionalProp1:
+        description: Placeholder for additional properties
+        type: object
+      platform:
+        description: Platform name
+        example: booking.com
+        type: string
+      submissionDate:
+        description: Date of submission
+        example: "2024-07-21T17:32:28Z"
+        type: string
+    type: object
+  handler.NotFoundError:
+    properties:
+      error:
+        description: Error message for resource not found
+        example: Resource not found
+        type: string
+    type: object
+  handler.Numbervalid:
+    properties:
+      isValid:
+        description: Error message for a valid registration number
+        example: "True"
+        type: string
+    type: object
+  handler.RegistrationData:
+    properties:
+      Unit:
+        $ref: '#/definitions/handler.Unit'
+      competentAuthorityId_area:
+        example: competentAuthorityId_area
+        type: string
+      competentAuthorityName_area:
+        example: competentAuthorityName_area
+        type: string
+      registrationNumber:
+        type: string
+    type: object
+  handler.ShapefileMetadata:
+    properties:
+      competentAuthorityId_area:
+        example: competentAuthorityId_area
+        type: string
+      competentAuthorityName_area:
+        example: competentAuthorityName_area
+        type: string
+      id:
+        example: 01J306Z5SJS720QPA5JHJQE7GD
+        type: string
+      name:
+        example: Amsterdam.zip
+        type: string
+      timestamp:
+        example: "2024-07-17T11:28:56.781531428Z"
+        type: string
+      type:
+        allOf:
+        - $ref: '#/definitions/handler.ShapefileType'
+        example: str
+    required:
+    - competentAuthorityId_area
+    - competentAuthorityName_area
+    type: object
+  handler.ShapefileType:
+    enum:
+    - str
+    - data
+    type: string
+    x-enum-varnames:
+    - STRType
+    - DataType
+  handler.SingleActivityData:
+    properties:
+      competentAuthorityId_validated:
+        type: string
+      competentAuthorityName_validated:
+        type: string
+      data:
+        $ref: '#/definitions/handler.GuestData'
+      metadata:
+        $ref: '#/definitions/handler.Metadata'
+    required:
+    - data
+    - metadata
+    type: object
+  handler.SingleListingData:
+    properties:
+      data:
+        $ref: '#/definitions/handler.RegistrationData'
+      metadata:
+        $ref: '#/definitions/handler.Metadata'
+    required:
+    - data
+    - metadata
+    type: object
+  handler.Status:
+    properties:
+      status:
+        description: Status message
+        example: ok
+        type: string
+    type: object
+  handler.Temporal:
+    properties:
+      endDateTime:
+        example: "2024-07-25T17:32:28Z"
+        type: string
+      startDateTime:
+        example: "2024-07-21T17:32:28Z"
+        type: string
+    type: object
+  handler.UnauthorizedError:
+    properties:
+      message:
+        description: Error message for unauthorized access
+        example: JWT is invalid
+        type: string
+    type: object
+  handler.Unit:
+    properties:
+      address:
+        $ref: '#/definitions/handler.Address'
+      description:
+        type: string
+      floorLevel:
+        type: string
+      numberOfRooms:
+        type: integer
+      obtainedAuth:
+        type: boolean
+      occupancy:
+        type: integer
+      purpose:
+        type: string
+      subjectToAuth:
+        type: boolean
+      type:
+        type: string
+      url:
+        type: string
+    type: object
+  handler.UploadResponse:
+    properties:
+      competentAuthorityId_area:
+        example: competentAuthorityId_area
+        type: string
+      competentAuthorityName_area:
+        example: competentAuthorityName_area
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      status:
+        type: string
+      timestamp:
+        type: string
+    type: object
+externalDocs:
+  description: STR Application Profile (STR-AP)
+  url: https://semiceu.github.io/STR-AP/releases/1.0.1/
+info:
+  contact:
+    email: wouter.travers@pwc.com
+    name: Wouter Travers
+  description: |-
+    A gateway for the electronic transmission of data between online short-term rental platforms and competent authorities, ensuring timely, reliable and efficient data sharing processes
+    Priority of development is: 1. listings, 2. orders, 3. activity, 4. area
+    <br>
+    To obtain API credentials, please contact: wouter.travers@pwc.com via e-mail
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: EU STR - Single Digital Entry Point
+paths:
+  /ca/activity-data:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve activity data submitted to the SDEP
+      parameters:
+      - description: Maximum number of records to return
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/handler.SingleActivityData'
+            type: array
+        "400":
+          description: Bad Request - Invalid limit parameter
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: "Unauthorized\"\t\t//\t(Handled by OAuth2 middleware)"
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "429":
+          description: "Too many requests\"\t//\t(Could be enforced by rate-limiting
+            middleware)"
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "503":
+          description: Service unavailable
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Retrieve activity data submitted to the SDEP
+      tags:
+      - ca
+  /ca/data-area:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Upload a new data area shapefile to the server.
+      parameters:
+      - description: Shapefile to upload
+        in: formData
+        name: file
+        required: true
+        type: file
+      - description: Id of the Competent Authority
+        in: formData
+        name: competentAuthorityId
+        required: true
+        type: string
+      - description: Name of the Competent Authority
+        in: formData
+        name: competentAuthorityName
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.UploadResponse'
+        "400":
+          description: Bad Request - Missing mandatory parameters
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "422":
+          description: Invalid file format or data
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "503":
+          description: Service unavailable
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - write
+      summary: Upload a new data area shapefile
+      tags:
+      - ca
+  /ca/data-area/{luid}:
+    delete:
+      description: Delete a data shapefile from the server based on the LUID.
+      parameters:
+      - description: LUID of the shapefile to delete
+        in: path
+        name: luid
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.DeleteResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.NotFoundError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - write
+      summary: Delete a data area shapefile
+      tags:
+      - ca
+  /ca/listings:
+    get:
+      description: Retrieve listings submitted to the SDEP
+      parameters:
+      - description: limit number of records returned
+        in: query
+        maximum: 100
+        minimum: 1
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/handler.SingleListingData'
+            type: array
+        "400":
+          description: Bad Request - Invalid limit parameter
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+        "503":
+          description: Service unavailable
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Retrieve listings submitted to the SDEP
+      tags:
+      - ca
+  /ca/str-area:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Upload a new STR area shapefile to the server.
+      parameters:
+      - description: Shapefile to upload
+        in: formData
+        name: file
+        required: true
+        type: file
+      - description: Id of the Competent Authority
+        in: formData
+        name: competentAuthorityId
+        required: true
+        type: string
+      - description: Name of the Competent Authority
+        in: formData
+        name: competentAuthorityName
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.UploadResponse'
+        "400":
+          description: Bad Request - Missing mandatory parameters
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "422":
+          description: Invalid file format or data
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "503":
+          description: Service unavailable
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - write
+      summary: Upload a new STR area shapefile
+      tags:
+      - ca
+  /ca/str-area/{luid}:
+    delete:
+      description: Delete the STR shapefile from the server based on the LUID.
+      parameters:
+      - description: LUID of the shapefile to delete
+        in: path
+        name: luid
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.DeleteResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.NotFoundError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - write
+      summary: Delete a STR area shapefile
+      tags:
+      - ca
+  /ping:
+    get:
+      description: ping test to check application health
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handler.Status'
+      summary: ping
+      tags:
+      - health
+  /str/activity-data:
+    post:
+      consumes:
+      - application/json
+      description: Submit activity data to the SDEP
+      parameters:
+      - description: json formatted ActivityData
+        in: body
+        name: ActivityData
+        required: true
+        schema:
+          $ref: '#/definitions/handler.ActivityData'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: delivered
+          schema:
+            items:
+              $ref: '#/definitions/handler.ActivityData'
+            type: array
+        "400":
+          description: Bad Request - Missing mandatory parameters
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: "Unauthorized\"\t//\t(Handled by OAuth2 middleware)"
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "422":
+          description: Invalid data field values
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "503":
+          description: Service unavailable
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Submit activity data to the SDEP
+      tags:
+      - str
+  /str/data-area:
+    get:
+      description: Retrieve a list of available Data shapefiles.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/handler.ShapefileMetadata'
+            type: array
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Get a list of available data-shapefiles (shapefiles for which you want
+        to receive activity data for)
+      tags:
+      - str
+  /str/data-area/{luid}:
+    get:
+      description: Retrieve the data shapefile by its ID and download it.
+      parameters:
+      - description: Shapefile ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/octet-stream
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: file
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "404":
+          description: Shapefile not Found
+          schema:
+            $ref: '#/definitions/handler.NotFoundError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Download the shapefile for which you want to receive activity data.
+      tags:
+      - str
+  /str/listings:
+    post:
+      consumes:
+      - application/json
+      description: submit listing(s) to SDEP
+      parameters:
+      - description: json formatted ListingsData
+        in: body
+        name: ListingsData
+        required: true
+        schema:
+          $ref: '#/definitions/handler.ListingsData'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/handler.Status'
+        "400":
+          description: Bad Request - Missing mandatory parameters
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+        "422":
+          description: Invalid data field values
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+        "429":
+          description: Too many requests
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+        "503":
+          description: Service unavailable
+          schema:
+            $ref: '#/definitions/handler.HTTPError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: submit listing(s) to SDEP
+      tags:
+      - str
+  /str/number-valid-check/{registrationNumber}:
+    get:
+      consumes:
+      - application/json
+      description: Registration Number Validation check
+      parameters:
+      - description: Registration Number
+        in: body
+        name: registrationNumber
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/handler.Numbervalid'
+        "400":
+          description: Bad Request - Missing registration number
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "422":
+          description: Invalid registration number format
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "503":
+          description: Service unavailable
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Registration Number Validation check
+      tags:
+      - str
+  /str/str-area:
+    get:
+      description: Retrieve a list of available STR shapefiles.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/handler.ShapefileMetadata'
+            type: array
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Get a list of available shapefiles (shapefiles where the STR regulation
+        is applicable)
+      tags:
+      - str
+  /str/str-area/{luid}:
+    get:
+      description: Retrieve the STR shapefile by its ID and download it.
+      parameters:
+      - description: Shapefile ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/octet-stream
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: file
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.BadRequestError'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/handler.UnauthorizedError'
+        "404":
+          description: Shapefile not Found
+          schema:
+            $ref: '#/definitions/handler.NotFoundError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.InternalServerError'
+      security:
+      - OAuth2AccessCode:
+        - read
+      summary: Download the shapefile where the STR regulation is applicable.
+      tags:
+      - str
+securityDefinitions:
+  OAuth2AccessCode:
+    authorizationUrl: https://tt-dp-dev.eu.auth0.com/authorize?audience=https://str.eu
+    flow: accessCode
+    scopes:
+      str: Grants read access
+    tokenUrl: https://tt-dp-dev.eu.auth0.com/oauth/token
+    type: oauth2
+swagger: "2.0"

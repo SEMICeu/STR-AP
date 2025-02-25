@@ -1,0 +1,16 @@
+{{- if .Values.efsStorage.enabled -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: shape-files
+  labels:
+    {{- include "str.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: {{ .Values.efsStorage.className }}
+  resources:
+    requests:
+      storage: 20Gi
+
+  {{- end }}
