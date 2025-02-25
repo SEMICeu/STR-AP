@@ -126,6 +126,8 @@ This user story details how STR platforms can access and stay updated on geograp
   <img src="images/figure4.png" alt="STR framework">
 </p>  
 
+Update, February 24th: In the prototype, two additional endpoints have been introduced. One endpoint (str-area) identifies where STR regulation is applicable, and the other specifies where the Member State wishes to receive activity data (data-area). This approach could serve as a potential path for developing the area endpoint, as these shapefiles will typically be the same for both regulatory and data reporting purposes.
+
 ### User Story 3.3: Dispatching Activity Data
 
 In this user story, the process of dispatching activity data to the appropriate Competent Authority is described. Since the filtering and dispatching of data occurs on the side of the Member States and their Competent Authorities, this process is less relevant for STR platforms.
@@ -169,7 +171,7 @@ The health check endpoint is a critical component of the SDEP, designed to provi
 
 ### 4.1.2. Endpoints for Platforms
 
-#### Submitting Activity Data Endpoint
+#### Submitting Activity Data Endpoint (Endpoint 1 for Platforms)
 
 **Overview**
 
@@ -276,11 +278,11 @@ The activity data submission endpoint is designed to facilitate the transfer of 
 }
 ```
 
-#### Download List of Uploaded Shapefiles by Competent Authorities
+#### Download List of Uploaded Shapefiles by Competent Authorities (Endpoint 2 for Platforms)
 
 **Overview**
 
-The shapefiles list retrieval endpoint is designed to provide platforms with a list of all available shapefiles that have been uploaded to the SDEP by competent authorities. This endpoint allows platform applications to query and retrieve metadata about the shapefiles, enabling easier management, selection, and download of geospatial data.
+The shapefiles list retrieval endpoint is designed to provide platforms with a list of all available shapefiles that have been uploaded to the SDEP by competent authorities for which they want to receive activity data for. This endpoint allows platform applications to query and retrieve metadata about the shapefiles, enabling easier management, selection, and download of geospatial data.
 
 **Technical Implementation**
 
@@ -338,11 +340,11 @@ The shapefiles list retrieval endpoint is designed to provide platforms with a l
 }
 ```
 
-#### Download Shapefiles Uploaded by Competent Authorities
+#### Download Shapefiles Uploaded by Competent Authorities (Endpoint 3 for Platforms)
 
 **Overview**
 
-The shapefiles retrieval endpoint is designed to provide platforms with access to geospatial data in the form of shapefiles where the application procedure applies. This endpoint allows platforms to request and download shapefiles. As a shapefile consists of at least 3 mandatory files (.shp, .shx, .dbf) we expect these to be uploaded within a ZIP file to the SDEP, we highly recommend to upload the .prj and .cpg file which are the projection files (with the coordinate system and project information) and the .cpg file which specifies the code page for the .dbf file.
+The shapefiles retrieval endpoint is designed to provide platforms with access to geospatial data in the form of shapefiles where Member States want to receive activity data for. This endpoint allows platforms to request and download shapefiles. As a shapefile consists of at least 3 mandatory files (.shp, .shx, .dbf) we expect these to be uploaded within a ZIP file to the SDEP, we highly recommend to upload the .prj and .cpg file which are the projection files (with the coordinate system and project information) and the .cpg file which specifies the code page for the .dbf file.
 
 **Technical Implementation**
 
@@ -410,7 +412,7 @@ The shapefiles retrieval endpoint is designed to provide platforms with access t
 }
 ```
 
-#### Post Invalid Listings
+#### Post Invalid Listings (Endpoint 4 for Platforms)
 
 **Overview**
 
@@ -530,7 +532,7 @@ The invalid listings submission endpoint is designed to allow platforms to repor
 }
 ```
 
-#### Registration Number Validation
+#### Registration Number Validation (Endpoint 5 for Platforms)
 
 **Overview**
 
@@ -607,7 +609,7 @@ This endpoint allows platforms to validate registration numbers.
 }
 ```
 
-#### Download List of Uploaded Shapefiles by Competent Authorities where STR regulation is applicable
+#### Download List of Uploaded Shapefiles by Competent Authorities where STR regulation is applicable (Endpoint 6 for Platforms)
 
 **Overview**
 
@@ -670,7 +672,7 @@ The shapefiles list retrieval endpoint is designed to provide platforms with a l
 ```
 
 
-#### Download Shapefiles Uploaded by Competent Authorities where STR regulation is applicable
+#### Download Shapefiles Uploaded by Competent Authorities where STR regulation is applicable (Endpoint 7 for Platforms)
 
 **Overview**
 
