@@ -108,8 +108,14 @@ This folder includes resources to help you in testing the prototype.  It include
 
 [Link to notebook](https://github.com/SEMICeu/STR-AP/tree/main/prototype/3.%20Testing)
 
-# 4. Feedback 
+# 4. Feedback
+## Purpose of This folder
+
+This folder contains documentation related to feedback collection on the SDEP prototype and functional requirements.
 [Link to notebook](https://github.com/SEMICeu/STR-AP/tree/main/prototype/4.%20Feedback%20)
 
+# 5. Documentation for Stakeholders
+## Purpose of This folder
 
-
+This folder contains specialized documentation tailored for different stakeholder groups involved with the SDEP.
+[Link to notebook](https://github.com/SEMICeu/STR-AP/tree/main/prototype/5.%20Documentation%20for%20stakeholders)
