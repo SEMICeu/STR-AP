@@ -877,68 +877,32 @@ curl -s -X POST https://$HOST/api/v0/str/activity-data \
 --data '{
   "data": [
     {
-      "numberOfGuests": 10,
+      "URL": "placeholder-URL",
+      "address": {
+        "city": "Diegem",
+        "country": "BEL",
+        "postalCode": "1831",
+        "street": "Culliganlaan 5"
+      },
+      "competentAuthorityId_area": "competentAuthorityId_area",
+      "competentAuthorityName_area": "competentAuthorityName_area",
       "countryOfGuests": [
         "ITA",
         "NLD"
       ],
-      "temporal": {
-        "startDateTime": "2024-07-21T17:32:28Z",
-        "endDateTime": "2024-07-25T17:32:28Z"
-      },
-      "address": {
-        "street": "123 Main St",
-        "city": "Brussels",
-        "postalCode": "1000",
-        "country": "BEL"
-      },
       "hostId": "placeholder-host-id",
-      "unitId": "placeholder-unit-id",
-      "areaId": "placeholder-area-id"
-    },
-    {
-      "numberOfGuests": 2,
-      "countryOfGuests": [
-        "BEL"
-      ],
-      "temporal": {
-        "startDateTime": "2024-07-21T17:32:28Z",
-        "endDateTime": "2024-07-25T17:32:28Z"
-      },
-      "address": {
-        "street": "123 Main St",
-        "city": "Brussels",
-        "postalCode": "1000",
-        "country": "BEL"
-      },
-      "hostId": "placeholder-host-id",
-      "unitId": "placeholder-unit-id",
-      "areaId": "placeholder-area-id"
-    },
-    {
       "numberOfGuests": 3,
-      "countryOfGuests": [
-        "BEL"
-      ],
+      "registrationNumber": "placeholder-registrationNumber",
       "temporal": {
-        "startDateTime": "2024-07-21T17:32:28Z",
-        "endDateTime": "2024-07-25T17:32:28Z"
-      },
-      "address": {
-        "street": "123 Main St",
-        "city": "Brussels",
-        "postalCode": "1000",
-        "country": "BEL"
-      },
-      "hostId": "placeholder-host-id",
-      "unitId": "placeholder-unit-id",
-      "areaId": "placeholder-area-id"
+        "endDateTime": "2024-07-25T17:32:28Z",
+        "startDateTime": "2024-07-21T17:32:28Z"
+      }
     }
   ],
   "metadata": {
-    "platform": "placeholder-platform",
-    "submissionDate": "2024-07-21T17:32:28Z",
-    "additionalProp1": {}
+    "additionalProp1": {},
+    "platform": "booking.com",
+    "submissionDate": "2024-07-21T17:32:28Z"
   }
 }' \
 | jq .
