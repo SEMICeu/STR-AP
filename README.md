@@ -63,7 +63,7 @@ This GitHub repository is structured to manage the development of a prototype an
 
 ## Contact
 
-For any questions or inquiries, please contact wouter.travers@pwc.com
+For any questions or inquiries, please contact Paolo.LAVAGGI@ec.europa.eu
 
 
 
