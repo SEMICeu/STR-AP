@@ -684,11 +684,11 @@ The listing data retrieval endpoint is designed to facilitate the retrieval of l
 }
 ```
 
-#### Upload Shapefile(s) for Areas where STR Procedure Applies
+#### Upload Shapefile(s) for Areas where an STR Procedure Applies
 
 **Overview**
 
-The shapefiles submission endpoint is designed to upload geospatial data in the form of shapefiles where an str
+The shapefiles submission endpoint is designed to upload geospatial data in the form of shapefiles where an STR
 procedure applies. This allows platforms to request and download shapefiles.
 
 **Endpoint Details**
@@ -769,7 +769,7 @@ procedure applies. This allows platforms to request and download shapefiles.
 
 **Overview**
 
-Allows deletion of a str data shapefile from the server based on the LUID.
+Allows deletion of an STR shapefile from the server based on the LUID.
 
 **Endpoint Details**
 
