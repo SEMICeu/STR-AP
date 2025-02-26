@@ -24,7 +24,7 @@ We developed this GitHub repository to provide a comprehensive **Data Model** an
 The repository includes:
 
 - **Data Model**: An application profile designed to harmonize and streamline the framework for data generation and data sharing related to short-term accommodation rental services across the EU.
-- **Prototype**: An initial implementation to demonstrate the practical application of the data model.
+- **Prototype**: An implementation to demonstrate the practical application of the legislation. 
 
 ## Data Model
 
