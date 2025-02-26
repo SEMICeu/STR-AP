@@ -436,7 +436,7 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
 }
 ```
 
-#### Upload Shapefile(s) for Areas where a Member States want to receive Activity Data For
+#### Upload Shapefile(s) for Areas where a Member State wantS to receive Activity Data For
 
 **Overview**
 
