@@ -28,7 +28,7 @@ The repository includes:
 
 ## Data Model
 
-### Repository Overview: STR-AP (Short Term Rental Application Profile)
+### Repository Overview: STR-AP 
 
 Link: [STR-AP Release 1.0.1](https://semiceu.github.io/STR-AP/releases/1.0.1)
 
