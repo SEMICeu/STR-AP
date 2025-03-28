@@ -979,7 +979,7 @@ curl -s https://$HOST/api/v0/str/str-area \
 | jq .
 ```
 
-## 6.1.11. Download List of STR Area Shapefiles (endpoint 7 for platforms)
+## 6.1.11. Download STR Area Shapefiles (endpoint 8 for platforms)
 
 ```bash
 curl -s https://$HOST/api/v0/str/str-area/[luid] \
