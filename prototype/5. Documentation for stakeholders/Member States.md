@@ -376,7 +376,6 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
         "ITA",
         "NLD"
       ],
-      "hostId": "placeholder-host-id",
       "numberOfGuests": 3,
       "temporal": {
         "startDateTime": "2024-07-21T17:32:28Z",
