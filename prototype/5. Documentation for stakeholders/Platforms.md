@@ -220,7 +220,6 @@ The activity data submission endpoint is designed to facilitate the transfer of 
                "ITA",
                "NLD"
             ],
-            "hostId": "placeholder-host-id",
             "numberOfGuests": 3,
             "registrationNumber": "placeholder-registrationNumber",
             "temporal": {
@@ -890,7 +889,6 @@ curl -s -X POST https://$HOST/api/v0/str/activity-data \
         "ITA",
         "NLD"
       ],
-      "hostId": "placeholder-host-id",
       "numberOfGuests": 3,
       "registrationNumber": "placeholder-registrationNumber",
       "temporal": {
