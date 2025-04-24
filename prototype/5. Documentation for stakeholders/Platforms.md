@@ -214,8 +214,6 @@ The activity data submission endpoint is designed to facilitate the transfer of 
                "postalCode": "1831",
                "street": "Culliganlaan 5"
             },
-            "competentAuthorityId_area": "competentAuthorityId_area",
-            "competentAuthorityName_area": "competentAuthorityName_area",
             "countryOfGuests": [
                "ITA",
                "NLD"
