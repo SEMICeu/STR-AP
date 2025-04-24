@@ -881,8 +881,6 @@ curl -s -X POST https://$HOST/api/v0/str/activity-data \
         "postalCode": "1831",
         "street": "Culliganlaan 5"
       },
-      "competentAuthorityId_area": "competentAuthorityId_area",
-      "competentAuthorityName_area": "competentAuthorityName_area",
       "countryOfGuests": [
         "ITA",
         "NLD"
