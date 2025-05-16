@@ -51,7 +51,7 @@
         - 6.1.10. [Download List of STR Area Shapefiles (endpoint 7 for platforms)](#6110-download-list-of-str-area-shapefiles-endpoint-7-for-platforms)
         - 6.1.11. [Download STR Area Shapefile (endpoint 8 for platforms)](#6111-download-str-area-shapefile-endpoint-8-for-platforms)
     - 6.2. [Via Postman](#62-via-postman)
-
+7. [Recommendations for the production phase](#7-recommendations-for-the-production-phase)
 
 # 1. Executive Summary
 
@@ -227,7 +227,6 @@ The activity data submission endpoint is designed to facilitate the transfer of 
          }
       ],
       "metadata": {
-         "additionalProp1": {},
          "platform": "booking.com",
          "submissionDate": "2024-07-21T17:32:28Z"
       }
@@ -462,7 +461,6 @@ The invalid listings submission endpoint is designed to allow platforms to repor
             "obtainedAuth": true,
             "occupancy": 0,
             "purpose": "string",
-            "subjectToAuth": true,
             "type": "string",
             "url": "string"
          },
@@ -894,7 +892,6 @@ curl -s -X POST https://$HOST/api/v0/str/activity-data \
     }
   ],
   "metadata": {
-    "additionalProp1": {},
     "platform": "booking.com",
     "submissionDate": "2024-07-21T17:32:28Z"
   }
@@ -940,7 +937,6 @@ curl -s -X POST https://$HOST/api/v0/str/listings \
         "obtainedAuth": true,
         "occupancy": 6,
         "purpose": "Residential",
-        "subjectToAuth": true,
         "type": "Apartment",
         "url": "https://example.com/listing"
       },
@@ -952,7 +948,6 @@ curl -s -X POST https://$HOST/api/v0/str/listings \
   "metadata": {
     "platform": "booking.com",
     "submissionDate": "2024-07-21T17:32:28Z",
-    "additionalProp1": {}
   }
 }' \
 | jq .
@@ -1002,3 +997,8 @@ To get started with testing the STR application using Postman, follow these step
 5. After importing the collection, please do not forget to add your personal environment by selecting it in the top right.
 
 By following these steps, you can set up and test the STR application efficiently using Postman.
+
+
+
+
+
