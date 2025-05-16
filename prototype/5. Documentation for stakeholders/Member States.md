@@ -370,8 +370,6 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
         "postalCode": "1831",
         "country": "BEL"
       },
-      "competentAuthorityId_area": "competentAuthorityId_area",
-      "competentAuthorityName_area": "competentAuthorityName_area",
       "countryOfGuests": [
         "ITA",
         "NLD"
@@ -388,8 +386,7 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
     "competentAuthorityName_validated": "competentAuthorityName_validated",
     "metadata": {
       "platform": "booking.com",
-      "submissionDate": "2024-07-21T17:32:28Z",
-      "additionalProp1": {}
+      "submissionDate": "2024-07-21T17:32:28Z"
     }
   }
 ]
@@ -624,7 +621,6 @@ The listing data retrieval endpoint is designed to facilitate the retrieval of l
           "country": "BEL"
         },
         "obtainedAuth": true,
-        "subjectToAuth": true,
         "numberOfRooms": 0,
         "occupancy": 0,
         "purpose": "string",
@@ -636,8 +632,7 @@ The listing data retrieval endpoint is designed to facilitate the retrieval of l
     },
     "metadata": {
       "platform": "booking.com",
-      "submissionDate": "2024-07-21T17:32:28Z",
-      "additionalProp1": {}
+      "submissionDate": "2024-07-21T17:32:28Z"
     }
   }
 ]
