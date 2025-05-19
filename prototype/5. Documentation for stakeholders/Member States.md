@@ -37,7 +37,7 @@
     - 5.6. [Persistent Volume Claim (PVC)](#56-persistent-volume-claim-pvc)
     - 5.7. [Apache Kafka Integration](#57-apache-kafka-integration)
     - 5.8. [Infrastructure Management](#58-infrastructure-management)
-6.6. [Testing Steps](#6-testing-steps)
+6. [Testing Steps](#6-testing-steps)
    - 6.1. [Via Terminal Commands](#61-via-terminal-commands)
        - 6.1.1. [Authentication](#611-authentication)
        - 6.1.2. [Get the OAUTH Token (from the /token endpoint)](#612-get-the-oauth-token-from-the-token-endpoint)
@@ -50,6 +50,7 @@
        - 6.1.9. [Upload STR Area Shapefile Endpoint (endpoint 6 for Member States)](#619-upload-str-area-shapefile-endpoint-endpoint-6-for-member-states)
        - 6.1.10. [Delete STR Area Shapefile Endpoint (endpoint 7 for Member States)](#6110-delete-str-area-shapefile-endpoint-endpoint-7-for-member-states)
     - 6.2. [Via Postman](#62-via-postman)
+7. [Field Level Specification](#7-field-level-specification)
 
 # 1. Executive Summary
 
@@ -1060,3 +1061,64 @@ To get started with testing the STR application using Postman, follow these step
     - After importing the environment, go to "Manage Environments".
     - Edit the imported environment and replace placeholder values with actual credentials.
 5. **After importing the collection, please do not forget to add your personal environment by adding it on the top right.**
+
+
+# 7. Field Level Specification
+## POST /ca/data-area
+
+### Body Structure
+
+- **`competentAuthorityId_area`**  
+  **Required**: Yes  
+  **Description**: ID of the local competent authority
+
+- **`competentAuthorityName_area`**  
+  **Required**: Yes  
+  **Description**: Name of the competent authority
+
+- **`id`**  
+  **Required**: Yes  
+  **Description**: Unique identifier for the Shapefile
+
+- **`name`**  
+  **Required**: Yes  
+  **Description**: Descriptive name of the Shapefile
+
+- **`status`**  
+  **Required**: Yes  
+  **Description**: Current status
+
+- **`timestamp`**  
+  **Required**: Yes  
+  **Description**: ISO 8601 formatted date-time string, marking when the status was recorded
+
+---
+
+## POST /ca/STR-area
+
+### Body Structure
+
+- **`competentAuthorityId_area`**  
+  **Required**: Yes  
+  **Description**: ID of the local competent authority
+
+- **`competentAuthorityName_area`**  
+  **Required**: Yes  
+  **Description**: Name of the competent authority
+
+- **`id`**  
+  **Required**: Yes  
+  **Description**: Unique identifier for the Shapefile
+
+- **`name`**  
+  **Required**: Yes  
+  **Description**: Descriptive name of the Shapefile
+
+- **`status`**  
+  **Required**: Yes  
+  **Description**: Current status
+
+- **`timestamp`**  
+  **Required**: Yes  
+  **Description**: ISO 8601 formatted date-time string, marking when the status was recorded
+
