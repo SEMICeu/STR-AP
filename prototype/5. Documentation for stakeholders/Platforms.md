@@ -51,7 +51,7 @@
         - 6.1.10. [Download List of STR Area Shapefiles (endpoint 7 for platforms)](#6110-download-list-of-str-area-shapefiles-endpoint-7-for-platforms)
         - 6.1.11. [Download STR Area Shapefile (endpoint 8 for platforms)](#6111-download-str-area-shapefile-endpoint-8-for-platforms)
     - 6.2. [Via Postman](#62-via-postman)
-7. [Recommendations for the production phase](#7-recommendations-for-the-production-phase)
+7. [Field Level Specification](#7-field-level-specification)
 
 # 1. Executive Summary
 
@@ -998,6 +998,176 @@ To get started with testing the STR application using Postman, follow these step
 
 By following these steps, you can set up and test the STR application efficiently using Postman.
 
+# 7. Field Level Specification
+## POST /str/activity-data
+
+### Body Structure
+
+#### Path: `data`
+**Required**: Yes  
+**Description**: An array of report entries, each detailing a short-term rental stay
+
+#### Path: `metadata`
+**Required**: Yes  
+**Description**: Metadata describing the submission context
+
+---
+
+### `data[]` Fields
+
+- **`data[].URL`**  
+  **Required**: Yes  
+  **Description**: URL of the rental listing or reference
+
+- **`data[].address`**  
+  **Description**: Object containing address details
+
+  - **`data[].address.city`**  
+    **Required**: Yes  
+    **Description**: City name
+
+  - **`data[].address.country`**  
+    **Required**: Yes  
+    **Description**: Country code (ISO 3166-1 alpha-3)
+
+  - **`data[].address.postalCode`**  
+    **Required**: Yes  
+    **Description**: Postal or ZIP code
+
+  - **`data[].address.street`**  
+    **Required**: Yes  
+    **Description**: Street address
+
+- **`data[].countryOfGuests`**  
+  **Required**: Yes  
+  **Description**: List of ISO 3166-1 alpha-3 codes representing countries of guests
+
+- **`data[].numberOfGuests`**  
+  **Required**: Yes  
+  **Description**: Total number of guests for the stay
+
+- **`data[].registrationNumber`**  
+  **Required**: Yes  
+  **Description**: Short-term rental registration number
+
+- **`data[].temporal`**  
+  **Description**: Object containing start and end of the stay
+
+  - **`data[].temporal.startDateTime`**  
+    **Required**: Yes  
+    **Description**: Start datetime of the stay (ISO 8601 format)
+
+  - **`data[].temporal.endDateTime`**  
+    **Required**: Yes  
+    **Description**: End datetime of the stay (ISO 8601 format)
+
+---
+
+### `metadata` Fields
+
+- **`metadata.platform`**  
+  **Required**: Yes  
+  **Description**: Platform name from which the data originates (e.g., booking.com)
+
+- **`metadata.submissionDate`**  
+  **Required**: Yes  
+  **Description**: Submission timestamp in ISO 8601 format
+
+---
+
+## POST /str/listing
+
+### Body Structure
+
+#### Path: `data`
+**Required**: Yes  
+**Description**: Array of unit registration entries
+
+#### Path: `metadata`
+**Required**: Yes  
+**Description**: Metadata about the submission, such as platform and submission date
+
+---
+
+### `data[]` Fields
+
+- **`data[].Unit`**  
+  **Description**: Object containing details about the rental unit
+
+  - **`data[].Unit.address`**  
+    **Description**: Object specifying the address of the unit
+
+    - **`data[].Unit.address.city`**  
+      **Required**: Yes  
+      **Description**: City where the unit is located
+
+    - **`data[].Unit.address.country`**  
+      **Required**: Yes  
+      **Description**: Country code (ISO 3166-1 alpha-3)
+
+    - **`data[].Unit.address.postalCode`**  
+      **Required**: Yes  
+      **Description**: Postal/ZIP code of the unit
+
+    - **`data[].Unit.address.street`**  
+      **Required**: Yes  
+      **Description**: Street address
+
+  - **`data[].Unit.description`**  
+    **Required**: Optional  
+    **Description**: Description of the unit
+
+  - **`data[].Unit.floorLevel`**  
+    **Required**: Optional  
+    **Description**: Floor level the unit is on (e.g., "2nd floor")
+
+  - **`data[].Unit.numberOfRooms`**  
+    **Required**: Optional  
+    **Description**: Total number of rooms in the unit
+
+  - **`data[].Unit.obtainedAuth`**  
+    **Required**: Yes  
+    **Description**: Boolean indicating whether authorization was obtained
+
+  - **`data[].Unit.occupancy`**  
+    **Required**: Optional  
+    **Description**: Maximum allowed number of occupants
+
+  - **`data[].Unit.purpose`**  
+    **Required**: Optional  
+    **Description**: Purpose of the unit use (e.g., tourist lodging, residential, etc.)
+
+  - **`data[].Unit.type`**  
+    **Required**: Optional  
+    **Description**: Type of unit (e.g., apartment, house)
+
+  - **`data[].Unit.url`**  
+    **Required**: Yes  
+    **Description**: URL to the listing or unit information
+
+- **`data[].competentAuthorityId_area`**  
+  **Required**: Yes  
+  **Description**: ID of the competent authority in the jurisdiction
+
+- **`data[].competentAuthorityName_area`**  
+  **Required**: Yes  
+  **Description**: Name of the competent authority
+
+- **`data[].registrationNumber`**  
+  **Required**: Yes  
+  **Description**: Registration number of the unit
+
+---
+
+### `metadata` Fields
+
+- **`metadata.platform`**  
+  **Required**: Yes  
+  **Description**: Platform submitting the data (e.g., booking.com)
+
+- **`metadata.submissionDate`**  
+  **Required**: Yes  
+  **Description**: ISO 8601 formatted submission date
 
 
 
