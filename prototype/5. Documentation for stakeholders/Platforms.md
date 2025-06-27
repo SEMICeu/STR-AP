@@ -470,7 +470,6 @@ The invalid listings submission endpoint is designed to allow platforms to repor
       }
    ],
    "metadata": {
-      "additionalProp1": {},
       "platform": "booking.com",
       "submissionDate": "2024-07-21T17:32:28Z"
    }
