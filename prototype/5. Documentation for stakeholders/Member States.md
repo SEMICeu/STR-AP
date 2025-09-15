@@ -373,6 +373,7 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
       },
       "countryOfGuests": [
         "ITA",
+        "ITA", 
         "NLD"
       ],
       "numberOfGuests": 3,
