@@ -216,6 +216,7 @@ The activity data submission endpoint is designed to facilitate the transfer of 
             },
             "countryOfGuests": [
                "ITA",
+               "ITA",
                "NLD"
             ],
             "numberOfGuests": 3,
