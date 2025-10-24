@@ -159,14 +159,9 @@ The health check endpoint is a critical component of the SDEP, designed to provi
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-{
-  "status": "ok"
-}
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 ```
 
 ### 4.1.2. Endpoints for Platforms
