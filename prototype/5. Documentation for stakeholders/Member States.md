@@ -359,8 +359,7 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
 
 For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
-If you have any questions or need access permissions, please contact the project owner or your technical lead.
+This resource contains all the necessary details regarding API endpoints and request/response formats. 
 
 ---
 
@@ -395,8 +394,7 @@ The shapefiles submission endpoint is designed to upload geospatial data in the 
 
 For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
-If you have any questions or need access permissions, please contact the project owner or your technical lead.
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 
 ---
 
@@ -417,8 +415,7 @@ Allows deletion of a data shapefile from the server based on the LUID.
 
 For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
-If you have any questions or need access permissions, please contact the project owner or your technical lead.
+This resource contains all the necessary details regarding API endpoints and request/response formats. 
 
 ---
 
@@ -451,8 +448,7 @@ The listing data retrieval endpoint is designed to facilitate the retrieval of l
 
 For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
-If you have any questions or need access permissions, please contact the project owner or your technical lead.
+This resource contains all the necessary details regarding API endpoints and request/response formats. 
 
 ---
 
@@ -483,8 +479,7 @@ The shapefiles submission endpoint is designed to upload geospatial data in the 
 
 For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
-If you have any questions or need access permissions, please contact the project owner or your technical lead.
+This resource contains all the necessary details regarding API endpoints and request/response formats. 
 
 ---
 
@@ -505,8 +500,7 @@ Allows deletion of an STR shapefile from the server based on the LUID.
 
 For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
-If you have any questions or need access permissions, please contact the project owner or your technical lead.
+This resource contains all the necessary details regarding API endpoints and request/response formats. 
 
 
 ## 4.2. Authentication and Authorization
