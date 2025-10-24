@@ -171,7 +171,7 @@ The health check endpoint is a critical component of the SDEP, designed to provi
 
 ### 4.1.2. Endpoints for Platforms
 
-#### Submitting Activity Data Endpoint (Endpoint 1 for Platforms)
+### Submitting Activity Data Endpoint (Endpoint 1 for Platforms)
 
 **Overview**
 
@@ -198,82 +198,11 @@ The activity data submission endpoint is designed to facilitate the transfer of 
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-[
-   {
-      "data": [
-         {
-            "URL": "placeholder-URL",
-            "address": {
-               "city": "Diegem",
-               "country": "BEL",
-               "postalCode": "1831",
-               "street": "Culliganlaan 5"
-            },
-            "countryOfGuests": [
-               "ITA",
-               "ITA",
-               "NLD"
-            ],
-            "numberOfGuests": 3,
-            "registrationNumber": "placeholder-registrationNumber",
-            "temporal": {
-               "endDateTime": "2024-07-25T17:32:28Z",
-               "startDateTime": "2024-07-21T17:32:28Z"
-            }
-         }
-      ],
-      "metadata": {
-         "platform": "booking.com",
-         "submissionDate": "2024-07-21T17:32:28Z"
-      }
-   }
-]
-```
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 
-| Code | Description     |
-|------|-----------------|
-| 400  | Bad Request     |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description     |
-|------|-----------------|
-| 401  | Unauthorized    |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description                |
-|------|----------------------------|
-| 422  | Invalid data field values  |
-
-```json
-{
-   "status": "Wrong data format!"
-}
-```
-
-| Code | Description          |
-|------|----------------------|
-| 503  | Service unavailable  |
-
-```json
-{
-   "error": "An unexpected error occurred"
-}
-```
+---
 
 #### Download List of Uploaded Shapefiles by Competent Authorities (Endpoint 2 for Platforms)
 
@@ -300,42 +229,11 @@ The shapefiles list retrieval endpoint is designed to provide platforms with a l
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-[
-   {
-      "competentAuthorityId_area": "competentAuthorityId_area",
-      "competentAuthorityName_area": "competentAuthorityName_area",
-      "id": "01J306Z5SJS720QPA5JHJQE7GD",
-      "name": "Amsterdam.zip",
-      "timestamp": "2024-07-17T11:28:56.781531428Z",
-      "type": "str"
-   }
-]
-```
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 
-| Code | Description |
-|------|-------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description             |
-|------|-------------------------|
-| 500  | Internal Server Error   |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 #### Download Shapefiles Uploaded by Competent Authorities (Endpoint 3 for Platforms)
 
@@ -364,50 +262,11 @@ The shapefiles retrieval endpoint is designed to provide platforms with access t
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description |
-|------|-------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description        |
-|------|--------------------|
-| 404  | Shapefile not Found|
-
-```json
-{
-  "error": "Resource not found"
-}
-```
-
-| Code | Description             |
-|------|-------------------------|
-| 500  | Internal Server Error   |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 #### Post Invalid Listings (Endpoint 4 for Platforms)
 
@@ -435,97 +294,11 @@ The invalid listings submission endpoint is designed to allow platforms to repor
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 201  | Created     |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-{
-  "status": "delivered"
-}
-```
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 
-```json
-{
-   "data": [
-      {
-         "Unit": {
-            "address": {
-               "city": "Diegem",
-               "country": "BEL",
-               "postalCode": "1831",
-               "street": "Culliganlaan 5"
-            },
-            "description": "string",
-            "floorLevel": "string",
-            "numberOfRooms": 0,
-            "obtainedAuth": true,
-            "occupancy": 0,
-            "purpose": "string",
-            "type": "string",
-            "url": "string"
-         },
-         "competentAuthorityId_area": "competentAuthorityId_area",
-         "competentAuthorityName_area": "competentAuthorityName_area",
-         "registrationNumber": "string"
-      }
-   ],
-   "metadata": {
-      "platform": "booking.com",
-      "submissionDate": "2024-07-21T17:32:28Z"
-   }
-}
-```
-
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
-
-```json
-{
-   "status": "Wrong data format!"
-}
-```
-
-| Code | Description |
-|------|-------------|
-| 401  | Unauthorized |
-
-```json
-{
-   "message": "JWT is invalid"
-}
-```
-
-| Code | Description               |
-|------|---------------------------|
-| 422  | Invalid data field values |
-
-```json
-{
-  "error": "Resource not found"
-}
-```
-
-| Code | Description        |
-|------|--------------------|
-| 429  | Too many requests  |
-
-```json
-{
-  "error": "Resource not found"
-}
-```
-
-| Code | Description          |
-|------|----------------------|
-| 503  | Service unavailable  |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 #### Registration Number Validation (Endpoint 5 for Platforms)
 
@@ -554,55 +327,11 @@ This endpoint allows platforms to validate registration numbers.
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | Success     |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-{
-  "isValid": "True"
-}
-```
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
-
-```json
-{
-   "status": "Wrong data format!"
-}
-```
-
-| Code | Description |
-|------|-------------|
-| 401  | Unauthorized |
-
-```json
-{
-   "message": "JWT is invalid"
-}
-```
-
-| Code | Description                         |
-|------|-------------------------------------|
-| 422  | Invalid registration number format  |
-
-```json
-{
-  "error": "Wrong data format!"
-}
-```
-
-| Code | Description          |
-|------|----------------------|
-| 503  | Service unavailable  |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 #### Download List of Uploaded Shapefiles by Competent Authorities where STR regulation is applicable (Endpoint 6 for Platforms)
 
@@ -629,43 +358,11 @@ The shapefiles list retrieval endpoint is designed to provide platforms with a l
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-[
-   {
-      "competentAuthorityId_area": "competentAuthorityId_area",
-      "competentAuthorityName_area": "competentAuthorityName_area",
-      "id": "01J306Z5SJS720QPA5JHJQE7GD",
-      "name": "Amsterdam.zip",
-      "timestamp": "2024-07-17T11:28:56.781531428Z",
-      "type": "str"
-   }
-]
-```
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 
-| Code | Description |
-|------|-------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description             |
-|------|-------------------------|
-| 500  | Internal Server Error   |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
-
+---
 
 #### Download Shapefiles Uploaded by Competent Authorities where STR regulation is applicable (Endpoint 7 for Platforms)
 
@@ -694,50 +391,9 @@ The shapefiles retrieval endpoint is designed to provide platforms with access t
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description |
-|------|-------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description        |
-|------|--------------------|
-| 404  | Shapefile not Found|
-
-```json
-{
-  "error": "Resource not found"
-}
-```
-
-| Code | Description             |
-|------|-------------------------|
-| 500  | Internal Server Error   |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+This resource contains all the necessary details regarding API endpoints and request/response formats. .
 
 ## 4.2. Authentication and Authorization
 
