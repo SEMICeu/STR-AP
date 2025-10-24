@@ -350,89 +350,19 @@ The activity data retrieval endpoint is designed to facilitate the retrieval of 
 
 **Sequencing**
 
-1. Member State(s) sends authentication request
-2. SDEP sends access token to the Member State
-3. Member State submits request to retrieve the activity data
+1. Member State(s) sends authentication request  
+2. SDEP sends access token to the Member State  
+3. Member State submits request to retrieve the activity data  
 4. SDEP sends activity retrieval report confirmation response "delivered"
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-[
-  {
-    "data": {
-      "address": {
-        "street": "Culliganlaan 5",
-        "city": "Diegem",
-        "postalCode": "1831",
-        "country": "BEL"
-      },
-      "countryOfGuests": [
-        "ITA",
-        "ITA", 
-        "NLD"
-      ],
-      "numberOfGuests": 3,
-      "temporal": {
-        "startDateTime": "2024-07-21T17:32:28Z",
-        "endDateTime": "2024-07-25T17:32:28Z"
-      },
-      "URL": "placeholder-URL",
-      "registrationNumber": "placeholder-registrationNumber"
-    },
-    "competentAuthorityId_validated": "competentAuthorityId_validated",
-    "competentAuthorityName_validated": "competentAuthorityName_validated",
-    "metadata": {
-      "platform": "booking.com",
-      "submissionDate": "2024-07-21T17:32:28Z"
-    }
-  }
-]
-```
+This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
+If you have any questions or need access permissions, please contact the project owner or your technical lead.
 
-| Code | Description                           |
-|------|---------------------------------------|
-| 400  | Bad Request - Invalid limit parameter |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description  |
-|------|--------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "status": "JWT is invalid!"
-}
-```
-
-| Code | Description       |
-|------|-------------------|
-| 429  | Too many requests |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description         |
-|------|---------------------|
-| 503  | Service unavailable |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 #### Upload Shapefile(s) for Areas where a Member State wantS to receive Activity Data For
 
@@ -456,67 +386,19 @@ The shapefiles submission endpoint is designed to upload geospatial data in the 
 
 **Sequencing**
 
-1. Member State(s) sends authentication request
-2. SDEP sends access token to the Member State
-3. Member State submits shapefile
+1. Member State(s) sends authentication request  
+2. SDEP sends access token to the Member State  
+3. Member State submits shapefile  
 4. SDEP sends confirmation response "delivered"
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-{
-  "id": "string",
-  "name": "string",
-  "competentAuthorityId_area": "competentAuthorityId_area",
-  "competentAuthorityName_area": "competentAuthorityName_area",
-  "status": "string",
-  "timestamp": "string"
-}
-```
+This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
+If you have any questions or need access permissions, please contact the project owner or your technical lead.
 
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description  |
-|------|--------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description                 |
-|------|-----------------------------|
-| 422  | Invalid file format or data |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description         |
-|------|---------------------|
-| 503  | Service unavailable |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 ### Delete Area Shapefile Endpoint
 
@@ -533,49 +415,12 @@ Allows deletion of a data shapefile from the server based on the LUID.
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
+This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
+If you have any questions or need access permissions, please contact the project owner or your technical lead.
 
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description  |
-|------|--------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description |
-|------|-------------|
-| 404  | Not Found   |
-
-```json
-{
-  "error": "Resource not found"
-}
-```
-
-| Code | Description           |
-|------|-----------------------|
-| 500  | Internal Server Error |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 ### Retrieving Listing Data Endpoint
 
@@ -597,95 +442,25 @@ The listing data retrieval endpoint is designed to facilitate the retrieval of l
 
 **Sequencing**
 
-1. Member State(s) sends authentication request
-2. SDEP sends access token to the Member State
-3. Member State submits request to retrieve the listing data
+1. Member State(s) sends authentication request  
+2. SDEP sends access token to the Member State  
+3. Member State submits request to retrieve the listing data  
 4. SDEP sends listings retrieval report confirmation response "delivered"
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-[
-  {
-    "data": {
-      "registrationNumber": "string",
-      "Unit": {
-        "description": "string",
-        "floorLevel": "string",
-        "address": {
-          "street": "Culliganlaan 5",
-          "city": "Diegem",
-          "postalCode": "1831",
-          "country": "BEL"
-        },
-        "obtainedAuth": true,
-        "numberOfRooms": 0,
-        "occupancy": 0,
-        "purpose": "string",
-        "type": "string",
-        "url": "string"
-      },
-      "competentAuthorityId_area": "competentAuthorityId_area",
-      "competentAuthorityName_area": "competentAuthorityName_area"
-    },
-    "metadata": {
-      "platform": "booking.com",
-      "submissionDate": "2024-07-21T17:32:28Z"
-    }
-  }
-]
-```
+This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
+If you have any questions or need access permissions, please contact the project owner or your technical lead.
 
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description  |
-|------|--------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description       |
-|------|-------------------|
-| 429  | Too many requests |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description         |
-|------|---------------------|
-| 503  | Service unavailable |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 #### Upload Shapefile(s) for Areas where an STR Procedure Applies
 
 **Overview**
 
-The shapefiles submission endpoint is designed to upload geospatial data in the form of shapefiles where an STR
-procedure applies. This allows platforms to request and download shapefiles.
+The shapefiles submission endpoint is designed to upload geospatial data in the form of shapefiles where an STR procedure applies. This allows platforms to request and download shapefiles.
 
 **Endpoint Details**
 
@@ -699,67 +474,19 @@ procedure applies. This allows platforms to request and download shapefiles.
 
 **Sequencing**
 
-1. Member State(s) sends authentication request
-2. SDEP sends access token to the Member State
-3. Member State submits shapefile
+1. Member State(s) sends authentication request  
+2. SDEP sends access token to the Member State  
+3. Member State submits shapefile  
 4. SDEP sends confirmation response "delivered"
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-```json
-{
-  "id": "string",
-  "name": "string",
-  "competentAuthorityId_area": "competentAuthorityId_area",
-  "competentAuthorityName_area": "competentAuthorityName_area",
-  "status": "string",
-  "timestamp": "string"
-}
-```
+This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
+If you have any questions or need access permissions, please contact the project owner or your technical lead.
 
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description  |
-|------|--------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description                 |
-|------|-----------------------------|
-| 422  | Invalid file format or data |
-
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description         |
-|------|---------------------|
-| 503  | Service unavailable |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
+---
 
 ### Delete STR Area Shapefile Endpoint
 
@@ -776,49 +503,11 @@ Allows deletion of an STR shapefile from the server based on the LUID.
 
 **Response Structure**
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+For the official technical specifications, please refer to the Swagger documentation available at the following link: [https://eu-str.sdep-pilot.eu/swagger/index.html#/](https://eu-str.sdep-pilot.eu/swagger/index.html#/)  
 
-| Code | Description |
-|------|-------------|
-| 400  | Bad Request |
+This resource contains all the necessary details regarding API endpoints, request/response formats, authentication methods, and error handling protocols.  
+If you have any questions or need access permissions, please contact the project owner or your technical lead.
 
-```json
-{
-  "status": "Wrong data format!"
-}
-```
-
-| Code | Description  |
-|------|--------------|
-| 401  | Unauthorized |
-
-```json
-{
-  "message": "JWT is invalid"
-}
-```
-
-| Code | Description |
-|------|-------------|
-| 404  | Not Found   |
-
-```json
-{
-  "error": "Resource not found"
-}
-```
-
-| Code | Description           |
-|------|-----------------------|
-| 500  | Internal Server Error |
-
-```json
-{
-  "error": "An unexpected error occurred"
-}
-```
 
 ## 4.2. Authentication and Authorization
 
