@@ -62,6 +62,7 @@
     "PublicService.identifier": {
       "@id": "http://purl.org/dc/terms/identifier"
     },
+    "RandomCheckResult": "https://w3id.org/str/RandomCheckResult",
     "RegistrationNumber": "https://w3id.org/str/RegistrationNumber",
     "RegistrationProcedure": "https://w3id.org/str/RegistrationProcedure",
     "Resource": "http://www.w3.org/ns/dcat#Resource",
@@ -110,10 +111,9 @@
     "areaID": {
       "@id": "https://w3id.org/str/areaID"
     },
-    "checks": {
-      "@container": "@set",
-      "@id": "https://w3id.org/str/checks",
-      "@type": "@id"
+    "checkDate": {
+      "@id": "https://w3id.org/str/checkDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "classification": {
       "@container": "@set",
@@ -121,6 +121,7 @@
       "@type": "@id"
     },
     "concerns": {
+      "@container": "@set",
       "@id": "https://w3id.org/str/concerns",
       "@type": "@id"
     },
@@ -171,6 +172,10 @@
     "description": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "details": {
+      "@id": "https://w3id.org/str/details",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "distribution": {
@@ -238,7 +243,6 @@
       "@type": "@id"
     },
     "hasListing": {
-      "@container": "@set",
       "@id": "https://w3id.org/str/hasListing",
       "@type": "@id"
     },
@@ -286,6 +290,11 @@
     "isReferredIn": {
       "@container": "@set",
       "@id": "https://w3id.org/str/isReferredIn",
+      "@type": "@id"
+    },
+    "isReportedTo": {
+      "@container": "@set",
+      "@id": "https://w3id.org/str/isReportedTo",
       "@type": "@id"
     },
     "isSubjectToAuthorization": {
@@ -363,6 +372,11 @@
       "@id": "https://w3id.org/str/offers",
       "@type": "@id"
     },
+    "performs": {
+      "@container": "@set",
+      "@id": "https://w3id.org/str/performs",
+      "@type": "@id"
+    },
     "poBox": {
       "@id": "http://www.w3.org/ns/locn#poBox"
     },
@@ -383,7 +397,6 @@
       "@type": "@id"
     },
     "produces": {
-      "@container": "@set",
       "@id": "http://purl.org/vocab/cpsv#produces",
       "@type": "@id"
     },
@@ -428,6 +441,10 @@
     "requestsArea": {
       "@container": "@set",
       "@id": "https://w3id.org/str/requestsArea",
+      "@type": "@id"
+    },
+    "result": {
+      "@id": "https://w3id.org/str/result",
       "@type": "@id"
     },
     "sentTo": {
@@ -483,6 +500,11 @@
     "value": {
       "@id": "http://data.europa.eu/m8g/hasValue",
       "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "verifiedVia": {
+      "@container": "@set",
+      "@id": "https://w3id.org/str/verifiedVia",
+      "@type": "@id"
     },
     "verifies": {
       "@container": "@set",

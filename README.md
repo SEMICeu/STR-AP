@@ -30,7 +30,7 @@ The repository includes:
 
 ### Repository Overview: STR-AP 
 
-Link: [STR-AP Release 1.0.1](https://semiceu.github.io/STR-AP/releases/1.0.1)
+Link: [STR-AP Release 1.1.0](https://semiceu.github.io/STR-AP/releases/1.1.0)
 
 The **Data Model** folder contains the **STR-AP (Short Term Rental Application Profile)**, which is an application profile designed to harmonize and streamline the framework for data generation and data sharing related to short-term accommodation rental services across the EU. This profile provides a standardized format for exchanging relevant data between different platforms and stakeholders in the short-term rental market.
 

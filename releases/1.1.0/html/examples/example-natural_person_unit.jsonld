@@ -1,0 +1,113 @@
+{
+  "@context": [
+  "https://semiceu.github.io/STR-AP/releases/1.0.0/context/strap.jsonld",
+   {
+    "adms": "http://www.w3.org/ns/adms#",
+    "cv": "http://data.europa.eu/m8g/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "ex": "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "org": "http://www.w3.org/ns/org#",
+    "person": "http://www.w3.org/ns/person#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "str": "https://w3id.org/str/",
+    "time": "http://www.w3.org/2006/time#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+   }
+  ],
+  "@graph": [
+    {
+     "@id": "ex:person1",
+     "@type": "Person",
+     "Person.familyName" : {
+       "@language": "fr",
+       "@value": "Magritte"
+     },
+     "Person.givenName" : {
+       "@language": "fr",
+       "@value": "René François Ghislain"
+     },
+     "Person.contactPoint" : {
+       "@id": "ex:contactPoint1"
+     },
+     "Person.domicile" : {
+       "@id": "ex:address1"
+     },
+     "Person.identifier" : {
+       "@id": "ex:identifier1"
+     },
+     "Person.provides" : {
+       "@id": "ex:evidence1"
+     }
+    },
+    {
+      "@id": "ex:contactPoint1",
+      "@type": "ContactPoint",
+      "ContactPoint.hasEmail": "rene@magritte.be",
+      "ContactPoint.hasTelephone": "+32 012 345 678"
+    },
+    {
+      "@id": "ex:address1",
+      "@type": "Address",
+      "Address.fullAddress": {
+        "@language": "fr",
+        "@value": "Rue Esseghem 135, 1090 Bruxelles, Belgique"
+      }
+    },
+    {
+      "@id": "ex:identifier1",
+      "@type": "Identifier",
+      "Identifier.notation": "123.456.789"
+    },
+    {
+      "@id": "ex:evidence1",
+      "@type": "Evidence",
+      "Evidence.identifier" : "evi-123",
+      "Evidence.name" : {
+        "@language": "en",
+        "@value": "Information about the unit1"
+      },
+      "Evidence.submissionDate": {
+        "@type": "xsd:dateTime",
+        "@value": "2024-01-28T09:00:00"
+      },
+      "Evidence.describes": {
+        "@id": "ex:unit1"
+      }
+    },
+    {
+      "@id": "ex:unit1",
+      "@type": "Unit",
+      "Unit.numberOfBedrooms": {
+        "@type": "xsd:integer",
+        "@value": "1"
+      },
+      "Unit.occupancy": {
+        "@type": "xsd:integer",
+        "@value": "2"
+      },
+      "Unit.floorLevel": {
+        "@language": "fr",
+        "@value": "2eme étage"
+      },
+      "Unit.purpose" : {
+        "@language": "fr",
+        "@value": "Maison partagée avec étage privé"
+      },
+      "Unit.type" : {
+        "@id": "ex:sharedHouse"
+      },
+      "Unit.hasUnitAddress" : {
+        "@id": "ex:address1"
+      }
+    },
+    {
+      "@id": "ex:sharedHouse",
+      "@type": "Concept"
+    }
+  ]
+}

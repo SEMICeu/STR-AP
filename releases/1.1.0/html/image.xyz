@@ -1,0 +1,40 @@
+materialdesignicons F064D Hosts
+materialdesignicons F02E3 "STR Platforms" as STR
+materialdesignicons F01EE "Single Digital Entry Point" as SDEP
+// participantgroup #lightblue **Competent Authorities**
+// materialdesignicons F01BC Registries
+materialdesignicons F0070 "Competent Authorities" as CA
+// end
+
+
+
+group Epic 1: Host Registration  
+    Hosts ->  CA: Host data submission 
+    
+    
+    CA -> Hosts: Registration number issuance 
+end  
+
+group Epic 2: Listing Management  (Not part of the prototype) 
+    Hosts -> STR: Submit listing (with registration number)
+    
+end  
+
+group Epic 3: Data sharing and compliance
+    STR -> SDEP:  Activity data sharing 
+    
+    
+    SDEP -> CA:  Dispatching activity data
+ 
+    
+    CA -> STR: Area list updates
+end  
+
+group Epic 4: Validation and verification
+    STR -> CA:Share listings flagged in random checks 
+    
+    CA -> STR: SDEP Order removal based on listing URL and/or registration number
+
+    
+
+end
