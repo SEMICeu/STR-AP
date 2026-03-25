@@ -1,3 +1,17 @@
+
+
+## Deprecated Code – Older Version
+
+This folder contains an **older version of the code** that was used in the initial stages of the project.
+
+The project has since evolved, and the **new reference model** has been fully migrated to a dedicated GitHub repository.  
+You can find the updated version here:
+
+➡️ **https://github.com/SEMICeu/sdep/**
+
+Please refer to that repository for the latest structure, improvements, and ongoing development.
+
+
 # STR-AP (Short Term Rental Application and Prototype Profile)
 
 Welcome to the **Short-Term Rental Application and Prototype Profile** repository! This project aims to harmonize and streamline the framework for data generation and data sharing on short-term accommodation rental services across the EU. 
